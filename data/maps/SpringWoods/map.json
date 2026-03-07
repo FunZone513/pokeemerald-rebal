@@ -95,7 +95,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SpringWoods_Evelynn",
+      "script": "NULL",
       "flag": "FLAG_TEMP_A"
     }
   ],
@@ -137,7 +137,25 @@
       "elevation": 0,
       "var": "VAR_EVELYNN_STATE",
       "var_value": "3",
-      "script": "SpringWoods_Evelynn"
+      "script": "SpringWoods_EvelynnStairs"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_EVELYNN_STATE",
+      "var_value": "3",
+      "script": "SpringWoods_EvelynnL"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_EVELYNN_STATE",
+      "var_value": "3",
+      "script": "SpringWoods_EvelynnL1"
     }
   ],
   "bg_events": [

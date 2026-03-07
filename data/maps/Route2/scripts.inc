@@ -268,7 +268,7 @@ Route2_Evelynn_Movement_0:
 
 Route2_Camper_Text_0:
 # 72 "data/maps/Route2/scripts.pory"
-	.string "I hope you can get the Gym Leader to\n come soon, I'd like to go back home.$"
+	.string "I hope you can get the Gym Leader to\ncome soon, I'd like to go back home.$"
 
 Route2_Miniboss_Text_0:
 # 81 "data/maps/Route2/scripts.pory"

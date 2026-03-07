@@ -71,6 +71,8 @@ script DyecressTown_HerbShop_Lass {
 
 script DyecressTown_HerbShop_QuestGuy {
     lock
+    applymovement(4, moves(face_player))
+    waitmovement(0)
     if (var(VAR_DYECRESS_HERB_SHOP_QUEST) == 0) {
         msgbox(DyecressTown_HerbShop_QuestGuy_Text)
         setvar(VAR_DYECRESS_HERB_SHOP_QUEST, 1)
@@ -109,6 +111,7 @@ script DyecressTown_HerbShop_QuestGuy {
     } elif (var(VAR_DYECRESS_HERB_SHOP_QUEST) == 3) {
         msgbox("Thank you for all your help!", MSGBOX_NPC)
     }
+    releaseall
 }
 
 script DyecressTown_HerbShop_QuestGuy2 {
@@ -120,45 +123,30 @@ script DyecressTown_HerbShop_QuestGuy2 {
 script DyecressTown_HerbShop_QuestGuy3 {
     setvar(VAR_DYECRESS_HERB_SHOP_QUEST, 3)
     msgbox(DyecressTown_HerbShop_QuestGuy_Text3)
-    getobjectxy(OBJ_EVENT_ID_PLAYER, CURRENT_POSITION, VAR_TEMP_1, VAR_TEMP_2)
-    if (
-        (var(VAR_TEMP_1) == 0 && var(VAR_TEMP_2) == 5) ||
-        (var(VAR_TEMP_1) == 1 && var(VAR_TEMP_2) == 4) ||
-        (var(VAR_TEMP_1) == 1 && var(VAR_TEMP_2) == 6)
-    ) {
-        applymovement(4, moves(walk_right*4 walk_down*2))
-    } else {
-        applymovement(4, moves(walk_down walk_right*4 walk_down))
-    }
+    applymovement(4, moves(walk_up*3))
     waitmovement(0)
+    playse(SE_EXIT)
     removeobject(4)
+    waitse
     delay(60)
     playfanfare(MUS_OBTAIN_BERRY)
     waitfanfare
     delay(30)
     playse(SE_EXIT)
     addobject(4)
-    setobjectxy(4, 5, 7)
+    setobjectxy(4, 0, 1)
     waitse
-    if (
-        (var(VAR_TEMP_1) == 0 && var(VAR_TEMP_2) == 5) ||
-        (var(VAR_TEMP_1) == 1 && var(VAR_TEMP_2) == 4) ||
-        (var(VAR_TEMP_1) == 1 && var(VAR_TEMP_2) == 6)
-    ) {
-        applymovement(4, moves( walk_up*2 walk_left*4))
-    } else {
-        applymovement(4, moves(walk_up walk_left*4 walk_up))
-    }
+    applymovement(4, moves(walk_down*3))
     waitmovement(0)
     applymovement(4, moves(face_player))
     waitmovement(0)
     msgbox("Success!\nWe will now be able to stock Mints!")
-    release
+    releaseall
 }
 
 text DyecressTown_HerbShop_QuestGuy_Text {
     "I'm from Libra Institute, we've been\nworking with the owners of the Herb Shop.\p"
-    "We're hoping that we can create some\nnew special herbs together,\lbut we have hit a rut in development.\p"
+    "We're hoping that we can create some\nnew special herbs together,\lbut we have hit a rut in development."
 }
 
 text DyecressTown_HerbShop_QuestGuy_Text2 {

@@ -482,7 +482,7 @@ SpringwoodCity_AquaGrunt5_Text_0:
 
 SpringwoodCity_LibraEvelynn_Text::
 # 57 "data/maps/SpringwoodCity/scripts.pory"
-	.string "Wait... Are you the one that\ncleared out Quiet Grove?\p"
+	.string "Wait... weren't you the one that\ncleared out Quiet Grove?\p"
 	.string "Hmmm...\p"
 	.string "I'm not sure what you're after,\nbut if you're against Team Aqua then\lyou can't be all bad.\p"
 	.string "Tell you what, I'll be in Spring Woods\nto check something.\p"

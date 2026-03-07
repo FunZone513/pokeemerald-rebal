@@ -69,7 +69,7 @@ text Route2_Camper_Warning_Text {
 }
 
 script Route2_Camper {
-    msgbox("I hope you can get the Gym Leader to\n come soon, I'd like to go back home.", MSGBOX_NPC)
+    msgbox("I hope you can get the Gym Leader to\ncome soon, I'd like to go back home.", MSGBOX_NPC)
 }
 
 script Route2_Miniboss {

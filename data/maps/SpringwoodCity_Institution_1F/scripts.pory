@@ -13,7 +13,7 @@ script SpringwoodCity_Institution_1F_Director {
             break
 
         default:
-        msgbox(format("We're collecting data from Labs all over the region."), MSGBOX_NPC)
+            msgbox(format("We're collecting data from Labs all over the region."), MSGBOX_NPC)
     }
     releaseall
 }
@@ -21,11 +21,11 @@ script SpringwoodCity_Institution_1F_Director {
 text SpringwoodCity_Institution_1F_Director_Text {
     "Yes? Can I help you?\p"
     "...\p"
-    "Oh! You're from Dyecress!\nHow wonderful it is to hear that\nOld Man Spenser is finally letting us\linvestigate the town's history.\p"
+    "Oh! You're from Dyecress!\nHow wonderful it is to hear that\lOld Man Spenser is finally letting us\linvestigate the town's history.\p"
     "It's been a dark spot in our knowledge\nbase for quite some time now.\p"
     "We always hear about the rich history\nof the town, yet we're never allowed to\llearn any of it, it's really a shame.\p"
     "I'll dispatch some of our researchers\nright away!\p"
-    "They'll make sure to help out with any of\nSpenser's qualms, and I'll make sure they\ldon't make a mess of the town."
+    "They'll make sure to help out with any\nof Spenser's qualms, and I'll make sure\lthey don't make a mess of the town."
 }
 
 script SpringwoodCity_Institution_1F_Scientist1 {

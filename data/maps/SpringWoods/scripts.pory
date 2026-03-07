@@ -8,12 +8,32 @@ script SpringWoods_OnLoad {
     }
 }
 
-script SpringWoods_Evelynn {
+script SpringWoods_EvelynnL {
+    lock
+    hidefollower
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right*4 walk_up))
+    waitmovement(0)
+    goto(SpringWoods_Evelynn)
+}
+
+script SpringWoods_EvelynnL1 {
+    lock
+    hidefollower
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up))
+    waitmovement(0)
+    goto(SpringWoods_EvelynnL)
+}
+
+script SpringWoods_EvelynnStairs {
     lock
     hidefollower
     delay(16)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left*2 walk_up*3))
     waitmovement(0)
+    goto(SpringWoods_Evelynn)
+}
+
+script SpringWoods_Evelynn {
     msgbox(SpringWoods_Evelynn_Text)
     applymovement(6, moves(face_right))
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))

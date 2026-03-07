@@ -188,10 +188,13 @@
 #define METATILE_Fallarbor_RedRockWall               0x269
 
 // gTileset_Fortree
+#define METATILE_Fortree_BridgeBottomOcean                 0x218
+#define METATILE_Fortree_BridgeMiddleOcean                 0x2A9
 #define METATILE_Fortree_BridgeOverGrass_Lowered           0x24F
 #define METATILE_Fortree_BridgeOverGrass_Raised            0x24E
 #define METATILE_Fortree_BridgeOverTrees_Lowered           0x257
 #define METATILE_Fortree_BridgeOverTrees_Raised            0x256
+#define METATILE_Fortree_BridgeTopOcean                    0x210
 #define METATILE_Fortree_LongGrass_Root                    0x208
 #define METATILE_Fortree_SecretBase_LongGrass_BottomLeft   0x281
 #define METATILE_Fortree_SecretBase_LongGrass_BottomMid    0x282

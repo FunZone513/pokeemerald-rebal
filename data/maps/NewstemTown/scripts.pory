@@ -1,4 +1,13 @@
-mapscripts NewstemTown_MapScripts {}
+mapscripts NewstemTown_MapScripts {
+    MAP_SCRIPT_ON_LOAD: NewstemTown_OnLoad
+}
+
+script NewstemTown_OnLoad {
+    if (!flag(FLAG_REGI_DOORS_OPENED)) {
+        setmetatile(10, 15, METATILE_General_RockWall_GrassBase, TRUE)
+        setmetatile(10, 14, METATILE_General_RockWall_RockBase, TRUE)
+    }
+}
 
 script NewstemTown_Sign_Town {
     lockall

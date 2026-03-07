@@ -21,8 +21,8 @@ script DyecressTown_Indoor1_Spenser {
 
 text DyecressTown_Indoor1_Spenser_Text {
     "Dyecress' history is something that many\nknow exists, but few remember details.\p"
-    "While the specifics of the history have\nbeen lost over time,\l"
-    "the guidance granted by our predecessors\lremains in our hearts and actions.\p"
+    "While the specifics of the history have\nbeen lost over time, the guidance\l"
+    "granted by our predecessors\lremains in our hearts and actions.\p"
     "Thus, the current is built upon the past.\nTo forget where we come from is to\lforget where we're headed.\p"
     "These old bones have been working\ntirelessly for generations, trying to\luncover the secret of the town's origin.\p"
     "While my time has been spent sifting\nthrough old books, I've heard tell that\l"

@@ -48,8 +48,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GAMEBOY_KID",
-      "x": 3,
-      "y": 22,
+      "x": 15,
+      "y": 19,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -111,7 +111,7 @@
       "x": 29,
       "y": 13,
       "elevation": 0,
-      "dest_map": "MAP_WEBBED_THICKET",
+      "dest_map": "MAP_NEWSTEM_TOWN_INDOOR1",
       "dest_warp_id": "0"
     },
     {

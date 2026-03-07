@@ -225,7 +225,7 @@ SpringwoodCity_Institution_1F_Director_Text::
 # 21 "data/maps/SpringwoodCity_Institution_1F/scripts.pory"
 	.string "Yes? Can I help you?\p"
 	.string "...\p"
-	.string "Oh! You're from Dyecress!\nHow wonderful it is to hear that\nOld Man Spenser is finally letting us\linvestigate the town's history.\p"
+	.string "Oh! You're from Dyecress!\nHow wonderful it is to hear that\lOld Man Spenser is finally letting us\linvestigate the town's history.\p"
 	.string "It's been a dark spot in our knowledge\nbase for quite some time now.\p"
 	.string "We always hear about the rich history\nof the town, yet we're never allowed to\llearn any of it, it's really a shame.\p"
 	.string "I'll dispatch some of our researchers\nright away!\p"

@@ -30,15 +30,15 @@
   ],
   "warp_events": [
     {
-      "x": 4,
-      "y": 8,
+      "x": 2,
+      "y": 7,
       "elevation": 0,
       "dest_map": "MAP_OCHRE_VALE",
       "dest_warp_id": "7"
     },
     {
-      "x": 3,
-      "y": 8,
+      "x": 1,
+      "y": 7,
       "elevation": 0,
       "dest_map": "MAP_OCHRE_VALE",
       "dest_warp_id": "7"

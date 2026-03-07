@@ -5,7 +5,43 @@ mapscripts Route6_MapScripts {
 script Route6_OnLoad {
     if (!flag(FLAG_CLEARED_ROUTE6)) {
         setflag(FLAG_TEMP_A)
+
+        setmetatile(29, 53, METATILE_General_CalmWater, TRUE)
+        setmetatile(30, 53, METATILE_General_CalmWater, TRUE)
+        setmetatile(31, 53, METATILE_General_CalmWater, TRUE)
+        setmetatile(32, 53, METATILE_General_CalmWater, TRUE)
+        setmetatile(29, 54, METATILE_General_CalmWater, TRUE)
+        setmetatile(30, 54, METATILE_Fortree_BridgeTopOcean, TRUE)
+        setmetatile(31, 54, METATILE_General_CalmWater, TRUE)
+        setmetatile(32, 54, METATILE_Fortree_BridgeTopOcean, TRUE)
+        setmetatile(29, 55, METATILE_General_CalmWater, TRUE)
+        setmetatile(30, 55, METATILE_Fortree_BridgeBottomOcean, TRUE)
+        setmetatile(31, 55, METATILE_General_CalmWater, TRUE)
+        setmetatile(32, 55, METATILE_Fortree_BridgeBottomOcean, TRUE)
+        setmetatile(29, 56, METATILE_Fortree_BridgeTopOcean, TRUE)
+        setmetatile(29, 57, METATILE_Fortree_BridgeBottomOcean, TRUE)
     }
+}
+
+script Route6_AquaGrunt {
+    msgbox(format("I can't believe this..."), MSGBOX_NPC)
+}
+
+script Route6_AquaGrunt2 {
+    msgbox("Oh hey...\nyou wanted to get through here?\pYeah... I'm sorry.\nI'm not sure how this happened.", MSGBOX_NPC)
+}
+
+script Route6_MagmaGrunt {
+    msgbox(format("These idiots broke the bridge!"), MSGBOX_NPC)
+}
+
+script Route6_MagmaGrunt2 {
+    msgbox(Route6_MagmaGrunt2_Text, MSGBOX_NPC)
+}
+
+text Route6_MagmaGrunt2_Text {
+    "I'm not really sure what we're\nsupposed to do now,\lI'd ask Maxie for help but...\p"
+    "I think I heard he was off to somewhere\non Route 10. Not sure why though."
 }
 
 script Route6_Camper {

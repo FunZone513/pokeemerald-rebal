@@ -3146,6 +3146,27 @@ void Script_EndTrainerCanSeeIf(struct ScriptContext *ctx)
 
 //=======================================
 
+bool8 ScrCmd_debugprint(struct ScriptContext *ctx)
+{
+    u16 num;
+    const u8 *str = (const u8*)ScriptReadWord(ctx);
+    u16 numOrVar = ScriptReadHalfword(ctx);
+
+    if (str != NULL)
+    {
+        if (numOrVar != 65535)
+        {
+            num = VarGet(numOrVar);
+            DebugPrintfLevel(MGBA_LOG_ERROR, "%S, %u", str, num);
+        }
+        else
+        {
+            DebugPrintfLevel(MGBA_LOG_ERROR, "%S", str);
+        }
+    }
+    return FALSE;
+}
+
 void GetInteractedPokemon(void) {
     u32 pokemonObjID = (gSpecialVar_LastTalked - 1); // get the map object number
     u32 speciesIndex = gMapHeader.events->objectEvents[pokemonObjID].trainerRange_berryTreeId; // grab the species from sight range    

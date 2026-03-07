@@ -51,8 +51,8 @@ DyecressTown_Indoor1_Spenser_Text_0:
 DyecressTown_Indoor1_Spenser_Text::
 # 22 "data/maps/DyecressTown_Indoor1/scripts.pory"
 	.string "Dyecress' history is something that many\nknow exists, but few remember details.\p"
-	.string "While the specifics of the history have\nbeen lost over time,\l"
-	.string "the guidance granted by our predecessors\lremains in our hearts and actions.\p"
+	.string "While the specifics of the history have\nbeen lost over time, the guidance\l"
+	.string "granted by our predecessors\lremains in our hearts and actions.\p"
 	.string "Thus, the current is built upon the past.\nTo forget where we come from is to\lforget where we're headed.\p"
 	.string "These old bones have been working\ntirelessly for generations, trying to\luncover the secret of the town's origin.\p"
 	.string "While my time has been spent sifting\nthrough old books, I've heard tell that\l"

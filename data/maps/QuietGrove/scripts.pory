@@ -72,7 +72,7 @@ text QuietGrove_Admin_Text {
     "I was hoping we would've bought enough\ntime with the Parasect and the rockslide,\l"
     "but they sure reacted quickly to it.\p"
     "Even after all that hard work\nbehind the scenes...\p" 
-    "Such a let down, we had only just\nstarted getting the info we wanted."
+    "Such a let down, we had only just\nstarted getting the info we wanted.\p"
     "And to cap off this colossal failure,"
 }
 
@@ -113,8 +113,8 @@ script QuietGrove_LittleGirl {
 
 text QuietGrove_LittleGirl_Text {
     "My friend lives around here somewhere,\nthey always pop out of nowhere!\p"
-    "I don't see them every time,\nbut it's always fun when they come back!\p"
+    "I don't see them every time, but\nit's always fun when they come back!\p"
     "Last time they brought a funny lady,\nshe looked a little sad when she saw me,\lbut we had played a whole bunch after!\p"
-    "I hope my friend didn't get scared off by\nangry Pokemon, they're only little,\llike me.\p"
+    "I hope my friend didn't get scared off\nby angry Pokemon, they're only little,\llike me.\p"
     "You should come play with us next\ntime they're here!"
 }

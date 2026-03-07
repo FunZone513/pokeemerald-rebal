@@ -55,7 +55,7 @@ script SpringwoodCity_LibraEvelynnTrigger {
 }
 
 text SpringwoodCity_LibraEvelynn_Text {
-    "Wait... Are you the one that\ncleared out Quiet Grove?\p"
+    "Wait... weren't you the one that\ncleared out Quiet Grove?\p"
     "Hmmm...\p"
     "I'm not sure what you're after,\nbut if you're against Team Aqua then\lyou can't be all bad.\p"
     "Tell you what, I'll be in Spring Woods\nto check something.\p"

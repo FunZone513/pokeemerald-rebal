@@ -228,7 +228,7 @@ QuietGrove_Admin_Text::
 	.string "I was hoping we would've bought enough\ntime with the Parasect and the rockslide,\l"
 	.string "but they sure reacted quickly to it.\p"
 	.string "Even after all that hard work\nbehind the scenes...\p"
-	.string "Such a let down, we had only just\nstarted getting the info we wanted."
+	.string "Such a let down, we had only just\nstarted getting the info we wanted.\p"
 	.string "And to cap off this colossal failure,$"
 
 QuietGrove_Admin_Text2::

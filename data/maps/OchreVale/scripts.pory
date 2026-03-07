@@ -1,4 +1,13 @@
-mapscripts OchreVale_MapScripts {}
+mapscripts OchreVale_MapScripts {
+    MAP_SCRIPT_ON_LOAD: OchreVale_OnLoad
+}
+
+script OchreVale_OnLoad {
+    if (!flag(FLAG_REGI_DOORS_OPENED)) {
+        setmetatile(18, 37, METATILE_Fallarbor_RedRockWall, TRUE)
+        setmetatile(18, 36, METATILE_Fallarbor_RedRockWall, TRUE)
+    }
+}
 
 script OchreVale_OldWoman {
     msgbox(format("Ochre Vale is home to a large quarry, not that much digging is done there anymore."), MSGBOX_NPC)

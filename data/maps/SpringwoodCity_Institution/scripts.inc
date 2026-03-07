@@ -385,7 +385,7 @@ SpringwoodCity_Institution_Employee2_Text_0:
 
 SpringwoodCity_Institution_Grunt_Text_0:
 # 64 "data/maps/SpringwoodCity_Institution/scripts.pory"
-	.string "Huh? What do you mean\nwhat am I still doing here?\pI told you, these are PJs!$"
+	.string "Huh? What am I still doing here?\pI told you, these are PJs!$"
 
 SpringwoodCity_Institution_Grunt_Text_1:
 # 66 "data/maps/SpringwoodCity_Institution/scripts.pory"

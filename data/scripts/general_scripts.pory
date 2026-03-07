@@ -45,6 +45,7 @@ script Generic_POKEMON_INTERACT {
         case 4: message("!?")
         default: message("?")
     }
+    
     waitmessage
     waitmoncry
     waitbuttonpress

@@ -61,7 +61,7 @@ script SpringwoodCity_Institution_Employee2 {
 
 script SpringwoodCity_Institution_Grunt {
     if (flag(FLAG_CLEARED_QUIET_GROVE)) {
-        msgbox("Huh? What do you mean\nwhat am I still doing here?\pI told you, these are PJs!", MSGBOX_NPC)
+        msgbox("Huh? What am I still doing here?\pI told you, these are PJs!", MSGBOX_NPC)
     } else {
         msgbox("The security guys keep looking at me\nlike I'm some suspicious individual.\pI uhh...\nI just forgot to take off my PJs\lthis morning!", MSGBOX_NPC)
     } 
