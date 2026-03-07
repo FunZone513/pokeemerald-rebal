@@ -336,7 +336,7 @@ SpringwoodCity_Institution_StairBlocker_Movement_5:
 
 SpringwoodCity_Institution_Receptionist_Text_0:
 # 13 "data/maps/SpringwoodCity_Institution/scripts.pory"
-	.string "Welcome to the Libra Institute!\nWould you happen to have an appointment?$"
+	.string "Welcome to the Libra Institute!\nDo you happen to have an appointment?$"
 
 SpringwoodCity_Institution_Receptionist_Text_1:
 # 15 "data/maps/SpringwoodCity_Institution/scripts.pory"

@@ -305,7 +305,7 @@ Route2_Camper_Warning_Text::
 	.string "I'm not sure why it's so upset,\nbut I would recommend avoiding it.\p"
 	.string "Gym Leader Martin is supposed to be\ncoming to help calm it down,\l"
 	.string "but I haven't heard from him in a bit.\p"
-	.string "Say, could you go and\n find out where he is?\p"
+	.string "Say, could you go and\nfind out where he is?\p"
 	.string "It would be really helpful,\nas I'm stuck here making sure it\l"
 	.string "doesn't hurt anyone.\p"
 	.string "Best of luck!$"

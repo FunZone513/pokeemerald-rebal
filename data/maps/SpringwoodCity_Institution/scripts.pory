@@ -10,7 +10,7 @@ script SpringwoodCity_Institution_CheckState {
 
 script SpringwoodCity_Institution_Receptionist {
     lockall
-    msgbox("Welcome to the Libra Institute!\nWould you happen to have an appointment?")
+    msgbox("Welcome to the Libra Institute!\nDo you happen to have an appointment?")
     if (var(VAR_DYECRESS_MYSTERY_STATE) == 1) {
         msgbox("...")
         msgbox(SpringwoodCity_Institution_Receptionist_Dyecress_Mystery1)

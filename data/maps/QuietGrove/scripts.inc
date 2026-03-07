@@ -241,7 +241,7 @@ QuietGrove_Admin_Text2::
 QuietGrove_LittleGirl_Text::
 # 114 "data/maps/QuietGrove/scripts.pory"
 	.string "My friend lives around here somewhere,\nthey always pop out of nowhere!\p"
-	.string "I don't see them every time,\nbut it's always fun when they come back!\p"
+	.string "I don't see them every time, but\nit's always fun when they come back!\p"
 	.string "Last time they brought a funny lady,\nshe looked a little sad when she saw me,\lbut we had played a whole bunch after!\p"
-	.string "I hope my friend didn't get scared off by\nangry Pokemon, they're only little,\llike me.\p"
+	.string "I hope my friend didn't get scared off\nby angry Pokemon, they're only little,\llike me.\p"
 	.string "You should come play with us next\ntime they're here!$"

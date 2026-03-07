@@ -17,11 +17,11 @@ script Generic_GYM_LEVEL_GUIDE {
     lockall
     if (var(VAR_CURRENT_LEVEL_CAP) != 100) {
         buffernumberstring(STR_VAR_1, VAR_CURRENT_LEVEL_CAP)
-        msgbox("Recommended Level:\n{STR_VAR_1}", MSGBOX_SIGN)
+        msgbox("Current Level Cap:\n{STR_VAR_1}", MSGBOX_SIGN)
     } else {
         call(Generic_UPDATE_LEVELCAP)
         buffernumberstring(STR_VAR_1, VAR_CURRENT_LEVEL_CAP)
-        msgbox("Recommended Level:\n{STR_VAR_1}", MSGBOX_SIGN)
+        msgbox("Current Level Cap:\n{STR_VAR_1}", MSGBOX_SIGN)
         setvar(VAR_CURRENT_LEVEL_CAP, 100)
     }
     releaseall

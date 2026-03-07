@@ -706,10 +706,12 @@ bool8 StandardWildEncounter(u16 curMetatileBehavior, u16 prevMetatileBehavior)
                         struct Pokemon mon1 = gEnemyParty[0];
                         TryGenerateWildMon(gWildMonHeaders[headerId].landMonsInfo, WILD_AREA_LAND, WILD_CHECK_KEEN_EYE);
                         gEnemyParty[1] = mon1;
+                        VarSet(VAR_0x800A, 0); // clear the wild battle var
                         BattleSetup_StartDoubleWildBattle();
                     }
                     else
                     {
+                        VarSet(VAR_0x800A, 0); // clear the wild battle var
                         BattleSetup_StartWildBattle();
                     }
                     return TRUE;
@@ -1125,6 +1127,7 @@ static void ApplyCleanseTagEncounterRateMod(u32 *encRate)
 
 bool8 TryDoDoubleWildBattle(void)
 {
+    VarSet(VAR_0x800A, 1); // tell the double battle check that its a wild battle
     if (GetSafariZoneFlag()
       || (B_DOUBLE_WILD_REQUIRE_2_MONS == TRUE && GetMonsStateToDoubles() != PLAYER_HAS_TWO_USABLE_MONS))
         return FALSE;

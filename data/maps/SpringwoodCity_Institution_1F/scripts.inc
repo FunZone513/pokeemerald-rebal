@@ -229,4 +229,4 @@ SpringwoodCity_Institution_1F_Director_Text::
 	.string "It's been a dark spot in our knowledge\nbase for quite some time now.\p"
 	.string "We always hear about the rich history\nof the town, yet we're never allowed to\llearn any of it, it's really a shame.\p"
 	.string "I'll dispatch some of our researchers\nright away!\p"
-	.string "They'll make sure to help out with any of\nSpenser's qualms, and I'll make sure they\ldon't make a mess of the town.$"
+	.string "They'll make sure to help out with any\nof Spenser's qualms, and I'll make sure\lthey don't make a mess of the town.$"
