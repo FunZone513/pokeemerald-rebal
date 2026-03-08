@@ -816,7 +816,7 @@ Level: 20
 
 Larvitar
 Ability: Sand Veil
-Level: 21
+Level: 20
 - Rock Slide
 - Stomping Tantrum
 - Sandstorm
@@ -831,29 +831,19 @@ Music: Intense
 Items: Super Potion / Full Heal
 AI: Gym Leader
 
-Nacli (M) @ Eviolite 
+Nacli (M) 
 Ability: Sturdy  
-Level: 20  
+Level: 19  
 EVs: 236 HP / 36 Def / 236 SpD  
 Adamant Nature  
 - Iron Defense  
 - Stealth Rock  
 - Bulldoze  
-- Tackle  
+- Tackle   
 
-Vigoroth (M) @ Silk Scarf  
-Ability: Vital Spirit  
-Level: 20  
-EVs: 252 Atk / 4 SpD / 248 Spe  
-Adamant Nature  
-- Slash  
-- Night Slash  
-- Bulk Up  
-- Slack Off  
-
-Chinchou (F) @ Magnet  
+Chinchou (F) 
 Ability: Water Absorb  
-Level: 20  
+Level: 19  
 EVs: 252 SpA / 252 SpD  
 Modest Nature  
 IVs: 0 Atk  
@@ -862,25 +852,35 @@ IVs: 0 Atk
 - Bubble Beam  
 - Volt Switch  
 
+Makuhita (M)  
+Ability: Guts  
+Level: 20 
+EVs: 252 Atk / 252 SpD  
+Adamant Nature  
+- Bulk Up  
+- Counter  
+- Fire Punch  
+- Arm Thrust
+
+Vigoroth (M) 
+Ability: Vital Spirit  
+Level: 20  
+EVs: 252 Atk / 248 Spe  
+Adamant Nature  
+- Slash  
+- Night Slash  
+- Bulk Up  
+- Slack Off 
+
 Solrock @ Wide Lens  
 Ability: Levitate  
-Level: 20  
+Level: 22  
 EVs: 236 HP / 236 Atk / 36 Spe  
 Adamant Nature  
 - Cosmic Power  
 - Rock Slide  
 - Zen Headbutt  
 - Morning Sun  
-
-Crobat (F) @ Life Orb  
-Ability: Inner Focus  
-Level: 22
-EVs: 252 HP / 248 Atk / 8 SpA  
-Naughty Nature  
-- Air Slash  
-- Poison Jab  
-- Leech Life  
-- Mean Look  
 
 === TRAINER_ROUTE8_PICNICKER ===
 Name: Madeline

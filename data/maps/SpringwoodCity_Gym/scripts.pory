@@ -106,6 +106,8 @@ script SpringwoodCity_Gym_Martin_Defeated {
     msgbox(SpringwoodCity_Gym_Martin_Badge, MSGBOX_DEFAULT)
 	setflag(FLAG_BADGE01_GET)
     call(Generic_UPDATE_LEVELCAP)
+	setvar(VAR_0x8008, 1)
+	call(Common_EventScript_SetGymTrainers)
     releaseall
 }
 

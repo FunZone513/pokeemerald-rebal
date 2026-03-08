@@ -91,7 +91,7 @@ script Route2_Miniboss {
 }
 
 script Route2_Miniboss_Battle {
-    setwildbattle(SPECIES_PARASECT, 25, ITEM_OCCA_BERRY)
+    setwildbattle(SPECIES_PARASECT, 30, ITEM_OCCA_BERRY)
     setflag(FLAG_ACTIVE_BOSS_BATTLE)
     dowildbattle
     clearflag(FLAG_ACTIVE_BOSS_BATTLE)

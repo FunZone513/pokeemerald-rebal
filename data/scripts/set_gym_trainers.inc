@@ -1,7 +1,7 @@
 Common_EventScript_SetGymTrainers::
 	switch VAR_0x8008
-	case 1, RustboroCity_Gym_SetGymTrainers
-	case 2, DewfordTown_Gym_SetGymTrainers
+	case 1, SpringwoodCity_Gym_SetGymTrainers
+	case 2, OchreVale_Gym_SetGymTrainers
 	case 3, MauvilleCity_Gym_SetGymTrainers
 	case 4, LavaridgeTown_Gym_SetGymTrainers
 	case 5, PetalburgCity_Gym_SetGymTrainers
@@ -10,19 +10,20 @@ Common_EventScript_SetGymTrainers::
 	case 8, SootopolisCity_Gym_SetGymTrainers
 	end
 
-RustboroCity_Gym_SetGymTrainers::
-	settrainerflag TRAINER_JOSH
-	settrainerflag TRAINER_TOMMY
-	settrainerflag TRAINER_MARC
+SpringwoodCity_Gym_SetGymTrainers::
+	settrainerflag SPRINGWOOD_GYM_TRAINER1
+	settrainerflag SPRINGWOOD_GYM_TRAINER2
+	settrainerflag SPRINGWOOD_GYM_TRAINER3
+	settrainerflag SPRINGWOOD_GYM_TRAINER4
 	return
 
-DewfordTown_Gym_SetGymTrainers::
-	settrainerflag TRAINER_TAKAO
-	settrainerflag TRAINER_JOCELYN
-	settrainerflag TRAINER_LAURA
-	settrainerflag TRAINER_BRENDEN
-	settrainerflag TRAINER_CRISTIAN
-	settrainerflag TRAINER_LILITH
+OchreVale_Gym_SetGymTrainers::
+	settrainerflag TRAINER_OCHRE_VALE_GYM_HIKER
+	settrainerflag TRAINER_OCHRE_VALE_GYM_BATTLE_GIRL
+	settrainerflag TRAINER_OCHRE_VALE_GYM_BEAUTY
+	settrainerflag TRAINER_OCHRE_VALE_GYM_MAGMA_GRUNT
+	settrainerflag TRAINER_OCHRE_VALE_GYM_MANIAC
+	settrainerflag TRAINER_OCHRE_VALE_GYM_LASS
 	return
 
 MauvilleCity_Gym_SetGymTrainers::

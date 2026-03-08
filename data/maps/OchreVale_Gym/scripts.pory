@@ -4,7 +4,7 @@ mapscripts OchreVale_Gym_MapScripts {
 
 script OchreVale_Gym_FlashSet {
     if (!flag(FLAG_BADGE02_GET)) {
-        setflashlevel(3)
+        setflashlevel(4)
     } else { 
         setflashlevel(1)
     }
@@ -30,6 +30,9 @@ script OchreVale_Gym_Douglas_Defeated {
 	call(Common_EventScript_PlayGymBadgeFanfare)
     msgbox(OchreVale_Gym_Douglas_Badge, MSGBOX_DEFAULT)
 	setflag(FLAG_BADGE02_GET)
+    call(Generic_UPDATE_LEVELCAP)
+	setvar(VAR_0x8008, 2)
+	call(Common_EventScript_SetGymTrainers)
     releaseall
 }
 

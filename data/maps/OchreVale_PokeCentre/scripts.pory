@@ -1,4 +1,10 @@
-mapscripts OchreVale_PokeCentre_MapScripts {}
+mapscripts OchreVale_PokeCentre_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: OchreVale_PokeCentre_OnTransition
+}
+
+script OchreVale_PokeCentre_OnTransition {
+    setrespawn(HEAL_LOCATION_OCHRE_VALE)
+}
 
 script OchreVale_PokeCentre_Hiker {
     msgbox(format("Ochre Vale is a great place to stock up on supplies before I continue on to Springwood City."), MSGBOX_NPC)

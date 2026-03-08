@@ -127,7 +127,7 @@ Route2_Miniboss_2:
 
 Route2_Miniboss_Battle::
 # 94 "data/maps/Route2/scripts.pory"
-	setwildbattle SPECIES_PARASECT, 25, ITEM_OCCA_BERRY
+	setwildbattle SPECIES_PARASECT, 30, ITEM_OCCA_BERRY
 # 95 "data/maps/Route2/scripts.pory"
 	setflag FLAG_ACTIVE_BOSS_BATTLE
 # 96 "data/maps/Route2/scripts.pory"

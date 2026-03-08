@@ -8,8 +8,61 @@ script DyecressTown_OnLoad {
     }
 }
 
+script DyecressFirstVisit {
+    if (!flag(FLAG_FIRST_VISIT_DYECRESS)) {
+        lock
+        applymovement(14, moves(face_left))
+        waitmovement(0)
+        playse(SE_PIN)
+        applymovement(14, Common_Movement_ExclamationMark)
+        waitmovement(0)
+        delay(80)
+        applymovement(14, moves(walk_fast_up*2 walk_fast_left*8 walk_fast_up*4))
+        waitmovement(0)
+        setflag(FLAG_FIRST_VISIT_DYECRESS)
+        removeobject(14)
+        releaseall
+    }
+}
+
+script DyecressTown_Spenser {
+    lockall
+    switch(var(VAR_DYECRESS_MYSTERY_STATE)) {
+        case 0:
+            msgbox(DyecressTown_Spenser_Text1, MSGBOX_NPC)
+            setvar(VAR_DYECRESS_MYSTERY_STATE, 1)
+            break
+        
+        case 1:
+        case 2:
+            msgbox(format("I hope the researchers from Libra can help us uncover the origin of our town."))
+            break
+        
+        case 3:
+        default:
+            msgbox(format("As much as it pains me to have these coats scrutinise our wonderful history, I must admit that they are at least careful not to damage anything."), MSGBOX_NPC)
+    }
+    releaseall
+}
+
+text DyecressTown_Spenser_Text1 {
+    "The history of Dyecress is something\nthat many know exists,\lbut few remember details.\p"
+    "While the specifics of the history have\nbeen lost over time, the guidance\l"
+    "granted by our predecessors\lremains in our hearts and actions.\p"
+    "Thus, the current is built upon the\nefforts of the past.\p"
+    "To forget where we come from is to\nforget where we're headed.\p"
+    "These old bones have been working\ntirelessly trying to uncover the\lsecret of the town's origin.\p"
+    "While my time has been spent sifting\nthrough old books, I've heard tell that\l"
+    "the upstart folks in the city have\lfound new ways of uncovering and\ldeciphering lost texts.\p"
+    "I'm no longer the man I was in my youth,\nso I'm unable to make the trip myself,\l"
+    "and many of the residents here are also\ltoo elderly to travel the distance.\p"
+    "Could you do an old soul a favour?\p"
+    "I would appreciate you sending word to\nLibra Institute in Springwood City,\l"
+    "requesting someone to finally unravel\lthe history of our town."
+}
+
 script DyecressTown_Sign {
-    msgbox("Dyecress Town\nA heritage overlooking the sea.", MSGBOX_SIGN)
+    msgbox("Dyecress Town,\nA heritage overlooking the sea.", MSGBOX_SIGN)
 }
 
 script DyecressTown_Sign2 {
@@ -24,7 +77,7 @@ script DyecressTown_Sign_Temple {
     msgbox("The words seem to have\neroded over time...\pDo you want to try reading it anyway?", MSGBOX_YESNO)
     if (var(VAR_RESULT) == YES) {
         msgbox(DyecressTown_Sign_Temple_Text, MSGBOX_SIGN)
-    }
+    } else { closemessage }
 }
 
 text DyecressTown_Sign_Temple_Text {
@@ -67,8 +120,4 @@ script DyecressTown_Scientist3 {
 
 script DyecressTown_Scientist4 {
     msgbox(format("The text on this sign is much too degraded to be read, so we're using a new method to try and gather more clues."), MSGBOX_NPC)
-}
-
-script DyecressTown_Spenser_Temple {
-    msgbox(format("As much as it pains me to have these coats scrutinise our wonderful history, I must admit that they are at least careful not to damage anything."), MSGBOX_NPC)
 }

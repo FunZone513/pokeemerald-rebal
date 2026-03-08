@@ -1893,7 +1893,7 @@ F_TRAINER_FEMALE |
 #line 818
             .ability = ABILITY_SAND_VEIL,
 #line 819
-            .lvl = 21,
+            .lvl = 20,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
@@ -1930,8 +1930,6 @@ F_TRAINER_FEMALE |
             .species = SPECIES_NACLI,
 #line 834
             .gender = TRAINER_MON_MALE,
-#line 834
-            .heldItem = ITEM_EVIOLITE,
 #line 837
             .ev = TRAINER_PARTY_EVS(236, 0, 36, 0, 0, 236),
 #line 839
@@ -1939,7 +1937,7 @@ F_TRAINER_FEMALE |
 #line 835
             .ability = ABILITY_STURDY,
 #line 836
-            .lvl = 20,
+            .lvl = 19,
 #line 838
             .nature = NATURE_ADAMANT,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -1953,50 +1951,22 @@ F_TRAINER_FEMALE |
             },
             {
 #line 844
-            .species = SPECIES_VIGOROTH,
-#line 844
-            .gender = TRAINER_MON_MALE,
-#line 844
-            .heldItem = ITEM_SILK_SCARF,
-#line 847
-            .ev = TRAINER_PARTY_EVS(0, 252, 0, 248, 0, 4),
-#line 849
-            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-#line 845
-            .ability = ABILITY_VITAL_SPIRIT,
-#line 846
-            .lvl = 20,
-#line 848
-            .nature = NATURE_ADAMANT,
-            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
-            .moves = {
-#line 849
-                MOVE_SLASH,
-                MOVE_NIGHT_SLASH,
-                MOVE_BULK_UP,
-                MOVE_SLACK_OFF,
-            },
-            },
-            {
-#line 854
             .species = SPECIES_CHINCHOU,
-#line 854
+#line 844
             .gender = TRAINER_MON_FEMALE,
-#line 854
-            .heldItem = ITEM_MAGNET,
-#line 857
+#line 847
             .ev = TRAINER_PARTY_EVS(0, 0, 0, 0, 252, 252),
-#line 859
+#line 849
             .iv = TRAINER_PARTY_IVS(31, 0, 31, 31, 31, 31),
-#line 855
+#line 845
             .ability = ABILITY_WATER_ABSORB,
-#line 856
-            .lvl = 20,
-#line 858
+#line 846
+            .lvl = 19,
+#line 848
             .nature = NATURE_MODEST,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
-#line 860
+#line 850
                 MOVE_THUNDER_WAVE,
                 MOVE_THUNDERBOLT,
                 MOVE_BUBBLE_BEAM,
@@ -2004,17 +1974,40 @@ F_TRAINER_FEMALE |
             },
             },
             {
+#line 855
+            .species = SPECIES_MAKUHITA,
+#line 855
+            .gender = TRAINER_MON_MALE,
+#line 858
+            .ev = TRAINER_PARTY_EVS(0, 252, 0, 0, 0, 252),
+#line 860
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 856
+            .ability = ABILITY_GUTS,
+#line 857
+            .lvl = 20,
+#line 859
+            .nature = NATURE_ADAMANT,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 860
+                MOVE_BULK_UP,
+                MOVE_COUNTER,
+                MOVE_FIRE_PUNCH,
+                MOVE_ARM_THRUST,
+            },
+            },
+            {
 #line 865
-            .species = SPECIES_SOLROCK,
-            .gender = TRAINER_MON_RANDOM_GENDER,
+            .species = SPECIES_VIGOROTH,
 #line 865
-            .heldItem = ITEM_WIDE_LENS,
+            .gender = TRAINER_MON_MALE,
 #line 868
-            .ev = TRAINER_PARTY_EVS(236, 236, 0, 36, 0, 0),
+            .ev = TRAINER_PARTY_EVS(0, 252, 0, 248, 0, 0),
 #line 870
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 866
-            .ability = ABILITY_LEVITATE,
+            .ability = ABILITY_VITAL_SPIRIT,
 #line 867
             .lvl = 20,
 #line 869
@@ -2022,36 +2015,35 @@ F_TRAINER_FEMALE |
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 870
-                MOVE_COSMIC_POWER,
-                MOVE_ROCK_SLIDE,
-                MOVE_ZEN_HEADBUTT,
-                MOVE_MORNING_SUN,
+                MOVE_SLASH,
+                MOVE_NIGHT_SLASH,
+                MOVE_BULK_UP,
+                MOVE_SLACK_OFF,
             },
             },
             {
 #line 875
-            .species = SPECIES_CROBAT,
+            .species = SPECIES_SOLROCK,
+            .gender = TRAINER_MON_RANDOM_GENDER,
 #line 875
-            .gender = TRAINER_MON_FEMALE,
-#line 875
-            .heldItem = ITEM_LIFE_ORB,
+            .heldItem = ITEM_WIDE_LENS,
 #line 878
-            .ev = TRAINER_PARTY_EVS(252, 248, 0, 0, 8, 0),
+            .ev = TRAINER_PARTY_EVS(236, 236, 0, 36, 0, 0),
 #line 880
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 876
-            .ability = ABILITY_INNER_FOCUS,
+            .ability = ABILITY_LEVITATE,
 #line 877
             .lvl = 22,
 #line 879
-            .nature = NATURE_NAUGHTY,
+            .nature = NATURE_ADAMANT,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 880
-                MOVE_AIR_SLASH,
-                MOVE_POISON_JAB,
-                MOVE_LEECH_LIFE,
-                MOVE_MEAN_LOOK,
+                MOVE_COSMIC_POWER,
+                MOVE_ROCK_SLIDE,
+                MOVE_ZEN_HEADBUTT,
+                MOVE_MORNING_SUN,
             },
             },
         },

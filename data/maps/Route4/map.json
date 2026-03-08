@@ -164,8 +164,8 @@
     },
     {
       "type": "hidden_item",
-      "x": 15,
-      "y": 18,
+      "x": 23,
+      "y": 12,
       "elevation": 0,
       "item": "ITEM_CALCIUM",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_4_1"

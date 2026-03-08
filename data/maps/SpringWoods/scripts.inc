@@ -261,7 +261,7 @@ SpringWoods_Evelynn_Text::
 # 54 "data/maps/SpringWoods/scripts.pory"
 	.string "...\p"
 	.string "This forest is a beautiful place.\p"
-	.string "The warm water that flows out of the\nspring that is its namesake carries\labundant minerals to enrich the soil.\p"
+	.string "The warm water that flows out of the\nspring that is it's namesake carries\labundant minerals to enrich the soil.\p"
 	.string "It's a perfect harmony of nature.$"
 
 SpringWoods_Evelynn_Text2::

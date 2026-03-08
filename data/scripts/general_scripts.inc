@@ -456,7 +456,7 @@ Generic_POKEMON_INTERACT_Movement_0:
 
 Generic_GYM_LEVEL_GUIDE_Text_0:
 # 20 "data/scripts/general_scripts.pory"
-	.string "Recommended Level:\n{STR_VAR_1}$"
+	.string "Current Level Cap:\n{STR_VAR_1}$"
 
 Generic_POKEMON_INTERACT_Text_0:
 # 41 "data/scripts/general_scripts.pory"

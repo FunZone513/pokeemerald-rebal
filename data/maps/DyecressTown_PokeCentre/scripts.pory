@@ -1,5 +1,10 @@
 mapscripts DyecressTown_PokeCentre_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: DyecressTown_PokeCentre_OnTransition
     MAP_SCRIPT_ON_LOAD: DyecressTown_PokeCentre_OnLoad
+}
+
+script DyecressTown_PokeCentre_OnTransition {
+    setrespawn(HEAL_LOCATION_DYECRESS_TOWN)
 }
 
 script DyecressTown_PokeCentre_OnLoad {
