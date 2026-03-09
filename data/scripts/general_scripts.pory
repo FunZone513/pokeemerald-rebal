@@ -1,3 +1,26 @@
+//MARK: Default Settings
+script Generic_DefaultSettings {
+    setflag(FLAG_SYS_B_DASH)
+    setflag(FLAG_SHARED_EXP)
+    setflag(FLAG_USE_NEW_TYPE_CHART)
+    setvar(VAR_STARTED_GAME, 1)
+    call(Generic_UPDATE_LEVELCAP)
+    call(Generic_IncreaseExpGain)
+    
+    // % chance
+    setvar(VAR_WILD_BATTLE_CHANCE, 15)
+    
+    releaseall
+}
+
+script Generic_IncreaseExpGain {
+    //! this is 2.5x for playtesting purposes
+    setvar(VAR_INCREASE_EXP_GAIN, 150)
+
+    // % increase. EG: 20 = 1.2x experience. Set to 0 for no bonus.
+    //setvar(VAR_INCREASE_EXP_GAIN, 50) 
+}
+
 //MARK: Level Cap
 script Generic_UPDATE_LEVELCAP {
     setvar(VAR_CURRENT_LEVEL_CAP, 15)

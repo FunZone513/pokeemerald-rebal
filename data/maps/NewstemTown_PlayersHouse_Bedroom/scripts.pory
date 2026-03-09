@@ -1,22 +1,7 @@
 mapscripts NewstemTown_PlayersHouse_Bedroom_MapScripts {
     MAP_SCRIPT_ON_FRAME_TABLE [ 
-        VAR_STARTED_GAME, 0: NewstemTown_DefaultSettings
+        VAR_STARTED_GAME, 0: Generic_DefaultSettings
     ]
-}
-
-script NewstemTown_DefaultSettings {
-    setflag(FLAG_SYS_B_DASH)
-    setflag(FLAG_SHARED_EXP)
-    setflag(FLAG_USE_NEW_TYPE_CHART)
-    setvar(VAR_STARTED_GAME, 1)
-    call(Generic_UPDATE_LEVELCAP)
-    
-    // % chance
-    setvar(VAR_WILD_BATTLE_CHANCE, 15)
-    
-    // % increase. EG: 20 = 1.2x experience. Set to 0 for no bonus.
-    setvar(VAR_INCREASE_EXP_GAIN, 50) 
-    releaseall
 }
 
 script NewstemTown_PlayersHouse_Bedroom_Settings {
@@ -48,7 +33,7 @@ script NewstemTown_PlayersHouse_Bedroom_Settings {
             multichoice(25, 5, MULTI_GENERIC_ONOFF, 0)
             closemessage
             if (var(VAR_RESULT) == 0) { 
-                setvar(VAR_INCREASE_EXP_GAIN, 150) //! this is actually 2.5x for playtesting
+                call(Generic_IncreaseExpGain)
             } else { setvar(VAR_INCREASE_EXP_GAIN, 0) }
             goto(NewstemTown_PlayersHouse_Bedroom_Settings)
         
@@ -80,13 +65,3 @@ script NewstemTown_PlayersHouse_Bedroom_Settings {
 script NewstemTown_PlayersHouse_Bedroom_PC {
     call(LittlerootTown_BrendansHouse_2F_EventScript_CheckPlayersPC)
 }
-
-//script NewstemTown_DEBUG {
-//    lockall
-//    givemon(SPECIES_TURTWIG, 1)
-//    istypeinparty(TYPE_GRASS)
-//    if (var(VAR_RESULT) == YES) {
-//        msgbox("Yeah")
-//    }
-//    releaseall
-//}

@@ -163,18 +163,15 @@ AI: Gym Leader
 
 Roggenrola  
 Ability: Sturdy  
-Level: 12
-EVs: 236 HP / 236 Atk / 36 Def  
+Level: 12 
 Adamant Nature  
 - Stealth Rock  
 - Tackle  
-- Rock Tomb  
-- Sand Attack  
+- Rock Tomb   
 
 Yanma  
 Ability: Speed Boost  
 Level: 12
-EVs: 236 SpA / 236 Spe  
 Mild Nature  
 - Struggle Bug  
 - Quick Attack  
@@ -183,7 +180,6 @@ Mild Nature
 
 Clauncher  
 Level: 12
-EVs: 52 HP / 224 SpA / 224 Spe  
 Mild Nature  
 - Water Pulse  
 - Aqua Jet  
@@ -192,7 +188,6 @@ Mild Nature
 Sableye  
 Ability: Prankster  
 Level: 13
-EVs: 12 HP / 244 Def / 224 SpD  
 Careful Nature  
 - Fake Out  
 - Shadow Sneak  
@@ -202,11 +197,10 @@ Careful Nature
 Munchlax @ Sitrus Berry  
 Ability: Gluttony  
 Level: 15
-EVs: 228 Atk / 244 Def / 28 SpD  
 Adamant Nature  
 - Lick  
 - Tackle  
-- Recycle  
+- Recycle 
 - Curse 
 
 === SPRINGWOOD_GYM_TRAINER1 === 
