@@ -13,7 +13,7 @@ MauvilleCity_Gym_OnLoad:
 # 7 "data/maps/MauvilleCity_Gym/scripts.pory"
 	goto_if_set FLAG_DEFEATED_MAUVILLE_GYM, MauvilleCity_Gym_EventScript_DeactivatePuzzle
 # 8 "data/maps/MauvilleCity_Gym/scripts.pory"
-	switch VAR_MAUVILLE_GYM_STATE
+	switch VAR_SPRINGWOOD_GYM_STATE
 # 9 "data/maps/MauvilleCity_Gym/scripts.pory"
 	case 0, MauvilleCity_Gym_EventScript_UpdateBarriers
 # 10 "data/maps/MauvilleCity_Gym/scripts.pory"
@@ -283,9 +283,9 @@ MauvilleCity_Gym_EventScript_Switch1::
 # 142 "data/maps/MauvilleCity_Gym/scripts.pory"
 	goto_if_set FLAG_DEFEATED_MAUVILLE_GYM, MauvilleCity_Gym_EventScript_SwitchDoNothing
 # 143 "data/maps/MauvilleCity_Gym/scripts.pory"
-	goto_if_eq VAR_MAUVILLE_GYM_STATE, 1, MauvilleCity_Gym_EventScript_SwitchDoNothing
+	goto_if_eq VAR_SPRINGWOOD_GYM_STATE, 1, MauvilleCity_Gym_EventScript_SwitchDoNothing
 # 144 "data/maps/MauvilleCity_Gym/scripts.pory"
-	setvar VAR_MAUVILLE_GYM_STATE, 1
+	setvar VAR_SPRINGWOOD_GYM_STATE, 1
 # 145 "data/maps/MauvilleCity_Gym/scripts.pory"
 	setvar VAR_0x8004, 0
 # 146 "data/maps/MauvilleCity_Gym/scripts.pory"
@@ -301,9 +301,9 @@ MauvilleCity_Gym_EventScript_Switch2::
 # 151 "data/maps/MauvilleCity_Gym/scripts.pory"
 	goto_if_set FLAG_DEFEATED_MAUVILLE_GYM, MauvilleCity_Gym_EventScript_SwitchDoNothing
 # 152 "data/maps/MauvilleCity_Gym/scripts.pory"
-	goto_if_eq VAR_MAUVILLE_GYM_STATE, 2, MauvilleCity_Gym_EventScript_SwitchDoNothing
+	goto_if_eq VAR_SPRINGWOOD_GYM_STATE, 2, MauvilleCity_Gym_EventScript_SwitchDoNothing
 # 153 "data/maps/MauvilleCity_Gym/scripts.pory"
-	setvar VAR_MAUVILLE_GYM_STATE, 2
+	setvar VAR_SPRINGWOOD_GYM_STATE, 2
 # 154 "data/maps/MauvilleCity_Gym/scripts.pory"
 	setvar VAR_0x8004, 1
 # 155 "data/maps/MauvilleCity_Gym/scripts.pory"
@@ -319,9 +319,9 @@ MauvilleCity_Gym_EventScript_Switch3::
 # 160 "data/maps/MauvilleCity_Gym/scripts.pory"
 	goto_if_set FLAG_DEFEATED_MAUVILLE_GYM, MauvilleCity_Gym_EventScript_SwitchDoNothing
 # 161 "data/maps/MauvilleCity_Gym/scripts.pory"
-	goto_if_eq VAR_MAUVILLE_GYM_STATE, 3, MauvilleCity_Gym_EventScript_SwitchDoNothing
+	goto_if_eq VAR_SPRINGWOOD_GYM_STATE, 3, MauvilleCity_Gym_EventScript_SwitchDoNothing
 # 162 "data/maps/MauvilleCity_Gym/scripts.pory"
-	setvar VAR_MAUVILLE_GYM_STATE, 3
+	setvar VAR_SPRINGWOOD_GYM_STATE, 3
 # 163 "data/maps/MauvilleCity_Gym/scripts.pory"
 	setvar VAR_0x8004, 2
 # 164 "data/maps/MauvilleCity_Gym/scripts.pory"
@@ -337,9 +337,9 @@ MauvilleCity_Gym_EventScript_Switch4::
 # 169 "data/maps/MauvilleCity_Gym/scripts.pory"
 	goto_if_set FLAG_DEFEATED_MAUVILLE_GYM, MauvilleCity_Gym_EventScript_SwitchDoNothing
 # 170 "data/maps/MauvilleCity_Gym/scripts.pory"
-	goto_if_eq VAR_MAUVILLE_GYM_STATE, 4, MauvilleCity_Gym_EventScript_SwitchDoNothing
+	goto_if_eq VAR_SPRINGWOOD_GYM_STATE, 4, MauvilleCity_Gym_EventScript_SwitchDoNothing
 # 171 "data/maps/MauvilleCity_Gym/scripts.pory"
-	setvar VAR_MAUVILLE_GYM_STATE, 4
+	setvar VAR_SPRINGWOOD_GYM_STATE, 4
 # 172 "data/maps/MauvilleCity_Gym/scripts.pory"
 	setvar VAR_0x8004, 3
 # 173 "data/maps/MauvilleCity_Gym/scripts.pory"

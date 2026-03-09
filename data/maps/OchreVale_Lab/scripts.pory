@@ -2,7 +2,7 @@ mapscripts OchreVale_Lab_MapScripts {}
 
 script OchreVale_Lab_Director {
     lockall
-    if (var(VAR_ROUTE4_WATER_STONE_STATE) == 4) {
+    if (var(VAR_ROUTE4_WATER_STONE_STATE) <= 4) {
         msgbox(OchreVale_Lab_Director_Text, MSGBOX_NPC)
         setvar(VAR_ROUTE4_WATER_STONE_STATE, 5)
     } elif (var(VAR_ROUTE4_WATER_STONE_STATE) == 5) {

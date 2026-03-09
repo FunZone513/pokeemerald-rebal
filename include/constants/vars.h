@@ -194,7 +194,8 @@
 #define VAR_BRINEY_HOUSE_STATE                           0x4090
 #define VAR_UNUSED_0x4091                                0x4091 // Unused Var
 #define VAR_LITTLEROOT_INTRO_STATE                       0x4092
-#define VAR_MAUVILLE_GYM_STATE                           0x4093
+#define VAR_SPRINGWOOD_GYM_STATE                         0x4093 // repurposed since I've changed methods
+//#define VAR_DYECRESS_INTRO_STATE                         VAR_SPRINGWOOD_GYM_STATE
 #define VAR_LILYCOVE_MUSEUM_2F_STATE                     0x4094
 #define VAR_LILYCOVE_FAN_CLUB_STATE                      0x4095
 #define VAR_BRINEY_LOCATION                              0x4096
@@ -270,8 +271,11 @@
 #define VAR_UNUSED_0x40DC                                0x40DC // Unused Var
 #define VAR_GIFT_PICHU_SLOT                              0x40DD
 #define VAR_GIFT_UNUSED_1                                0x40DE // Var is written to, but never read
+#define VAR_SPRINGWOOD_GYM_SWITCH1                       VAR_GIFT_UNUSED_1
 #define VAR_GIFT_UNUSED_2                                0x40DF // Var is written to, but never read
+#define VAR_SPRINGWOOD_GYM_SWITCH2                       VAR_GIFT_UNUSED_2
 #define VAR_GIFT_UNUSED_3                                0x40E0 // Var is written to, but never read
+#define VAR_SPRINGWOOD_GYM_SWITCH3                       VAR_GIFT_UNUSED_3
 #define VAR_GIFT_UNUSED_4                                0x40E1 // Var is written to, but never read
 #define VAR_GIFT_UNUSED_5                                0x40E2 // Var is written to, but never read
 #define VAR_GIFT_UNUSED_6                                0x40E3 // Var is written to, but never read

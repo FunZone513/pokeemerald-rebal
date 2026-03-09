@@ -255,7 +255,7 @@ SpringWoods_Picnicker_Text_2:
 # 109 "data/maps/SpringWoods/scripts.pory"
 	.string "Spring Woods are named after the spring\n"
 	.string "that provides the water for the woods\l"
-	.string "to propsper.$"
+	.string "to prosper.$"
 
 SpringWoods_Evelynn_Text::
 # 54 "data/maps/SpringWoods/scripts.pory"

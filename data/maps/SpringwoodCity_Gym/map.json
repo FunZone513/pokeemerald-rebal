@@ -115,27 +115,27 @@
       "x": 3,
       "y": 15,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_SPRINGWOOD_GYM_SWITCH1",
       "var_value": "0",
-      "script": "SpringwoodCity_Gym_PressSwitch1"
+      "script": "SpringwoodCity_Gym_CheckPlayerPos"
     },
     {
       "type": "trigger",
       "x": 2,
       "y": 10,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_SPRINGWOOD_GYM_SWITCH2",
       "var_value": "0",
-      "script": "SpringwoodCity_Gym_PressSwitch2"
+      "script": "SpringwoodCity_Gym_CheckPlayerPos"
     },
     {
       "type": "trigger",
       "x": 10,
       "y": 7,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_SPRINGWOOD_GYM_SWITCH3",
       "var_value": "0",
-      "script": "SpringwoodCity_Gym_PressSwitch3"
+      "script": "SpringwoodCity_Gym_CheckPlayerPos"
     }
   ],
   "bg_events": [

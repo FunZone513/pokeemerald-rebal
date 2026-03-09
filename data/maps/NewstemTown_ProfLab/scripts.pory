@@ -6,16 +6,11 @@ mapscripts NewstemTown_ProfLab_MapScripts {
 
 script NewstemTown_ProfLab_Intro {
     lockall
-    applymovement(OBJ_EVENT_ID_PLAYER, NewstemTown_WalkIntoLab)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up*6))
     waitmovement(0)
     msgbox(NewstemTown_ProfLab_Text_Intro)
     setvar(VAR_LITTLEROOT_INTRO_STATE, 2)
     releaseall
-}
-
-movement NewstemTown_WalkIntoLab {
-    walk_up * 6
-    //face_up
 }
 
 script NewstemTown_ProfLab_Professor {
@@ -87,6 +82,16 @@ script StarterSelection {
         hidemonpic
     }
     waitmessage
+    applymovement(4, moves(face_left))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+    waitmovement(0)
+    msgbox(format("I also have some items to help you get started on your adventure."), MSGBOX_NPC)
+    giveitem(ITEM_POKE_BALL, 5)
+    giveitem(ITEM_POTION, 2)
+    msgbox(format("Have fun out there!"), MSGBOX_NPC)
+    applymovement(4, moves(face_down))
+    waitmovement(0)
+    releaseall
 }
 
 script PickedStarter {
@@ -111,6 +116,7 @@ script NicknamePartyMon {
         call(Common_EventScript_GetGiftMonPartySlot)
         call(Common_EventScript_NameReceivedPartyMon)
     }
+    return
 }
 
 script NicknameBoxMon{

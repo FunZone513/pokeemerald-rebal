@@ -3,62 +3,123 @@ mapscripts DyecressTown_MapScripts {
 }
 
 script DyecressTown_OnLoad {
-    if (var(VAR_DYECRESS_MYSTERY_STATE) <= 2) {
-        setflag(FLAG_TEMP_A)
+    switch(var(VAR_DYECRESS_MYSTERY_STATE)) {
+        case 0: // not started
+            setflag(FLAG_TEMP_A) 
+            break
+        
+        case 1: // seen baltoy
+        case 2: // spoken to simon
+        case 3: // spoken to receptionist at libra
+            setflag(FLAG_TEMP_A)
+            setflag(FLAG_TEMP_B)
+            break
+        
+        case 4: // spoken to libra chief
+        case 5: // gotten reward from simon
+        default:
+            setflag(FLAG_TEMP_B)
+            setflag(FLAG_TEMP_C)
     }
 }
 
 script DyecressFirstVisit {
-    if (!flag(FLAG_FIRST_VISIT_DYECRESS)) {
-        lock
-        applymovement(14, moves(face_left))
-        waitmovement(0)
-        playse(SE_PIN)
-        applymovement(14, Common_Movement_ExclamationMark)
-        waitmovement(0)
-        delay(80)
-        applymovement(14, moves(walk_fast_up*2 walk_fast_left*8 walk_fast_up*4))
-        waitmovement(0)
-        setflag(FLAG_FIRST_VISIT_DYECRESS)
-        removeobject(14)
-        releaseall
+    switch(var(VAR_DYECRESS_MYSTERY_STATE)) {
+        case 0: call(DyecressTown_Baltoy_Bait) break
+        case 1: call(DyecressTown_FirstTempleVisit) break
+
+        // might want to add something else here later on
+        default: break
     }
+}
+
+script DyecressTown_Baltoy_Bait {
+    lock
+    applymovement(14, moves(face_left))
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(14, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    delay(80)
+    applymovement(14, moves(walk_fast_up*2 walk_fast_left*8 walk_fast_up*4))
+    waitmovement(0)
+    removeobject(14)
+    setvar(VAR_DYECRESS_MYSTERY_STATE, 1)
+    releaseall 
+}
+
+script DyecressTown_FirstTempleVisit {
+    lock
+    applymovement(15, moves(jump_in_place_down))
+    playse(SE_LEDGE)
+    waitmovement(0)
+    applymovement(15, moves(jump_in_place_down))
+    playse(SE_LEDGE)
+    waitmovement(0)
+    applymovement(15, moves(face_up))
+    waitmovement(0)
+    delay(60)
+    applymovement(15, moves(face_left lock_facing_direction))
+    waitmovement(0)
+    applymovement(15, moves(walk_right))
+    applymovement(10, moves(walk_down*4))
+    waitmovement(15)
+    applymovement(15, moves(unlock_facing_direction face_down))
+    waitmovement(10)
+
+    getobjectxy(OBJ_EVENT_ID_PLAYER, CURRENT_POSITION, VAR_TEMP_A, VAR_TEMP_B)
+    if (var(VAR_TEMP_A) == 19 ) { 
+        applymovement(10, moves(walk_left face_down)) 
+    } elif (var(VAR_TEMP_A) == 21 ) { 
+        applymovement(10, moves(walk_right face_down))
+    } else { applymovement(10, moves(face_down)) }
+    waitmovement(0)
+
+    msgbox( DyecressTown_MysteryText_Start, MSGBOX_NPC)
+
+    if (var(VAR_TEMP_A) == 19 ) { 
+        applymovement(10, moves(walk_right)) 
+    } elif (var(VAR_TEMP_A) == 21 ) { 
+        applymovement(10, moves(walk_left))
+    } else { applymovement(10, moves(face_up)) }
+    waitmovement(0)
+    
+    applymovement(10, moves(walk_up*4))
+    waitmovement(0)
+    applymovement(15, moves(walk_left face_down))
+    waitmovement(0)
+    setvar(VAR_DYECRESS_MYSTERY_STATE, 2)
+    releaseall
 }
 
 script DyecressTown_Spenser {
     lockall
     switch(var(VAR_DYECRESS_MYSTERY_STATE)) {
         case 0:
-            msgbox(DyecressTown_Spenser_Text1, MSGBOX_NPC)
-            setvar(VAR_DYECRESS_MYSTERY_STATE, 1)
-            break
-        
         case 1:
         case 2:
-            msgbox(format("I hope the researchers from Libra can help us uncover the origin of our town."))
+            msgbox(format("I hope the researchers from Libra Institute can help us uncover the origin of our town."))
             break
         
-        case 3:
-        default:
-            msgbox(format("As much as it pains me to have these coats scrutinise our wonderful history, I must admit that they are at least careful not to damage anything."), MSGBOX_NPC)
+        default: break
     }
     releaseall
 }
 
-text DyecressTown_Spenser_Text1 {
-    "The history of Dyecress is something\nthat many know exists,\lbut few remember details.\p"
-    "While the specifics of the history have\nbeen lost over time, the guidance\l"
-    "granted by our predecessors\lremains in our hearts and actions.\p"
-    "Thus, the current is built upon the\nefforts of the past.\p"
-    "To forget where we come from is to\nforget where we're headed.\p"
-    "These old bones have been working\ntirelessly trying to uncover the\lsecret of the town's origin.\p"
-    "While my time has been spent sifting\nthrough old books, I've heard tell that\l"
-    "the upstart folks in the city have\lfound new ways of uncovering and\ldeciphering lost texts.\p"
-    "I'm no longer the man I was in my youth,\nso I'm unable to make the trip myself,\l"
-    "and many of the residents here are also\ltoo elderly to travel the distance.\p"
-    "Could you do an old soul a favour?\p"
-    "I would appreciate you sending word to\nLibra Institute in Springwood City,\l"
-    "requesting someone to finally unravel\lthe history of our town."
+text DyecressTown_MysteryText_Start {
+    "You're a new face around here,\nmy Baltoy is a little skittish around\lnew folks so don't mind it.\p"
+    "You look like you've just started\nout on a Pokemon adventure of your own.\p"
+    "It's nice of you to pop into our\ntown here, but I can't imagine there\lis much here that you would want to see.\p"
+    "Most of the younger folks here\nhave already left for the city,\lso you're probably not going to find\lany exciting battles here.\p"
+    "...\p"
+    "Hmm...\p"
+    "You may not find any battling here,\nbut every proper Pokemon adventure is\lin need of some quests right?\p"
+    "I've been researching the history\nof the town for decades,\lbut time is catching up to me.\p"
+    "As I don't have anyone to continue\nafter I'm gone, I would at least like\lto see how much progress can be made\lbefore my time is up.\p"
+    "I've heard tell that the upstart folks\nin the city have found new ways of\luncovering and deciphering lost text.\p"
+    "I'm no longer the man I was in my youth,\nso I'm unable to make the trip myself,\lso could you do an old soul a favour?\p"
+    "I would appreciate you sending word to\nLibra Institute in Springwood City,\lrequesting someone to finally unravel\lthe history of our town.\p"
+    "I'm sure I have some type of artifact\nlying around that could make it worth\lyour time and effort."
 }
 
 script DyecressTown_Sign {
@@ -66,7 +127,7 @@ script DyecressTown_Sign {
 }
 
 script DyecressTown_Sign2 {
-    msgbox("Spenser's House.", MSGBOX_SIGN)
+    msgbox("Simon's House.", MSGBOX_SIGN)
 }
 
 script DyecressTown_Sign3 {

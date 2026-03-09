@@ -29,7 +29,7 @@ MauvilleCity_OnTransition:
 # 15 "data/maps/MauvilleCity/scripts.pory"
 	clearflag FLAG_MAUVILLE_GYM_BARRIERS_STATE
 # 16 "data/maps/MauvilleCity/scripts.pory"
-	setvar VAR_MAUVILLE_GYM_STATE, 0
+	setvar VAR_SPRINGWOOD_GYM_STATE, 0
 # 17 "data/maps/MauvilleCity/scripts.pory"
 	call_if_set FLAG_GOT_TM_THUNDERBOLT_FROM_WATTSON, MauvilleCity_EventScript_MoveWattsonBackToGym
 # 18 "data/maps/MauvilleCity/scripts.pory"

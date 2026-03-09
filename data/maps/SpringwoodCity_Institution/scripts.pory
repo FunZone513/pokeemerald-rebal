@@ -3,31 +3,29 @@ mapscripts SpringwoodCity_Institution_MapScripts {
 }
 
 script SpringwoodCity_Institution_CheckState {
-    if (var(VAR_DYECRESS_MYSTERY_STATE) >= 2) {
-        setvar(VAR_TEMP_A, 1)
+    if (var(VAR_DYECRESS_MYSTERY_STATE) >= 4) {
+        setflag(FLAG_TEMP_A)
     }
 }
 
 script SpringwoodCity_Institution_Receptionist {
     lockall
     msgbox("Welcome to the Libra Institute!\nDo you happen to have an appointment?")
-    if (var(VAR_DYECRESS_MYSTERY_STATE) == 1) {
-        msgbox("...")
-        msgbox(SpringwoodCity_Institution_Receptionist_Dyecress_Mystery1)
-        setvar(VAR_TEMP_A, 1)
-        setvar(VAR_DYECRESS_MYSTERY_STATE, 2)
-    } elif (var(VAR_DYECRESS_MYSTERY_STATE) == 2) {
-        msgbox(format("Oh you're the one helping out Spenser. You'll find our researchers up the stairs to the left."))
+    if (var(VAR_DYECRESS_MYSTERY_STATE) == 2) {
+        msgbox(SpringwoodCity_Institution_Receptionist_Dyecress_Mystery1, MSGBOX_NPC)
+        setvar(VAR_DYECRESS_MYSTERY_STATE, 3)
+    } elif (var(VAR_DYECRESS_MYSTERY_STATE) == 3) {
+        msgbox(format("If you're looking for the researchers to help out Simon, you'll find them up the stairs to the left."), MSGBOX_NPC)
     }
     releaseall
 }
 
 text SpringwoodCity_Institution_Receptionist_Dyecress_Mystery1 {
+    "...\p"
     "You have a message from a wordy Old Man\nin Dyecress Town?\p"
     "I see!\p"
-    "Our insitute has had quite an interest\nin Dyecress for quite a while now,\l"
-    "but Old Spenser was reluctant to let us\linvestigate the town.\p"
-    "If he's sent you here as a request for\nhelp, then I can only imagine how stumped\lhe must be on his current task.\p"
+    "Our insitute has had quite an interest\nin Dyecress for quite a while now,\lbut Simon was reluctant to let us\linvestigate the town.\p"
+    "If he's sent you here as a request for\nhelp, then I can only imagine how\lstumped he must be on his current task.\p"
     "Please make your way up the stairs to\nthe left, our in-house researches would\lbe honoured to lend a hand."
 }
 
@@ -44,11 +42,23 @@ script SpringwoodCity_Institution_Scientist {
 }
 
 script SpringwoodCity_Institution_Scientist2 {
-    msgbox("We collaborate with the Research Lab\non Route 4 sometimes.\pThey discover things, we refine them.", MSGBOX_NPC)
+    msgbox(format("We collaborate with the Research Lab on Route 4 sometimes. They discover things, we refine them."), MSGBOX_NPC)
 }
 
 script SpringwoodCity_Institution_Scientist3 {
     msgbox(format("Trying to determine research budgets is always a pain."), MSGBOX_NPC)
+}
+
+script SpringwoodCity_Institution_Scientist4 {
+    msgbox(format("I've heard that there's a mystery at Dyecress Town, but we don't have permission to look into it."), MSGBOX_NPC)
+}
+
+script SpringwoodCity_Institution_Scientist5 {
+    msgbox(format("Our project got dropped, so we're kinda just standing around waiting for a new one."), MSGBOX_NPC)
+}
+
+script SpringwoodCity_Institution_Scientist6 {
+    msgbox(format("I hope we don't get fired before we can get a new task, how else am I going to feed myself and my 43 barboach babies?"), MSGBOX_NPC)
 }
 
 script SpringwoodCity_Institution_Employee {
@@ -69,31 +79,40 @@ script SpringwoodCity_Institution_Grunt {
 
 script SpringwoodCity_Institution_StairBlocker1 {
     setvar(VAR_TEMP_1, 1)
-    call(SpringwoodCity_Institution_StairBlocker)
+    call(SpringwoodCity_Institution_StairBlockerL)
 }
 
 script SpringwoodCity_Institution_StairBlocker2 {
     setvar(VAR_TEMP_1, 2)
-    call(SpringwoodCity_Institution_StairBlocker)
+    call(SpringwoodCity_Institution_StairBlockerL)
 }
 
 script SpringwoodCity_Institution_StairBlocker3 {
     setvar(VAR_TEMP_1, 3)
-    call(SpringwoodCity_Institution_StairBlocker)
+    call(SpringwoodCity_Institution_StairBlockerL)
 }
 
 script SpringwoodCity_Institution_StairBlocker4 {
     setvar(VAR_TEMP_1, 4)
-    call(SpringwoodCity_Institution_StairBlocker)
+    call(SpringwoodCity_Institution_StairBlockerR)
 }
 
 script SpringwoodCity_Institution_StairBlocker5 {
     setvar(VAR_TEMP_1, 5)
-    call(SpringwoodCity_Institution_StairBlocker)
+    call(SpringwoodCity_Institution_StairBlockerR)
 }
 
 script SpringwoodCity_Institution_StairBlocker6 {
     setvar(VAR_TEMP_1, 6)
+    call(SpringwoodCity_Institution_StairBlockerR)
+}
+
+script SpringwoodCity_Institution_StairBlockerL {
+    if (var(VAR_DYECRESS_MYSTERY_STATE) < 3) { call(SpringwoodCity_Institution_StairBlocker) }
+}
+
+script SpringwoodCity_Institution_StairBlockerR {
+    //TODO: doesn't have a quest yet
     call(SpringwoodCity_Institution_StairBlocker)
 }
 

@@ -95,72 +95,74 @@ DyecressTown_PokeCentre_Girl::
 # 54 "data/maps/DyecressTown_PokeCentre/scripts.pory"
 	delay 120
 # 55 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-	braillemessage DyecressTown_PokeCentre_Girl_Text
+	playse SE_M_STRENGTH
 # 56 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-	setvar VAR_0x8004, 1
+	braillemessage DyecressTown_PokeCentre_Girl_Text
 # 57 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-	setvar VAR_0x8005, 1
+	setvar VAR_0x8004, 1
 # 58 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-	setvar VAR_0x8006, 12
+	setvar VAR_0x8005, 3
 # 59 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-	setvar VAR_0x8007, 2
+	setvar VAR_0x8006, 12
 # 60 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-	setvar VAR_0x8008, 8
+	setvar VAR_0x8007, 2
 # 61 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-	special ShakeCamera
+	setvar VAR_0x8008, 8
 # 62 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-	waitstate
+	special ShakeCamera
 # 63 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-	setvar VAR_0x8008, 0
+	waitstate
 # 64 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-	delay 48
+	setvar VAR_0x8008, 0
 # 65 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-	closebraillemessage
+	delay 60
 # 66 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-	playse SE_M_LEER
+	closebraillemessage
 # 67 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-	fadescreenspeed FADE_TO_WHITE, 1
+	playse SE_M_LEER
 # 68 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-	setflag FLAG_DYECRESS_BULLSHIT
+	fadescreenspeed FADE_TO_WHITE, 1
 # 69 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-	removeobject 5
+	setflag FLAG_DYECRESS_BULLSHIT
 # 70 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-	applymovement 2, DyecressTown_PokeCentre_Girl_Movement_1
+	removeobject 5
 # 71 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-	applymovement 3, DyecressTown_PokeCentre_Girl_Movement_2
+	applymovement 2, DyecressTown_PokeCentre_Girl_Movement_1
 # 72 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-	applymovement 4, DyecressTown_PokeCentre_Girl_Movement_3
+	applymovement 3, DyecressTown_PokeCentre_Girl_Movement_2
 # 73 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-	waitmovement 0
+	applymovement 4, DyecressTown_PokeCentre_Girl_Movement_3
 # 74 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-	setobjectmovementtype 2, MOVEMENT_TYPE_FACE_UP
+	waitmovement 0
 # 75 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-	setobjectmovementtype 3, MOVEMENT_TYPE_FACE_DOWN
+	setobjectmovementtype 2, MOVEMENT_TYPE_FACE_UP
 # 76 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-	setobjectmovementtype 4, MOVEMENT_TYPE_FACE_RIGHT
+	setobjectmovementtype 3, MOVEMENT_TYPE_FACE_DOWN
 # 77 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-	special DrawWholeMapView
+	setobjectmovementtype 4, MOVEMENT_TYPE_FACE_RIGHT
 # 78 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-	fadescreenspeed FADE_FROM_WHITE, 3
+	special DrawWholeMapView
 # 79 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-	delay 48
+	fadescreenspeed FADE_FROM_WHITE, 3
 # 80 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-	fadeinbgm 2
+	delay 48
 # 81 "data/maps/DyecressTown_PokeCentre/scripts.pory"
+	fadeinbgm 2
+# 82 "data/maps/DyecressTown_PokeCentre/scripts.pory"
 	releaseall
 	return
 
 
-# 84 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-
 # 85 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-DyecressTown_PokeCentre_Girl_Text:
+
 # 86 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-    brailleformat 3, 0, 25, 19, 6, 3
+DyecressTown_PokeCentre_Girl_Text:
 # 87 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-	.braille "????\n"
+    brailleformat 3, 0, 25, 19, 6, 3
 # 88 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-	.braille "????$"
+	.braille "DONT\n"
+# 89 "data/maps/DyecressTown_PokeCentre/scripts.pory"
+	.braille "LOOK$"
 
 # 52 "data/maps/DyecressTown_PokeCentre/scripts.pory"
 DyecressTown_PokeCentre_Girl_Movement_0:
@@ -168,21 +170,21 @@ DyecressTown_PokeCentre_Girl_Movement_0:
 	face_player
 	step_end
 
-# 70 "data/maps/DyecressTown_PokeCentre/scripts.pory"
+# 71 "data/maps/DyecressTown_PokeCentre/scripts.pory"
 DyecressTown_PokeCentre_Girl_Movement_1:
-# 70 "data/maps/DyecressTown_PokeCentre/scripts.pory"
+# 71 "data/maps/DyecressTown_PokeCentre/scripts.pory"
 	face_up
 	step_end
 
-# 71 "data/maps/DyecressTown_PokeCentre/scripts.pory"
+# 72 "data/maps/DyecressTown_PokeCentre/scripts.pory"
 DyecressTown_PokeCentre_Girl_Movement_2:
-# 71 "data/maps/DyecressTown_PokeCentre/scripts.pory"
+# 72 "data/maps/DyecressTown_PokeCentre/scripts.pory"
 	face_down
 	step_end
 
-# 72 "data/maps/DyecressTown_PokeCentre/scripts.pory"
+# 73 "data/maps/DyecressTown_PokeCentre/scripts.pory"
 DyecressTown_PokeCentre_Girl_Movement_3:
-# 72 "data/maps/DyecressTown_PokeCentre/scripts.pory"
+# 73 "data/maps/DyecressTown_PokeCentre/scripts.pory"
 	face_right
 	step_end
 

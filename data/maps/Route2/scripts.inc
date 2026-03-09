@@ -292,7 +292,7 @@ Route2_BlackBelt_Text_0:
 
 Route2_Evelynn_Text_0:
 # 113 "data/maps/Route2/scripts.pory"
-	.string "You poor thing,\nwhat did those idiots do to you?$"
+	.string "You poor thing...\nWhat did those idiots do to you?$"
 
 Route2_Evelynn_Text_1:
 # 121 "data/maps/Route2/scripts.pory"

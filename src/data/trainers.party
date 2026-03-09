@@ -908,10 +908,13 @@ Music: Suspicious
 AI: Smart Trainer
 
 Nincada
-Level: 15
+Level: 16
 
-Kirlia
-Level: 20
+Ralts (F)
+Level: 16
+- Confusion
+- Draining Kiss
+- Double Team
 
 === TRAINER_ROUTE8_TWINS ===
 Name: Pibi & Jay

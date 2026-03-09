@@ -106,6 +106,6 @@ script SpringWoods_Picnicker {
         format("Did you know that Springwood City is named after the Spring Woods?"),
         format("My fun fact didn't distract you from winning.")  
     )
-    msgbox(format("Spring Woods are named after the spring that provides the water for the woods to propsper."), MSGBOX_AUTOCLOSE)
+    msgbox(format("Spring Woods are named after the spring that provides the water for the woods to prosper."), MSGBOX_AUTOCLOSE)
     end
 }

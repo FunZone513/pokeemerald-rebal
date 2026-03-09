@@ -14,7 +14,7 @@ script Route4_OnLoad {
 }
 
 script Route4_LedgeBlocker {
-    if (var(VAR_DYECRESS_MYSTERY_STATE) <= 1) {
+    if (var(VAR_DYECRESS_MYSTERY_STATE) <= 2) {
         // ledge blocking dyecress
         setmetatile(12, 25, METATILE_General_Ledge_East, TRUE)
         setmetatile(12, 26, METATILE_Petalburg_Disabled_Ledge_East, TRUE)

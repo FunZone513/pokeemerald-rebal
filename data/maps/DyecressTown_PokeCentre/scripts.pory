@@ -52,16 +52,17 @@ script DyecressTown_PokeCentre_Girl {
     applymovement(5, moves(face_player))
     waitmovement(0)
     delay(120)
+    playse(SE_M_STRENGTH)
     braillemessage(DyecressTown_PokeCentre_Girl_Text)
     setvar(VAR_0x8004, 1)  // vertical pan
-	setvar(VAR_0x8005, 1)  // horizontal pan
+	setvar(VAR_0x8005, 3)  // horizontal pan
 	setvar(VAR_0x8006, 12)  // num shakes
 	setvar(VAR_0x8007, 2)  // shake delay
 	setvar(VAR_0x8008, 8)  // remove sound
     special(ShakeCamera)
     waitstate
 	setvar(VAR_0x8008, 0)
-    delay(48)
+    delay(60)
     closebraillemessage
     playse(SE_M_LEER)
     fadescreenspeed(FADE_TO_WHITE, 1)
@@ -84,6 +85,6 @@ script DyecressTown_PokeCentre_Girl {
 raw `
 DyecressTown_PokeCentre_Girl_Text:
     brailleformat 3, 0, 25, 19, 6, 3
-	.braille "????\n"
-	.braille "????$"
+	.braille "DONT\n"
+	.braille "LOOK$"
 `

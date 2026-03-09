@@ -302,6 +302,8 @@ SpringwoodCity_LibraEvelynnTrigger_Movement_0:
 # 29 "data/maps/SpringwoodCity/scripts.pory"
 SpringwoodCity_LibraEvelynnTrigger_Movement_1:
 # 29 "data/maps/SpringwoodCity/scripts.pory"
+	face_up
+# 29 "data/maps/SpringwoodCity/scripts.pory"
 	lock_facing_direction
 # 29 "data/maps/SpringwoodCity/scripts.pory"
 	walk_down

@@ -37,7 +37,7 @@ Route4_OnLoad_4:
 
 Route4_LedgeBlocker::
 # 17 "data/maps/Route4/scripts.pory"
-	compare VAR_DYECRESS_MYSTERY_STATE, 1
+	compare VAR_DYECRESS_MYSTERY_STATE, 2
 	goto_if_le Route4_LedgeBlocker_1
 # 29 "data/maps/Route4/scripts.pory"
 	setflag FLAG_TEMP_2

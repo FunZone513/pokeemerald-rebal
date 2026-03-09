@@ -150,15 +150,15 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_SPENSER",
       "x": 20,
-      "y": 6,
+      "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
+      "movement_range_x": 0,
+      "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "DyecressTown_Spenser",
-      "flag": "0"
+      "flag": "FLAG_TEMP_C"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(BUDEW)",
@@ -210,12 +210,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_FIRST_VISIT_DYECRESS"
+      "flag": "FLAG_TEMP_B"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(BALTOY)",
       "x": 20,
-      "y": 7,
+      "y": 8,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -223,7 +223,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "SPECIES_BALTOY",
       "script": "Generic_POKEMON_INTERACT",
-      "flag": "0"
+      "flag": "FLAG_TEMP_C"
     }
   ],
   "warp_events": [
@@ -262,7 +262,7 @@
       "x": 19,
       "y": 32,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_DYECRESS_MYSTERY_STATE",
       "var_value": "0",
       "script": "DyecressFirstVisit"
     },
@@ -271,8 +271,35 @@
       "x": 19,
       "y": 33,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_DYECRESS_MYSTERY_STATE",
       "var_value": "0",
+      "script": "DyecressFirstVisit"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_DYECRESS_MYSTERY_STATE",
+      "var_value": "1",
+      "script": "DyecressFirstVisit"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_DYECRESS_MYSTERY_STATE",
+      "var_value": "1",
+      "script": "DyecressFirstVisit"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_DYECRESS_MYSTERY_STATE",
+      "var_value": "1",
       "script": "DyecressFirstVisit"
     }
   ],

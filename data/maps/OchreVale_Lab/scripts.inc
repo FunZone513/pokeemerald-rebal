@@ -7,7 +7,7 @@ OchreVale_Lab_Director::
 	lockall
 # 5 "data/maps/OchreVale_Lab/scripts.pory"
 	compare VAR_ROUTE4_WATER_STONE_STATE, 4
-	goto_if_eq OchreVale_Lab_Director_2
+	goto_if_le OchreVale_Lab_Director_2
 # 8 "data/maps/OchreVale_Lab/scripts.pory"
 	compare VAR_ROUTE4_WATER_STONE_STATE, 5
 	goto_if_eq OchreVale_Lab_Director_3

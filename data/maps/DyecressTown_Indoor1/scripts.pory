@@ -3,33 +3,28 @@ mapscripts DyecressTown_Indoor1_MapScripts {
 }
 
 script DyecressTown_Indoor1_OnLoad {
-    if (var(VAR_DYECRESS_MYSTERY_STATE) >= 3) {
+    if (var(VAR_DYECRESS_MYSTERY_STATE) < 4) {
         setflag(FLAG_TEMP_A)
     }
 }
 
-// script DyecressTown_Indoor1_Spenser {
-//     lockall
-//     if (var(VAR_DYECRESS_MYSTERY_STATE) == 0) {
-//         msgbox(DyecressTown_Indoor1_Spenser_Text, MSGBOX_NPC)
-//         setvar(VAR_DYECRESS_MYSTERY_STATE, 1)
-//     } elif (var(VAR_DYECRESS_MYSTERY_STATE) >= 1) {
-//         msgbox(format("I hope the researchers from Libra can help us uncover the origin of our town."))
-//     }
-//     releaseall
-// }
+script DyecressTown_Indoor1_Spenser {
+    lockall
+    if (var(VAR_DYECRESS_MYSTERY_STATE) != 5) {
+        msgbox(DyecressTown_Indoor1_Spenser_Text, MSGBOX_NPC)
+        giveitem(ITEM_AMULET_COIN)
+        setvar(VAR_DYECRESS_MYSTERY_STATE, 5)
+    } else {
+        msgbox(format("I hope the researchers from Libra can help us uncover the origin of our town."), MSGBOX_NPC)
+    }
+    releaseall
+}
 
-// text DyecressTown_Indoor1_Spenser_Text {
-//     "Dyecress' history is something that many\nknow exists, but few remember details.\p"
-//     "While the specifics of the history have\nbeen lost over time, the guidance\l"
-//     "granted by our predecessors\lremains in our hearts and actions.\p"
-//     "Thus, the current is built upon the past.\nTo forget where we come from is to\lforget where we're headed.\p"
-//     "These old bones have been working\ntirelessly for generations, trying to\luncover the secret of the town's origin.\p"
-//     "While my time has been spent sifting\nthrough old books, I've heard tell that\l"
-//     "the upstart folks in the city have found\lnew ways of uncovering lost texts.\p"
-//     "I'm no longer the man I was in my youth,\nso I'm unable to make the trip myself,\l"
-//     "and many of the residents here are also\ltoo elderly to travel the distance.\p"
-//     "Could you do an old soul a favour?\p"
-//     "I would appreciate you sending word to\nLibra Institute in Springwood City,\l"
-//     "requesting someone to finally unravel\lthe history of our town."
-// }
+text DyecressTown_Indoor1_Spenser_Text {
+    "I see the coats have come over to\npoke around the township now.\p"
+    "I was hesitant to let outsiders come\nin and start prodding away at our\ltown's historical sites...\p"
+    "But, they're being uncharacteristically\nrespectful.\p"
+    "I would guess that whomever is their\nsuperior made sure not to send\lany incompetent fools at least.\p"
+    "Oh right, all quests must come\nwith a suitable reward.\p"
+    "Here,\nI hope this was worth the trouble."
+}

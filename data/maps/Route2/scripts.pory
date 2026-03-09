@@ -110,7 +110,7 @@ script Route2_BlackBelt {
 
 script Route2_Evelynn {
     lock
-    msgbox("You poor thing,\nwhat did those idiots do to you?")
+    msgbox("You poor thing...\nWhat did those idiots do to you?")
     playse(SE_PIN)
     applymovement(6, Common_Movement_ExclamationMark)
     waitmovement(0)

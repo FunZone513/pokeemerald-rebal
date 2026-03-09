@@ -3,17 +3,21 @@ mapscripts SpringwoodCity_Institution_1F_MapScripts {}
 script SpringwoodCity_Institution_1F_Director {
     lockall
     switch(var(VAR_DYECRESS_MYSTERY_STATE)) {
+        case 0:
+        case 1:
         case 2:
-            msgbox(SpringwoodCity_Institution_1F_Director_Text, MSGBOX_NPC)
-            setvar(VAR_DYECRESS_MYSTERY_STATE, 3)
-            break
-        
-        case 3:
-            msgbox(format("I've sent some of my guys over to Dyecress Town to help out Spenser with his deciphering of the old texts. I hope they learn something fruitful from it!"), MSGBOX_NPC)
+            msgbox(format("We're collecting data from Labs all over the region."), MSGBOX_NPC)
             break
 
+        case 3:
+            msgbox(SpringwoodCity_Institution_1F_Director_Text, MSGBOX_NPC)
+            setvar(VAR_DYECRESS_MYSTERY_STATE, 4)
+            break
+        
+        case 4:
         default:
-            msgbox(format("We're collecting data from Labs all over the region."), MSGBOX_NPC)
+            msgbox(format("I've sent some of my guys over to Dyecress Town to help out Simon with his investigation. I hope they learn something fruitful from it!"), MSGBOX_NPC)
+            break            
     }
     releaseall
 }
@@ -21,11 +25,11 @@ script SpringwoodCity_Institution_1F_Director {
 text SpringwoodCity_Institution_1F_Director_Text {
     "Yes? Can I help you?\p"
     "...\p"
-    "Oh! You're from Dyecress!\nHow wonderful it is to hear that\lOld Man Spenser is finally letting us\linvestigate the town's history.\p"
+    "Oh! You're from Dyecress!\nHow wonderful it is to hear that\lOld Man Simon is finally letting us\linvestigate the town's history.\p"
     "It's been a dark spot in our knowledge\nbase for quite some time now.\p"
     "We always hear about the rich history\nof the town, yet we're never allowed to\llearn any of it, it's really a shame.\p"
     "I'll dispatch some of our researchers\nright away!\p"
-    "They'll make sure to help out with any\nof Spenser's qualms, and I'll make sure\lthey don't make a mess of the town."
+    "They'll make sure to help out with any\nof Simon's qualms, and I'll make sure\lthey don't make a mess of the town."
 }
 
 script SpringwoodCity_Institution_1F_Scientist1 {
