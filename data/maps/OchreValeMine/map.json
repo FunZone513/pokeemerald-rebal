@@ -7,7 +7,7 @@
   "requires_flash": false,
   "weather": "WEATHER_SHADE",
   "map_type": "MAP_TYPE_UNDERGROUND",
-  "allow_cycling": true,
+  "allow_cycling": false,
   "allow_escaping": true,
   "allow_running": true,
   "show_map_name": true,
@@ -220,7 +220,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_HARD_STONE",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_OCHRE_VALE_MINE"
+      "flag": "FLAG_ITEM_OCHRE_VALE_MINE_2"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER",

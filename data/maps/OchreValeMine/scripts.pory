@@ -16,13 +16,13 @@ script OchreValeMine_MagmaEncounter {
     special(SpawnCameraObject)
     applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_right*2))
     waitmovement(0)
-    msgbox(format("We told you to stop looking into it!"))
-    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_right*2))
+    msgbox("We told you to stop looking into it.")
+    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_right*1))
     waitmovement(0)
-    msgbox(format("Theres something weird about it though! We have to figure out what the readings mean, don't you understand?!"))
-    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_left*2))
+    msgbox("Theres something unusual hidden\nin the data!\lWe must figure out what it means,\ldon't you understand?!")
+    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_left*1))
     waitmovement(0)
-    msgbox(format("It's not our job to understand, our job is just to stop people like you from doing what you're doing."))
+    msgbox("It's not our job to understand,\nour job is to hinder people like you.")
     applymovement(22, moves(walk_right))
     applymovement(23, moves(walk_right))
     applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_right))
@@ -33,11 +33,8 @@ script OchreValeMine_MagmaEncounter {
     waitmovement(0)
     applymovement(24, Common_Movement_Delay48)
     waitmovement(0)
-    msgbox(format("Hey! You over there! Can you please help me out here?"))
     waitse
-    playse(SE_PIN)
-    delay(8)
-    waitse
+    msgbox("Hey! You over there!\nCan you please help me out here?")
     playse(SE_PIN)
     applymovement(22, Common_Movement_ExclamationMark)
     applymovement(23, Common_Movement_ExclamationMark)
@@ -47,14 +44,20 @@ script OchreValeMine_MagmaEncounter {
     waitmovement(0)
     delay(48)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right*2))
-    msgbox(format("Who are you to try and get in our way? We're just here to stop them from doing something foolish!"))
-    trainerbattle_two_trainers(TRAINER_OCHRE_VALE_MINE_MAGMA_GRUNT2, format("You don't understand what you're doing here!"), TRAINER_OCHRE_VALE_MINE_MAGMA_GRUNT1, format("Look at the bigger picture!"))
-    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_left*2))
+    msgbox("Who are you to try and get in our way?\nWe're here to stop them from doing\lsomething foolish!")
+    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_left*1))
     waitmovement(0)
     special(RemoveCameraObject)
+    trainerbattle_two_trainers(
+        TRAINER_OCHRE_VALE_MINE_MAGMA_GRUNT2, 
+        format("No!"), 
+        TRAINER_OCHRE_VALE_MINE_MAGMA_GRUNT1, 
+        format("Now what are we supposed to do...")
+    )
     specialvar(VAR_RESULT, GetBattleOutcome)
     if (var(VAR_RESULT) == B_OUTCOME_WON) {
-        msgbox(format("We'll retreat for now, but we'll keep an eye on you."))
+        msgbox("We'll have to retreat for now,\nbut next time we won't go easy!")
+        closemessage
         setvar(VAR_ROUTE4_WATER_STONE_STATE, 6)
         fadescreen(FADE_TO_BLACK)
         removeobject(22)
@@ -67,6 +70,7 @@ script OchreValeMine_MagmaEncounter {
         applymovement(24, moves(walk_left))
         waitmovement(0)
         msgbox(OchreValeMine_MagmaEncounter_EndText)
+        closemessage
         delay(16)
         applymovement(24, moves(walk_right))
         waitmovement(0)

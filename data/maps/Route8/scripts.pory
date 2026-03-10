@@ -13,10 +13,10 @@ script Route8_Picnicker {
 script Route8_Collector {
     trainerbattle_single(
         TRAINER_ROUTE8_COLLECTOR, 
-        format("The ocean cliffs here are beautiful!"),
-        format("I shall look out over the sea and forget all about this.")  
+        format("I like to find rare Pokemon."),
+        format("I thought having the rarest Pokemon made me the best Trainer.")  
     )
-    msgbox(format("The trail gets a bit technical around here."), MSGBOX_AUTOCLOSE)
+    msgbox(format("Collectors like me enjoy finding the rarest Pokemon to fill out our teams with."), MSGBOX_AUTOCLOSE)
     end
 }
 
@@ -25,7 +25,7 @@ script Route8_Twins1 {
         TRAINER_ROUTE8_TWINS, 
         "We like to play on the cliffs edge!", 
         "We're careful to not fall...", 
-        "Huh? Do you only have one Pokemon? Lame!"
+        "Huh? Do you only have one Pokemon?\nLame!"
     )
     msgbox(format("It's fun to play here, but the grown ups don't like it when we get near the cliffs..."), MSGBOX_AUTOCLOSE)
     end
@@ -34,9 +34,9 @@ script Route8_Twins1 {
 script Route8_Twins2 {
     trainerbattle_double(
         TRAINER_ROUTE8_TWINS, 
-        "I beat our Pokemon are stronger than your Pokemon!", 
-        "I bet our Dad is stronger than your Dad...", 
-        "Huh? Do you only have one Pokemon? Cringe!"
+        "I bet our Pokemon are\nstronger than your Pokemon!", 
+        "I bet our Dad is stronger\nthan your Dad...", 
+        "Huh? Do you only have one Pokemon?\nCringe!"
     )
     msgbox(format("Mum says that we used to have a big brother."), MSGBOX_AUTOCLOSE)
     end

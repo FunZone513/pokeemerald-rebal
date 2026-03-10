@@ -40,21 +40,44 @@ OchreVale_PokeCentre_MagmaGrunt::
 # 26 "data/maps/OchreVale_PokeCentre/scripts.pory"
 	lockall
 # 27 "data/maps/OchreVale_PokeCentre/scripts.pory"
-	goto_if_set FLAG_TEMP_1, OchreVale_PokeCentre_MagmaGrunt_2
-# 37 "data/maps/OchreVale_PokeCentre/scripts.pory"
-	msgbox OchreVale_PokeCentre_MagmaGrunt_Text_3, MSGBOX_NPC
-# 38 "data/maps/OchreVale_PokeCentre/scripts.pory"
-	setflag FLAG_TEMP_1
-# 40 "data/maps/OchreVale_PokeCentre/scripts.pory"
+	checktrainerflag TRAINER_OCHRE_VALE_POKECENTRE_MAGMA_GRUNT
+	goto_if 0, OchreVale_PokeCentre_MagmaGrunt_2
+# 46 "data/maps/OchreVale_PokeCentre/scripts.pory"
+	msgbox OchreVale_PokeCentre_MagmaGrunt_Text_4, MSGBOX_AUTOCLOSE
+OchreVale_PokeCentre_MagmaGrunt_1:
+# 48 "data/maps/OchreVale_PokeCentre/scripts.pory"
 	releaseall
 	return
 
 OchreVale_PokeCentre_MagmaGrunt_2:
 # 28 "data/maps/OchreVale_PokeCentre/scripts.pory"
-	trainerbattle_single TRAINER_OCHRE_VALE_POKECENTRE_MAGMA_GRUNT, OchreVale_PokeCentre_MagmaGrunt_Text_0, OchreVale_PokeCentre_MagmaGrunt_Text_1
+	switch VAR_TEMP_0
+# 29 "data/maps/OchreVale_PokeCentre/scripts.pory"
+	case 0, OchreVale_PokeCentre_MagmaGrunt_6
 # 33 "data/maps/OchreVale_PokeCentre/scripts.pory"
-	msgbox OchreVale_PokeCentre_MagmaGrunt_Text_2, MSGBOX_AUTOCLOSE
-	end
+	case 1, OchreVale_PokeCentre_MagmaGrunt_7
+# 37 "data/maps/OchreVale_PokeCentre/scripts.pory"
+	case 2, OchreVale_PokeCentre_MagmaGrunt_8
+	goto OchreVale_PokeCentre_MagmaGrunt_1
+
+OchreVale_PokeCentre_MagmaGrunt_6:
+# 30 "data/maps/OchreVale_PokeCentre/scripts.pory"
+	msgbox OchreVale_PokeCentre_MagmaGrunt_Text_0, MSGBOX_NPC
+# 31 "data/maps/OchreVale_PokeCentre/scripts.pory"
+	addvar VAR_TEMP_0, 1
+	goto OchreVale_PokeCentre_MagmaGrunt_1
+
+OchreVale_PokeCentre_MagmaGrunt_7:
+# 34 "data/maps/OchreVale_PokeCentre/scripts.pory"
+	msgbox OchreVale_PokeCentre_MagmaGrunt_Text_1, MSGBOX_NPC
+# 35 "data/maps/OchreVale_PokeCentre/scripts.pory"
+	addvar VAR_TEMP_0, 1
+	goto OchreVale_PokeCentre_MagmaGrunt_1
+
+OchreVale_PokeCentre_MagmaGrunt_8:
+# 38 "data/maps/OchreVale_PokeCentre/scripts.pory"
+	trainerbattle_single TRAINER_OCHRE_VALE_POKECENTRE_MAGMA_GRUNT, OchreVale_PokeCentre_MagmaGrunt_Text_2, OchreVale_PokeCentre_MagmaGrunt_Text_3
+	goto OchreVale_PokeCentre_MagmaGrunt_1
 
 
 # 16 "data/maps/OchreVale_PokeCentre/scripts.pory"
@@ -81,19 +104,23 @@ OchreVale_PokeCentre_Scientist_Text_0:
 
 OchreVale_PokeCentre_MagmaGrunt_Text_0:
 # 30 "data/maps/OchreVale_PokeCentre/scripts.pory"
-	.string "THAT'S IT! YOU ASKED FOR IT!$"
+	.string "Don't bother me!\nCan't you see I'm busy!?$"
 
 OchreVale_PokeCentre_MagmaGrunt_Text_1:
-# 31 "data/maps/OchreVale_PokeCentre/scripts.pory"
+# 34 "data/maps/OchreVale_PokeCentre/scripts.pory"
+	.string "Are you deaf?? Leave me alone!$"
+
+OchreVale_PokeCentre_MagmaGrunt_Text_2:
+# 40 "data/maps/OchreVale_PokeCentre/scripts.pory"
+	.string "THAT'S IT! YOU ASKED FOR IT!$"
+
+OchreVale_PokeCentre_MagmaGrunt_Text_3:
+# 41 "data/maps/OchreVale_PokeCentre/scripts.pory"
 	.string "Well at least it'll be easy to heal my\n"
 	.string "Pokemon...$"
 
-OchreVale_PokeCentre_MagmaGrunt_Text_2:
-# 33 "data/maps/OchreVale_PokeCentre/scripts.pory"
-	.string "I was waiting to see if the other guys\n"
-	.string "needed my help, but I guess I'll have to\l"
-	.string "wait a bit longer now...$"
-
-OchreVale_PokeCentre_MagmaGrunt_Text_3:
-# 37 "data/maps/OchreVale_PokeCentre/scripts.pory"
-	.string "Don't bother me!\nCan't you see I'm busy!?$"
+OchreVale_PokeCentre_MagmaGrunt_Text_4:
+# 46 "data/maps/OchreVale_PokeCentre/scripts.pory"
+	.string "Well if I was going to have all my\n"
+	.string "Pokemon knocked out, this is a pretty\l"
+	.string "good to do it.$"

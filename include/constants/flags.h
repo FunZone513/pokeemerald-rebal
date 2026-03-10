@@ -571,6 +571,8 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_10                            (FLAG_HIDDEN_ITEMS_START + 0x17)
 #define FLAG_HIDDEN_ITEM_ROUTE_10_1                          (FLAG_HIDDEN_ITEMS_START + 0x18)
 #define FLAG_HIDDEN_ITEM_DRIPSTONE_CHANNEL                   (FLAG_HIDDEN_ITEMS_START + 0x19)
+#define FLAG_HIDDEN_ITEM_DRIPSTONE_PASS                      (FLAG_HIDDEN_ITEMS_START + 0x1A)
+#define FLAG_HIDDEN_ITEM_DRIPSTONE_PASS_2                    (FLAG_HIDDEN_ITEMS_START + 0x1B)
 
 // --============= old ones ( put // after ones I'm reusing )
 #define FLAG_HIDDEN_ITEM_ROUTE_123_SUPER_REPEL               (FLAG_HIDDEN_ITEMS_START + 0x07) //
@@ -592,8 +594,8 @@
 #define FLAG_HIDDEN_ITEM_UNDERWATER_127_HEART_SCALE          (FLAG_HIDDEN_ITEMS_START + 0x17) //
 #define FLAG_HIDDEN_ITEM_UNDERWATER_127_RED_SHARD            (FLAG_HIDDEN_ITEMS_START + 0x18) //
 #define FLAG_HIDDEN_ITEM_UNDERWATER_128_PROTEIN              (FLAG_HIDDEN_ITEMS_START + 0x19) //
-#define FLAG_HIDDEN_ITEM_UNDERWATER_128_PEARL                (FLAG_HIDDEN_ITEMS_START + 0x1A)
-#define FLAG_HIDDEN_ITEM_LILYCOVE_CITY_HEART_SCALE           (FLAG_HIDDEN_ITEMS_START + 0x1B)
+#define FLAG_HIDDEN_ITEM_UNDERWATER_128_PEARL                (FLAG_HIDDEN_ITEMS_START + 0x1A) //
+#define FLAG_HIDDEN_ITEM_LILYCOVE_CITY_HEART_SCALE           (FLAG_HIDDEN_ITEMS_START + 0x1B) //
 #define FLAG_HIDDEN_ITEM_FALLARBOR_TOWN_NUGGET               (FLAG_HIDDEN_ITEMS_START + 0x1C)
 #define FLAG_HIDDEN_ITEM_MT_PYRE_EXTERIOR_ULTRA_BALL         (FLAG_HIDDEN_ITEMS_START + 0x1D)
 #define FLAG_HIDDEN_ITEM_UNUSED_0X1E                         (FLAG_HIDDEN_ITEMS_START + 0x1E)
@@ -681,17 +683,16 @@
 // --============= old ones
 
 //MARK: Utility Flags
-#define FLAG_FORCE_WILD_DOUBLE_BATTLE  0x264        // Used for toggling wild double battles
-#define FLAG_SHARED_EXP    0x265                    // Used for toggling shared exp
-#define FLAG_ENABLE_VS_SEEKER  0x266                // Used for Vs. Seeker
-#define FLAG_ENABLE_FOLLOWER_POKEMON  0x267         // Used for toggling follower pokemon
-#define FLAG_FLY_FROM_NAV  0x268                    // Used for toggling fly from nav menu
-#define FLAG_USE_NEW_TYPE_CHART  0x269              // QoL flag for the new type chart
-#define FLAG_ACTIVE_BOSS_BATTLE  0x26A              // Toggles Boss Battle State
-#define FLAG_DISABLE_WILD_ENCOUNTERS  0x26B         // Disables wild encounters when on
-#define FLAG_FORCE_SHINY_ENCOUNTERS  0x26C          // Toggles shiny encounters
-
-#define FLAG_ROUTE_7_SHOWN_POKEMON  0x26D // Unused Flag
+#define FLAG_FORCE_WILD_DOUBLE_BATTLE   0x264   // Used for toggling wild double battles
+#define FLAG_SHARED_EXP                 0x265   // Used for toggling shared exp
+#define FLAG_ENABLE_VS_SEEKER           0x266   // Used for Vs. Seeker
+#define FLAG_ENABLE_FOLLOWER_POKEMON    0x267   // Used for toggling follower pokemon
+#define FLAG_FLY_FROM_NAV               0x268   // Used for toggling fly from nav menu
+#define FLAG_USE_NEW_TYPE_CHART         0x269   // QoL flag for the new type chart
+#define FLAG_ACTIVE_BOSS_BATTLE         0x26A   // Toggles Boss Battle State
+#define FLAG_DISABLE_WILD_ENCOUNTERS    0x26B   // Disables wild encounters when on
+#define FLAG_FORCE_SHINY_ENCOUNTERS     0x26C   // Toggles shiny encounters
+#define FLAG_NOCLIP                     0x26D   // Toggles collision
 
 // MARK: Unused
 #define FLAG_UNUSED_0x26E  0x26E // Unused Flag
@@ -1113,9 +1114,9 @@
 #define FLAG_ITEM_ROUTE_2_1                                         0x409
 #define FLAG_ITEM_ROUTE_4                                           0x40A
 #define FLAG_ITEM_WEBBED_THICKET                                    0x40B
-#define FLAG_ITEM_ROUTE_132_RARE_CANDY                              0x40C
-#define FLAG_ITEM_ROUTE_133_BIG_PEARL                               0x40D
-#define FLAG_ITEM_ROUTE_133_STAR_PIECE                              0x40E
+#define FLAG_ITEM_OCHRE_VALE_MINE_2                                 0x40C
+#define FLAG_ITEM_DRIPTONE_PASS                                     0x40D
+#define FLAG_ITEM_DRIPTONE_PASS_2                                   0x40E
 #define FLAG_ITEM_PETALBURG_CITY_MAX_REVIVE                         0x40F
 #define FLAG_ITEM_PETALBURG_CITY_ETHER                              0x410
 #define FLAG_ITEM_RUSTBORO_CITY_X_DEFEND                            0x411

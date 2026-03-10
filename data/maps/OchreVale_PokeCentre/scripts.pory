@@ -24,18 +24,26 @@ script OchreVale_PokeCentre_Scientist {
 
 script OchreVale_PokeCentre_MagmaGrunt {
     lockall
-    if (flag(FLAG_TEMP_1)) {
-        trainerbattle_single(
-            TRAINER_OCHRE_VALE_POKECENTRE_MAGMA_GRUNT, 
-            format("THAT'S IT! YOU ASKED FOR IT!"),
-            format("Well at least it'll be easy to heal my Pokemon...")  
-        )
-        msgbox(format("I was waiting to see if the other guys needed my help, but I guess I'll have to wait a bit longer now..."), MSGBOX_AUTOCLOSE)
-        end
-
+    if (!defeated(TRAINER_OCHRE_VALE_POKECENTRE_MAGMA_GRUNT)) {
+        switch(var(VAR_TEMP_0)) {
+            case 0:
+                msgbox("Don't bother me!\nCan't you see I'm busy!?", MSGBOX_NPC)
+                addvar(VAR_TEMP_0, 1)
+                break
+            case 1:
+                msgbox("Are you deaf?? Leave me alone!", MSGBOX_NPC)
+                addvar(VAR_TEMP_0, 1)
+                break
+            case 2:
+                trainerbattle_single(
+                    TRAINER_OCHRE_VALE_POKECENTRE_MAGMA_GRUNT, 
+                    format("THAT'S IT! YOU ASKED FOR IT!"),
+                    format("Well at least it'll be easy to heal my Pokemon...")  
+                )
+                break
+        }
     } else {
-        msgbox("Don't bother me!\nCan't you see I'm busy!?", MSGBOX_NPC)
-        setflag(FLAG_TEMP_1)
+        msgbox(format("Well if I was going to have all my Pokemon knocked out, this is a pretty good to do it."), MSGBOX_AUTOCLOSE)
     }
     releaseall
 }

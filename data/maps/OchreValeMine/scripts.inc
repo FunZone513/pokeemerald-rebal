@@ -33,23 +33,23 @@ OchreValeMine_MagmaEncounter::
 # 19 "data/maps/OchreValeMine/scripts.pory"
 	msgbox OchreValeMine_MagmaEncounter_Text_0
 # 20 "data/maps/OchreValeMine/scripts.pory"
-	applymovement OBJ_EVENT_ID_CAMERA, OchreValeMine_MagmaEncounter_Movement_1
+	applymovement OBJ_EVENT_ID_CAMERA, OchreValeMine_MagmaEncounter_Movement_2
 # 21 "data/maps/OchreValeMine/scripts.pory"
 	waitmovement 0
 # 22 "data/maps/OchreValeMine/scripts.pory"
 	msgbox OchreValeMine_MagmaEncounter_Text_1
 # 23 "data/maps/OchreValeMine/scripts.pory"
-	applymovement OBJ_EVENT_ID_CAMERA, OchreValeMine_MagmaEncounter_Movement_2
+	applymovement OBJ_EVENT_ID_CAMERA, OchreValeMine_MagmaEncounter_Movement_3
 # 24 "data/maps/OchreValeMine/scripts.pory"
 	waitmovement 0
 # 25 "data/maps/OchreValeMine/scripts.pory"
 	msgbox OchreValeMine_MagmaEncounter_Text_2
 # 26 "data/maps/OchreValeMine/scripts.pory"
-	applymovement 22, OchreValeMine_MagmaEncounter_Movement_3
+	applymovement 22, OchreValeMine_MagmaEncounter_Movement_2
 # 27 "data/maps/OchreValeMine/scripts.pory"
-	applymovement 23, OchreValeMine_MagmaEncounter_Movement_3
+	applymovement 23, OchreValeMine_MagmaEncounter_Movement_2
 # 28 "data/maps/OchreValeMine/scripts.pory"
-	applymovement OBJ_EVENT_ID_CAMERA, OchreValeMine_MagmaEncounter_Movement_3
+	applymovement OBJ_EVENT_ID_CAMERA, OchreValeMine_MagmaEncounter_Movement_2
 # 29 "data/maps/OchreValeMine/scripts.pory"
 	waitmovement 0
 # 30 "data/maps/OchreValeMine/scripts.pory"
@@ -65,163 +65,161 @@ OchreValeMine_MagmaEncounter::
 # 35 "data/maps/OchreValeMine/scripts.pory"
 	waitmovement 0
 # 36 "data/maps/OchreValeMine/scripts.pory"
-	msgbox OchreValeMine_MagmaEncounter_Text_3
-# 37 "data/maps/OchreValeMine/scripts.pory"
 	waitse
+# 37 "data/maps/OchreValeMine/scripts.pory"
+	msgbox OchreValeMine_MagmaEncounter_Text_3
 # 38 "data/maps/OchreValeMine/scripts.pory"
 	playse SE_PIN
 # 39 "data/maps/OchreValeMine/scripts.pory"
-	delay 8
-# 40 "data/maps/OchreValeMine/scripts.pory"
-	waitse
-# 41 "data/maps/OchreValeMine/scripts.pory"
-	playse SE_PIN
-# 42 "data/maps/OchreValeMine/scripts.pory"
 	applymovement 22, Common_Movement_ExclamationMark
-# 43 "data/maps/OchreValeMine/scripts.pory"
+# 40 "data/maps/OchreValeMine/scripts.pory"
 	applymovement 23, Common_Movement_ExclamationMark
+# 41 "data/maps/OchreValeMine/scripts.pory"
+	waitmovement 0
+# 42 "data/maps/OchreValeMine/scripts.pory"
+	applymovement 22, OchreValeMine_MagmaEncounter_Movement_4
+# 43 "data/maps/OchreValeMine/scripts.pory"
+	applymovement 23, OchreValeMine_MagmaEncounter_Movement_4
 # 44 "data/maps/OchreValeMine/scripts.pory"
 	waitmovement 0
 # 45 "data/maps/OchreValeMine/scripts.pory"
-	applymovement 22, OchreValeMine_MagmaEncounter_Movement_4
-# 46 "data/maps/OchreValeMine/scripts.pory"
-	applymovement 23, OchreValeMine_MagmaEncounter_Movement_4
-# 47 "data/maps/OchreValeMine/scripts.pory"
-	waitmovement 0
-# 48 "data/maps/OchreValeMine/scripts.pory"
 	delay 48
-# 49 "data/maps/OchreValeMine/scripts.pory"
+# 46 "data/maps/OchreValeMine/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, OchreValeMine_MagmaEncounter_Movement_1
-# 50 "data/maps/OchreValeMine/scripts.pory"
+# 47 "data/maps/OchreValeMine/scripts.pory"
 	msgbox OchreValeMine_MagmaEncounter_Text_4
+# 48 "data/maps/OchreValeMine/scripts.pory"
+	applymovement OBJ_EVENT_ID_CAMERA, OchreValeMine_MagmaEncounter_Movement_3
+# 49 "data/maps/OchreValeMine/scripts.pory"
+	waitmovement 0
+# 50 "data/maps/OchreValeMine/scripts.pory"
+	special RemoveCameraObject
 # 51 "data/maps/OchreValeMine/scripts.pory"
 	trainerbattle_two_trainers TRAINER_OCHRE_VALE_MINE_MAGMA_GRUNT2, OchreValeMine_MagmaEncounter_Text_5, TRAINER_OCHRE_VALE_MINE_MAGMA_GRUNT1, OchreValeMine_MagmaEncounter_Text_6
-# 52 "data/maps/OchreValeMine/scripts.pory"
-	applymovement OBJ_EVENT_ID_CAMERA, OchreValeMine_MagmaEncounter_Movement_2
-# 53 "data/maps/OchreValeMine/scripts.pory"
-	waitmovement 0
-# 54 "data/maps/OchreValeMine/scripts.pory"
-	special RemoveCameraObject
-# 55 "data/maps/OchreValeMine/scripts.pory"
+# 57 "data/maps/OchreValeMine/scripts.pory"
 	specialvar VAR_RESULT, GetBattleOutcome
-# 56 "data/maps/OchreValeMine/scripts.pory"
+# 58 "data/maps/OchreValeMine/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_WON
 	goto_if_eq OchreValeMine_MagmaEncounter_2
 OchreValeMine_MagmaEncounter_1:
-# 75 "data/maps/OchreValeMine/scripts.pory"
+# 79 "data/maps/OchreValeMine/scripts.pory"
 	releaseall
 	return
 
 OchreValeMine_MagmaEncounter_2:
-# 57 "data/maps/OchreValeMine/scripts.pory"
-	msgbox OchreValeMine_MagmaEncounter_Text_7
-# 58 "data/maps/OchreValeMine/scripts.pory"
-	setvar VAR_ROUTE4_WATER_STONE_STATE, 6
 # 59 "data/maps/OchreValeMine/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	msgbox OchreValeMine_MagmaEncounter_Text_7
 # 60 "data/maps/OchreValeMine/scripts.pory"
-	removeobject 22
+	closemessage
 # 61 "data/maps/OchreValeMine/scripts.pory"
-	removeobject 23
+	setvar VAR_ROUTE4_WATER_STONE_STATE, 6
 # 62 "data/maps/OchreValeMine/scripts.pory"
-	playse SE_FLEE
+	fadescreen FADE_TO_BLACK
 # 63 "data/maps/OchreValeMine/scripts.pory"
-	delay 60
+	removeobject 22
 # 64 "data/maps/OchreValeMine/scripts.pory"
-	special DrawWholeMapView
+	removeobject 23
 # 65 "data/maps/OchreValeMine/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	playse SE_FLEE
 # 66 "data/maps/OchreValeMine/scripts.pory"
-	delay 16
+	delay 60
 # 67 "data/maps/OchreValeMine/scripts.pory"
-	applymovement 24, OchreValeMine_MagmaEncounter_Movement_5
+	special DrawWholeMapView
 # 68 "data/maps/OchreValeMine/scripts.pory"
-	waitmovement 0
+	fadescreen FADE_FROM_BLACK
 # 69 "data/maps/OchreValeMine/scripts.pory"
-	msgbox OchreValeMine_MagmaEncounter_EndText
-# 70 "data/maps/OchreValeMine/scripts.pory"
 	delay 16
-# 71 "data/maps/OchreValeMine/scripts.pory"
+# 70 "data/maps/OchreValeMine/scripts.pory"
 	applymovement 24, OchreValeMine_MagmaEncounter_Movement_3
-# 72 "data/maps/OchreValeMine/scripts.pory"
+# 71 "data/maps/OchreValeMine/scripts.pory"
 	waitmovement 0
+# 72 "data/maps/OchreValeMine/scripts.pory"
+	msgbox OchreValeMine_MagmaEncounter_EndText
 # 73 "data/maps/OchreValeMine/scripts.pory"
+	closemessage
+# 74 "data/maps/OchreValeMine/scripts.pory"
+	delay 16
+# 75 "data/maps/OchreValeMine/scripts.pory"
+	applymovement 24, OchreValeMine_MagmaEncounter_Movement_2
+# 76 "data/maps/OchreValeMine/scripts.pory"
+	waitmovement 0
+# 77 "data/maps/OchreValeMine/scripts.pory"
 	setvar VAR_TEMP_2, 0
 	goto OchreValeMine_MagmaEncounter_1
 
 
 OchreValeMine_ScientistGuy::
-# 85 "data/maps/OchreValeMine/scripts.pory"
+# 89 "data/maps/OchreValeMine/scripts.pory"
 	lockall
-# 86 "data/maps/OchreValeMine/scripts.pory"
+# 90 "data/maps/OchreValeMine/scripts.pory"
 	msgbox OchreValeMine_ScientistGuy_Text_0, MSGBOX_NPC
-# 87 "data/maps/OchreValeMine/scripts.pory"
+# 91 "data/maps/OchreValeMine/scripts.pory"
 	releaseall
 	return
 
 
 OchreValeMine_MagmaEncounterClear::
-# 91 "data/maps/OchreValeMine/scripts.pory"
+# 95 "data/maps/OchreValeMine/scripts.pory"
 	goto_if_unset FLAG_CLEARED_OCHRE_VALE_MINE, OchreValeMine_MagmaEncounterClear_2
 OchreValeMine_MagmaEncounterClear_1:
-# 94 "data/maps/OchreValeMine/scripts.pory"
+# 98 "data/maps/OchreValeMine/scripts.pory"
 	setvar VAR_TEMP_2, 0
 	return
 
 OchreValeMine_MagmaEncounterClear_2:
-# 92 "data/maps/OchreValeMine/scripts.pory"
+# 96 "data/maps/OchreValeMine/scripts.pory"
 	setflag FLAG_CLEARED_OCHRE_VALE_MINE
 	goto OchreValeMine_MagmaEncounterClear_1
 
 
 OchreValeMine_BlackBelt::
-# 98 "data/maps/OchreValeMine/scripts.pory"
+# 102 "data/maps/OchreValeMine/scripts.pory"
 	trainerbattle_single TRAINER_OCHRE_VALE_MINE_BLACK_BELT, OchreValeMine_BlackBelt_Text_0, OchreValeMine_BlackBelt_Text_1
-# 103 "data/maps/OchreValeMine/scripts.pory"
+# 107 "data/maps/OchreValeMine/scripts.pory"
 	msgbox OchreValeMine_BlackBelt_Text_2, MSGBOX_AUTOCLOSE
 	end
 
 
 OchreValeMine_BattleGirl::
-# 108 "data/maps/OchreValeMine/scripts.pory"
+# 112 "data/maps/OchreValeMine/scripts.pory"
 	trainerbattle_single TRAINER_OCHRE_VALE_MINE_BATTLE_GIRL, OchreValeMine_BattleGirl_Text_0, OchreValeMine_BattleGirl_Text_1
-# 113 "data/maps/OchreValeMine/scripts.pory"
+# 117 "data/maps/OchreValeMine/scripts.pory"
 	msgbox OchreValeMine_BattleGirl_Text_2, MSGBOX_AUTOCLOSE
 	end
 
 
 OchreValeMine_Picnicker::
-# 118 "data/maps/OchreValeMine/scripts.pory"
+# 122 "data/maps/OchreValeMine/scripts.pory"
 	trainerbattle_single TRAINER_OCHRE_VALE_MINE_PICNICKER, OchreValeMine_Picnicker_Text_0, OchreValeMine_Picnicker_Text_1
-# 123 "data/maps/OchreValeMine/scripts.pory"
+# 127 "data/maps/OchreValeMine/scripts.pory"
 	msgbox OchreValeMine_Picnicker_Text_2, MSGBOX_AUTOCLOSE
 	end
 
 
 OchreValeMine_Hiker::
-# 128 "data/maps/OchreValeMine/scripts.pory"
+# 132 "data/maps/OchreValeMine/scripts.pory"
 	trainerbattle_single TRAINER_OCHRE_VALE_MINE_HIKER, OchreValeMine_Hiker_Text_0, OchreValeMine_Hiker_Text_1
-# 133 "data/maps/OchreValeMine/scripts.pory"
+# 137 "data/maps/OchreValeMine/scripts.pory"
 	msgbox OchreValeMine_Hiker_Text_2, MSGBOX_AUTOCLOSE
 	end
 
 
 OchreValeMine_GemstoneRed::
-# 138 "data/maps/OchreValeMine/scripts.pory"
+# 142 "data/maps/OchreValeMine/scripts.pory"
 	lockall
-# 139 "data/maps/OchreValeMine/scripts.pory"
+# 143 "data/maps/OchreValeMine/scripts.pory"
 	msgbox OchreValeMine_GemstoneRed_Text_0, MSGBOX_SIGN
-# 140 "data/maps/OchreValeMine/scripts.pory"
+# 144 "data/maps/OchreValeMine/scripts.pory"
 	releaseall
 	return
 
 
 OchreValeMine_GemstoneBlue::
-# 144 "data/maps/OchreValeMine/scripts.pory"
+# 148 "data/maps/OchreValeMine/scripts.pory"
 	lockall
-# 145 "data/maps/OchreValeMine/scripts.pory"
+# 149 "data/maps/OchreValeMine/scripts.pory"
 	msgbox OchreValeMine_GemstoneBlue_Text_0, MSGBOX_SIGN
-# 146 "data/maps/OchreValeMine/scripts.pory"
+# 150 "data/maps/OchreValeMine/scripts.pory"
 	releaseall
 	return
 
@@ -240,152 +238,135 @@ OchreValeMine_MagmaEncounter_Movement_1:
 	walk_right
 	step_end
 
-# 23 "data/maps/OchreValeMine/scripts.pory"
+# 20 "data/maps/OchreValeMine/scripts.pory"
 OchreValeMine_MagmaEncounter_Movement_2:
-# 23 "data/maps/OchreValeMine/scripts.pory"
-	walk_left
-# 23 "data/maps/OchreValeMine/scripts.pory"
-	walk_left
-	step_end
-
-# 26 "data/maps/OchreValeMine/scripts.pory"
-OchreValeMine_MagmaEncounter_Movement_3:
-# 26 "data/maps/OchreValeMine/scripts.pory"
+# 20 "data/maps/OchreValeMine/scripts.pory"
 	walk_right
 	step_end
 
-# 45 "data/maps/OchreValeMine/scripts.pory"
-OchreValeMine_MagmaEncounter_Movement_4:
-# 45 "data/maps/OchreValeMine/scripts.pory"
-	face_left
+# 23 "data/maps/OchreValeMine/scripts.pory"
+OchreValeMine_MagmaEncounter_Movement_3:
+# 23 "data/maps/OchreValeMine/scripts.pory"
+	walk_left
 	step_end
 
-# 67 "data/maps/OchreValeMine/scripts.pory"
-OchreValeMine_MagmaEncounter_Movement_5:
-# 67 "data/maps/OchreValeMine/scripts.pory"
-	walk_left
+# 42 "data/maps/OchreValeMine/scripts.pory"
+OchreValeMine_MagmaEncounter_Movement_4:
+# 42 "data/maps/OchreValeMine/scripts.pory"
+	face_left
 	step_end
 
 OchreValeMine_MagmaEncounter_Text_0:
 # 19 "data/maps/OchreValeMine/scripts.pory"
-	.string "We told you to stop looking into it!$"
+	.string "We told you to stop looking into it.$"
 
 OchreValeMine_MagmaEncounter_Text_1:
 # 22 "data/maps/OchreValeMine/scripts.pory"
-	.string "Theres something weird about it\n"
-	.string "though! We have to figure out what the\l"
-	.string "readings mean, don't you understand?!$"
+	.string "Theres something unusual hidden\nin the data!\lWe must figure out what it means,\ldon't you understand?!$"
 
 OchreValeMine_MagmaEncounter_Text_2:
 # 25 "data/maps/OchreValeMine/scripts.pory"
-	.string "It's not our job to understand, our job\n"
-	.string "is just to stop people like you from\l"
-	.string "doing what you're doing.$"
+	.string "It's not our job to understand,\nour job is to hinder people like you.$"
 
 OchreValeMine_MagmaEncounter_Text_3:
-# 36 "data/maps/OchreValeMine/scripts.pory"
-	.string "Hey! You over there! Can you please\n"
-	.string "help me out here?$"
+# 37 "data/maps/OchreValeMine/scripts.pory"
+	.string "Hey! You over there!\nCan you please help me out here?$"
 
 OchreValeMine_MagmaEncounter_Text_4:
-# 50 "data/maps/OchreValeMine/scripts.pory"
-	.string "Who are you to try and get in our way?\n"
-	.string "We're just here to stop them from doing\l"
-	.string "something foolish!$"
+# 47 "data/maps/OchreValeMine/scripts.pory"
+	.string "Who are you to try and get in our way?\nWe're here to stop them from doing\lsomething foolish!$"
 
 OchreValeMine_MagmaEncounter_Text_5:
-# 51 "data/maps/OchreValeMine/scripts.pory"
-	.string "You don't understand what you're doing\n"
-	.string "here!$"
+# 53 "data/maps/OchreValeMine/scripts.pory"
+	.string "No!$"
 
 OchreValeMine_MagmaEncounter_Text_6:
-# 51 "data/maps/OchreValeMine/scripts.pory"
-	.string "Look at the bigger picture!$"
+# 55 "data/maps/OchreValeMine/scripts.pory"
+	.string "Now what are we supposed to do...$"
 
 OchreValeMine_MagmaEncounter_Text_7:
-# 57 "data/maps/OchreValeMine/scripts.pory"
-	.string "We'll retreat for now, but we'll keep an\n"
-	.string "eye on you.$"
+# 59 "data/maps/OchreValeMine/scripts.pory"
+	.string "We'll have to retreat for now,\nbut next time we won't go easy!$"
 
 OchreValeMine_ScientistGuy_Text_0:
-# 86 "data/maps/OchreValeMine/scripts.pory"
+# 90 "data/maps/OchreValeMine/scripts.pory"
 	.string "I'm going to finish collecting the\n"
 	.string "samples I need then I'll report back to\l"
 	.string "the Lab. Feel free to go on ahead.$"
 
 OchreValeMine_BlackBelt_Text_0:
-# 100 "data/maps/OchreValeMine/scripts.pory"
+# 104 "data/maps/OchreValeMine/scripts.pory"
 	.string "THIS IS A GREAT PLACE TO TEST THE\n"
 	.string "POWER OF MY FISTS!$"
 
 OchreValeMine_BlackBelt_Text_1:
-# 101 "data/maps/OchreValeMine/scripts.pory"
+# 105 "data/maps/OchreValeMine/scripts.pory"
 	.string "I NEED TO PUNCH MORE ROCKS!$"
 
 OchreValeMine_BlackBelt_Text_2:
-# 103 "data/maps/OchreValeMine/scripts.pory"
+# 107 "data/maps/OchreValeMine/scripts.pory"
 	.string "Destroying rocks here benefits both\n"
 	.string "myself and the miners as it helps quarry\l"
 	.string "for materials.$"
 
 OchreValeMine_BattleGirl_Text_0:
-# 110 "data/maps/OchreValeMine/scripts.pory"
+# 114 "data/maps/OchreValeMine/scripts.pory"
 	.string "I heard this was a great place to train,\n"
 	.string "but I'm scared of the dark...$"
 
 OchreValeMine_BattleGirl_Text_1:
-# 111 "data/maps/OchreValeMine/scripts.pory"
+# 115 "data/maps/OchreValeMine/scripts.pory"
 	.string "Can you please point me to the\n"
 	.string "entrance?$"
 
 OchreValeMine_BattleGirl_Text_2:
-# 113 "data/maps/OchreValeMine/scripts.pory"
+# 117 "data/maps/OchreValeMine/scripts.pory"
 	.string "I knew I shouldn't have come here, I\n"
 	.string "thought training in the dark would help\l"
 	.string "me get over my fears, but the noises of\l"
 	.string "rocks breaking is just making it worse.$"
 
 OchreValeMine_Picnicker_Text_0:
-# 120 "data/maps/OchreValeMine/scripts.pory"
+# 124 "data/maps/OchreValeMine/scripts.pory"
 	.string "Isn't it weird that its spelled 'Picnic'?$"
 
 OchreValeMine_Picnicker_Text_1:
-# 121 "data/maps/OchreValeMine/scripts.pory"
+# 125 "data/maps/OchreValeMine/scripts.pory"
 	.string "'Picknick'? No?$"
 
 OchreValeMine_Picnicker_Text_2:
-# 123 "data/maps/OchreValeMine/scripts.pory"
+# 127 "data/maps/OchreValeMine/scripts.pory"
 	.string "Picnic, Picnicker, Picknic, Picknicker,\n"
 	.string "Picknick, Picknicer... I don't even know\l"
 	.string "anymore...$"
 
 OchreValeMine_Hiker_Text_0:
-# 130 "data/maps/OchreValeMine/scripts.pory"
+# 134 "data/maps/OchreValeMine/scripts.pory"
 	.string "The view of the cave would be great\n"
 	.string "with a light.$"
 
 OchreValeMine_Hiker_Text_1:
-# 131 "data/maps/OchreValeMine/scripts.pory"
+# 135 "data/maps/OchreValeMine/scripts.pory"
 	.string "Have flashlights been invented?$"
 
 OchreValeMine_Hiker_Text_2:
-# 133 "data/maps/OchreValeMine/scripts.pory"
+# 137 "data/maps/OchreValeMine/scripts.pory"
 	.string "I wish I could just light up the entire\n"
 	.string "cave somehow, but I don't think it's\l"
 	.string "possible.$"
 
 OchreValeMine_GemstoneRed_Text_0:
-# 139 "data/maps/OchreValeMine/scripts.pory"
+# 143 "data/maps/OchreValeMine/scripts.pory"
 	.string "There appears to be a strange red\n"
 	.string "crystal hidden amongst the rocks.$"
 
 OchreValeMine_GemstoneBlue_Text_0:
-# 145 "data/maps/OchreValeMine/scripts.pory"
+# 149 "data/maps/OchreValeMine/scripts.pory"
 	.string "There appears to be a strange blue\n"
 	.string "crystal hidden amongst the rocks.$"
 
 OchreValeMine_MagmaEncounter_EndText::
-# 78 "data/maps/OchreValeMine/scripts.pory"
+# 82 "data/maps/OchreValeMine/scripts.pory"
 	.string "Thank you for your assistance,\nI'm not sure why they were so riled up.\p"
 	.string "They never used to be this bad before,\nsomething must've happened for them to\lgo off the rails like this.\p"
 	.string "They should stop interfering with our\nresearch now, so we can finally get\lthe materials sent to the lab.$"

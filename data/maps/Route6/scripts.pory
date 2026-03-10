@@ -10,20 +10,33 @@ script Route6_OnLoad {
         setmetatile(30, 53, METATILE_General_CalmWater, TRUE)
         setmetatile(31, 53, METATILE_General_CalmWater, TRUE)
         setmetatile(32, 53, METATILE_General_CalmWater, TRUE)
+
         setmetatile(29, 54, METATILE_General_CalmWater, TRUE)
         setmetatile(30, 54, METATILE_Fortree_BridgeTopOcean, TRUE)
-        setmetatile(31, 54, METATILE_General_CalmWater, TRUE)
-        setmetatile(32, 54, METATILE_Fortree_BridgeTopOcean, TRUE)
+        setmetatile(31, 54, METATILE_Fortree_BridgeTopOcean, TRUE)
+        setmetatile(32, 54, METATILE_General_CalmWater, TRUE)
+
         setmetatile(29, 55, METATILE_General_CalmWater, TRUE)
         setmetatile(30, 55, METATILE_Fortree_BridgeBottomOcean, TRUE)
-        setmetatile(31, 55, METATILE_General_CalmWater, TRUE)
-        setmetatile(32, 55, METATILE_Fortree_BridgeBottomOcean, TRUE)
+        setmetatile(31, 55, METATILE_Fortree_BridgeBottomOcean, TRUE)
+        setmetatile(32, 55, METATILE_General_CalmWater, TRUE)
+
         setmetatile(29, 56, METATILE_Fortree_BridgeTopOcean, TRUE)
         setmetatile(29, 57, METATILE_Fortree_BridgeBottomOcean, TRUE)
     }
 }
 
 script Route6_AquaGrunt {
+    trainerbattle_single(
+        TRAINER_ROUTE6_AQUA_GRUNT, 
+        format("Hey! We're doin' stuff here!"),
+        format("Doesn't rain make Water types stronger?")  
+    )
+    msgbox(format("What are we doin? None of your business!"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route6_AquaGrunt1 {
     msgbox(format("I can't believe this..."), MSGBOX_NPC)
 }
 
@@ -32,6 +45,16 @@ script Route6_AquaGrunt2 {
 }
 
 script Route6_MagmaGrunt {
+    trainerbattle_single(
+        TRAINER_ROUTE6_MAGMA_GRUNT, 
+        format("You're not one of them Aqua guys are ya?"),
+        format("Curse this blasted rain!")  
+    )
+    msgbox(format("Who's idea was it to make the Magma guys go to a raining place..."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route6_MagmaGrunt1 {
     msgbox(format("These idiots broke the bridge!"), MSGBOX_NPC)
 }
 
@@ -65,69 +88,69 @@ script Route6_Hiker {
 script Route6_Picnicker {
     trainerbattle_single(
         TRAINER_ROUTE6_PICNICKER, 
-        format(""),
-        format("")  
+        format("It's great weather for a picnic huh?"),
+        format("I was joking, this weather sucks.")  
     )
-    msgbox(format(""), MSGBOX_AUTOCLOSE)
+    msgbox(format("The rain makes my sandwiches soggy..."), MSGBOX_AUTOCLOSE)
     end
 }
 
 script Route6_BugCatcher {
     trainerbattle_single(
         TRAINER_ROUTE6_BUG_CATCHER, 
-        format(""),
-        format("")  
+        format("Hoo Hoo Hee Hee"),
+        format("Hoo... Hee...")  
     )
-    msgbox(format(""), MSGBOX_AUTOCLOSE)
+    msgbox(format("I'm trying to find some cool bugs in the long grass."), MSGBOX_AUTOCLOSE)
     end
 }
 
 script Route6_Psychic {
     trainerbattle_single(
         TRAINER_ROUTE6_PSYCHIC, 
-        format(""),
-        format("")  
+        format("Thought you could sneak past me did you?"),
+        format("Maybe I should've just let you pass...")  
     )
-    msgbox(format(""), MSGBOX_AUTOCLOSE)
+    msgbox(format("That large bush looks kind of interesting."), MSGBOX_AUTOCLOSE)
     end
 }
 
 script Route6_BugManiac {
     trainerbattle_single(
         TRAINER_ROUTE6_BUG_MANIAC, 
-        format(""),
-        format("")  
+        format("THE TIME OF BUG IS UPON US!"),
+        format("Man this game must be bugged...")  
     )
-    msgbox(format(""), MSGBOX_AUTOCLOSE)
+    msgbox(format("I heard there's a cool spot to catch some rare bugs around here."), MSGBOX_AUTOCLOSE)
     end
 }
 
 script Route6_NinjaBoy {
     trainerbattle_single(
         TRAINER_ROUTE6_NINJA_BOY, 
-        format(""),
-        format("")  
+        format("Surprise!"),
+        format("I'm surprised!")  
     )
-    msgbox(format(""), MSGBOX_AUTOCLOSE)
+    msgbox(format("I thought if I jumped out at you then I would get an advantage."), MSGBOX_AUTOCLOSE)
     end
 }
 
 script Route6_BirdKeeper {
     trainerbattle_single(
         TRAINER_ROUTE6_BIRD_KEEPER, 
-        format(""),
-        format("")  
+        format("I like birds."),
+        format("Hey that didn't count, I was being tickled by the feathers!")  
     )
-    msgbox(format(""), MSGBOX_AUTOCLOSE)
+    msgbox(format("I could really go for some chicken nuggets right about now."), MSGBOX_AUTOCLOSE)
     end
 }
 
 script Route6_Beauty {
     trainerbattle_single(
         TRAINER_ROUTE6_BEAUTY, 
-        format(""),
-        format("")  
+        format("I'm available."),
+        format("You're pretty strong, are you busy later?")  
     )
-    msgbox(format(""), MSGBOX_AUTOCLOSE)
+    msgbox(format("It's so hard to find someone decent nowadays."), MSGBOX_AUTOCLOSE)
     end
 }

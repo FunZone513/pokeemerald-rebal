@@ -8,7 +8,12 @@ script ScorchedChambers_OnTransition {
         if (flag(FLAG_SCORCHED_CHAMBERS_BRIDGE_SEEN)) {
             setvar(VAR_TEMP_A, 2)
         } else { setvar(VAR_TEMP_A, 1) } // evelynn trigger
-    }
+    
+        // magma couple
+        if (defeated(TRAINER_SCORCHED_CHAMBERS_MAGMA_GRUNT5) || defeated(TRAINER_SCORCHED_CHAMBERS_MAGMA_GRUNT6)) {
+            setflag(FLAG_TEMP_B)
+        } else { setvar(VAR_TEMP_B, 1) }
+    } else { setflag(FLAG_TEMP_B) }
 }
 
 script ScorchedChambers_Hiker {
@@ -138,35 +143,96 @@ script ScorchedChambers_MagmaGrunt4 {
         format("If only my arms were a little longer!"),
         format("Curse my tiny Tyrunt arms...")  
     )
-    msgbox(format("Idk what that item is but I sure do want it."), MSGBOX_AUTOCLOSE)
+    msgbox(format("I don't know what that item is but I sure do want it."), MSGBOX_AUTOCLOSE)
     end
 }
-//TODO this is meant to call over the other one, its the pair from ochre vale
 
-script ScorchedChambers_MagmaGrunt5 {
+script ScorchedChambers_MagmaCouple {
+    lockall
+    playse(SE_PIN)
+    applymovement(22, Common_Movement_ExclamationMark)
+    waitmovement(22)
+    delay(16)
+
+    getobjectxy(OBJ_EVENT_ID_PLAYER, CURRENT_POSITION, VAR_TEMP_1, VAR_TEMP_2)
+    switch(var(VAR_TEMP_2)) { // I don't think pory has for loops
+        case 28: applymovement(22, moves(walk_up*4)) break
+        case 29: applymovement(22, moves(walk_up*3)) break
+        case 30: applymovement(22, moves(walk_up*2)) break
+        case 31: applymovement(22, moves(walk_up)) break
+        case 32: applymovement(22, moves(face_up)) break
+    }
+    waitmovement(0)
+
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
+    waitmovement(0)
+    msgbox(ScorchedChambers_MagmaCouple_Text1)
+    closemessage
+    applymovement(21, moves(face_left))
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(21, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    delay(16)
+    applymovement(21, moves(walk_left*5))
+    waitmovement(0)
     
+    switch(var(VAR_TEMP_2)) {
+        case 28: applymovement(21, moves(walk_up*3)) break
+        case 29: applymovement(21, moves(walk_up*2)) break
+        case 30: applymovement(21, moves(walk_up)) break
+        case 31: break
+        case 32: applymovement(21, moves(walk_down)) break
+    }
+    waitmovement(0)
 
-
-    trainerbattle_single(
+    applymovement(21, moves(face_left))
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+    msgbox(ScorchedChambers_MagmaCouple_Text2)
+    closemessage
+    trainerbattle_two_trainers(
         TRAINER_SCORCHED_CHAMBERS_MAGMA_GRUNT5, 
-        format(""),
-        format("")  
-    )
-    msgbox(format(""), MSGBOX_AUTOCLOSE)
-    end
-}
-script ScorchedChambers_MagmaGrunt6 {
-    trainerbattle_single(
+        format("Not again!"), 
         TRAINER_SCORCHED_CHAMBERS_MAGMA_GRUNT6, 
-        format(""),
-        format("")  
+        format("We'll never hear the end of this...")
     )
-    msgbox(format(""), MSGBOX_AUTOCLOSE)
-    end
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    if (var(VAR_RESULT) == B_OUTCOME_WON) {
+        msgbox("This isn't the last you've heard of us!\nAgain!")
+        closemessage
+        fadescreen(FADE_TO_BLACK)
+        removeobject(22)
+        removeobject(21)
+        playse(SE_FLEE)
+        delay(60)
+        special(DrawWholeMapView)
+        fadescreen(FADE_FROM_BLACK)
+        setvar(VAR_TEMP_B, 0)
+    }
+    releaseall
+}
+
+text ScorchedChambers_MagmaCouple_Text1 {
+    "Huh?\p"
+    "Aren't you the one from Ochre Vale...?\p"
+    "Oh shoot, you are too!\p"
+    "Don't tell me you've come to\nmess with us again!"
+}
+
+text ScorchedChambers_MagmaCouple_Text2 {
+    "Hey man, what are you up t-\p"
+    "Oh god, not this kid again!\p"
+    "We got scolded so hard because\nyou screwed up what we were\ldoing before!\p"
+    "Why have you come back to harass us?\p"
+    "...\p"
+    "Huh?\nWe're doing something wrong?\p"
+    "Ignorance truely is bliss isn't it?\p"
+    "We're not gonna go easy this time,\nso prepare yourself for a butt-kicking!"
 }
 
 script ScorchedChambers_AlertEvelynn {
-    lock
+    lockall
     setvar(VAR_TEMP_A, 2)
     playse(SE_PIN)
     applymovement(24, Common_Movement_ExclamationMark)
@@ -191,15 +257,17 @@ script ScorchedChambers_AlertEvelynn {
     applymovement(24, moves(face_left delay_16*4 face_right delay_16*4 face_down))
     waitmovement(0)
     msgbox("Wait right there!\nI'll come up!")
-    applymovement(24, moves(walk_fast_up))
+    applymovement(24, moves(walk_fast_up*4))
     waitmovement(0)
+    closemessage
+    delay(16)
     applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_down))
     waitmovement(0)
     special(RemoveCameraObject)
-    delay(48)
+    delay(32)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
     waitmovement(0)
-    delay(48)
+    delay(32)
     setobjectxy(24, 39, 52)
     applymovement(24, moves(walk_left walk_up*4 walk_left*7))
     waitmovement(0)
@@ -212,8 +280,9 @@ script ScorchedChambers_AlertEvelynn {
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
     applymovement(24, moves(walk_fast_left*7))
     waitmovement(0)
-    removeobject(24)
-    release
+    hideobjectat(24, MAP_SCORCHED_CHAMBERS)
+    setobjectxyperm(24, 0, 59)
+    releaseall
 }
 
 script ScorchedChambers_MagmaBridge {
@@ -221,8 +290,8 @@ script ScorchedChambers_MagmaBridge {
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up))
     waitmovement(0)
     getobjectxy(OBJ_EVENT_ID_PLAYER, CURRENT_POSITION, VAR_TEMP_1, VAR_TEMP_2)
-    if (var(VAR_TEMP_1) == 49) { 
-        applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right))
+    if (var(VAR_TEMP_1) == 20) { 
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left))
         waitmovement(0)
     }
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up*2))
@@ -234,8 +303,8 @@ script ScorchedChambers_MagmaBridge {
         waitmovement(0)
         goto(ScorchedChambers_MagmaMultiBattle) // skip if you lost previously | lmao loser
     }
-    applymovement(27, moves(face_right))
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
+    applymovement(27, moves(face_left))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
     waitmovement(0)
     msgbox(ScorchedChambers_EvelynnText2)
     playse(SE_USE_ITEM)
@@ -245,10 +314,14 @@ script ScorchedChambers_MagmaBridge {
     applymovement(27, moves(face_up))
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
     waitmovement(0)
+    special(SpawnCameraObject)
+    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_up))
+    waitmovement(0)
     msgbox("Now that you've had your little chat,\nlet's get down to business.")
     applymovement(27, moves(walk_up))
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up))
     waitmovement(0)
+    special(RemoveCameraObject)
     goto(ScorchedChambers_MagmaMultiBattle)
 }
 
@@ -271,7 +344,7 @@ script ScorchedChambers_MagmaMultiBattle {
         TRAINER_SCORCHED_CHAMBERS_MAGMA_ADMIN, 
         "How did you...", 
         TRAINER_SCORCHED_CHAMBERS_MAGMA_GRUNT7, 
-        "My promotion... I knew\nTeam Magma didn't have job security!",
+        "My promotion... I knew Team Magma\ndidn't have job security!",
         PARTNER_SCORCHED_CHAMBERS_EVELYNN
     )
     if (var(VAR_RESULT) != 1) {
@@ -279,15 +352,16 @@ script ScorchedChambers_MagmaMultiBattle {
         special(SetCB2WhiteOut)
         waitstate
     }
-    applymovement(25, moves(lock_facing_direction walk_up*2 unlock_facing_direction))
-    applymovement(26, moves(lock_facing_direction walk_up*2 unlock_facing_direction))
-    applymovement(27, moves(walk_up*2))
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up*2))
+    applymovement(25, moves(lock_facing_direction walk_slow_up*2 unlock_facing_direction))
+    applymovement(26, moves(lock_facing_direction walk_slow_up*2 unlock_facing_direction))
+    applymovement(27, moves(walk_slow_up*2))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_slow_up*2))
     waitmovement(0)
     delay(20)
     applymovement(18, moves(face_down))
     waitmovement(0)
     msgbox("Haa...\pYou're dismissed.")
+    closemessage
     playse(SE_PIN)
     applymovement(25, Common_Movement_ExclamationMark)
     applymovement(26, Common_Movement_ExclamationMark)
@@ -297,24 +371,29 @@ script ScorchedChambers_MagmaMultiBattle {
     applymovement(26, moves(face_up))
     waitmovement(0)
     msgbox("Yes sir!")
-    applymovement(25, moves(walk_fast_left*8))
-    applymovement(26, moves(walk_fast_left*8))
-    delay(30)
+    closemessage
+    applymovement(25, moves(walk_fast_left*10))
+    applymovement(26, moves(walk_fast_left*10))
+    delay(48)
     applymovement(27, moves(walk_up))
     waitmovement(26)
-    removeobject(25)
-    removeobject(26)
+    hideobjectat(25, MAP_SCORCHED_CHAMBERS)
+    hideobjectat(26, MAP_SCORCHED_CHAMBERS)
     msgbox("Maxie!\pWhat are you up to now?!")
+    closemessage
     delay(20)
     special(SpawnCameraObject)
     applymovement(18, moves(face_up))
     applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_up*4))
     waitmovement(0)
-    msgbox("Doesn't it seem strange, Miss Evelynn?\p")
+    msgbox("Doesn't it seem strange, Miss Evelynn?")
     applymovement(27, moves(walk_up))
     msgbox("What does?")
     msgbox("Everything.\pThe warmth of this lava,\nthe strength of our Pokemon,\leven our very lives.")
-    msgbox("Have you gone mad?")
+    closemessage
+    delay(80)
+    msgbox("...\pHave you gone mad Maxie?")
+    closemessage
     applymovement(18, moves(face_down))
     applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_fast_down*2))
     waitmovement(0)
@@ -323,43 +402,51 @@ script ScorchedChambers_MagmaMultiBattle {
     msgbox("I...\pOf course I know that!\pWho wouldn't know their own name?!")
     applymovement(18, moves(face_up))
     waitmovement(0)
-    msgbox("Yes of course, just as my name is Maxie,\lyour name is Evelynn.")
+    msgbox("Yes, yes of course...\njust as my name is Maxie,\lyour name is Evelynn.")
+    closemessage
     delay(120)
     applymovement(18, moves(face_down))
     waitmovement(0)
     msgbox("...\pI see it's still too early.")
-    applymovement(18, moves(walk_down walk_left face_down))
+    closemessage
+    applymovement(18, moves(walk_down))
     waitmovement(0)
     msgbox("I shall be taking my leave here,\nI hope to see you again Evelynn.")
-    applymovement(18, moves(face_left delay_16*2 face_down))
+    closemessage
+    applymovement(18, moves(walk_left delay_16*2 face_down))
     waitmovement(0)
-    msgbox("And I hope to never see your annoying\nfriend again.")
+    msgbox("...and I hope to never see your annoying\nfriend again.")
+    closemessage
     applymovement(18, moves(walk_left*8))
     waitmovement(0)
     removeobject(18)
     delay(60)
-    applymovement(27, moves(face_right))
+    applymovement(27, moves(face_left))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
     applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_down*2))
     waitmovement(0)
-    msgbox("I uh...\pThanks for the help...")
-    applymovement(27, moves(walk_left*8))
-    waitmovement(0)
-    removeobject(27)
+    msgbox("I uh...\p...\p...thanks for the help...")
+    closemessage
+    applymovement(27, moves(walk_down*8))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
+    waitmovement(27)
+    hideobjectat(27, MAP_SCORCHED_CHAMBERS)
     special(RemoveCameraObject)
     setflag(FLAG_CLEARED_SCORCHED_CHAMBERS)
     setvar(VAR_TEMP_A, 0)
+    releaseall
 }
 
 text ScorchedChambers_EvelynnText {
     "I see that you've already taken care of\nsome of the guards.\p"
     "If I had known you would be doing that,\nI wouldn't have bothered sneaking in...\p"
-    "Whatever,\nhow about a temporary alliance?\p"
-    "I'm not really sure what all these\nTeam Magma goons are after,\lbut it can't be good, whatever it is.\p"
+    "Whatever, how about a temporary\nalliance?\p"
+    "I'm not really sure what all these\nTeam Magma goons are after,\lbut it can't be good whatever it is.\p"
     "I think I saw their Boss up ahead,\nbut he's all mine to take care of,\lso if you don't mind..."
 }
 
 text ScorchedChambers_EvelynnText2 {
-    "I know I know,\n I didn't make it very far.\p"
+    "I know I know,\nI didn't make it very far.\p"
     "But I think we'd better work together\nto take down these two.\p"
     "I'll quickly heal your Pokemon,\nso you better not hold me back!"
 }

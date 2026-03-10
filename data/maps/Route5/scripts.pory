@@ -49,10 +49,10 @@ script Route5_Picnicker {
 script Route5_BlackBelt {
     trainerbattle_single(
         TRAINER_ROUTE5_BLACKBELT, 
-        format("Punching rocks makes my fists HARD."),
-        format("Punching rocks makes my bones HURT.")  
+        format("PUNCHING ROCKS MAKES MY FISTS HARD."),
+        format("PUNCHING ROCKS MAKES MY BONES HURT.")  
     )
-    msgbox(format("The pain in my fists distracts me from the pain of my exstance."), MSGBOX_AUTOCLOSE)
+    msgbox(format("The pain in my fists distracts me from the pain of my existance."), MSGBOX_AUTOCLOSE)
     end
 }
 

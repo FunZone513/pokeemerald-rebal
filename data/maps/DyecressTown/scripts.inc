@@ -201,7 +201,7 @@ DyecressTown_Spenser_1:
 
 DyecressTown_Spenser_3:
 # 101 "data/maps/DyecressTown/scripts.pory"
-	msgbox DyecressTown_Spenser_Text_0
+	msgbox DyecressTown_Spenser_Text_0, MSGBOX_NPC
 	goto DyecressTown_Spenser_1
 
 

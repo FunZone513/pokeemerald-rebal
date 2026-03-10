@@ -28,8 +28,8 @@
       "x": 20,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE5",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_DRIPSTONE_PASS",
+      "dest_warp_id": "1"
     },
     {
       "x": 7,

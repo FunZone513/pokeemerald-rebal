@@ -167,16 +167,7 @@ Level: 12
 Adamant Nature  
 - Stealth Rock  
 - Tackle  
-- Rock Tomb   
-
-Yanma  
-Ability: Speed Boost  
-Level: 12
-Mild Nature  
-- Struggle Bug  
-- Quick Attack  
-- Air Slash  
-- Detect  
+- Rock Tomb
 
 Clauncher  
 Level: 12
@@ -443,9 +434,8 @@ AI: Basic Trainer
 
 Golett
 Ability: Iron Fist
-EVs: 244 HP / 248 Atk / 8 SpD
 Adamant Nature
-Level: 20
+Level: 22
 - Shadow Punch
 - Fire Punch
 - Thunder Punch
@@ -822,54 +812,53 @@ Class: Leader
 Pic: Leader Wattson
 Gender: Male
 Music: Intense
-Items: Super Potion / Full Heal
+Items: Super Potion / Super Potion
 AI: Gym Leader
-
-Nacli (M) 
-Ability: Sturdy  
-Level: 19  
-EVs: 236 HP / 36 Def / 236 SpD  
-Adamant Nature  
-- Iron Defense  
-- Stealth Rock  
-- Bulldoze  
-- Tackle   
-
-Chinchou (F) 
-Ability: Water Absorb  
-Level: 19  
-EVs: 252 SpA / 252 SpD  
-Modest Nature  
-IVs: 0 Atk  
-- Thunder Wave  
-- Thunderbolt  
-- Bubble Beam  
-- Volt Switch  
 
 Makuhita (M)  
 Ability: Guts  
-Level: 20 
-EVs: 252 Atk / 252 SpD  
+Level: 19  
+Tera Type: Fighting  
 Adamant Nature  
 - Bulk Up  
 - Counter  
 - Fire Punch  
-- Arm Thrust
+- Arm Thrust    
 
-Vigoroth (M) 
+Chinchou (F)  
+Ability: Water Absorb  
+Level: 19  
+Tera Type: Water  
+Modest Nature  
+IVs: 0 Atk  
+- Thunder Wave  
+- Shock Wave  
+- Water Pulse 
+
+Vigoroth (M)  
 Ability: Vital Spirit  
-Level: 20  
-EVs: 252 Atk / 248 Spe  
+Level: 19  
+Tera Type: Normal  
 Adamant Nature  
 - Slash  
-- Night Slash  
+- Low Kick  
 - Bulk Up  
-- Slack Off 
+- Slack Off  
+
+Onix (M)
+Ability: Weak Armor  
+Level: 21  
+Tera Type: Rock  
+Careful Nature  
+- Curse  
+- Smack Down  
+- Dragon Breath  
+- Bulldoze
 
 Solrock @ Wide Lens  
 Ability: Levitate  
 Level: 22  
-EVs: 236 HP / 236 Atk / 36 Spe  
+Tera Type: Rock  
 Adamant Nature  
 - Cosmic Power  
 - Rock Slide  
@@ -1108,10 +1097,10 @@ Music: Intense
 AI: Basic Trainer
 
 Makuhita
-Level: 18
+Level: 20
 
 Ninjask
-Level: 20
+Level: 24
 
 === TRAINER_ROUTE10_HIKER ===
 Name: Rictor
@@ -1136,13 +1125,13 @@ Music: Male
 AI: Basic Trainer
 
 Krabby
-Level: 16
+Level: 17
 
 Shroomish
-Level: 16
+Level: 17
 
 Mightyena
-Level: 18
+Level: 20
 
 === TRAINER_SCORCHED_CHAMBERS_HIKER ===
 Name: Hugh
@@ -1153,13 +1142,13 @@ Music: Hiker
 AI: Basic Trainer
 
 Slugma
-Level: 18
+Level: 20
 
 Aron
-Level: 18
+Level: 20
 
 Barboach
-Level: 18
+Level: 20
 
 === TRAINER_SCORCHED_CHAMBERS_PICNICKER ===
 Name: Rayleigh
@@ -1258,9 +1247,8 @@ AI: Smart Trainer
 
 Chansey  
 Ability: Healer  
-Level: 24  
+Level: 25  
 Tera Type: Normal  
-EVs: 228 HP / 236 Def / 32 SpA / 12 Spe  
 Bold Nature  
 IVs: 0 Atk  
 - Soft-Boiled  
@@ -1278,9 +1266,8 @@ AI: Smart Trainer
 
 Snorlax  
 Ability: Thick Fat  
-Level: 24  
+Level: 25  
 Tera Type: Normal  
-EVs: 248 HP / 248 Atk / 4 Spe  
 Adamant Nature  
 - Heavy Slam  
 - Crunch  
@@ -1448,10 +1435,10 @@ Level: 21
 - Tackle
 - Stockpile
 
-Slugma
+Magcargo
 Ability: Flame Body
 Modest Nature
-Level: 21
+Level: 24
 - Flamethrower
 - Smog
 - Yawn 
@@ -1464,6 +1451,13 @@ Gender: Female
 Music: Magma
 AI: Smart Trainer
 
+Hippopotas (F)
+Level: 21
+- Crunch
+- Sand Tomb
+- Yawn
+- Rock Tomb
+
 Onix
 Ability: Weak Armor
 Adamant Nature
@@ -1472,6 +1466,8 @@ Level: 24
 - Bind
 - Dragon Breath
 - Curse
+
+
 
 === TRAINER_SCORCHED_CHAMBERS_MAGMA_GRUNT7 ===
 Name: Carla
@@ -1485,14 +1481,14 @@ Numel
 Level: 22
 
 Vulpix
-Level: 22
+Level: 23
 - Will O Wisp
 - Ember
 - Quick Attack
 - Disable
 
 Golbat
-Level: 23
+Level: 24
 
 === TRAINER_SCORCHED_CHAMBERS_MAGMA_ADMIN ===
 Name: Terrance
@@ -1503,18 +1499,18 @@ Music: Magma
 AI: Smart Trainer
 
 Torkoal
-Level: 23
+Level: 24
 Ability: Drought
 - Protect
 - Lava Plume
 - Smokescreen
 - Body Slam
 
-Slugma
-Level: 23
+Sandile
+Level: 24
 - Rock Slide
-- Flamethrower
-- Yawn
+- Crunch
+- Thunder Fang
 
 Lampent
 Level: 25
@@ -1553,7 +1549,7 @@ Nincada
 Level: 19
 
 === TRAINER_ROUTE6_PSYCHIC ===  
-Name: EDWARD
+Name: Edward
 Class: Psychic
 Pic: Psychic M
 Gender: Male
@@ -1624,6 +1620,94 @@ Level: 28
 
 Roserade
 Level: 28
+
+=== TRAINER_ROUTE6_AQUA_GRUNT ===
+Name: Vincent
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+AI: Basic Trainer
+
+Krabby
+Level: 18
+
+Carvanha
+Level: 18
+
+Poliwag
+Level: 20
+
+=== TRAINER_ROUTE6_MAGMA_GRUNT ===
+Name: Ryan
+Class: Team Magma
+Pic: Magma Grunt M
+Gender: Male
+Music: Magma
+AI: Basic Trainer
+
+Slugma
+Level: 19
+
+Numel
+Level: 19
+
+=== TRAINER_DRIPSTONE_PASS_FISHERMAN ===
+Name: Fitzgerald
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Hiker
+AI: Basic Trainer
+
+Huntail (M)
+Level: 23
+
+=== TRAINER_DRIPSTONE_PASS_PSYCHIC ===  
+Name: Aspin
+Class: Psychic
+Pic: Psychic M
+Gender: Male
+Music: Intense
+AI: Basic Trainer
+
+Chingling
+Level: 17
+
+Noctowl
+Level: 21
+
+=== TRAINER_DRIPSTONE_PASS_HEXMANIAC ===
+Name: Leah
+Class: Hex Maniac
+Pic: Hex Maniac
+Gender: Female
+Music: Suspicious
+AI: Basic Trainer
+
+Morelull
+Level: 18
+
+Whismur
+Level: 18
+
+Duskull
+Level: 18
+
+=== TRAINER_DRIPSTONE_PASS_RUNNER ===
+Name: Brett
+Class: Triathlete
+Pic: Running Triathlete M
+Gender: Male
+Music: Male
+AI: Basic Trainer
+
+Hitmonlee
+Level: 20
+
+Vigoroth
+Level: 20
+
 
 /* ------ !! KEEP AT THE BOTTOM !! ------ */
 === RIVAL_EVELYNN_1 ===

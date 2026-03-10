@@ -1265,3 +1265,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/DyecressTown_HerbShop/scripts.inc"
 
 	.include "data/maps/WebbedThicket/scripts.inc"
+
+	.include "data/maps/DripstonePass/scripts.inc"

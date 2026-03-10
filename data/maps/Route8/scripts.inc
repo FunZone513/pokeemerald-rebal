@@ -12,9 +12,9 @@ Route8_Picnicker::
 
 Route8_Collector::
 # 14 "data/maps/Route8/scripts.pory"
-	trainerbattle_single TRAINER_ROUTE8_COLLECTOR, Route8_Picnicker_Text_0, Route8_Picnicker_Text_1
+	trainerbattle_single TRAINER_ROUTE8_COLLECTOR, Route8_Collector_Text_0, Route8_Collector_Text_1
 # 19 "data/maps/Route8/scripts.pory"
-	msgbox Route8_Picnicker_Text_2, MSGBOX_AUTOCLOSE
+	msgbox Route8_Collector_Text_2, MSGBOX_AUTOCLOSE
 	end
 
 
@@ -66,6 +66,21 @@ Route8_Picnicker_Text_2:
 	.string "The trail gets a bit technical around\n"
 	.string "here.$"
 
+Route8_Collector_Text_0:
+# 16 "data/maps/Route8/scripts.pory"
+	.string "I like to find rare Pokemon.$"
+
+Route8_Collector_Text_1:
+# 17 "data/maps/Route8/scripts.pory"
+	.string "I thought having the rarest Pokemon\n"
+	.string "made me the best Trainer.$"
+
+Route8_Collector_Text_2:
+# 19 "data/maps/Route8/scripts.pory"
+	.string "Collectors like me enjoy finding the\n"
+	.string "rarest Pokemon to fill out our teams\l"
+	.string "with.$"
+
 Route8_Twins1_Text_0:
 # 26 "data/maps/Route8/scripts.pory"
 	.string "We like to play on the cliffs edge!$"
@@ -76,7 +91,7 @@ Route8_Twins1_Text_1:
 
 Route8_Twins1_Text_2:
 # 28 "data/maps/Route8/scripts.pory"
-	.string "Huh? Do you only have one Pokemon? Lame!$"
+	.string "Huh? Do you only have one Pokemon?\nLame!$"
 
 Route8_Twins1_Text_3:
 # 30 "data/maps/Route8/scripts.pory"
@@ -86,15 +101,15 @@ Route8_Twins1_Text_3:
 
 Route8_Twins2_Text_0:
 # 37 "data/maps/Route8/scripts.pory"
-	.string "I beat our Pokemon are stronger than your Pokemon!$"
+	.string "I bet our Pokemon are\nstronger than your Pokemon!$"
 
 Route8_Twins2_Text_1:
 # 38 "data/maps/Route8/scripts.pory"
-	.string "I bet our Dad is stronger than your Dad...$"
+	.string "I bet our Dad is stronger\nthan your Dad...$"
 
 Route8_Twins2_Text_2:
 # 39 "data/maps/Route8/scripts.pory"
-	.string "Huh? Do you only have one Pokemon? Cringe!$"
+	.string "Huh? Do you only have one Pokemon?\nCringe!$"
 
 Route8_Twins2_Text_3:
 # 41 "data/maps/Route8/scripts.pory"

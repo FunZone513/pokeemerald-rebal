@@ -93,11 +93,18 @@
 #define TRAINER_ROUTE6_NINJA_BOY    81
 #define TRAINER_ROUTE6_BIRD_KEEPER  82
 #define TRAINER_ROUTE6_BEAUTY       83
+#define TRAINER_ROUTE6_AQUA_GRUNT   84
+#define TRAINER_ROUTE6_MAGMA_GRUNT  85
+#define TRAINER_DRIPSTONE_PASS_FISHERMAN 86
+#define TRAINER_DRIPSTONE_PASS_PSYCHIC   87
+#define TRAINER_DRIPSTONE_PASS_HEXMANIAC 88
+#define TRAINER_DRIPSTONE_PASS_RUNNER    89
 
 // I'm just gonna keep these grouped together at the bottom by adding to them :)
-#define RIVAL_EVELYNN_1                   84
+#define RIVAL_EVELYNN_1                   90
 
-#define TRAINERS_COUNT                      85
+// don't forget to increase this one too
+#define TRAINERS_COUNT                      91
 
 #define MAX_TRAINERS_COUNT                  864
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)

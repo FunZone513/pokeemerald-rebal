@@ -98,7 +98,7 @@ script DyecressTown_Spenser {
         case 0:
         case 1:
         case 2:
-            msgbox(format("I hope the researchers from Libra Institute can help us uncover the origin of our town."))
+            msgbox(format("I hope the researchers from Libra Institute can help us uncover the origin of our town."), MSGBOX_NPC)
             break
         
         default: break

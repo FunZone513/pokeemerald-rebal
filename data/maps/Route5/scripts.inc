@@ -123,16 +123,16 @@ Route5_Picnicker_Text_2:
 
 Route5_BlackBelt_Text_0:
 # 52 "data/maps/Route5/scripts.pory"
-	.string "Punching rocks makes my fists HARD.$"
+	.string "PUNCHING ROCKS MAKES MY FISTS HARD.$"
 
 Route5_BlackBelt_Text_1:
 # 53 "data/maps/Route5/scripts.pory"
-	.string "Punching rocks makes my bones HURT.$"
+	.string "PUNCHING ROCKS MAKES MY BONES HURT.$"
 
 Route5_BlackBelt_Text_2:
 # 55 "data/maps/Route5/scripts.pory"
 	.string "The pain in my fists distracts me from\n"
-	.string "the pain of my exstance.$"
+	.string "the pain of my existance.$"
 
 Route5_Expert_Text_0:
 # 62 "data/maps/Route5/scripts.pory"

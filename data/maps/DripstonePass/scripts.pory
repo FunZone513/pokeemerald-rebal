@@ -1,0 +1,41 @@
+mapscripts DripstonePass_MapScripts {}
+
+script DripstonePass_Fisherman {
+    trainerbattle_single(
+        TRAINER_DRIPSTONE_PASS_FISHERMAN, 
+        format("I found my way here following the way of The Rod."),
+        format("The Rod has let me down...")  
+    )
+    msgbox(format("The water is pretty murky, maybe that's why the Pokemon I caught were weak."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script DripstonePass_Psychic {
+    trainerbattle_single(
+        TRAINER_DRIPSTONE_PASS_PSYCHIC, 
+        format("I forsaw this encounter, and my imminent victory!"),
+        format("Okay fine, I lied.")  
+    )
+    msgbox(format("I don't get to choose what visions I see."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script DripstonePass_HexManiac {
+    trainerbattle_single(
+        TRAINER_DRIPSTONE_PASS_HEXMANIAC, 
+        format("I like it down here... nice and dark..."),
+        format("I'm one with the mold...")  
+    )
+    msgbox(format("The sunlight hurts my eyes... so I hide in gloomy places like this..."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script DripstonePass_Runner {
+    trainerbattle_single(
+        TRAINER_DRIPSTONE_PASS_RUNNER, 
+        format("Yeah!"),
+        format("No!")  
+    )
+    msgbox(format("Huh? I don't have anything to say to you."), MSGBOX_AUTOCLOSE)
+    end
+}
