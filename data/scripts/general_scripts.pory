@@ -75,6 +75,142 @@ script Generic_POKEMON_INTERACT {
     releaseall
 }
 
+script Generic_GetBadgeCount {
+    setvar(VAR_RESULT, 0)
+    if (flag(FLAG_BADGE01_GET)) { addvar(VAR_RESULT, 1) }
+    if (flag(FLAG_BADGE02_GET)) { addvar(VAR_RESULT, 1) }
+    if (flag(FLAG_BADGE03_GET)) { addvar(VAR_RESULT, 1) }
+    if (flag(FLAG_BADGE04_GET)) { addvar(VAR_RESULT, 1) }
+    if (flag(FLAG_BADGE05_GET)) { addvar(VAR_RESULT, 1) }
+    if (flag(FLAG_BADGE06_GET)) { addvar(VAR_RESULT, 1) }
+    if (flag(FLAG_BADGE07_GET)) { addvar(VAR_RESULT, 1) }
+    if (flag(FLAG_BADGE08_GET)) { addvar(VAR_RESULT, 1) }
+}
+
+//MARK: Pokemart
+script Generic_POKEMART {
+    lock
+    faceplayer
+    message("Welcome!\pHow may I serve you?")
+    waitmessage
+    call(Generic_GetBadgeCount)
+    switch(var(VAR_RESULT)) {
+        case 0:
+        case 1:
+            pokemart(GenericPokeMart_1)
+            break
+        
+        case 2:
+        case 3:
+            pokemart(GenericPokeMart_2)
+            break
+        
+        case 4:
+        case 5:
+            pokemart(GenericPokeMart_3)
+            break
+        
+        case 6:
+        case 7:
+            pokemart(GenericPokeMart_4)
+            break
+
+        case 8:
+        default:
+            pokemart(GenericPokeMart_5)
+    }
+    msgbox("Please come again!", MSGBOX_DEFAULT)
+    release
+}
+
+mart GenericPokeMart_1 {
+    ITEM_POKE_BALL
+    ITEM_POTION
+    ITEM_ANTIDOTE
+    ITEM_PARALYZE_HEAL
+    ITEM_AWAKENING
+    ITEM_BURN_HEAL
+}
+
+mart GenericPokeMart_2 {
+    ITEM_POKE_BALL
+    ITEM_GREAT_BALL
+    ITEM_POTION
+    ITEM_SUPER_POTION
+    ITEM_REPEL
+    ITEM_ANTIDOTE
+    ITEM_PARALYZE_HEAL
+    ITEM_AWAKENING
+    ITEM_BURN_HEAL
+}
+
+mart GenericPokeMart_3 {
+    ITEM_POKE_BALL
+    ITEM_GREAT_BALL
+    ITEM_ULTRA_BALL
+    ITEM_POTION
+    ITEM_SUPER_POTION
+    ITEM_HYPER_POTION
+    ITEM_REPEL
+    ITEM_SUPER_REPEL
+    ITEM_MAX_REPEL
+    ITEM_ANTIDOTE
+    ITEM_PARALYZE_HEAL
+    ITEM_AWAKENING
+    ITEM_BURN_HEAL
+    ITEM_FULL_HEAL
+    ITEM_REVIVE
+    ITEM_ETHER
+    ITEM_ELIXIR
+}
+
+mart GenericPokeMart_4 {
+    ITEM_POKE_BALL
+    ITEM_GREAT_BALL
+    ITEM_ULTRA_BALL
+    ITEM_POTION
+    ITEM_SUPER_POTION
+    ITEM_HYPER_POTION
+    ITEM_MAX_POTION
+    ITEM_FULL_RESTORE
+    ITEM_REPEL
+    ITEM_SUPER_REPEL
+    ITEM_MAX_REPEL
+    ITEM_ANTIDOTE
+    ITEM_PARALYZE_HEAL
+    ITEM_AWAKENING
+    ITEM_BURN_HEAL
+    ITEM_FULL_HEAL
+    ITEM_REVIVE
+    ITEM_MAX_REVIVE
+    ITEM_ETHER
+    ITEM_MAX_ETHER
+    ITEM_ELIXIR
+    ITEM_MAX_ELIXIR
+}
+
+mart GenericPokeMart_5 {
+    ITEM_POKE_BALL
+    ITEM_GREAT_BALL
+    ITEM_ULTRA_BALL
+    ITEM_POTION
+    ITEM_SUPER_POTION
+    ITEM_HYPER_POTION
+    ITEM_MAX_POTION
+    ITEM_FULL_RESTORE
+    ITEM_REPEL
+    ITEM_SUPER_REPEL
+    ITEM_MAX_REPEL
+    ITEM_FULL_HEAL
+    ITEM_REVIVE
+    ITEM_MAX_REVIVE
+    ITEM_ETHER
+    ITEM_MAX_ETHER
+    ITEM_ELIXIR
+    ITEM_MAX_ELIXIR
+}
+
+
 //MARK: Thicket Brush
 script ThicketBrushInteract {    
     lockall

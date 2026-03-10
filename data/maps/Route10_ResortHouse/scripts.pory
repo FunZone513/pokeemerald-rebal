@@ -5,15 +5,34 @@ script Route10_ResortHouse_Owner {
 }
 
 script Route10_ResortHouse_Receptionist {
+    lock
     applymovement(1, moves(face_down))
-    msgbox(Route10_ResortHouse_Receptionist_Text, MSGBOX_SIGN)
-}
+    msgbox("Hello and Welcome to the\nSoothing Sands Resort!", MSGBOX_DEFAULT)
+    if (flag(FLAG_CLEARED_SCORCHED_CHAMBERS)) {
+        msgbox(format("I can heal up your Pokemon, free of charge."), MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            call(Common_EventScript_OutOfCenterPartyHeal)
+            msgbox("Thank you for using our services.", MSGBOX_DEFAULT)
+        } else {
+            msgbox("Until next time.", MSGBOX_DEFAULT)
+        }
 
-text Route10_ResortHouse_Receptionist_Text {
-    "Hello and Welcome to the\nSoothing Sands Resort!\p"
-    "We're currently fully booked,\nbut we should have an opening in...\p"
-    "About 3 Months!\p"
-    "Would you like to make a reservation?"
+    } else {
+        checkmoney(1000)
+        if (var(VAR_RESULT)) {
+            msgbox(format("I can heal up your Pokemon for ¥1000 if you would like."), MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES) {
+                removemoney(1000)
+                call(Common_EventScript_OutOfCenterPartyHeal)
+                msgbox("Thank you for using our services.", MSGBOX_DEFAULT)
+            } else {
+                msgbox("Until next time.", MSGBOX_DEFAULT)
+            }
+        } else {
+            msgbox(format("I could heal up your Pokemon for ¥1000, but you don't seem to have enough."), MSGBOX_DEFAULT)
+        }
+    }
+    release
 }
 
 script Route10_ResortHouse_Receptionist_NPC {

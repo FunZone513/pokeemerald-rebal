@@ -26,10 +26,9 @@ script Route10_ResortOwner {
 }
 
 text Route10_ResortOwner_Text {
-    "Hey there!\nI'm the owner of the resort here.\p"
-    "Thank you for clearing out Team Magma,\nthose guys made business really awkward.\p"
-    "But thanks to you, I no longer have to\nworry about my customers being harassed!\p"
-    "You're free to go wherever in the\nresort you please, thanks again!"
+    "Hey there!\nThank you for clearing out Team Magma,\nthose guys weren't good for business.\p"
+    "Thanks to you, I no longer\nhave to worry about my customers\lbeing harassed!\p"
+    "As a thank you, you're free to go\nwherever and use the facilities in the\lresort as you please, thanks again!"
 }
 
 script Route10_SandEnjoyer1 {
