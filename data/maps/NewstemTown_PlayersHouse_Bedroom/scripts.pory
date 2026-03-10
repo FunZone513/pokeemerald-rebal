@@ -4,6 +4,10 @@ mapscripts NewstemTown_PlayersHouse_Bedroom_MapScripts {
     ]
 }
 
+script NewstemTown_PlayersHouse_Bedroom_InfoNPC {
+    msgbox(format("Current game version is\n0.1.0"), MSGBOX_NPC)
+}
+
 script NewstemTown_PlayersHouse_Bedroom_Settings {
     lockall
     message(format("This is where you edit the game's difficulty and QoL settings."))
@@ -18,7 +22,7 @@ script NewstemTown_PlayersHouse_Bedroom_Settings {
                 setflag(FLAG_SHARED_EXP)
             } else { clearflag(FLAG_SHARED_EXP) }
             goto(NewstemTown_PlayersHouse_Bedroom_Settings)
-            
+
         case 1:
             message(format("Use the new Ice Type interactions. Grants Water and Grass resist."))
             multichoice(25, 5, MULTI_GENERIC_ONOFF, 0)

@@ -14,8 +14,8 @@ script Generic_DefaultSettings {
 }
 
 script Generic_IncreaseExpGain {
-    //! this is 2.5x for playtesting purposes
-    setvar(VAR_INCREASE_EXP_GAIN, 150)
+    //! this is 2.0x for playtesting purposes
+    setvar(VAR_INCREASE_EXP_GAIN, 100)
 
     // % increase. EG: 20 = 1.2x experience. Set to 0 for no bonus.
     //setvar(VAR_INCREASE_EXP_GAIN, 50) 

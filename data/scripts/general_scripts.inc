@@ -20,7 +20,7 @@ Generic_DefaultSettings::
 
 Generic_IncreaseExpGain::
 # 18 "data/scripts/general_scripts.pory"
-	setvar VAR_INCREASE_EXP_GAIN, 150
+	setvar VAR_INCREASE_EXP_GAIN, 100
 	return
 
 
