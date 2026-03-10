@@ -1,4 +1,12 @@
-mapscripts DripstonePass_MapScripts {}
+mapscripts DripstonePass_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: DripstonePass_OnTransition
+}
+
+script DripstonePass_OnTransition {
+    if (defeated(TRAINER_DRIPSTONE_PASS_HEXMANIAC)) {
+        cleartrainerflag(TRAINER_DRIPSTONE_PASS_HEXMANIAC)
+    }
+}
 
 script DripstonePass_Fisherman {
     trainerbattle_single(
