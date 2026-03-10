@@ -15172,6 +15172,75 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_ROUTE11",
+          "base_label": "gRoute11",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_POOCHYENA"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_FLETCHLING"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_EKANS"
+              },
+              {
+                "min_level": 16,
+                "max_level": 20,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 17,
+                "max_level": 20,
+                "species": "SPECIES_FLETCHINDER"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_VULPIX"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_VULPIX"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_EKANS"
+              },
+              {
+                "min_level": 16,
+                "max_level": 20,
+                "species": "SPECIES_FLETCHLING"
+              },
+              {
+                "min_level": 16,
+                "max_level": 20,
+                "species": "SPECIES_FLETCHLING"
+              },
+              {
+                "min_level": 16,
+                "max_level": 20,
+                "species": "SPECIES_FLETCHLING"
+              }
+            ]
+          }
         }
       ]
     },

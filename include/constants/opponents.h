@@ -99,12 +99,15 @@
 #define TRAINER_DRIPSTONE_PASS_PSYCHIC   87
 #define TRAINER_DRIPSTONE_PASS_HEXMANIAC 88
 #define TRAINER_DRIPSTONE_PASS_RUNNER    89
+#define TRAINER_ROUTE11_BUG_CATCHER    90
+#define TRAINER_ROUTE11_BATTLE_GIRL    91
+#define TRAINER_ROUTE11_HIKER    92
 
 // I'm just gonna keep these grouped together at the bottom by adding to them :)
-#define RIVAL_EVELYNN_1                   90
+#define RIVAL_EVELYNN_1                   93
 
-// don't forget to increase this one too
-#define TRAINERS_COUNT                      91
+//* don't forget to increase this one too
+#define TRAINERS_COUNT                      94
 
 #define MAX_TRAINERS_COUNT                  864
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)

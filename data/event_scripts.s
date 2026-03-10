@@ -1267,3 +1267,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/WebbedThicket/scripts.inc"
 
 	.include "data/maps/DripstonePass/scripts.inc"
+
+	.include "data/maps/Route11/scripts.inc"

@@ -1708,6 +1708,54 @@ Level: 20
 Vigoroth
 Level: 20
 
+=== TRAINER_ROUTE11_BUG_CATCHER ===
+Name: Stewart
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+AI: Basic Trainer
+
+Surskit
+Level: 19
+
+Beautifly
+Level: 20
+
+Dwebble
+Level: 20
+
+=== TRAINER_ROUTE11_BATTLE_GIRL ===
+Name: Leanna
+Class: Battle Girl
+Pic: Battle Girl
+Gender: Female
+Music: Intense
+AI: Basic Trainer
+
+Meditite
+Level: 22
+
+Vigoroth
+Level: 22
+
+=== TRAINER_ROUTE11_HIKER ===
+Name: Louis
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
+AI: Basic Trainer
+
+Onix
+Level: 21
+
+Numel
+Level: 21
+
+Loudred
+Level: 21
+
 
 /* ------ !! KEEP AT THE BOTTOM !! ------ */
 === RIVAL_EVELYNN_1 ===

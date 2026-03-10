@@ -1,0 +1,31 @@
+mapscripts Route11_MapScripts {}
+
+script Route11_BugCatcher {
+    trainerbattle_single(
+        TRAINER_ROUTE11_BUG_CATCHER, 
+        format("Found any cool bugs?"),
+        format("Aw man...")  
+    )
+    msgbox(format("I can't afford to heal at the resort... now what do I do?"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route11_BattleGirl {
+    trainerbattle_single(
+        TRAINER_ROUTE11_BATTLE_GIRL, 
+        format("Trekking makes for a good workout!"),
+        format("I would've won if I wasn't already worn out...")  
+    )
+    msgbox(format("I'm enjoying the harsh vibe of the area around here."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route11_Hiker {
+    trainerbattle_single(
+        TRAINER_ROUTE11_HIKER, 
+        format("Oh hey."),
+        format("Nice job.")  
+    )
+    msgbox(format("I'm not much of a battler, I just enjoy being outdoors with my Pokemon."), MSGBOX_AUTOCLOSE)
+    end
+}
