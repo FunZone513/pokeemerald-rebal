@@ -1,11 +1,11 @@
 mapscripts LapashTown_MapScripts {}
 
 script LapashTown_Sign_Town {
-    msgbox("Lapash Town,\nCloudy with a chance of Ash.", MSGBOX_SIGN)
+    msgbox("Lapash Town,\nWere worries are laid to rest.", MSGBOX_SIGN)
 }
 
 script LapashTown_Artist {
-    msgbox("The way the ash falls is so elegant...", MSGBOX_NPC)
+    msgbox("The way the ash falls is almost... \nelegant... like a dance...", MSGBOX_NPC)
 }
 
 script LapashTown_OldWoman {
@@ -14,6 +14,6 @@ script LapashTown_OldWoman {
 
 text LapashTown_OldWoman_Text {
     "There's a superstition that the ash is\ncomprised of those that we've lost, and\l"
-    "that it's what's left over after they\nascend from the earth they're buried in\lup into the sky.\p"
+    "that it's what's left over after they\lascend from the earth they're buried in\lup into the sky.\p"
     "Whether you believe it or not is up to\nyou, but it can give some folks a sense\lof closure, so it's worth thinking about."
 }

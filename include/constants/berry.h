@@ -63,8 +63,8 @@
 #define BERRY_TREE_ROUTE5_2              18
 
 #define BERRY_TREE_ROUTE12_1              19
-#define BERRY_TREE_ROUTE12_1              20
-#define BERRY_TREE_ROUTE12_1              21
+#define BERRY_TREE_ROUTE12_2              20
+#define BERRY_TREE_ROUTE12_3              21
 
 // IDs for berry tree objects, indexes into berryTrees in SaveBlock1
 // Named for whatever berry is initially planted there on a new game

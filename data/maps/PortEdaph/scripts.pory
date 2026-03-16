@@ -5,19 +5,19 @@ script PortEdaph_Sign_Gym {
 }
 
 script PortEdaph_Farm_Sign {
-    msgbox("Edaph Orchard,\nProsperous and Fruitful.")
+    msgbox("Edaph Orchard,\nProsperous and Fruitful.", MSGBOX_SIGN)
 }
 
 script PortEdaph_Town_Sign {
-    msgbox("Port Edaph,\nMoney grows on trees.")
+    msgbox("Port Edaph,\nMoney grows on trees.", MSGBOX_SIGN)
 }
 
 script PortEdaph_Bike_Sign {
-    msgbox("Bike Shop,\nRide your worries away!")
+    msgbox("Bike Shop,\nRide your worries away!", MSGBOX_SIGN)
 }
 
 script PortEdaph_Dock_Sign {
-    msgbox("Port Edaph Port,\nIt's a mouthful.")
+    msgbox("Port Edaph Port,\nIt's a mouthful.", MSGBOX_SIGN)
 }
 
 script PortEdaph_Woman1 {

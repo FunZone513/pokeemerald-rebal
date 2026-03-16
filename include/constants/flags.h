@@ -580,8 +580,9 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_12_1                          (FLAG_HIDDEN_ITEMS_START + 0x20)
 #define FLAG_HIDDEN_ITEM_ROUTE_12_2                          (FLAG_HIDDEN_ITEMS_START + 0x21)
 #define FLAG_HIDDEN_ITEM_LAPASH_TOWN                         (FLAG_HIDDEN_ITEMS_START + 0x22)
+#define FLAG_HIDDEN_ITEM_LAPASH_TOWN_1                       (FLAG_HIDDEN_ITEMS_START + 0x23)
 
-#define FLAG_HIDDEN_ITEM_SS_TIDAL_LOWER_DECK_LEFTOVERS       (FLAG_HIDDEN_ITEMS_START + 0x23)
+
 #define FLAG_HIDDEN_ITEM_UNDERWATER_124_CALCIUM              (FLAG_HIDDEN_ITEMS_START + 0x24)
 #define FLAG_HIDDEN_ITEM_UNUSED_0X25                         (FLAG_HIDDEN_ITEMS_START + 0x25)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_124_HEART_SCALE_2        (FLAG_HIDDEN_ITEMS_START + 0x26)
@@ -1107,9 +1108,9 @@
 #define FLAG_ITEM_ROUTE_8_1                                         0x418
 #define FLAG_ITEM_HEATSWELL_PATH_2                                  0x419
 #define FLAG_ITEM_ROUTE_12                                          0x41A
+#define FLAG_ITEM_LAPASH_TOWN                                       0x41B
 
 
-#define FLAG_ITEM_GRANITE_CAVE_B1F_POKE_BALL                        0x41B
 #define FLAG_ITEM_MT_PYRE_5F_LAX_INCENSE                            0x41C
 #define FLAG_ITEM_GRANITE_CAVE_B2F_REPEL                            0x41D
 #define FLAG_ITEM_GRANITE_CAVE_B2F_RARE_CANDY                       0x41E

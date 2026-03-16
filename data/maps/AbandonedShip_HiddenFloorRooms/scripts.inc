@@ -93,7 +93,7 @@ AbandonedShip_HiddenFloorRooms_EventScript_EnterRm1::
 # 47 "data/maps/AbandonedShip_HiddenFloorRooms/scripts.pory"
 	dofieldeffectsparkle 10, 10, 0
 # 48 "data/maps/AbandonedShip_HiddenFloorRooms/scripts.pory"
-	specialvar VAR_RESULT, FoundAbandonedShipRoom4Key
+	@ specialvar VAR_RESULT, FoundAbandonedShipRoom4Key
 # 49 "data/maps/AbandonedShip_HiddenFloorRooms/scripts.pory"
 	call_if_eq VAR_RESULT, FALSE, AbandonedShip_HiddenFloorRooms_EventScript_Rm4KeySparkle
 # 50 "data/maps/AbandonedShip_HiddenFloorRooms/scripts.pory"
@@ -113,7 +113,7 @@ AbandonedShip_HiddenFloorRooms_EventScript_EnterRm2::
 # 57 "data/maps/AbandonedShip_HiddenFloorRooms/scripts.pory"
 AbandonedShip_HiddenFloorRooms_EventScript_EnterRm3::
 # 58 "data/maps/AbandonedShip_HiddenFloorRooms/scripts.pory"
-	specialvar VAR_RESULT, FoundAbandonedShipRoom1Key
+	@ specialvar VAR_RESULT, FoundAbandonedShipRoom1Key
 # 59 "data/maps/AbandonedShip_HiddenFloorRooms/scripts.pory"
 	goto_if_eq VAR_RESULT, TRUE, AbandonedShip_HiddenFloorRooms_EventScript_Rm3NoSparkle
 # 60 "data/maps/AbandonedShip_HiddenFloorRooms/scripts.pory"
@@ -143,7 +143,7 @@ AbandonedShip_HiddenFloorRooms_EventScript_EnterRm4::
 # 72 "data/maps/AbandonedShip_HiddenFloorRooms/scripts.pory"
 	dofieldeffectsparkle 11, 3, 0
 # 73 "data/maps/AbandonedShip_HiddenFloorRooms/scripts.pory"
-	specialvar VAR_RESULT, FoundAbandonedShipRoom6Key
+	@ specialvar VAR_RESULT, FoundAbandonedShipRoom6Key
 # 74 "data/maps/AbandonedShip_HiddenFloorRooms/scripts.pory"
 	call_if_eq VAR_RESULT, FALSE, AbandonedShip_HiddenFloorRooms_EventScript_Rm6KeySparkle
 # 75 "data/maps/AbandonedShip_HiddenFloorRooms/scripts.pory"
@@ -165,7 +165,7 @@ AbandonedShip_HiddenFloorRooms_EventScript_EnterRm5::
 # 83 "data/maps/AbandonedShip_HiddenFloorRooms/scripts.pory"
 	dofieldeffectsparkle 24, 6, 0
 # 84 "data/maps/AbandonedShip_HiddenFloorRooms/scripts.pory"
-	specialvar VAR_RESULT, FoundAbandonedShipRoom2Key
+	@ specialvar VAR_RESULT, FoundAbandonedShipRoom2Key
 # 85 "data/maps/AbandonedShip_HiddenFloorRooms/scripts.pory"
 	call_if_eq VAR_RESULT, FALSE, AbandonedShip_HiddenFloorRooms_EventScript_Rm2KeySparkle
 # 86 "data/maps/AbandonedShip_HiddenFloorRooms/scripts.pory"

@@ -11,6 +11,7 @@ script HeatswellPath_OnTransition {
 script HeatswellPath_BikeKid {
     lock
     playse(SE_PIN)
+    waitse
     applymovement(6, Common_Movement_ExclamationMark)
     waitmovement(6)
     applymovement(6, moves(face_player))
@@ -23,7 +24,7 @@ script HeatswellPath_BikeKid {
     specialvar(VAR_RESULT, GetBattleOutcome)
     if (var(VAR_RESULT) == B_OUTCOME_WON) {
         fadedefaultbgm
-        msgbox("...\p")
+        msgbox("...")
         closemessage
         applymovement(6, moves(face_down))
         waitmovement(0)
@@ -34,8 +35,9 @@ script HeatswellPath_BikeKid {
         closemessage
         fadescreen(FADE_TO_BLACK)
         setvar(VAR_PORT_EDAPH_BIKE_SHOP, 2)
-        setflag(FLAG_TEMP_A)
+        removeobject(6)
         playse(SE_FLEE)
+        waitse
         delay(48)
         special(DrawWholeMapView)
         fadescreen(FADE_FROM_BLACK)
@@ -47,9 +49,9 @@ text HeatswellPath_BikeKid_Text {
     "Oh! You've freed me!\nIt's about time someone came!\p"
     "I'm trying my hand at being a\nPokemon Trainer, but the terrain around\lhere is really rough.\p"
     "It's honestly really inconsiderate,\nthey should be more conscious of\lpeople when designing these routes!\p"
-    "Huh? Who?\p"
+    "Huh?\nWho?\p"
     "Well, the people who design these\nareas of course!\p"
-    "They should have more foresight of\nthe kinds of people who would be\nusing them, I mean seriously,\llook at this lava! It's a hazard!\p"
+    "They should have more foresight of\nthe kinds of people who would be\lusing them, I mean seriously,\llook at this lava! It's a hazard!\p"
     "...\p"
     "What's that?\nYou're not making any sense.\p"
     "Wait!\p"

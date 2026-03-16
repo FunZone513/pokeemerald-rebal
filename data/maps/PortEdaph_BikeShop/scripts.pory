@@ -118,6 +118,7 @@ script PortEdaph_BikeShop_Cashier {
             msgbox(PortEdaph_BikeShop_Chashier_Text2, MSGBOX_NPC)
             giveitem(ITEM_MACH_BIKE)
             setvar(VAR_PORT_EDAPH_BIKE_SHOP, 3)
+            msgbox("Catch you later!", MSGBOX_NPC)
             break
         
         case 3:
@@ -134,7 +135,7 @@ text PortEdaph_BikeShop_Chashier_Text1 {
 }
 
 text PortEdaph_BikeShop_Chashier_Text2 {
-    "My son came back in a huff, I'm\nnot sure what you said to him but I'm\lglad he's decided to stop wandering\labout and help out here.\p"
+    "My son came back in a huff, I'm not\nsure what you said to him but I'm\lglad he's decided to stop wandering\labout and help out here.\p"
     "I apologise if he acted rudely to you,\nI think I may have spoiled him a little\lwhen he was a child...\p"
     "Oh right! I have the Bike here\nready for you as thanks!\p"
     "I've had our mechanic fix it up\ngood as new too, so feel free to\lgive it a go right away!"

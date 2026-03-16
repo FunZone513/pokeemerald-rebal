@@ -1359,7 +1359,7 @@ u16 GetSlotMachineId(void)
     return sSlotMachineIds[rnd % SLOT_MACHINE_COUNT];
 }
 
-bool8 FoundAbandonedShipRoom1Key(void)
+/* bool8 FoundAbandonedShipRoom1Key(void)
 {
     u16 *specVar = &gSpecialVar_0x8004;
     u16 flag = FLAG_HIDDEN_ITEM_ABANDONED_SHIP_RM_1_KEY;
@@ -1401,7 +1401,7 @@ bool8 FoundAbandonedShipRoom6Key(void)
         return FALSE;
 
     return TRUE;
-}
+} */
 
 bool8 LeadMonHasEffortRibbon(void)
 {

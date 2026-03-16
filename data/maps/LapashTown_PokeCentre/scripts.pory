@@ -19,7 +19,7 @@ script LapashTown_PokeCentre_OldWoman {
 }
 
 script LapashTown_PokeCentre_OldMan {
-    msgbox(format("I'm checking the records of the passed residents. I've found that names aren't always consistent."), MSGBOX_NPC)
+    msgbox(format("I'm checking the records of the passed residents. I've found that the names aren't always consistent."), MSGBOX_NPC)
 }
 
 script LapashTown_PokeCentre_HexManiac {

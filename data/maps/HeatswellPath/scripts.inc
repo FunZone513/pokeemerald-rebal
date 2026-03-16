@@ -22,150 +22,154 @@ HeatswellPath_BikeKid::
 # 13 "data/maps/HeatswellPath/scripts.pory"
 	playse SE_PIN
 # 14 "data/maps/HeatswellPath/scripts.pory"
-	applymovement 6, Common_Movement_ExclamationMark
+	waitse
 # 15 "data/maps/HeatswellPath/scripts.pory"
-	waitmovement 6
+	applymovement 6, Common_Movement_ExclamationMark
 # 16 "data/maps/HeatswellPath/scripts.pory"
-	applymovement 6, HeatswellPath_BikeKid_Movement_0
+	waitmovement 6
 # 17 "data/maps/HeatswellPath/scripts.pory"
-	waitmovement 0
+	applymovement 6, HeatswellPath_BikeKid_Movement_0
 # 18 "data/maps/HeatswellPath/scripts.pory"
-	msgbox HeatswellPath_BikeKid_Text, MSGBOX_NPC
+	waitmovement 0
 # 19 "data/maps/HeatswellPath/scripts.pory"
-	playbgm MUS_ENCOUNTER_RICH, FALSE
+	msgbox HeatswellPath_BikeKid_Text, MSGBOX_NPC
 # 20 "data/maps/HeatswellPath/scripts.pory"
-	msgbox HeatswellPath_BikeKid_Text_0
+	playbgm MUS_ENCOUNTER_RICH, FALSE
 # 21 "data/maps/HeatswellPath/scripts.pory"
-	closemessage
+	msgbox HeatswellPath_BikeKid_Text_0
 # 22 "data/maps/HeatswellPath/scripts.pory"
-	trainerbattle_no_intro TRAINER_HEATSWELL_PATH_BIKE_KID, HeatswellPath_BikeKid_Text_1
+	closemessage
 # 23 "data/maps/HeatswellPath/scripts.pory"
-	specialvar VAR_RESULT, GetBattleOutcome
+	trainerbattle_no_intro TRAINER_HEATSWELL_PATH_BIKE_KID, HeatswellPath_BikeKid_Text_1
 # 24 "data/maps/HeatswellPath/scripts.pory"
+	specialvar VAR_RESULT, GetBattleOutcome
+# 25 "data/maps/HeatswellPath/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_WON
 	goto_if_eq HeatswellPath_BikeKid_2
 HeatswellPath_BikeKid_1:
-# 43 "data/maps/HeatswellPath/scripts.pory"
+# 45 "data/maps/HeatswellPath/scripts.pory"
 	release
 	return
 
 HeatswellPath_BikeKid_2:
-# 25 "data/maps/HeatswellPath/scripts.pory"
-	fadedefaultbgm
 # 26 "data/maps/HeatswellPath/scripts.pory"
-	msgbox HeatswellPath_BikeKid_Text_2
+	fadedefaultbgm
 # 27 "data/maps/HeatswellPath/scripts.pory"
-	closemessage
+	msgbox HeatswellPath_BikeKid_Text_2
 # 28 "data/maps/HeatswellPath/scripts.pory"
-	applymovement 6, HeatswellPath_BikeKid_Movement_1
-# 29 "data/maps/HeatswellPath/scripts.pory"
-	waitmovement 0
-# 30 "data/maps/HeatswellPath/scripts.pory"
-	delay 100
-# 31 "data/maps/HeatswellPath/scripts.pory"
-	applymovement 6, HeatswellPath_BikeKid_Movement_0
-# 32 "data/maps/HeatswellPath/scripts.pory"
-	waitmovement 0
-# 33 "data/maps/HeatswellPath/scripts.pory"
-	msgbox HeatswellPath_BikeKid_Text_3
-# 34 "data/maps/HeatswellPath/scripts.pory"
 	closemessage
+# 29 "data/maps/HeatswellPath/scripts.pory"
+	applymovement 6, HeatswellPath_BikeKid_Movement_1
+# 30 "data/maps/HeatswellPath/scripts.pory"
+	waitmovement 0
+# 31 "data/maps/HeatswellPath/scripts.pory"
+	delay 100
+# 32 "data/maps/HeatswellPath/scripts.pory"
+	applymovement 6, HeatswellPath_BikeKid_Movement_0
+# 33 "data/maps/HeatswellPath/scripts.pory"
+	waitmovement 0
+# 34 "data/maps/HeatswellPath/scripts.pory"
+	msgbox HeatswellPath_BikeKid_Text_3
 # 35 "data/maps/HeatswellPath/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	closemessage
 # 36 "data/maps/HeatswellPath/scripts.pory"
-	setvar VAR_PORT_EDAPH_BIKE_SHOP, 2
+	fadescreen FADE_TO_BLACK
 # 37 "data/maps/HeatswellPath/scripts.pory"
-	setflag FLAG_TEMP_A
+	setvar VAR_PORT_EDAPH_BIKE_SHOP, 2
 # 38 "data/maps/HeatswellPath/scripts.pory"
-	playse SE_FLEE
+	removeobject 6
 # 39 "data/maps/HeatswellPath/scripts.pory"
-	delay 48
+	playse SE_FLEE
 # 40 "data/maps/HeatswellPath/scripts.pory"
-	special DrawWholeMapView
+	waitse
 # 41 "data/maps/HeatswellPath/scripts.pory"
+	delay 48
+# 42 "data/maps/HeatswellPath/scripts.pory"
+	special DrawWholeMapView
+# 43 "data/maps/HeatswellPath/scripts.pory"
 	fadescreen FADE_FROM_BLACK
 	goto HeatswellPath_BikeKid_1
 
 
 HeatswellPath_BlackBelt::
-# 60 "data/maps/HeatswellPath/scripts.pory"
+# 62 "data/maps/HeatswellPath/scripts.pory"
 	trainerbattle_single TRAINER_HEATSWELL_PATH_BLACKBELT, HeatswellPath_BlackBelt_Text_0, HeatswellPath_BlackBelt_Text_1
-# 65 "data/maps/HeatswellPath/scripts.pory"
+# 67 "data/maps/HeatswellPath/scripts.pory"
 	msgbox HeatswellPath_BlackBelt_Text_2, MSGBOX_AUTOCLOSE
 	end
 
 
 HeatswellPath_Kindler::
-# 70 "data/maps/HeatswellPath/scripts.pory"
+# 72 "data/maps/HeatswellPath/scripts.pory"
 	trainerbattle_single TRAINER_HEATSWELL_PATH_KINDLER, HeatswellPath_Kindler_Text_0, HeatswellPath_Kindler_Text_1
-# 75 "data/maps/HeatswellPath/scripts.pory"
+# 77 "data/maps/HeatswellPath/scripts.pory"
 	msgbox HeatswellPath_Kindler_Text_2, MSGBOX_AUTOCLOSE
 	end
 
 
-# 16 "data/maps/HeatswellPath/scripts.pory"
+# 17 "data/maps/HeatswellPath/scripts.pory"
 HeatswellPath_BikeKid_Movement_0:
-# 16 "data/maps/HeatswellPath/scripts.pory"
+# 17 "data/maps/HeatswellPath/scripts.pory"
 	face_player
 	step_end
 
-# 28 "data/maps/HeatswellPath/scripts.pory"
+# 29 "data/maps/HeatswellPath/scripts.pory"
 HeatswellPath_BikeKid_Movement_1:
-# 28 "data/maps/HeatswellPath/scripts.pory"
+# 29 "data/maps/HeatswellPath/scripts.pory"
 	face_down
 	step_end
 
 HeatswellPath_BikeKid_Text_0:
-# 20 "data/maps/HeatswellPath/scripts.pory"
+# 21 "data/maps/HeatswellPath/scripts.pory"
 	.string "I can't wait to defeat you and\nbegin my epic journey!$"
 
 HeatswellPath_BikeKid_Text_1:
-# 22 "data/maps/HeatswellPath/scripts.pory"
+# 23 "data/maps/HeatswellPath/scripts.pory"
 	.string "...what? I lost?$"
 
 HeatswellPath_BikeKid_Text_2:
-# 26 "data/maps/HeatswellPath/scripts.pory"
-	.string "...\p$"
+# 27 "data/maps/HeatswellPath/scripts.pory"
+	.string "...$"
 
 HeatswellPath_BikeKid_Text_3:
-# 33 "data/maps/HeatswellPath/scripts.pory"
+# 34 "data/maps/HeatswellPath/scripts.pory"
 	.string "Being a Pokemon Trainer is for people\nwho don't have a future career path.\pI'll be going back to helping my father\nrun the Bike Shop.$"
 
 HeatswellPath_BlackBelt_Text_0:
-# 62 "data/maps/HeatswellPath/scripts.pory"
+# 64 "data/maps/HeatswellPath/scripts.pory"
 	.string "FEEL THE BURN!$"
 
 HeatswellPath_BlackBelt_Text_1:
-# 63 "data/maps/HeatswellPath/scripts.pory"
+# 65 "data/maps/HeatswellPath/scripts.pory"
 	.string "OOF OW THAT HURTS!$"
 
 HeatswellPath_BlackBelt_Text_2:
-# 65 "data/maps/HeatswellPath/scripts.pory"
+# 67 "data/maps/HeatswellPath/scripts.pory"
 	.string "This fabric is not breathable in the\n"
 	.string "least, I believe I have made an error.$"
 
 HeatswellPath_Kindler_Text_0:
-# 72 "data/maps/HeatswellPath/scripts.pory"
+# 74 "data/maps/HeatswellPath/scripts.pory"
 	.string "This is my element!$"
 
 HeatswellPath_Kindler_Text_1:
-# 73 "data/maps/HeatswellPath/scripts.pory"
+# 75 "data/maps/HeatswellPath/scripts.pory"
 	.string "Wait that's not how it was supposed to\n"
 	.string "go!$"
 
 HeatswellPath_Kindler_Text_2:
-# 75 "data/maps/HeatswellPath/scripts.pory"
+# 77 "data/maps/HeatswellPath/scripts.pory"
 	.string "Even though I'm indoors, I feel like I\n"
 	.string "need some sunscreen.$"
 
 HeatswellPath_BikeKid_Text::
-# 46 "data/maps/HeatswellPath/scripts.pory"
+# 48 "data/maps/HeatswellPath/scripts.pory"
 	.string "Oh! You've freed me!\nIt's about time someone came!\p"
 	.string "I'm trying my hand at being a\nPokemon Trainer, but the terrain around\lhere is really rough.\p"
 	.string "It's honestly really inconsiderate,\nthey should be more conscious of\lpeople when designing these routes!\p"
-	.string "Huh? Who?\p"
+	.string "Huh?\nWho?\p"
 	.string "Well, the people who design these\nareas of course!\p"
-	.string "They should have more foresight of\nthe kinds of people who would be\nusing them, I mean seriously,\llook at this lava! It's a hazard!\p"
+	.string "They should have more foresight of\nthe kinds of people who would be\lusing them, I mean seriously,\llook at this lava! It's a hazard!\p"
 	.string "...\p"
 	.string "What's that?\nYou're not making any sense.\p"
 	.string "Wait!\p"

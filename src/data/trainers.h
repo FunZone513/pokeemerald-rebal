@@ -4043,7 +4043,7 @@ F_TRAINER_FEMALE |
         {
             {
 #line 1569
-            .species = SPECIES_SHEDINJA,
+            .species = SPECIES_SCYTHER,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 1571
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
@@ -5140,45 +5140,265 @@ F_TRAINER_FEMALE |
             },
         },
     },
+#line 1965
+    [DIFFICULTY_NORMAL][TRAINER_ROUTE12_BUG_MANIAC] =
+    {
+#line 1966
+        .trainerName = _("Sven"),
 #line 1967
+        .trainerClass = TRAINER_CLASS_BUG_MANIAC,
+#line 1968
+        .trainerPic = TRAINER_PIC_BUG_MANIAC,
+        .encounterMusic_gender =
+#line 1970
+            TRAINER_ENCOUNTER_MUSIC_MALE,
+#line 1971
+        .aiFlags = AI_FLAG_SMART_TRAINER,
+        .partySize = 1,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 1973
+            .species = SPECIES_SHEDINJA,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 1975
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 1974
+            .lvl = 26,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+        },
+    },
+#line 1976
+    [DIFFICULTY_NORMAL][TRAINER_ROUTE12_HIKER] =
+    {
+#line 1977
+        .trainerName = _("Daryl"),
+#line 1978
+        .trainerClass = TRAINER_CLASS_HIKER,
+#line 1979
+        .trainerPic = TRAINER_PIC_HIKER,
+        .encounterMusic_gender =
+#line 1981
+            TRAINER_ENCOUNTER_MUSIC_HIKER,
+#line 1982
+        .doubleBattle = FALSE,
+#line 1983
+        .aiFlags = AI_FLAG_BASIC_TRAINER,
+        .partySize = 2,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 1985
+            .species = SPECIES_NACLSTACK,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 1987
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 1986
+            .lvl = 24,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+            {
+#line 1988
+            .species = SPECIES_STARAVIA,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 1990
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 1989
+            .lvl = 24,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+        },
+    },
+#line 1991
+    [DIFFICULTY_NORMAL][TRAINER_ROUTE12_NINJA_BOY] =
+    {
+#line 1992
+        .trainerName = _("Akira"),
+#line 1993
+        .trainerClass = TRAINER_CLASS_NINJA_BOY,
+#line 1994
+        .trainerPic = TRAINER_PIC_NINJA_BOY,
+        .encounterMusic_gender =
+#line 1996
+            TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+#line 1997
+        .aiFlags = AI_FLAG_SMART_TRAINER,
+        .partySize = 3,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 1999
+            .species = SPECIES_ARIADOS,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 2001
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 2000
+            .lvl = 23,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+            {
+#line 2002
+            .species = SPECIES_NIDORINO,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 2004
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 2003
+            .lvl = 23,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+            {
+#line 2005
+            .species = SPECIES_MURKROW,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 2007
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 2006
+            .lvl = 23,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+        },
+    },
+#line 2008
+    [DIFFICULTY_NORMAL][TRAINER_ROUTE12_BREEDER] =
+    {
+#line 2009
+        .trainerName = _("Kaasa"),
+#line 2010
+        .trainerClass = TRAINER_CLASS_PKMN_BREEDER,
+#line 2011
+        .trainerPic = TRAINER_PIC_POKEMON_BREEDER_F,
+        .encounterMusic_gender =
+#line 2012
+F_TRAINER_FEMALE | 
+#line 2013
+            TRAINER_ENCOUNTER_MUSIC_FEMALE,
+#line 2014
+        .doubleBattle = TRUE,
+#line 2015
+        .aiFlags = AI_FLAG_BASIC_TRAINER,
+        .partySize = 6,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 2017
+            .species = SPECIES_SLAKOTH,
+#line 2017
+            .gender = TRAINER_MON_MALE,
+#line 2019
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 2018
+            .lvl = 20,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+            {
+#line 2020
+            .species = SPECIES_BLITZLE,
+#line 2020
+            .gender = TRAINER_MON_MALE,
+#line 2022
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 2021
+            .lvl = 20,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+            {
+#line 2023
+            .species = SPECIES_DEERLING,
+#line 2023
+            .gender = TRAINER_MON_MALE,
+#line 2025
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 2024
+            .lvl = 20,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+            {
+#line 2026
+            .species = SPECIES_KIRLIA,
+#line 2026
+            .gender = TRAINER_MON_MALE,
+#line 2028
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 2027
+            .lvl = 20,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+            {
+#line 2029
+            .species = SPECIES_POOCHYENA,
+#line 2029
+            .gender = TRAINER_MON_MALE,
+#line 2031
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 2030
+            .lvl = 20,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+            {
+#line 2032
+            .species = SPECIES_TYROGUE,
+#line 2032
+            .gender = TRAINER_MON_MALE,
+#line 2034
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 2033
+            .lvl = 20,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+        },
+    },
+#line 2038
     [DIFFICULTY_NORMAL][RIVAL_EVELYNN_1] =
     {
-#line 1968
+#line 2039
         .trainerName = _("Evelynn"),
-#line 1969
+#line 2040
         .trainerClass = TRAINER_CLASS_RIVAL,
-#line 1970
+#line 2041
         .trainerPic = TRAINER_PIC_PIKE_QUEEN_LUCY,
         .encounterMusic_gender =
-#line 1971
+#line 2042
 F_TRAINER_FEMALE | 
-#line 1972
+#line 2043
             TRAINER_ENCOUNTER_MUSIC_FEMALE,
-#line 1973
+#line 2044
         .items = { ITEM_SUPER_POTION },
-#line 1974
+#line 2045
         .aiFlags = AI_FLAG_RIVAL,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
             {
-#line 1976
+#line 2047
             .species = SPECIES_ROSELIA,
-#line 1976
+#line 2047
             .gender = TRAINER_MON_FEMALE,
-#line 1979
+#line 2050
             .ev = TRAINER_PARTY_EVS(0, 4, 0, 252, 252, 0),
-#line 1981
+#line 2052
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-#line 1978
+#line 2049
             .ability = ABILITY_POISON_POINT,
-#line 1977
+#line 2048
             .lvl = 16,
-#line 1980
+#line 2051
             .nature = NATURE_HASTY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
-#line 1981
+#line 2052
                 MOVE_MAGICAL_LEAF,
                 MOVE_POISON_STING,
                 MOVE_MEGA_DRAIN,
@@ -5186,23 +5406,23 @@ F_TRAINER_FEMALE |
             },
             },
             {
-#line 1986
+#line 2057
             .species = SPECIES_VENIPEDE,
-#line 1986
+#line 2057
             .gender = TRAINER_MON_FEMALE,
-#line 1989
+#line 2060
             .ev = TRAINER_PARTY_EVS(252, 252, 0, 0, 0, 4),
-#line 1991
+#line 2062
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-#line 1988
+#line 2059
             .ability = ABILITY_SPEED_BOOST,
-#line 1987
+#line 2058
             .lvl = 16,
-#line 1990
+#line 2061
             .nature = NATURE_ADAMANT,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
-#line 1991
+#line 2062
                 MOVE_ROLLOUT,
                 MOVE_POISON_TAIL,
                 MOVE_BUG_BITE,
@@ -5210,23 +5430,23 @@ F_TRAINER_FEMALE |
             },
             },
             {
-#line 1996
+#line 2067
             .species = SPECIES_MAWILE,
-#line 1996
+#line 2067
             .gender = TRAINER_MON_FEMALE,
-#line 1999
+#line 2070
             .ev = TRAINER_PARTY_EVS(4, 252, 0, 252, 0, 0),
-#line 2001
+#line 2072
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-#line 1998
+#line 2069
             .ability = ABILITY_INTIMIDATE,
-#line 1997
+#line 2068
             .lvl = 18,
-#line 2000
+#line 2071
             .nature = NATURE_JOLLY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
-#line 2001
+#line 2072
                 MOVE_BITE,
                 MOVE_SUCKER_PUNCH,
                 MOVE_FAIRY_WIND,

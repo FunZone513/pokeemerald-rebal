@@ -96,154 +96,158 @@ PortEdaph_Dock_BoatEvent::
 # 54 "data/maps/PortEdaph_Dock/scripts.pory"
 	waitse
 # 55 "data/maps/PortEdaph_Dock/scripts.pory"
-	playse SE_INTRO_BLAST
+	delay 24
 # 56 "data/maps/PortEdaph_Dock/scripts.pory"
-	applymovement 4, PortEdaph_Dock_BoatEvent_Movement_8
+	playse SE_INTRO_BLAST
 # 57 "data/maps/PortEdaph_Dock/scripts.pory"
-	waitmovement 0
+	applymovement 4, PortEdaph_Dock_BoatEvent_Movement_8
 # 58 "data/maps/PortEdaph_Dock/scripts.pory"
-	delay 32
+	waitmovement 0
 # 59 "data/maps/PortEdaph_Dock/scripts.pory"
-	waitse
+	delay 48
 # 60 "data/maps/PortEdaph_Dock/scripts.pory"
-	playse SE_TRUCK_DOOR
-# 61 "data/maps/PortEdaph_Dock/scripts.pory"
-	applymovement 1, Common_Movement_ExclamationMark
-# 62 "data/maps/PortEdaph_Dock/scripts.pory"
-	applymovement 2, Common_Movement_ExclamationMark
-# 63 "data/maps/PortEdaph_Dock/scripts.pory"
-	applymovement 3, Common_Movement_ExclamationMark
-# 64 "data/maps/PortEdaph_Dock/scripts.pory"
 	waitse
+# 61 "data/maps/PortEdaph_Dock/scripts.pory"
+	playse SE_TRUCK_DOOR
+# 62 "data/maps/PortEdaph_Dock/scripts.pory"
+	applymovement 1, Common_Movement_ExclamationMark
+# 63 "data/maps/PortEdaph_Dock/scripts.pory"
+	applymovement 2, Common_Movement_ExclamationMark
+# 64 "data/maps/PortEdaph_Dock/scripts.pory"
+	applymovement 3, Common_Movement_ExclamationMark
 # 65 "data/maps/PortEdaph_Dock/scripts.pory"
-	delay 16
+	waitse
 # 66 "data/maps/PortEdaph_Dock/scripts.pory"
-	waitmovement 0
+	delay 32
 # 67 "data/maps/PortEdaph_Dock/scripts.pory"
-	setvar VAR_0x8004, 3
+	waitmovement 0
 # 68 "data/maps/PortEdaph_Dock/scripts.pory"
-	setvar VAR_0x8005, 5
+	setvar VAR_0x8004, 3
 # 69 "data/maps/PortEdaph_Dock/scripts.pory"
-	setvar VAR_0x8006, 8
+	setvar VAR_0x8005, 5
 # 70 "data/maps/PortEdaph_Dock/scripts.pory"
-	setvar VAR_0x8007, 1
+	setvar VAR_0x8006, 8
 # 71 "data/maps/PortEdaph_Dock/scripts.pory"
-	setvar VAR_0x8008, 1
+	setvar VAR_0x8007, 1
 # 72 "data/maps/PortEdaph_Dock/scripts.pory"
-	special ShakeCamera
+	setvar VAR_0x8008, 1
 # 73 "data/maps/PortEdaph_Dock/scripts.pory"
-	playse SE_M_EXPLOSION
+	special ShakeCamera
 # 74 "data/maps/PortEdaph_Dock/scripts.pory"
-	waitstate
+	playse SE_M_EXPLOSION
 # 75 "data/maps/PortEdaph_Dock/scripts.pory"
-	fadescreenspeed FADE_TO_WHITE, 1
+	waitstate
 # 76 "data/maps/PortEdaph_Dock/scripts.pory"
-	fadeoutbgm 1
+	fadescreenspeed FADE_TO_WHITE, 1
 # 77 "data/maps/PortEdaph_Dock/scripts.pory"
-	hideobjectat 4, MAP_PORT_EDAPH_DOCK
+	fadeoutbgm 0
 # 78 "data/maps/PortEdaph_Dock/scripts.pory"
-	showobjectat 10, MAP_PORT_EDAPH_DOCK
+	hideobjectat 4, MAP_PORT_EDAPH_DOCK
 # 79 "data/maps/PortEdaph_Dock/scripts.pory"
-	applymovement 10, PortEdaph_Dock_BoatEvent_Movement_4
+	showobjectat 10, MAP_PORT_EDAPH_DOCK
 # 80 "data/maps/PortEdaph_Dock/scripts.pory"
-	special DrawWholeMapView
+	applymovement 10, PortEdaph_Dock_BoatEvent_Movement_4
 # 81 "data/maps/PortEdaph_Dock/scripts.pory"
-	delay 60
+	special DrawWholeMapView
 # 82 "data/maps/PortEdaph_Dock/scripts.pory"
-	fadescreenspeed FADE_FROM_WHITE, 16
-# 83 "data/maps/PortEdaph_Dock/scripts.pory"
-	delay 100
-# 84 "data/maps/PortEdaph_Dock/scripts.pory"
-	applymovement OBJ_EVENT_ID_CAMERA, PortEdaph_Dock_BoatEvent_Movement_9
-# 85 "data/maps/PortEdaph_Dock/scripts.pory"
 	delay 60
+# 83 "data/maps/PortEdaph_Dock/scripts.pory"
+	fadescreenspeed FADE_FROM_WHITE, 16
+# 84 "data/maps/PortEdaph_Dock/scripts.pory"
+	delay 100
+# 85 "data/maps/PortEdaph_Dock/scripts.pory"
+	applymovement OBJ_EVENT_ID_CAMERA, PortEdaph_Dock_BoatEvent_Movement_9
 # 86 "data/maps/PortEdaph_Dock/scripts.pory"
-	applymovement 2, PortEdaph_Dock_BoatEvent_Movement_10
+	delay 60
 # 87 "data/maps/PortEdaph_Dock/scripts.pory"
-	msgbox PortEdaph_Dock_BoatEvent_Text_1
+	applymovement 2, PortEdaph_Dock_BoatEvent_Movement_10
 # 88 "data/maps/PortEdaph_Dock/scripts.pory"
-	closemessage
+	msgbox PortEdaph_Dock_BoatEvent_Text_1
 # 89 "data/maps/PortEdaph_Dock/scripts.pory"
-	waitmovement 0
+	closemessage
 # 90 "data/maps/PortEdaph_Dock/scripts.pory"
-	applymovement 2, PortEdaph_Dock_BoatEvent_Movement_11
+	waitmovement 0
 # 91 "data/maps/PortEdaph_Dock/scripts.pory"
-	waitmovement 2
+	applymovement 2, PortEdaph_Dock_BoatEvent_Movement_11
 # 92 "data/maps/PortEdaph_Dock/scripts.pory"
-	playse SE_EXIT
+	waitmovement 2
 # 93 "data/maps/PortEdaph_Dock/scripts.pory"
-	removeobject 2
-# 94 "data/maps/PortEdaph_Dock/scripts.pory"
-	delay 30
-# 95 "data/maps/PortEdaph_Dock/scripts.pory"
-	applymovement 3, PortEdaph_Dock_BoatEvent_Movement_10
-# 96 "data/maps/PortEdaph_Dock/scripts.pory"
-	waitmovement 0
-# 97 "data/maps/PortEdaph_Dock/scripts.pory"
-	delay 48
-# 98 "data/maps/PortEdaph_Dock/scripts.pory"
-	applymovement 3, PortEdaph_Dock_BoatEvent_Movement_3
-# 99 "data/maps/PortEdaph_Dock/scripts.pory"
-	waitmovement 0
-# 100 "data/maps/PortEdaph_Dock/scripts.pory"
-	delay 48
-# 101 "data/maps/PortEdaph_Dock/scripts.pory"
-	applymovement 3, PortEdaph_Dock_BoatEvent_Movement_12
-# 102 "data/maps/PortEdaph_Dock/scripts.pory"
-	waitmovement 0
-# 103 "data/maps/PortEdaph_Dock/scripts.pory"
 	playse SE_EXIT
-# 104 "data/maps/PortEdaph_Dock/scripts.pory"
-	removeobject 3
-# 105 "data/maps/PortEdaph_Dock/scripts.pory"
-	applymovement OBJ_EVENT_ID_CAMERA, PortEdaph_Dock_BoatEvent_Movement_13
-# 106 "data/maps/PortEdaph_Dock/scripts.pory"
+# 94 "data/maps/PortEdaph_Dock/scripts.pory"
+	removeobject 2
+# 95 "data/maps/PortEdaph_Dock/scripts.pory"
+	delay 30
+# 96 "data/maps/PortEdaph_Dock/scripts.pory"
+	applymovement 3, PortEdaph_Dock_BoatEvent_Movement_10
+# 97 "data/maps/PortEdaph_Dock/scripts.pory"
 	waitmovement 0
+# 98 "data/maps/PortEdaph_Dock/scripts.pory"
+	delay 48
+# 99 "data/maps/PortEdaph_Dock/scripts.pory"
+	applymovement 3, PortEdaph_Dock_BoatEvent_Movement_3
+# 100 "data/maps/PortEdaph_Dock/scripts.pory"
+	waitmovement 0
+# 101 "data/maps/PortEdaph_Dock/scripts.pory"
+	delay 48
+# 102 "data/maps/PortEdaph_Dock/scripts.pory"
+	applymovement 3, PortEdaph_Dock_BoatEvent_Movement_12
+# 103 "data/maps/PortEdaph_Dock/scripts.pory"
+	waitmovement 0
+# 104 "data/maps/PortEdaph_Dock/scripts.pory"
+	playse SE_EXIT
+# 105 "data/maps/PortEdaph_Dock/scripts.pory"
+	removeobject 3
+# 106 "data/maps/PortEdaph_Dock/scripts.pory"
+	applymovement OBJ_EVENT_ID_CAMERA, PortEdaph_Dock_BoatEvent_Movement_13
 # 107 "data/maps/PortEdaph_Dock/scripts.pory"
-	setflag FLAG_SEEN_EDAPH_DOCK_EVENT
+	waitmovement 0
 # 108 "data/maps/PortEdaph_Dock/scripts.pory"
-	special RemoveCameraObject
+	setflag FLAG_SEEN_EDAPH_DOCK_EVENT
 # 109 "data/maps/PortEdaph_Dock/scripts.pory"
-	setvar VAR_TEMP_A, 0
+	special RemoveCameraObject
 # 110 "data/maps/PortEdaph_Dock/scripts.pory"
+	setvar VAR_TEMP_A, 0
+# 111 "data/maps/PortEdaph_Dock/scripts.pory"
+	fadeinbgm 16
+# 112 "data/maps/PortEdaph_Dock/scripts.pory"
 	release
 	return
 
 
 PortEdaph_Dock_BoatEvent_Captain::
-# 114 "data/maps/PortEdaph_Dock/scripts.pory"
+# 116 "data/maps/PortEdaph_Dock/scripts.pory"
 	msgbox PortEdaph_Dock_BoatEvent_Captain_Text_0
-# 115 "data/maps/PortEdaph_Dock/scripts.pory"
+# 117 "data/maps/PortEdaph_Dock/scripts.pory"
 	closemessage
 	return
 
 
 PortEdaph_Dock_Captain::
-# 132 "data/maps/PortEdaph_Dock/scripts.pory"
+# 134 "data/maps/PortEdaph_Dock/scripts.pory"
 	msgbox PortEdaph_Dock_Captain_Text_0, MSGBOX_NPC
 	return
 
 
 PortEdaph_Dock_Boy::
-# 136 "data/maps/PortEdaph_Dock/scripts.pory"
+# 138 "data/maps/PortEdaph_Dock/scripts.pory"
 	msgbox PortEdaph_Dock_Boy_Text_0, MSGBOX_NPC
 	return
 
 
 PortEdaph_Dock_Sailor::
-# 140 "data/maps/PortEdaph_Dock/scripts.pory"
+# 142 "data/maps/PortEdaph_Dock/scripts.pory"
 	msgbox PortEdaph_Dock_Sailor_Text_0, MSGBOX_NPC
 	return
 
 
 PortEdaph_Dock_OldWoman::
-# 144 "data/maps/PortEdaph_Dock/scripts.pory"
+# 146 "data/maps/PortEdaph_Dock/scripts.pory"
 	msgbox PortEdaph_Dock_OldWoman_Text_0, MSGBOX_NPC
 	return
 
 
 PortEdaph_Dock_Scientist::
-# 148 "data/maps/PortEdaph_Dock/scripts.pory"
+# 150 "data/maps/PortEdaph_Dock/scripts.pory"
 	msgbox PortEdaph_Dock_Scientist_Text_0, MSGBOX_NPC
 	return
 
@@ -318,77 +322,77 @@ PortEdaph_Dock_BoatEvent_Movement_7:
 	walk_diag_northeast
 	step_end
 
-# 56 "data/maps/PortEdaph_Dock/scripts.pory"
+# 57 "data/maps/PortEdaph_Dock/scripts.pory"
 PortEdaph_Dock_BoatEvent_Movement_8:
-# 56 "data/maps/PortEdaph_Dock/scripts.pory"
+# 57 "data/maps/PortEdaph_Dock/scripts.pory"
 	walk_slow_right
-# 56 "data/maps/PortEdaph_Dock/scripts.pory"
+# 57 "data/maps/PortEdaph_Dock/scripts.pory"
 	delay_16
-# 56 "data/maps/PortEdaph_Dock/scripts.pory"
+# 57 "data/maps/PortEdaph_Dock/scripts.pory"
 	delay_16
-# 56 "data/maps/PortEdaph_Dock/scripts.pory"
+# 57 "data/maps/PortEdaph_Dock/scripts.pory"
 	walk_slow_right
-# 56 "data/maps/PortEdaph_Dock/scripts.pory"
+# 57 "data/maps/PortEdaph_Dock/scripts.pory"
 	delay_16
-# 56 "data/maps/PortEdaph_Dock/scripts.pory"
+# 57 "data/maps/PortEdaph_Dock/scripts.pory"
 	delay_16
-# 56 "data/maps/PortEdaph_Dock/scripts.pory"
+# 57 "data/maps/PortEdaph_Dock/scripts.pory"
 	delay_16
-# 56 "data/maps/PortEdaph_Dock/scripts.pory"
+# 57 "data/maps/PortEdaph_Dock/scripts.pory"
 	walk_slow_right
 	step_end
 
-# 84 "data/maps/PortEdaph_Dock/scripts.pory"
+# 85 "data/maps/PortEdaph_Dock/scripts.pory"
 PortEdaph_Dock_BoatEvent_Movement_9:
-# 84 "data/maps/PortEdaph_Dock/scripts.pory"
+# 85 "data/maps/PortEdaph_Dock/scripts.pory"
 	walk_slow_diag_southwest
-# 84 "data/maps/PortEdaph_Dock/scripts.pory"
+# 85 "data/maps/PortEdaph_Dock/scripts.pory"
 	walk_slow_diag_southwest
-# 84 "data/maps/PortEdaph_Dock/scripts.pory"
+# 85 "data/maps/PortEdaph_Dock/scripts.pory"
 	walk_slow_diag_southwest
 	step_end
 
-# 86 "data/maps/PortEdaph_Dock/scripts.pory"
+# 87 "data/maps/PortEdaph_Dock/scripts.pory"
 PortEdaph_Dock_BoatEvent_Movement_10:
-# 86 "data/maps/PortEdaph_Dock/scripts.pory"
+# 87 "data/maps/PortEdaph_Dock/scripts.pory"
 	face_right
 	step_end
 
-# 90 "data/maps/PortEdaph_Dock/scripts.pory"
+# 91 "data/maps/PortEdaph_Dock/scripts.pory"
 PortEdaph_Dock_BoatEvent_Movement_11:
-# 90 "data/maps/PortEdaph_Dock/scripts.pory"
+# 91 "data/maps/PortEdaph_Dock/scripts.pory"
 	walk_fast_down
-# 90 "data/maps/PortEdaph_Dock/scripts.pory"
+# 91 "data/maps/PortEdaph_Dock/scripts.pory"
 	walk_fast_left
-# 90 "data/maps/PortEdaph_Dock/scripts.pory"
+# 91 "data/maps/PortEdaph_Dock/scripts.pory"
 	walk_fast_left
-# 90 "data/maps/PortEdaph_Dock/scripts.pory"
+# 91 "data/maps/PortEdaph_Dock/scripts.pory"
 	walk_fast_down
-# 90 "data/maps/PortEdaph_Dock/scripts.pory"
+# 91 "data/maps/PortEdaph_Dock/scripts.pory"
 	walk_fast_down
-# 90 "data/maps/PortEdaph_Dock/scripts.pory"
+# 91 "data/maps/PortEdaph_Dock/scripts.pory"
 	walk_fast_down
 	step_end
 
-# 101 "data/maps/PortEdaph_Dock/scripts.pory"
+# 102 "data/maps/PortEdaph_Dock/scripts.pory"
 PortEdaph_Dock_BoatEvent_Movement_12:
-# 101 "data/maps/PortEdaph_Dock/scripts.pory"
+# 102 "data/maps/PortEdaph_Dock/scripts.pory"
 	walk_fast_left
-# 101 "data/maps/PortEdaph_Dock/scripts.pory"
+# 102 "data/maps/PortEdaph_Dock/scripts.pory"
 	walk_fast_down
-# 101 "data/maps/PortEdaph_Dock/scripts.pory"
+# 102 "data/maps/PortEdaph_Dock/scripts.pory"
 	walk_fast_down
-# 101 "data/maps/PortEdaph_Dock/scripts.pory"
+# 102 "data/maps/PortEdaph_Dock/scripts.pory"
 	walk_fast_down
-# 101 "data/maps/PortEdaph_Dock/scripts.pory"
+# 102 "data/maps/PortEdaph_Dock/scripts.pory"
 	walk_fast_down
 	step_end
 
-# 105 "data/maps/PortEdaph_Dock/scripts.pory"
+# 106 "data/maps/PortEdaph_Dock/scripts.pory"
 PortEdaph_Dock_BoatEvent_Movement_13:
-# 105 "data/maps/PortEdaph_Dock/scripts.pory"
+# 106 "data/maps/PortEdaph_Dock/scripts.pory"
 	walk_down
-# 105 "data/maps/PortEdaph_Dock/scripts.pory"
+# 106 "data/maps/PortEdaph_Dock/scripts.pory"
 	walk_down
 	step_end
 
@@ -401,41 +405,41 @@ PortEdaph_Dock_BoatEvent_Text_0:
 	.string "Riveting stuff!\pNow I believe it's time for the boat\nto undergo it's first test voyage!$"
 
 PortEdaph_Dock_BoatEvent_Text_1:
-# 87 "data/maps/PortEdaph_Dock/scripts.pory"
+# 88 "data/maps/PortEdaph_Dock/scripts.pory"
 	.string "...I'm going to go get some help.$"
 
 PortEdaph_Dock_BoatEvent_Captain_Text_0:
-# 114 "data/maps/PortEdaph_Dock/scripts.pory"
+# 116 "data/maps/PortEdaph_Dock/scripts.pory"
 	.string "...$"
 
 PortEdaph_Dock_Captain_Text_0:
-# 132 "data/maps/PortEdaph_Dock/scripts.pory"
+# 134 "data/maps/PortEdaph_Dock/scripts.pory"
 	.string "Hi, I don't do anything yet.$"
 
 PortEdaph_Dock_Boy_Text_0:
-# 136 "data/maps/PortEdaph_Dock/scripts.pory"
+# 138 "data/maps/PortEdaph_Dock/scripts.pory"
 	.string "Truely an engineering marvel...$"
 
 PortEdaph_Dock_Sailor_Text_0:
-# 140 "data/maps/PortEdaph_Dock/scripts.pory"
+# 142 "data/maps/PortEdaph_Dock/scripts.pory"
 	.string "I hope the next boat doesn't explode on\n"
 	.string "us again.$"
 
 PortEdaph_Dock_OldWoman_Text_0:
-# 144 "data/maps/PortEdaph_Dock/scripts.pory"
+# 146 "data/maps/PortEdaph_Dock/scripts.pory"
 	.string "Oh, hello dear.\pHm? What's wrong?\pOh, no I'm fine.\nIt's just comfy in here that's all.$"
 
 PortEdaph_Dock_Scientist_Text_0:
-# 148 "data/maps/PortEdaph_Dock/scripts.pory"
+# 150 "data/maps/PortEdaph_Dock/scripts.pory"
 	.string "...what went wrong?$"
 
 PortEdaph_Dock_BoatEvent_Text1::
-# 118 "data/maps/PortEdaph_Dock/scripts.pory"
+# 120 "data/maps/PortEdaph_Dock/scripts.pory"
 	.string "It's an incredible day for seafarers\neverywhere!\p"
 	.string "We're here on the docks at Port Edaph\ntoday to talk about the new cruise\lliner that has been built here!$"
 
 PortEdaph_Dock_BoatEvent_Text2::
-# 123 "data/maps/PortEdaph_Dock/scripts.pory"
+# 125 "data/maps/PortEdaph_Dock/scripts.pory"
 	.string "Now then, can you tell us a little\nbit about what makes this boat special?\p"
 	.string "Certainly!\p"
 	.string "This new cruise liner has an advanced\ngyro system to keep it much more stable\lin rough waves.\p"

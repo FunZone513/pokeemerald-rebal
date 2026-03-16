@@ -10,25 +10,25 @@ PortEdaph_Sign_Gym::
 
 PortEdaph_Farm_Sign::
 # 8 "data/maps/PortEdaph/scripts.pory"
-	msgbox PortEdaph_Farm_Sign_Text_0
+	msgbox PortEdaph_Farm_Sign_Text_0, MSGBOX_SIGN
 	return
 
 
 PortEdaph_Town_Sign::
 # 12 "data/maps/PortEdaph/scripts.pory"
-	msgbox PortEdaph_Town_Sign_Text_0
+	msgbox PortEdaph_Town_Sign_Text_0, MSGBOX_SIGN
 	return
 
 
 PortEdaph_Bike_Sign::
 # 16 "data/maps/PortEdaph/scripts.pory"
-	msgbox PortEdaph_Bike_Sign_Text_0
+	msgbox PortEdaph_Bike_Sign_Text_0, MSGBOX_SIGN
 	return
 
 
 PortEdaph_Dock_Sign::
 # 20 "data/maps/PortEdaph/scripts.pory"
-	msgbox PortEdaph_Dock_Sign_Text_0
+	msgbox PortEdaph_Dock_Sign_Text_0, MSGBOX_SIGN
 	return
 
 

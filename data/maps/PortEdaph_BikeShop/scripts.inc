@@ -154,7 +154,7 @@ PortEdaph_BikeShop_Cashier::
 	case 1, PortEdaph_BikeShop_Cashier_2
 # 117 "data/maps/PortEdaph_BikeShop/scripts.pory"
 	case 2, PortEdaph_BikeShop_Cashier_3
-# 123 "data/maps/PortEdaph_BikeShop/scripts.pory"
+# 124 "data/maps/PortEdaph_BikeShop/scripts.pory"
 	case 3, PortEdaph_BikeShop_Cashier_4
 	return
 
@@ -170,40 +170,42 @@ PortEdaph_BikeShop_Cashier_3:
 	giveitem ITEM_MACH_BIKE
 # 120 "data/maps/PortEdaph_BikeShop/scripts.pory"
 	setvar VAR_PORT_EDAPH_BIKE_SHOP, 3
+# 121 "data/maps/PortEdaph_BikeShop/scripts.pory"
+	msgbox PortEdaph_BikeShop_Cashier_Text_0, MSGBOX_NPC
 	return
 
 PortEdaph_BikeShop_Cashier_4:
-# 124 "data/maps/PortEdaph_BikeShop/scripts.pory"
-	msgbox PortEdaph_BikeShop_Cashier_Text_0, MSGBOX_NPC
+# 125 "data/maps/PortEdaph_BikeShop/scripts.pory"
+	msgbox PortEdaph_BikeShop_Cashier_Text_1, MSGBOX_NPC
 	return
 
 
 PortEdaph_BikeShop_Mechanic::
-# 144 "data/maps/PortEdaph_BikeShop/scripts.pory"
+# 145 "data/maps/PortEdaph_BikeShop/scripts.pory"
 	msgbox PortEdaph_BikeShop_Mechanic_Text_0, MSGBOX_NPC
 	return
 
 
 PortEdaph_BikeShop_Woman::
-# 148 "data/maps/PortEdaph_BikeShop/scripts.pory"
+# 149 "data/maps/PortEdaph_BikeShop/scripts.pory"
 	msgbox PortEdaph_BikeShop_Woman_Text_0, MSGBOX_NPC
 	return
 
 
 PortEdaph_BikeShop_Man::
-# 152 "data/maps/PortEdaph_BikeShop/scripts.pory"
+# 153 "data/maps/PortEdaph_BikeShop/scripts.pory"
 	msgbox PortEdaph_BikeShop_Man_Text_0, MSGBOX_NPC
 	return
 
 
 PortEdaph_BikeShop_Man2::
-# 156 "data/maps/PortEdaph_BikeShop/scripts.pory"
+# 157 "data/maps/PortEdaph_BikeShop/scripts.pory"
 	msgbox PortEdaph_BikeShop_Man2_Text_0, MSGBOX_NPC
 	return
 
 
 PortEdaph_BikeShop_Woman2::
-# 160 "data/maps/PortEdaph_BikeShop/scripts.pory"
+# 161 "data/maps/PortEdaph_BikeShop/scripts.pory"
 	msgbox PortEdaph_BikeShop_Woman2_Text_0, MSGBOX_NPC
 	return
 
@@ -337,29 +339,33 @@ PortEdaph_BikeShop_Boy_Text_0:
 	.string "Oh it's you, come to gloat have you?$"
 
 PortEdaph_BikeShop_Cashier_Text_0:
-# 124 "data/maps/PortEdaph_BikeShop/scripts.pory"
+# 121 "data/maps/PortEdaph_BikeShop/scripts.pory"
+	.string "Catch you later!$"
+
+PortEdaph_BikeShop_Cashier_Text_1:
+# 125 "data/maps/PortEdaph_BikeShop/scripts.pory"
 	.string "I hope the Bike is treating you well!$"
 
 PortEdaph_BikeShop_Mechanic_Text_0:
-# 144 "data/maps/PortEdaph_BikeShop/scripts.pory"
+# 145 "data/maps/PortEdaph_BikeShop/scripts.pory"
 	.string "Ya?\pLooking for bike?\nThis is bike fixing part, try other side.$"
 
 PortEdaph_BikeShop_Woman_Text_0:
-# 148 "data/maps/PortEdaph_BikeShop/scripts.pory"
+# 149 "data/maps/PortEdaph_BikeShop/scripts.pory"
 	.string "These bikes sure are fancy, I guess\n"
 	.string "they have to justify the price somehow.$"
 
 PortEdaph_BikeShop_Man_Text_0:
-# 152 "data/maps/PortEdaph_BikeShop/scripts.pory"
+# 153 "data/maps/PortEdaph_BikeShop/scripts.pory"
 	.string "The seat wasn't on when I sat down...\nNow I'm stuck...$"
 
 PortEdaph_BikeShop_Man2_Text_0:
-# 156 "data/maps/PortEdaph_BikeShop/scripts.pory"
+# 157 "data/maps/PortEdaph_BikeShop/scripts.pory"
 	.string "This lady is crazy! Who said you could\n"
 	.string "ride around inside!$"
 
 PortEdaph_BikeShop_Woman2_Text_0:
-# 160 "data/maps/PortEdaph_BikeShop/scripts.pory"
+# 161 "data/maps/PortEdaph_BikeShop/scripts.pory"
 	.string "I love that I can just take the bikes\n"
 	.string "for a test ride before buying one!$"
 
@@ -395,15 +401,15 @@ PortEdaph_BikeShop_BikeInfo_Text::
 	.string "You'll be zipping around before\nyou know it!$"
 
 PortEdaph_BikeShop_Chashier_Text1::
-# 129 "data/maps/PortEdaph_BikeShop/scripts.pory"
+# 130 "data/maps/PortEdaph_BikeShop/scripts.pory"
 	.string "My son is trying to become a\nPokemon Trainer himself, so he's\lbeen out exploring nearby.\p"
 	.string "The only problem is that he's never\nbeen very good with directions.\p"
 	.string "I'm sure he's fine for now, but it would\ngive me peace of mind if you could go\land convince him that maybe the\llife of a trainer isn't for him.\p"
 	.string "I worry that something will eventually\nhappen to him, but he won't listen to me.$"
 
 PortEdaph_BikeShop_Chashier_Text2::
-# 136 "data/maps/PortEdaph_BikeShop/scripts.pory"
-	.string "My son came back in a huff, I'm\nnot sure what you said to him but I'm\lglad he's decided to stop wandering\labout and help out here.\p"
+# 137 "data/maps/PortEdaph_BikeShop/scripts.pory"
+	.string "My son came back in a huff, I'm not\nsure what you said to him but I'm\lglad he's decided to stop wandering\labout and help out here.\p"
 	.string "I apologise if he acted rudely to you,\nI think I may have spoiled him a little\lwhen he was a child...\p"
 	.string "Oh right! I have the Bike here\nready for you as thanks!\p"
 	.string "I've had our mechanic fix it up\ngood as new too, so feel free to\lgive it a go right away!$"

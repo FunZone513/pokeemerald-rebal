@@ -52,17 +52,18 @@ script PortEdaph_Dock_BoatEvent {
     waitmovement(OBJ_EVENT_ID_CAMERA)
     playse(SE_DING_DONG)
     waitse
+    delay(24)
     playse(SE_INTRO_BLAST)
     applymovement(4, moves(walk_slow_right delay_16*2 walk_slow_right delay_16*3 walk_slow_right))
     waitmovement(0)
-    delay(32)
+    delay(48)
     waitse
     playse(SE_TRUCK_DOOR)
     applymovement(1, Common_Movement_ExclamationMark)
     applymovement(2, Common_Movement_ExclamationMark)
     applymovement(3, Common_Movement_ExclamationMark)
     waitse
-    delay(16)
+    delay(32)
     waitmovement(0)
     setvar(VAR_0x8004, 3)  // vertical pan
 	setvar(VAR_0x8005, 5)  // horizontal pan
@@ -73,7 +74,7 @@ script PortEdaph_Dock_BoatEvent {
     playse(SE_M_EXPLOSION)
     waitstate
     fadescreenspeed(FADE_TO_WHITE, 1)
-    fadeoutbgm(1)
+    fadeoutbgm(0)
     hideobjectat(4, MAP_PORT_EDAPH_DOCK)
     showobjectat(10, MAP_PORT_EDAPH_DOCK)
     applymovement(10, moves(face_left))
@@ -107,6 +108,7 @@ script PortEdaph_Dock_BoatEvent {
     setflag(FLAG_SEEN_EDAPH_DOCK_EVENT)
     special(RemoveCameraObject)
     setvar(VAR_TEMP_A, 0)
+    fadeinbgm(16)
     release
 }
 
