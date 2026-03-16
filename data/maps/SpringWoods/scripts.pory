@@ -44,6 +44,7 @@ script SpringWoods_Evelynn {
 	fadedefaultbgm
     delay(48)
     msgbox(SpringWoods_Evelynn_Text3)
+    closemessage
     applymovement(6, moves(walk_down walk_left*7))
     waitmovement(0)
     removeobject(6)

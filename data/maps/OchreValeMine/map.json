@@ -288,20 +288,20 @@
       "flag": "FLAG_ITEM_OCHRE_VALE_MINE"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
-      "x": 32,
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",
+      "x": 34,
       "y": 33,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OchreValeMine_ScientistGuy",
       "flag": "FLAG_CLEARED_OCHRE_VALE_MINE"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_F",
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
       "x": 32,
       "y": 32,
       "elevation": 0,
@@ -314,16 +314,16 @@
       "flag": "FLAG_CLEARED_OCHRE_VALE_MINE"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",
-      "x": 34,
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "x": 32,
       "y": 33,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OchreValeMine_ScientistGuy",
+      "script": "NULL",
       "flag": "FLAG_CLEARED_OCHRE_VALE_MINE"
     }
   ],
@@ -344,16 +344,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_1",
       "var_value": "1",
-      "script": "OchreValeMine_MagmaEncounter"
-    },
-    {
-      "type": "trigger",
-      "x": 11,
-      "y": 20,
-      "elevation": 0,
-      "var": "VAR_TEMP_2",
-      "var_value": "1",
-      "script": "OchreValeMine_MagmaEncounterClear"
+      "script": "OchreValeMine_AquaEncounter"
     },
     {
       "type": "trigger",
@@ -362,7 +353,16 @@
       "elevation": 0,
       "var": "VAR_TEMP_2",
       "var_value": "1",
-      "script": "OchreValeMine_MagmaEncounterClear"
+      "script": "OchreValeMine_AquaEncounterClear"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_TEMP_2",
+      "var_value": "1",
+      "script": "OchreValeMine_AquaEncounterClear"
     }
   ],
   "bg_events": [

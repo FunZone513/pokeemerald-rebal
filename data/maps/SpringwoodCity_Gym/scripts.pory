@@ -14,14 +14,14 @@ script SpringwoodCity_Gym_CheckPlayerPos {
 
     // middle switch
     } elif ( var(VAR_TEMP_A) == 2 && var(VAR_TEMP_B) == 10 ) {
-        if (var(VAR_SPRINGWOOD_GYM_SWITCH1) == 0) {
+        if (var(VAR_SPRINGWOOD_GYM_SWITCH2) == 0) {
             playse(SE_UNLOCK)
             setvar(VAR_SPRINGWOOD_GYM_SWITCH2, 1)
         }
 
     // top switch
     } elif ( var(VAR_TEMP_A) == 10 && var(VAR_TEMP_B) == 7 ) {
-        if (var(VAR_SPRINGWOOD_GYM_SWITCH1) == 0) {
+        if (var(VAR_SPRINGWOOD_GYM_SWITCH3) == 0) {
             playse(SE_UNLOCK)
             setvar(VAR_SPRINGWOOD_GYM_SWITCH3, 1)
         }
@@ -71,7 +71,7 @@ script Springwood_Gym_Guide {
         }
         msgbox(Springwood_Gym_Guide_Text, MSGBOX_NPC)
     } else {
-        msgbox(format("Wow! You really showed your stuff! Defeating Martin is no easy task, but you definitely earned your Springwood Badge!"), MSGBOX_NPC)
+        msgbox(format("Using Cut requires a Grass or Bug type Pokemon, or one with the ability Hyper Cutter or Sharpness."), MSGBOX_NPC)
     }
     releaseall
 }
@@ -80,7 +80,7 @@ text Springwood_Gym_Guide_Text_Intro {
     "A new face!\nI'm the guide here at Springwood Gym.\p"
     "My job is to make sure the challengers\nknow what it is they are up against.\p"
     "Each Gym is assigned a guide to help\nout newcomers to the Gym Challenge.\p"
-    "Also, make sure to check the\nRecommended Level on each Gym's statues."
+    "Also, make sure to check out the\nRecommended Level on the Gym statues."
 }
 
 text Springwood_Gym_Guide_Text {
@@ -133,7 +133,6 @@ text SpringwoodCity_Gym_Martin_PostBattle {
 
 text SpringwoodCity_Gym_Martin_Badge {
     "Having the Springwood Badge means\nthat your Pokemon are able to cut down\lsmall trees that may block your path.\p"
-    "Grass and Bug types, as well as any\nPokemon that have an ability related to\lcutting are able to help you."
 }
 
 script SpringwoodGym_Trainer1 {

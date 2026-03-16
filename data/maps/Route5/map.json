@@ -27,19 +27,6 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-      "x": 56,
-      "y": 12,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_SUPER_REPEL",
-      "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_ROUTE_5_1"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
       "x": 9,
       "y": 8,
       "elevation": 0,
@@ -105,10 +92,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
-      "x": 52,
-      "y": 6,
+      "x": 54,
+      "y": 5,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -148,19 +135,6 @@
       "y": 19,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP_AND_RIGHT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "FLAG_CLEARED_QUIET_GROVE"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(RHYDON)",
-      "x": 39,
-      "y": 18,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -232,6 +206,71 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_RockSmash",
       "flag": "FLAG_TEMP_12"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
+      "x": 41,
+      "y": 17,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_RockSmash",
+      "flag": "FLAG_TEMP_13"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
+      "x": 30,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_RockSmash",
+      "flag": "FLAG_TEMP_14"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "x": 44,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_SUPER_REPEL",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_ROUTE_5_1"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
+      "x": 58,
+      "y": 9,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE5_1",
+      "script": "BerryTreeScript",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
+      "x": 58,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE5_2",
+      "script": "BerryTreeScript",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -276,6 +315,22 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route5_Sign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 7,
+      "y": 4,
+      "elevation": 0,
+      "item": "ITEM_BURN_HEAL",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_5_1"
+    },
+    {
+      "type": "sign",
+      "x": 37,
+      "y": 18,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Route5_SturdyRockBlocker"
     }
   ]
 }

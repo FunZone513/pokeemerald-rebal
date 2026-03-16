@@ -9,77 +9,77 @@ script OchreValeMine_OnTransition {
     }
 }
 
-script OchreValeMine_MagmaEncounter {
+script OchreValeMine_AquaEncounter {
     lockall
     setvar(VAR_TEMP_1, 0)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
     special(SpawnCameraObject)
     applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_right*2))
     waitmovement(0)
-    msgbox("We told you to stop looking into it.")
+    msgbox("We told you to stop looking into it!")
     applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_right*1))
     waitmovement(0)
     msgbox("Theres something unusual hidden\nin the data!\lWe must figure out what it means,\ldon't you understand?!")
     applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_left*1))
     waitmovement(0)
-    msgbox("It's not our job to understand,\nour job is to hinder people like you.")
-    applymovement(22, moves(walk_right))
+    msgbox("Unfortunately for you, it's not\nour job to understand.")
     applymovement(23, moves(walk_right))
+    applymovement(24, moves(walk_right))
     applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_right))
     waitmovement(0)
     delay(48)
     playse(SE_PIN)
-    applymovement(24, Common_Movement_ExclamationMark)
+    applymovement(22, Common_Movement_ExclamationMark)
     waitmovement(0)
-    applymovement(24, Common_Movement_Delay48)
+    applymovement(22, Common_Movement_Delay48)
     waitmovement(0)
     waitse
     msgbox("Hey! You over there!\nCan you please help me out here?")
     playse(SE_PIN)
-    applymovement(22, Common_Movement_ExclamationMark)
     applymovement(23, Common_Movement_ExclamationMark)
+    applymovement(24, Common_Movement_ExclamationMark)
     waitmovement(0)
-    applymovement(22, moves(face_left))
     applymovement(23, moves(face_left))
+    applymovement(24, moves(face_left))
     waitmovement(0)
     delay(48)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right*2))
-    msgbox("Who are you to try and get in our way?\nWe're here to stop them from doing\lsomething foolish!")
+    msgbox("Who are you to try and get in our way?")
     applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_left*1))
     waitmovement(0)
     special(RemoveCameraObject)
     trainerbattle_two_trainers(
-        TRAINER_OCHRE_VALE_MINE_MAGMA_GRUNT2, 
+        TRAINER_OCHRE_VALE_MINE_AQUA_GRUNT2, 
         format("No!"), 
-        TRAINER_OCHRE_VALE_MINE_MAGMA_GRUNT1, 
+        TRAINER_OCHRE_VALE_MINE_AQUA_GRUNT1, 
         format("Now what are we supposed to do...")
     )
     specialvar(VAR_RESULT, GetBattleOutcome)
     if (var(VAR_RESULT) == B_OUTCOME_WON) {
-        msgbox("We'll have to retreat for now,\nbut next time we won't go easy!")
+        msgbox("We were trying to stop them from doing\nsomething foolish...\pWe'll have to retreat for now,\nbut next time you'll be the one running.")
         closemessage
         setvar(VAR_ROUTE4_WATER_STONE_STATE, 6)
         fadescreen(FADE_TO_BLACK)
-        removeobject(22)
         removeobject(23)
+        removeobject(24)
         playse(SE_FLEE)
         delay(60)
         special(DrawWholeMapView)
         fadescreen(FADE_FROM_BLACK)
         delay(16)
-        applymovement(24, moves(walk_left))
+        applymovement(22, moves(walk_left))
         waitmovement(0)
-        msgbox(OchreValeMine_MagmaEncounter_EndText)
+        msgbox(OchreValeMine_AquaEncounter_EndText)
         closemessage
         delay(16)
-        applymovement(24, moves(walk_right))
+        applymovement(22, moves(walk_right))
         waitmovement(0)
         setvar(VAR_TEMP_2, 0)
     }
     releaseall
 }
 
-text OchreValeMine_MagmaEncounter_EndText {
+text OchreValeMine_AquaEncounter_EndText {
     "Thank you for your assistance,\nI'm not sure why they were so riled up.\p"
     "They never used to be this bad before,\nsomething must've happened for them to\lgo off the rails like this.\p"
     "They should stop interfering with our\nresearch now, so we can finally get\lthe materials sent to the lab."
@@ -91,7 +91,7 @@ script OchreValeMine_ScientistGuy {
     releaseall
 }
 
-script OchreValeMine_MagmaEncounterClear {
+script OchreValeMine_AquaEncounterClear {
     if (!flag(FLAG_CLEARED_OCHRE_VALE_MINE)) {
         setflag(FLAG_CLEARED_OCHRE_VALE_MINE)
     }

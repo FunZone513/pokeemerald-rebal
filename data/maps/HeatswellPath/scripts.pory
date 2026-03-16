@@ -1,0 +1,77 @@
+mapscripts HeatswellPath_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: HeatswellPath_OnTransition
+}
+
+script HeatswellPath_OnTransition {
+    if (var(VAR_PORT_EDAPH_BIKE_SHOP) != 1) {
+        setflag(FLAG_TEMP_A)
+    }
+}
+
+script HeatswellPath_BikeKid {
+    lock
+    playse(SE_PIN)
+    applymovement(6, Common_Movement_ExclamationMark)
+    waitmovement(6)
+    applymovement(6, moves(face_player))
+    waitmovement(0)
+    msgbox(HeatswellPath_BikeKid_Text, MSGBOX_NPC)
+    playbgm(MUS_ENCOUNTER_RICH, FALSE)
+    msgbox("I can't wait to defeat you and\nbegin my epic journey!")
+    closemessage
+    trainerbattle_no_intro(TRAINER_HEATSWELL_PATH_BIKE_KID, "...what? I lost?")
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    if (var(VAR_RESULT) == B_OUTCOME_WON) {
+        fadedefaultbgm
+        msgbox("...\p")
+        closemessage
+        applymovement(6, moves(face_down))
+        waitmovement(0)
+        delay(100)
+        applymovement(6, moves(face_player))
+        waitmovement(0)
+        msgbox("Being a Pokemon Trainer is for people\nwho don't have a future career path.\pI'll be going back to helping my father\nrun the Bike Shop.")
+        closemessage
+        fadescreen(FADE_TO_BLACK)
+        setvar(VAR_PORT_EDAPH_BIKE_SHOP, 2)
+        setflag(FLAG_TEMP_A)
+        playse(SE_FLEE)
+        delay(48)
+        special(DrawWholeMapView)
+        fadescreen(FADE_FROM_BLACK)
+    }
+    release
+}
+
+text HeatswellPath_BikeKid_Text {
+    "Oh! You've freed me!\nIt's about time someone came!\p"
+    "I'm trying my hand at being a\nPokemon Trainer, but the terrain around\lhere is really rough.\p"
+    "It's honestly really inconsiderate,\nthey should be more conscious of\lpeople when designing these routes!\p"
+    "Huh? Who?\p"
+    "Well, the people who design these\nareas of course!\p"
+    "They should have more foresight of\nthe kinds of people who would be\nusing them, I mean seriously,\llook at this lava! It's a hazard!\p"
+    "...\p"
+    "What's that?\nYou're not making any sense.\p"
+    "Wait!\p"
+    "You're a Pokemon Trainer too right?\nThat means we can try battling!"
+}
+
+script HeatswellPath_BlackBelt {
+    trainerbattle_single(
+        TRAINER_HEATSWELL_PATH_BLACKBELT, 
+        format("FEEL THE BURN!"),
+        format("OOF OW THAT HURTS!")  
+    )
+    msgbox(format("This fabric is not breathable in the least, I believe I have made an error."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script HeatswellPath_Kindler {
+    trainerbattle_single(
+        TRAINER_HEATSWELL_PATH_KINDLER, 
+        format("This is my element!"),
+        format("Wait that's not how it was supposed to go!")  
+    )
+    msgbox(format("Even though I'm indoors, I feel like I need some sunscreen."), MSGBOX_AUTOCLOSE)
+    end
+}

@@ -1,0 +1,10 @@
+mapscripts PortEdaph_PokeMart_MapScripts {}
+
+script PortEdaph_PokeMart_Cook {
+    msgbox(format("The berries here make for a tasty treat!"), MSGBOX_NPC)
+}
+
+script PortEdaph_PokeMart_Boy {
+    msgbox(format("Looking at all the juice boxes is making me thirsty, but I already spent my pocket money on lollies..."))
+    closemessage
+}

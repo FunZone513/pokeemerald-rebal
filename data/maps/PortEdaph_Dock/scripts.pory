@@ -1,0 +1,149 @@
+mapscripts PortEdaph_Dock_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: PortEdaph_Dock_OnTransition
+    MAP_SCRIPT_ON_FRAME_TABLE [ 
+        VAR_TEMP_A, 1: PortEdaph_Dock_BoatEvent
+    ]
+}
+
+script PortEdaph_Dock_OnTransition {
+
+    if (!flag(FLAG_SEEN_EDAPH_DOCK_EVENT)) {
+        setflag(FLAG_TEMP_1)
+        setvar(VAR_TEMP_A, 1)
+
+    } else {
+        setflag(FLAG_TEMP_A) // hides the boat, change if I need to reveal the boat later on
+        setflag(FLAG_TEMP_B) // shadow
+    }
+}
+
+script PortEdaph_Dock_WaterBlock {
+    lock
+    msgbox("This water isn't for swimming in.")
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down))
+    release
+}
+
+script PortEdaph_Dock_BoatEvent {
+    lock
+    hideobjectat(10, MAP_PORT_EDAPH_DOCK)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up*2 walk_right face_up))
+    waitmovement(0)
+    special(SpawnCameraObject)
+    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_up*2))
+    waitmovement(0)
+    msgbox(PortEdaph_Dock_BoatEvent_Text1)
+    closemessage
+    applymovement(2, moves(face_down))
+    applymovement(1, moves(face_up))
+    waitmovement(0)
+    msgbox(PortEdaph_Dock_BoatEvent_Text2)
+    closemessage
+    applymovement(2, moves(face_left))
+    applymovement(1, moves(face_left))
+    waitmovement(0)
+    msgbox("Riveting stuff!\pNow I believe it's time for the boat\nto undergo it's first test voyage!")
+    closemessage
+    applymovement(2, moves(face_up))
+    applymovement(1, moves(walk_right walk_up))
+    applymovement(3, moves(walk_right face_up))
+    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_diag_northeast*3))
+    waitmovement(OBJ_EVENT_ID_CAMERA)
+    playse(SE_DING_DONG)
+    waitse
+    playse(SE_INTRO_BLAST)
+    applymovement(4, moves(walk_slow_right delay_16*2 walk_slow_right delay_16*3 walk_slow_right))
+    waitmovement(0)
+    delay(32)
+    waitse
+    playse(SE_TRUCK_DOOR)
+    applymovement(1, Common_Movement_ExclamationMark)
+    applymovement(2, Common_Movement_ExclamationMark)
+    applymovement(3, Common_Movement_ExclamationMark)
+    waitse
+    delay(16)
+    waitmovement(0)
+    setvar(VAR_0x8004, 3)  // vertical pan
+	setvar(VAR_0x8005, 5)  // horizontal pan
+	setvar(VAR_0x8006, 8)  // num shakes
+	setvar(VAR_0x8007, 1)  // shake delay
+	setvar(VAR_0x8008, 1)  // remove sound
+    special(ShakeCamera)
+    playse(SE_M_EXPLOSION)
+    waitstate
+    fadescreenspeed(FADE_TO_WHITE, 1)
+    fadeoutbgm(1)
+    hideobjectat(4, MAP_PORT_EDAPH_DOCK)
+    showobjectat(10, MAP_PORT_EDAPH_DOCK)
+    applymovement(10, moves(face_left))
+    special(DrawWholeMapView)
+    delay(60)
+    fadescreenspeed(FADE_FROM_WHITE, 16)
+    delay(100)
+    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_slow_diag_southwest*3))
+    delay(60)
+    applymovement(2, moves(face_right))
+    msgbox("...I'm going to go get some help.")
+    closemessage
+    waitmovement(0)
+    applymovement(2, moves(walk_fast_down*1 walk_fast_left*2 walk_fast_down*3))
+    waitmovement(2)
+    playse(SE_EXIT)
+    removeobject(2)
+    delay(30)
+    applymovement(3, moves(face_right))
+    waitmovement(0)
+    delay(48)
+    applymovement(3, moves(face_up))
+    waitmovement(0)
+    delay(48)
+    applymovement(3, moves(walk_fast_left walk_fast_down*4))
+    waitmovement(0)
+    playse(SE_EXIT)
+    removeobject(3)
+    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_down*2))
+    waitmovement(0)
+    setflag(FLAG_SEEN_EDAPH_DOCK_EVENT)
+    special(RemoveCameraObject)
+    setvar(VAR_TEMP_A, 0)
+    release
+}
+
+script PortEdaph_Dock_BoatEvent_Captain {
+    msgbox("...")
+    closemessage
+}
+
+text PortEdaph_Dock_BoatEvent_Text1 {
+    "It's an incredible day for seafarers\neverywhere!\p"
+    "We're here on the docks at Port Edaph\ntoday to talk about the new cruise\lliner that has been built here!"
+}
+
+text PortEdaph_Dock_BoatEvent_Text2 {
+    "Now then, can you tell us a little\nbit about what makes this boat special?\p"
+    "Certainly!\p"
+    "This new cruise liner has an advanced\ngyro system to keep it much more stable\lin rough waves.\p"
+    "The engines have also been upgraded,\nmaking it faster and more efficient\lfor long distance travel!\p"
+    "We're hoping this new technological\nbreakthrough will help us finally\lventure beyond the horizon!"
+}
+
+script PortEdaph_Dock_Captain {
+    msgbox(format("Hi, I don't do anything yet."), MSGBOX_NPC)
+}
+
+script PortEdaph_Dock_Boy {
+    msgbox(format("Truely an engineering marvel..."), MSGBOX_NPC)
+}
+
+script PortEdaph_Dock_Sailor {
+    msgbox(format("I hope the next boat doesn't explode on us again."), MSGBOX_NPC)
+}
+
+script PortEdaph_Dock_OldWoman {
+    msgbox("Oh, hello dear.\pHm? What's wrong?\pOh, no I'm fine.\nIt's just comfy in here that's all.", MSGBOX_NPC)
+}
+
+script PortEdaph_Dock_Scientist {
+    msgbox(format("...what went wrong?"), MSGBOX_NPC)
+}

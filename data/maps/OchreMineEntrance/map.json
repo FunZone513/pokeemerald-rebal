@@ -80,19 +80,6 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
-      "x": 12,
-      "y": 17,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "OchreMineEntrance_MagmaGrunt",
-      "flag": "FLAG_CLEARED_OCHRE_VALE_MINE"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
       "x": 12,
       "y": 18,
@@ -104,6 +91,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_RockSmash",
       "flag": "FLAG_TEMP_14"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "x": 12,
+      "y": 17,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "OchreMineEntrance_AquaGrunt",
+      "flag": "FLAG_CLEARED_OCHRE_VALE_MINE"
     }
   ],
   "warp_events": [

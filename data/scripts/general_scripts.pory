@@ -1,3 +1,10 @@
+//MARK: Game Version
+script Generic_InfoNPC {
+    msgbox("Current Game Version is:\n- 0.1.1 -", MSGBOX_NPC)
+}
+
+
+
 //MARK: Default Settings
 script Generic_DefaultSettings {
     setflag(FLAG_SYS_B_DASH)
@@ -22,17 +29,34 @@ script Generic_IncreaseExpGain {
 }
 
 //MARK: Level Cap
+script Generic_GetBadgeCount {
+    setvar(VAR_RESULT, 0)
+    if (flag(FLAG_BADGE01_GET)) { addvar(VAR_RESULT, 1) }
+    if (flag(FLAG_BADGE02_GET)) { addvar(VAR_RESULT, 1) }
+    if (flag(FLAG_BADGE03_GET)) { addvar(VAR_RESULT, 1) }
+    if (flag(FLAG_BADGE04_GET)) { addvar(VAR_RESULT, 1) }
+    if (flag(FLAG_BADGE05_GET)) { addvar(VAR_RESULT, 1) }
+    if (flag(FLAG_BADGE06_GET)) { addvar(VAR_RESULT, 1) }
+    if (flag(FLAG_BADGE07_GET)) { addvar(VAR_RESULT, 1) }
+    if (flag(FLAG_BADGE08_GET)) { addvar(VAR_RESULT, 1) }
+    return
+}
+
 script Generic_UPDATE_LEVELCAP {
-    setvar(VAR_CURRENT_LEVEL_CAP, 15)
-
-    if (flag(FLAG_BADGE01_GET)) {
-        addvar(VAR_CURRENT_LEVEL_CAP, 7) // 22
+    call(Generic_GetBadgeCount)
+    
+    // this is how many badges you have, so the levelcap is offset by one (ie; 0 = first gym = 15)
+    switch(var(VAR_RESULT)) {
+        case 0: setvar(VAR_CURRENT_LEVEL_CAP, 15) break
+        case 1: setvar(VAR_CURRENT_LEVEL_CAP, 22) break
+        case 2: setvar(VAR_CURRENT_LEVEL_CAP, 30) break
+        case 3: setvar(VAR_CURRENT_LEVEL_CAP, 100) break
+        case 4: setvar(VAR_CURRENT_LEVEL_CAP, 100) break
+        case 5: setvar(VAR_CURRENT_LEVEL_CAP, 100) break
+        case 6: setvar(VAR_CURRENT_LEVEL_CAP, 100) break
+        case 7: setvar(VAR_CURRENT_LEVEL_CAP, 100) break
+        case 8: setvar(VAR_CURRENT_LEVEL_CAP, 100) break
     }
-
-    if (flag(FLAG_BADGE02_GET)) {
-        addvar(VAR_CURRENT_LEVEL_CAP, 78) // 100
-    }
-
     return
 }
 
@@ -70,21 +94,9 @@ script Generic_POKEMON_INTERACT {
     }
     
     waitmessage
-    waitmoncry
+    //waitmoncry
     waitbuttonpress
     releaseall
-}
-
-script Generic_GetBadgeCount {
-    setvar(VAR_RESULT, 0)
-    if (flag(FLAG_BADGE01_GET)) { addvar(VAR_RESULT, 1) }
-    if (flag(FLAG_BADGE02_GET)) { addvar(VAR_RESULT, 1) }
-    if (flag(FLAG_BADGE03_GET)) { addvar(VAR_RESULT, 1) }
-    if (flag(FLAG_BADGE04_GET)) { addvar(VAR_RESULT, 1) }
-    if (flag(FLAG_BADGE05_GET)) { addvar(VAR_RESULT, 1) }
-    if (flag(FLAG_BADGE06_GET)) { addvar(VAR_RESULT, 1) }
-    if (flag(FLAG_BADGE07_GET)) { addvar(VAR_RESULT, 1) }
-    if (flag(FLAG_BADGE08_GET)) { addvar(VAR_RESULT, 1) }
 }
 
 //MARK: Pokemart
@@ -208,6 +220,111 @@ mart GenericPokeMart_5 {
     ITEM_MAX_ETHER
     ITEM_ELIXIR
     ITEM_MAX_ELIXIR
+}
+
+//MARK: Pokemart 2
+script Generic_POKEMART_BERRY {
+    lock
+    faceplayer
+    message("Welcome!\pAre you interested in some berries?")
+    waitmessage
+    call(Generic_GetBadgeCount)
+    switch(var(VAR_RESULT)) {
+        case 0:
+        case 1:
+        case 2:
+            pokemart(GenericPokeMart_Berry1)
+            break
+        
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+        case 7:
+            pokemart(GenericPokeMart_Berry2)
+            break
+
+        case 8:
+        default:
+            pokemart(GenericPokeMart_Berry3)
+            break
+    }
+    msgbox("Please come again!", MSGBOX_DEFAULT)
+    release
+}
+
+mart GenericPokeMart_Berry1 {
+    ITEM_ORAN_BERRY
+    ITEM_PECHA_BERRY
+    ITEM_CHERI_BERRY
+    ITEM_CHESTO_BERRY
+    ITEM_RAWST_BERRY
+    ITEM_ASPEAR_BERRY
+    ITEM_LEPPA_BERRY
+    ITEM_PERSIM_BERRY
+}
+
+mart GenericPokeMart_Berry2 {
+    ITEM_ORAN_BERRY
+    ITEM_SITRUS_BERRY
+    ITEM_PECHA_BERRY
+    ITEM_CHERI_BERRY
+    ITEM_CHESTO_BERRY
+    ITEM_RAWST_BERRY
+    ITEM_ASPEAR_BERRY
+    ITEM_LUM_BERRY
+    ITEM_LEPPA_BERRY
+    ITEM_PERSIM_BERRY
+    ITEM_BABIRI_BERRY
+    ITEM_CHARTI_BERRY
+    ITEM_CHILAN_BERRY
+    ITEM_CHOPLE_BERRY
+    ITEM_COBA_BERRY
+    ITEM_COLBUR_BERRY
+    ITEM_HABAN_BERRY
+    ITEM_KASIB_BERRY
+    ITEM_KEBIA_BERRY
+    ITEM_OCCA_BERRY
+    ITEM_PASSHO_BERRY
+    ITEM_PAYAPA_BERRY
+    ITEM_RINDO_BERRY
+    ITEM_ROSELI_BERRY
+    ITEM_SHUCA_BERRY
+    ITEM_TANGA_BERRY
+    ITEM_WACAN_BERRY
+    ITEM_YACHE_BERRY
+}
+
+mart GenericPokeMart_Berry3 {
+    ITEM_ORAN_BERRY
+    ITEM_SITRUS_BERRY
+    ITEM_PECHA_BERRY
+    ITEM_CHERI_BERRY
+    ITEM_CHESTO_BERRY
+    ITEM_RAWST_BERRY
+    ITEM_ASPEAR_BERRY
+    ITEM_LUM_BERRY
+    ITEM_LEPPA_BERRY
+    ITEM_PERSIM_BERRY
+    ITEM_BABIRI_BERRY
+    ITEM_CHARTI_BERRY
+    ITEM_CHILAN_BERRY
+    ITEM_CHOPLE_BERRY
+    ITEM_COBA_BERRY
+    ITEM_COLBUR_BERRY
+    ITEM_HABAN_BERRY
+    ITEM_KASIB_BERRY
+    ITEM_KEBIA_BERRY
+    ITEM_OCCA_BERRY
+    ITEM_PASSHO_BERRY
+    ITEM_PAYAPA_BERRY
+    ITEM_RINDO_BERRY
+    ITEM_ROSELI_BERRY
+    ITEM_SHUCA_BERRY
+    ITEM_TANGA_BERRY
+    ITEM_WACAN_BERRY
+    ITEM_YACHE_BERRY
+    ITEM_ENIGMA_BERRY
 }
 
 

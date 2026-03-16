@@ -4980,6 +4980,156 @@
       "secondary_tileset": "gTileset_Lavaridge",
       "border_filepath": "data/layouts/Route11/border.bin",
       "blockdata_filepath": "data/layouts/Route11/map.bin"
+    },
+    {
+      "id": "LAYOUT_HEATSWELL_PATH",
+      "name": "HeatswellPath_Layout",
+      "width": 40,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/HeatswellPath/border.bin",
+      "blockdata_filepath": "data/layouts/HeatswellPath/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAPASH_TOWN",
+      "name": "LapashTown_Layout",
+      "width": 30,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/LapashTown/border.bin",
+      "blockdata_filepath": "data/layouts/LapashTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE12",
+      "name": "Route12_Layout",
+      "width": 30,
+      "height": 62,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/Route12/border.bin",
+      "blockdata_filepath": "data/layouts/Route12/map.bin"
+    },
+    {
+      "id": "LAYOUT_PORT_EDAPH",
+      "name": "PortEdaph_Layout",
+      "width": 50,
+      "height": 82,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/PortEdaph/border.bin",
+      "blockdata_filepath": "data/layouts/PortEdaph/map.bin"
+    },
+    {
+      "id": "LAYOUT_PORT_EDAPH_POKE_CENTRE",
+      "name": "PortEdaph_PokeCentre_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/PortEdaph_PokeCentre/border.bin",
+      "blockdata_filepath": "data/layouts/PortEdaph_PokeCentre/map.bin"
+    },
+    {
+      "id": "LAYOUT_PORT_EDAPH_INDOOR1",
+      "name": "PortEdaph_Indoor1_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/PortEdaph_Indoor1/border.bin",
+      "blockdata_filepath": "data/layouts/PortEdaph_Indoor1/map.bin"
+    },
+    {
+      "id": "LAYOUT_PORT_EDAPH_INDOOR2",
+      "name": "PortEdaph_Indoor2_Layout",
+      "width": 12,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/PortEdaph_Indoor2/border.bin",
+      "blockdata_filepath": "data/layouts/PortEdaph_Indoor2/map.bin"
+    },
+    {
+      "id": "LAYOUT_PORT_EDAPH_INDOOR3",
+      "name": "PortEdaph_Indoor3_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/PortEdaph_Indoor3/border.bin",
+      "blockdata_filepath": "data/layouts/PortEdaph_Indoor3/map.bin"
+    },
+    {
+      "id": "LAYOUT_PORT_EDAPH_POKE_MART",
+      "name": "PortEdaph_PokeMart_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/PortEdaph_PokeMart/border.bin",
+      "blockdata_filepath": "data/layouts/PortEdaph_PokeMart/map.bin"
+    },
+    {
+      "id": "LAYOUT_PORT_EDAPH_BIKE_SHOP",
+      "name": "PortEdaph_BikeShop_Layout",
+      "width": 16,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BikeShop",
+      "border_filepath": "data/layouts/PortEdaph_BikeShop/border.bin",
+      "blockdata_filepath": "data/layouts/PortEdaph_BikeShop/map.bin"
+    },
+    {
+      "id": "LAYOUT_PORT_EDAPH_DOCK",
+      "name": "PortEdaph_Dock_Layout",
+      "width": 22,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/PortEdaph_Dock/border.bin",
+      "blockdata_filepath": "data/layouts/PortEdaph_Dock/map.bin"
+    },
+    {
+      "id": "LAYOUT_PORT_EDAPH_GYM",
+      "name": "PortEdaph_Gym_Layout",
+      "width": 30,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_FortreeGym",
+      "border_filepath": "data/layouts/PortEdaph_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/PortEdaph_Gym/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAPASH_TOWN_POKE_CENTRE",
+      "name": "LapashTown_PokeCentre_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/LapashTown_PokeCentre/border.bin",
+      "blockdata_filepath": "data/layouts/LapashTown_PokeCentre/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAPASH_TOWN_INDOOR1",
+      "name": "LapashTown_Indoor1_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/LapashTown_Indoor1/border.bin",
+      "blockdata_filepath": "data/layouts/LapashTown_Indoor1/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAPASH_TOWN_INDOOR2",
+      "name": "LapashTown_Indoor2_Layout",
+      "width": 12,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/LapashTown_Indoor2/border.bin",
+      "blockdata_filepath": "data/layouts/LapashTown_Indoor2/map.bin"
     }
   ]
 }

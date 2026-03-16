@@ -1,0 +1,5 @@
+mapscripts PortEdaph_Indoor3_MapScripts {}
+
+script PortEdaph_Indoor3_Man {
+    msgbox(format("I miss my wife..."), MSGBOX_NPC)
+}

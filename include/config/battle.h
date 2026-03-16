@@ -226,7 +226,7 @@
 
 // Terrain settings
 #define B_TERRAIN_BG_CHANGE         TRUE       // If set to TRUE, terrain moves permanently change the default battle background until the effect fades.
-#define B_THUNDERSTORM_TERRAIN      TRUE       // If TRUE, overworld Thunderstorm generates Rain and Electric Terrain as in Gen 8.
+#define B_THUNDERSTORM_TERRAIN      FALSE       // If TRUE, overworld Thunderstorm generates Rain and Electric Terrain as in Gen 8.
 #define B_TERRAIN_TYPE_BOOST        GEN_LATEST // In Gen8, damage is boosted by 30% instead of 50%.
 #define B_SECRET_POWER_EFFECT       GEN_LATEST // Secret Power's effects change depending on terrain and generation. See MOVE_EFFECT_SECRET_POWER's case in `SetMoveEffect`.
 #define B_SECRET_POWER_ANIMATION    GEN_LATEST // Secret Power's animations change depending on terrain and generation.
@@ -243,7 +243,7 @@
 #define B_SHOW_TARGETS              TRUE  // If set to TRUE, all available targets, for moves hitting 2 or 3 Pokémon, will be shown before selecting a move.
 #define B_SHOW_CATEGORY_ICON        TRUE  // If set to TRUE, it will show an icon in the summary and move relearner showing the move's category.
 #define B_HIDE_HEALTHBOX_IN_ANIMS   TRUE  // If set to TRUE, hides healthboxes during move animations.
-#define B_WAIT_TIME_MULTIPLIER      16    // This determines how long text pauses in battle last. Vanilla is 16. Lower values result in faster battles.
+#define B_WAIT_TIME_MULTIPLIER      8    // This determines how long text pauses in battle last. Vanilla is 16. Lower values result in faster battles.
 #define B_QUICK_MOVE_CURSOR_TO_RUN  FALSE // If set to TRUE, pushing B in the battle options against a wild encounter will move the cursor to the run option
 #define B_MOVE_DESCRIPTION_BUTTON   L_BUTTON // If set to a button other than B_LAST_USED_BALL_BUTTON, pressing this button will open the move description menu
 
@@ -252,7 +252,7 @@
 #define B_CATCHING_CHARM_BOOST      100         // % boost in Critical Capture odds if player has the Catching Charm.
 #define B_CRITICAL_CAPTURE          TRUE       // If set to TRUE, Critical Capture will be enabled.
 #define B_LAST_USED_BALL            TRUE       // If TRUE, the "last used ball" feature from Gen 7 will be implemented
-#define B_LAST_USED_BALL_BUTTON     R_BUTTON   // If last used ball is implemented, this button (or button combo) will trigger throwing the last used ball.
+#define B_LAST_USED_BALL_BUTTON     (R_BUTTON)   // If last used ball is implemented, this button (or button combo) will trigger throwing the last used ball.
 #define B_LAST_USED_BALL_CYCLE      TRUE       // If TRUE, then holding B_LAST_USED_BALL_BUTTON while pressing the D-Pad cycles through the balls
 #define B_CATCH_SWAP_INTO_PARTY     GEN_LATEST // In Gen 7+, the option to swap the caught wild mon to the party will appear, allowing you to send a different mon to the box.
 #define B_CATCH_SWAP_CHECK_HMS      FALSE       // If TRUE, the catch swap feature above will prevent returning mons to the box if they know HMs.
@@ -269,7 +269,7 @@
 #define B_OBEDIENCE_MECHANICS           GEN_5      // In PLA+ (here Gen8+), obedience restrictions also apply to non-outsider Pokémon, albeit based on their level met rather than actual level
 #define B_USE_FROSTBITE                 TRUE      // In PLA, Frostbite replaces Freeze. Enabling this flag does the same here. Moves can still be cherry-picked to either Freeze or Frostbite. Freeze-Dry, Secret Power & Tri Attack depend on this config.
 #define B_OVERWORLD_SNOW                GEN_LATEST // In Gen9+, overworld Snow will summon snow instead of hail in battle.
-#define B_OVERWORLD_FOG                 GEN_LATEST // In Gen8+, overworld Fog summons Misty Terrain in battle. In Gen4 only, overworld Fog summons the unique fog weather condition in battle.
+#define B_OVERWORLD_FOG                 GEN_5 // In Gen8+, overworld Fog summons Misty Terrain in battle. In Gen4 only, overworld Fog summons the unique fog weather condition in battle.
 #define B_TOXIC_REVERSAL                GEN_LATEST // In Gen5+, bad poison will change to regular poison at the end of battles.
 #define B_TRY_CATCH_TRAINER_BALL        GEN_LATEST // In Gen4+, trying to catch a Trainer's Pokémon does not consume the Poké Ball.
 #define B_SLEEP_CLAUSE                  FALSE      // Enables Sleep Clause all the time in every case, overriding B_FLAG_SLEEP_CLAUSE. Use that for modularity.

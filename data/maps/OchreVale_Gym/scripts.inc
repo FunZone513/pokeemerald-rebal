@@ -13,7 +13,7 @@ OchreVale_Gym_FlashSet::
 
 OchreVale_Gym_FlashSet_1:
 # 7 "data/maps/OchreVale_Gym/scripts.pory"
-	setflashlevel 4
+	setflashlevel 6
 	return
 
 
@@ -21,7 +21,7 @@ OchreVale_Gym_Douglas::
 # 14 "data/maps/OchreVale_Gym/scripts.pory"
 	trainerbattle_single GYM_LEADER_DOUGLAS, OchreVale_Gym_Douglas_Text_Intro, OchreVale_Gym_Douglas_Text_Defeated, OchreVale_Gym_Douglas_Defeated, NO_MUSIC
 # 21 "data/maps/OchreVale_Gym/scripts.pory"
-	msgbox SpringwoodCity_Gym_Martin_PostBattle, MSGBOX_NPC
+	msgbox OchreVale_Gym_Douglas_PostBattle, MSGBOX_NPC
 # 22 "data/maps/OchreVale_Gym/scripts.pory"
 	releaseall
 	return
@@ -77,11 +77,11 @@ OchreVale_Gym_Beauty::
 	end
 
 
-OchreVale_Gym_MagmaGrunt::
+OchreVale_Gym_AquaGrunt::
 # 100 "data/maps/OchreVale_Gym/scripts.pory"
-	trainerbattle_single TRAINER_OCHRE_VALE_GYM_MAGMA_GRUNT, OchreVale_Gym_MagmaGrunt_Text_0, OchreVale_Gym_MagmaGrunt_Text_1
+	trainerbattle_single TRAINER_OCHRE_VALE_GYM_AQUA_GRUNT, OchreVale_Gym_AquaGrunt_Text_0, OchreVale_Gym_AquaGrunt_Text_1
 # 105 "data/maps/OchreVale_Gym/scripts.pory"
-	msgbox OchreVale_Gym_MagmaGrunt_Text_2, MSGBOX_AUTOCLOSE
+	msgbox OchreVale_Gym_AquaGrunt_Text_2, MSGBOX_AUTOCLOSE
 	end
 
 
@@ -163,16 +163,16 @@ OchreVale_Gym_Beauty_Text_2:
 	.string "in the dark, I should really go\l"
 	.string "somewhere else.$"
 
-OchreVale_Gym_MagmaGrunt_Text_0:
+OchreVale_Gym_AquaGrunt_Text_0:
 # 102 "data/maps/OchreVale_Gym/scripts.pory"
 	.string "I got lost and ended up in the Gym...$"
 
-OchreVale_Gym_MagmaGrunt_Text_1:
+OchreVale_Gym_AquaGrunt_Text_1:
 # 103 "data/maps/OchreVale_Gym/scripts.pory"
 	.string "I don't think I was supposed to be\n"
 	.string "here...$"
 
-OchreVale_Gym_MagmaGrunt_Text_2:
+OchreVale_Gym_AquaGrunt_Text_2:
 # 105 "data/maps/OchreVale_Gym/scripts.pory"
 	.string "I'm meant to be in the Mine, but I\n"
 	.string "somehow ended up in the Gym instead.$"
@@ -210,7 +210,9 @@ OchreVale_Gym_Lass_Text_2:
 
 OchreVale_Gym_Guide_Text_0:
 # 134 "data/maps/OchreVale_Gym/scripts.pory"
-	.string "Oh good,\nthe lights have come back on.\pOr well,\nthey're a little brighter now I suppose.$"
+	.string "Using Rock Smash requires a Rock or\n"
+	.string "Fighting type Pokemon, or one with the\l"
+	.string "ability Rock Head or Iron Fist.$"
 
 OchreVale_Gym_Douglas_Text_Intro::
 # 39 "data/maps/OchreVale_Gym/scripts.pory"
@@ -231,21 +233,21 @@ OchreVale_Gym_Douglas_Text_Defeated::
 	.string "Your determination shines through in\nyour battle prowess!\p"
 	.string "True hard work is the only thing that\nwill never betray you!$"
 
-OchreVale_Gym_Douglas_PostBattle::
+OchreVale_Gym_Douglas_Badge::
 # 58 "data/maps/OchreVale_Gym/scripts.pory"
+	.string "The Ochre Badge is a symbol of your\nstrong will, and that will is what\lenables you to destroy even boulders.\p"
+	.string "Rock and Fighting types\nhelp in the removal of rocks in the Mine,\land they'll help you outside of it too.\p$"
+
+OchreVale_Gym_Douglas_PostBattle::
+# 63 "data/maps/OchreVale_Gym/scripts.pory"
 	.string "A man is only really alive with dirt in\nhis hair and sweat on his back.\p"
 	.string "I may not be as young I used to be,\nbut I still work hard at what I love.\p"
 	.string "Never let anyone or anything stand in\nyour path, it's yours for a reason.$"
-
-OchreVale_Gym_Douglas_Badge::
-# 64 "data/maps/OchreVale_Gym/scripts.pory"
-	.string "The Ochre Badge is a symbol of your\nstrong will, and that will is what\lenables you to destroy even boulders.\p"
-	.string "Rock, Ground, and Fighting types all\nhelp in the removal of rocks in the Mine,\land they'll help you outside of it too.$"
 
 OchreVale_Gym_Guide_Text::
 # 139 "data/maps/OchreVale_Gym/scripts.pory"
 	.string "Welcome to the Ochre Vale Gym!\nGym Leader Douglas designed the Gym\lafter the inside of the quarry.\p"
 	.string "The cave-like hallways and the dim\nlighting make it that much harder to\lfind your way around!\p"
 	.string "Make sure to keep an eye out for other\nTrainers as you make your way\lthrough the Gym!\p"
-	.string "Also, Doug likes to use Pokemon that are\nhelpful with the mining operation,\las he doubles as the Gym Leader and the\lquarry overseer.\p"
+	.string "Also Doug likes to use Pokemon that are\nhelpful with the mining operation,\las he doubles as the Gym Leader and the\lquarry overseer.\p"
 	.string "Keep your wits about you!$"

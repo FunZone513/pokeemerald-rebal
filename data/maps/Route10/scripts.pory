@@ -7,7 +7,7 @@ script Route10_OnTransition {
         setflag(FLAG_TEMP_A)
 
         // consolidate seperate story beats
-        if (flag(FLAG_CLEARED_OCHRE_VALE_MINE) && defeated(TRAINER_ROUTE10_MAGMA_GRUNT) && var(VAR_EVELYNN_STATE) == 4) {
+        if (defeated(TRAINER_ROUTE10_MAGMA_GRUNT) && var(VAR_EVELYNN_STATE) >= 4) {
             setflag(FLAG_TEMP_B)
         }
 
@@ -63,47 +63,27 @@ script Route10_SandMagmaGrunt {
     msgbox("Can't a girl enjoy the warm sand here!?\nI'd never be able to otherwise!", MSGBOX_NPC)
 }
 
-script Route10_Numel {
-    setseenmon(SPECIES_NUMEL)
-    playmoncry(SPECIES_NUMEL, CRY_MODE_NORMAL)
-    msgbox("?", MSGBOX_NPC)
-}
-
 script Route10_MagmaGrunt {
     lockall
-    if (!flag(FLAG_CLEARED_OCHRE_VALE_MINE)) {
-        msgbox(format("...I wonder what the guys in Ochre Vale Mine are up to..."))
+    if (var(VAR_EVELYNN_STATE < 4)) {
+        msgbox("...I can't believe they dropped\nall the Numel Pokeballs...")
         closemessage
-        delay(16)
-        msgbox(format("We dropped our pokeballs and one of our numels escaped, but we can't remember who's it is since we have so many..."), MSGBOX_NPC)
+    }
+
+    if (!defeated(TRAINER_ROUTE10_MAGMA_GRUNT)) {
+        msgbox(format("Oh hey, I'm here to stop random people from interrupting our business."), MSGBOX_NPC)
         applymovement(24, moves(face_up))
         waitmovement(0)
-        if (!defeated(TRAINER_ROUTE10_MAGMA_GRUNT)) {
-            delay(60)
-            applymovement(24, moves(face_player))
-            waitmovement(0)
-            trainerbattle_single(
-                TRAINER_ROUTE10_MAGMA_GRUNT, 
-                format("Wait a second, who are you!?"),
-                format("Darn, if only I wasn't under contract to battle people.")  
-            )
-        }
+        delay(60)
+        applymovement(24, moves(face_player))
+        waitmovement(0)
+        trainerbattle_single(
+            TRAINER_ROUTE10_MAGMA_GRUNT, 
+            format("Wait a second, who are you!?"),
+            format("Darn, if only I wasn't under contract to battle people.")  
+        )
     } else {
-        if (!defeated(TRAINER_ROUTE10_MAGMA_GRUNT)) {
-            msgbox(format("Oh hey, I'm here to stop random people from interrupting our business."), MSGBOX_NPC)
-            applymovement(24, moves(face_up))
-            waitmovement(0)
-            delay(60)
-            applymovement(24, moves(face_player))
-            waitmovement(0)
-            trainerbattle_single(
-                TRAINER_ROUTE10_MAGMA_GRUNT, 
-                format("Wait a second, who are you!?"),
-                format("Darn, if only I wasn't under contract to battle people.")  
-            )
-        } else {
-            msgbox(format("You already beat up my Pokemon, I can't stop you from walking in."), MSGBOX_NPC)
-        }
+        msgbox(format("You already beat up my Pokemon, I can't stop you from walking in."), MSGBOX_NPC)
     }
     releaseall
 }
@@ -143,7 +123,6 @@ script Route10_Guard {
 script Route10_ResortBlocker {
     lockall    
     playse(SE_PIN)
-    waitmovement(0)
     applymovement(18, Common_Movement_ExclamationMark)
     waitmovement(0)
     applymovement(18, moves(face_left))

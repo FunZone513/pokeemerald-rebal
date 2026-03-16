@@ -12,14 +12,51 @@ script Route5_CheckBoulderBlock {
         setmetatile(35, 16, METATILE_General_Grass, FALSE)
         setmetatile(37, 17, METATILE_General_Grass, FALSE)
         setmetatile(38, 17, METATILE_General_Grass, FALSE)
-        setmetatile(37, 18, METATILE_General_Grass, FALSE)
+        //setmetatile(37, 18, METATILE_General_Grass, FALSE)
         setmetatile(38, 18, METATILE_General_Grass, FALSE)
         setmetatile(39, 17, METATILE_General_Grass, FALSE)
+    
+        if (flag(FLAG_CLEARED_ROUTE5)) {
+            setmetatile(37, 18, METATILE_General_Grass, FALSE)
+        } else {
+            setmetatile(37, 18, METATILE_Rustboro_Route5_SturdyRock, TRUE)
+        }
+
     } else {
         setflag(FLAG_TEMP_10)
         setflag(FLAG_TEMP_11)
         setflag(FLAG_TEMP_12)
+
+        if (flag(FLAG_CLEARED_ROUTE5)) {
+            setmetatile(37, 18, METATILE_General_Grass, FALSE) // sturdy rock
+        }
     }
+}
+
+script Route5_SturdyRockBlocker {
+    if (!flag(FLAG_CLEARED_ROUTE5)) {
+        lockall
+        msgbox("This rock seems sturdier than most...", MSGBOX_SIGN)
+        playse(SE_PIN)
+        applymovement(3, Common_Movement_ExclamationMark)
+        waitmovement(0)
+        applymovement(3, moves(walk_down walk_right*3))
+        waitmovement(0)
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
+        waitmovement(0)
+        msgbox(Route5_SturdyRock_Text)
+        closemessage
+        applymovement(3, moves(walk_left*3 walk_up face_right))
+        waitmovement(0)
+        releaseall
+    }
+}
+
+text Route5_SturdyRock_Text {
+    "You're a traveller aren't you?\p"
+    "This rock was left over from when\nwe cleared the debris.\p"
+    "We haven't had much luck removing it,\nso we were kind of putting it off...\p"
+    "I wonder if there's anyone at\nLibra Institute that might be able\lto lend us a hand..."
 }
 
 script Route5_Sign {
@@ -29,7 +66,16 @@ script Route5_Sign {
 script Route5_BoulderGuy {
     lockall
     if (flag(FLAG_CLEARED_QUIET_GROVE)) {
-        msgbox(format("We've cleared out the major rockslide as best as we can, but the rocks are pretty unstable here so they still fall onto the path occasionally."), MSGBOX_NPC)
+        applymovement(3, moves(face_player))
+        msgbox(format("We've cleared out the major rockslide as best as we can, but the rocks are pretty unstable here so they still fall onto the path occasionally."))
+    
+        if (flag(FLAG_CLEARED_ROUTE5)) {
+            msgbox(format("The rock guy came through and took off with the rock... Kind of a weird one if you ask me."))
+        } else {
+            msgbox(format("There's one rock left over that is proving to be especially problematic."))
+        }
+        closemessage
+    
     } else {
         msgbox(format("Watch your step! There was a major rockslide earlier. We're trying to get it cleared out as soon as possible."), MSGBOX_NPC)
     }

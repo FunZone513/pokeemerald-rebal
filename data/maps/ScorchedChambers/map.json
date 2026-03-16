@@ -87,7 +87,7 @@
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "ScorchedChambers_BlackBelt",
       "flag": "FLAG_TEMP_A"
@@ -100,7 +100,7 @@
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "ScorchedChambers_BattleGirl",
       "flag": "FLAG_TEMP_A"
@@ -425,24 +425,6 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 29,
-      "y": 48,
-      "elevation": 0,
-      "var": "VAR_TEMP_A",
-      "var_value": "1",
-      "script": "ScorchedChambers_AlertEvelynn"
-    },
-    {
-      "type": "trigger",
-      "x": 29,
-      "y": 49,
-      "elevation": 0,
-      "var": "VAR_TEMP_A",
-      "var_value": "1",
-      "script": "ScorchedChambers_AlertEvelynn"
-    },
-    {
-      "type": "trigger",
       "x": 19,
       "y": 43,
       "elevation": 0,
@@ -503,6 +485,24 @@
       "var": "VAR_TEMP_B",
       "var_value": "1",
       "script": "ScorchedChambers_MagmaCouple"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 49,
+      "elevation": 0,
+      "var": "VAR_TEMP_A",
+      "var_value": "1",
+      "script": "ScorchedChambers_AlertEvelynn"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 48,
+      "elevation": 0,
+      "var": "VAR_TEMP_A",
+      "var_value": "1",
+      "script": "ScorchedChambers_AlertEvelynn"
     }
   ],
   "bg_events": [

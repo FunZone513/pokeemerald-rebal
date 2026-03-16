@@ -8,6 +8,8 @@
     "gMapGroup_Indoor_SpringwoodCity",
     "gMapGroup_Indoor_OchreVale",
     "gMapGroup_Indoor_DyecressTown",
+    "gMapGroup_Indoor_PortEdaph",
+    "gMapGroup_Indoor_LapashTown",
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
@@ -47,7 +49,9 @@
     "NewstemTown",
     "SpringwoodCity",
     "OchreVale",
-    "DyecressTown"
+    "DyecressTown",
+    "LapashTown",
+    "PortEdaph"
   ],
   "gMapGroup_Routes": [
     "Route1",
@@ -60,7 +64,8 @@
     "Route8",
     "Route9",
     "Route10",
-    "Route11"
+    "Route11",
+    "Route12"
   ],
   "gMapGroup_Dungeons": [
     "DripstoneCave",
@@ -73,7 +78,8 @@
     "ScorchedChambers",
     "DripstoneChannel",
     "WebbedThicket",
-    "DripstonePass"
+    "DripstonePass",
+    "HeatswellPath"
   ],
   "gMapGroup_Indoor_Routes": [
     "Route3_FishingHut",
@@ -115,6 +121,21 @@
     "Dyecress_Indoor2",
     "DyecressTown_Indoor2",
     "DyecressTown_HerbShop"
+  ],
+  "gMapGroup_Indoor_PortEdaph": [
+    "PortEdaph_PokeCentre",
+    "PortEdaph_Indoor1",
+    "PortEdaph_Indoor2",
+    "PortEdaph_Indoor3",
+    "PortEdaph_PokeMart",
+    "PortEdaph_BikeShop",
+    "PortEdaph_Dock",
+    "PortEdaph_Gym"
+  ],
+  "gMapGroup_Indoor_LapashTown": [
+    "LapashTown_PokeCentre",
+    "LapashTown_Indoor1",
+    "LapashTown_Indoor2"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

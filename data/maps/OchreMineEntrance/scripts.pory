@@ -6,9 +6,9 @@ script OchreMineEntrance_Hiker {
     releaseall
 }
 
-script OchreMineEntrance_MagmaGrunt {
+script OchreMineEntrance_AquaGrunt {
     trainerbattle_single(
-        TRAINER_OCHRE_VALE_MINE_ENTRANCE_MAGMA_GRUNT, 
+        TRAINER_OCHRE_VALE_MINE_ENTRANCE_AQUA_GRUNT, 
         format("Hey! What are you looking at?"),
         format("I didn't really want to battle you, but I'm contractually obligated to.")  
     )

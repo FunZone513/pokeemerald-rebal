@@ -1,0 +1,5 @@
+mapscripts PortEdaph_Indoor1_MapScripts {}
+
+script PortEdaph_Indoor1_Woman {
+    msgbox(format("My husband takes his job at the beach very seriously."), MSGBOX_NPC)
+}

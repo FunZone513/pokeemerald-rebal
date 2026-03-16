@@ -63,10 +63,9 @@ OchreVale_Lab_Scientist3::
 
 OchreVale_Lab_Director_Text_0:
 # 9 "data/maps/OchreVale_Lab/scripts.pory"
-	.string "Those guys call themselves 'Team\n"
-	.string "Magma'. I'm not sure why they've decided\l"
-	.string "to start hindering our research all of a\l"
-	.string "sudden.$"
+	.string "Team Aqua has started messing with us...\n"
+	.string "I'm not sure why they've decided to all\l"
+	.string "of a sudden.$"
 
 OchreVale_Lab_Director_Text_1:
 # 11 "data/maps/OchreVale_Lab/scripts.pory"
@@ -99,6 +98,6 @@ OchreVale_Lab_Scientist3_Text_0:
 OchreVale_Lab_Director_Text::
 # 16 "data/maps/OchreVale_Lab/scripts.pory"
 	.string "We're a group from the lab on Route 4,\nand we're supposed to be sending any\limportant looking stones their way,\l"
-	.string "but recently we've been having trouble\lwith a group in Ochre Vale Mine.\p"
+	.string "but recently we've been having trouble\lwith Team Aqua in Ochre Vale Mine.\p"
 	.string "They're getting in the way of our\nmaterial collection, as well as\limpeding our transport methods.\p"
 	.string "I just wish someone would get them to\nleave us alone.$"

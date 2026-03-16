@@ -12,11 +12,11 @@ OchreMineEntrance_Hiker::
 	return
 
 
-OchreMineEntrance_MagmaGrunt::
+OchreMineEntrance_AquaGrunt::
 # 10 "data/maps/OchreMineEntrance/scripts.pory"
-	trainerbattle_single TRAINER_OCHRE_VALE_MINE_ENTRANCE_MAGMA_GRUNT, OchreMineEntrance_MagmaGrunt_Text_0, OchreMineEntrance_MagmaGrunt_Text_1
+	trainerbattle_single TRAINER_OCHRE_VALE_MINE_ENTRANCE_AQUA_GRUNT, OchreMineEntrance_AquaGrunt_Text_0, OchreMineEntrance_AquaGrunt_Text_1
 # 15 "data/maps/OchreMineEntrance/scripts.pory"
-	msgbox OchreMineEntrance_MagmaGrunt_Text_2, MSGBOX_AUTOCLOSE
+	msgbox OchreMineEntrance_AquaGrunt_Text_2, MSGBOX_AUTOCLOSE
 	end
 
 
@@ -26,16 +26,16 @@ OchreMineEntrance_Hiker_Text_0:
 	.string "since the nerds showed up I've all but\l"
 	.string "lost my job.$"
 
-OchreMineEntrance_MagmaGrunt_Text_0:
+OchreMineEntrance_AquaGrunt_Text_0:
 # 12 "data/maps/OchreMineEntrance/scripts.pory"
 	.string "Hey! What are you looking at?$"
 
-OchreMineEntrance_MagmaGrunt_Text_1:
+OchreMineEntrance_AquaGrunt_Text_1:
 # 13 "data/maps/OchreMineEntrance/scripts.pory"
 	.string "I didn't really want to battle you, but\n"
 	.string "I'm contractually obligated to.$"
 
-OchreMineEntrance_MagmaGrunt_Text_2:
+OchreMineEntrance_AquaGrunt_Text_2:
 # 15 "data/maps/OchreMineEntrance/scripts.pory"
 	.string "I was told to come here to stop the\n"
 	.string "researchers from doing whatever it is\l"

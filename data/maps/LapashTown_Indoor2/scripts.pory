@@ -1,0 +1,5 @@
+mapscripts LapashTown_Indoor2_MapScripts {}
+
+script LapashTown_Indoor2_Man {
+    msgbox(format("placeholder"), MSGBOX_NPC)
+}

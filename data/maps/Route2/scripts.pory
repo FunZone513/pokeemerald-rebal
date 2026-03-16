@@ -111,6 +111,7 @@ script Route2_BlackBelt {
 script Route2_Evelynn {
     lock
     msgbox("You poor thing...\nWhat did those idiots do to you?")
+    closemessage
     playse(SE_PIN)
     applymovement(6, Common_Movement_ExclamationMark)
     waitmovement(0)
@@ -119,10 +120,15 @@ script Route2_Evelynn {
     applymovement(6, Common_Movement_Delay48)
 	waitmovement(0)
     msgbox("Can I help you?\p...\pOh wait,\nI don't care.")
-    applymovement(6, moves(walk_up*5))
+    closemessage
+    applymovement(6, moves(walk_up*4 walk_left*8))
     waitmovement(0)
     removeobject(6)
     setflag(FLAG_TEMP_A)
     setvar(VAR_EVELYNN_STATE, 1)
     release
+}
+
+script Route2_Sign {
+    msgbox("Springwood City {UP_ARROW}\nQuiet Grove {RIGHT_ARROW}", MSGBOX_SIGN)
 }

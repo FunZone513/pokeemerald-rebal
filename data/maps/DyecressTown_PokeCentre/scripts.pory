@@ -15,6 +15,14 @@ script DyecressTown_PokeCentre_OnLoad {
     }
 }
 
+script DyecressTown_PokeCentre_Nurse {
+	setvar(VAR_0x800B, 1)
+	call(Common_EventScript_PkmnCenterNurse)
+	waitmessage
+	waitbuttonpress
+	release
+}
+
 script DyecressTown_PokeCentre_OldWoman {
     lockall
     if (!flag(FLAG_DYECRESS_BULLSHIT)) {

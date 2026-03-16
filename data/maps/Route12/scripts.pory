@@ -1,0 +1,41 @@
+mapscripts Route12_MapScripts {}
+
+script Route12_BugManiac {
+    trainerbattle_single(
+        TRAINER_ROUTE12_BUG_MANIAC, 
+        format("Yo this tree wack!"),
+        format("Yo your team wack!")  
+    )
+    msgbox(format("Yo why's this tree still green?"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route12_Hiker {
+    trainerbattle_single(
+        TRAINER_ROUTE12_HIKER, 
+        format("Mountain climbing is a great time!"),
+        format("Losing is not a great time...")  
+    )
+    msgbox("You need a bike to get up the slope?\nWeak.", MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route12_NinjaBoy {
+    trainerbattle_single(
+        TRAINER_ROUTE12_NINJA_BOY, 
+        format("AHA! Did I surprise you?"),
+        format("Aw shucks...")  
+    )
+    msgbox(format("There's trees here, shouldn't my disguise blend in?"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route12_Breeder {
+    trainerbattle_single(
+        TRAINER_ROUTE12_BREEDER, 
+        format("Oh my!"),
+        format("Aren't you a strong one?")  
+    )
+    msgbox(format("These little ones are going to need as much stamina as they can get."), MSGBOX_AUTOCLOSE)
+    end
+}

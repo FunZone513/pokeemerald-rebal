@@ -1,0 +1,13 @@
+mapscripts LapashTown_Indoor1_MapScripts {}
+
+script LapashTown_Indoor1_OldWoman {
+    msgbox(format("The ash collected here can be used to make incredible things, provided you have the skill."), MSGBOX_NPC)
+}
+
+script LapashTown_Indoor1_Boy {
+    msgbox(format("I'm learning how to create special remedies using the ash found around here."), MSGBOX_NPC)
+}
+
+script LapashTown_Indoor1_Scientist {
+    msgbox(format("Research into the properties of the ash here is arduous due to the difficulty of getting here from Libra Institute."), MSGBOX_NPC)
+}

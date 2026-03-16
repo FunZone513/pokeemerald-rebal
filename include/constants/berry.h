@@ -41,6 +41,31 @@
 // - BERRY_STAGE_FLOWERING
 #define NUM_WATER_STAGES 4
 
+#define BERRY_TREE_PORT_EDAPH_1         1
+#define BERRY_TREE_PORT_EDAPH_2         2
+#define BERRY_TREE_PORT_EDAPH_3         3
+#define BERRY_TREE_PORT_EDAPH_4         4
+#define BERRY_TREE_PORT_EDAPH_5         5
+#define BERRY_TREE_PORT_EDAPH_6         6
+#define BERRY_TREE_PORT_EDAPH_7         7
+#define BERRY_TREE_PORT_EDAPH_8         8
+#define BERRY_TREE_PORT_EDAPH_9         9
+#define BERRY_TREE_PORT_EDAPH_10         10
+#define BERRY_TREE_PORT_EDAPH_11         11
+#define BERRY_TREE_PORT_EDAPH_12         12
+#define BERRY_TREE_PORT_EDAPH_13         13
+#define BERRY_TREE_PORT_EDAPH_14         14
+
+#define BERRY_TREE_ROUTE3_1              15
+#define BERRY_TREE_ROUTE3_2              16
+
+#define BERRY_TREE_ROUTE5_1              17
+#define BERRY_TREE_ROUTE5_2              18
+
+#define BERRY_TREE_ROUTE12_1              19
+#define BERRY_TREE_ROUTE12_1              20
+#define BERRY_TREE_ROUTE12_1              21
+
 // IDs for berry tree objects, indexes into berryTrees in SaveBlock1
 // Named for whatever berry is initially planted there on a new game
 // Those with no initial berry are named "soil"

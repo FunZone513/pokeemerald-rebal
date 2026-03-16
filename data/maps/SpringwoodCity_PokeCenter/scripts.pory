@@ -7,12 +7,11 @@ script SpringwoodCity_PokemonCenter_OnTransition {
 }
 
 script SpringwoodCity_PokemonCenter_Nurse {
-    lockall
 	setvar(VAR_0x800B, 1)
 	call(Common_EventScript_PkmnCenterNurse)
 	waitmessage
 	waitbuttonpress
-	releaseall
+	release
 }
 
 script SpringwoodCity_PokemonCenter_Girl {

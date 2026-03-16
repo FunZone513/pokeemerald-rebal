@@ -1,0 +1,72 @@
+mapscripts PortEdaph_MapScripts {}
+
+script PortEdaph_Sign_Gym {
+    msgbox("Port Edaph Gym\nChasing Fertility.", MSGBOX_SIGN)
+}
+
+script PortEdaph_Farm_Sign {
+    msgbox("Edaph Orchard,\nProsperous and Fruitful.")
+}
+
+script PortEdaph_Town_Sign {
+    msgbox("Port Edaph,\nMoney grows on trees.")
+}
+
+script PortEdaph_Bike_Sign {
+    msgbox("Bike Shop,\nRide your worries away!")
+}
+
+script PortEdaph_Dock_Sign {
+    msgbox("Port Edaph Port,\nIt's a mouthful.")
+}
+
+script PortEdaph_Woman1 {
+    msgbox(format("My Roselia loves the soil here!"), MSGBOX_NPC)
+}
+
+script PortEdaph_Woman2 {
+    msgbox(format("Port Edaph's soil is especially good for growing fruiting plants, like Berry trees."), MSGBOX_NPC)
+}
+
+script PortEdaph_Woman3 {
+    msgbox(format("Since plants grow really easily here, a lot of people have their own garden."), MSGBOX_NPC)
+}
+
+script PortEdaph_Kid1 {
+    msgbox(format("I can't wait until I grow bigger and can ride around on a bike!"), MSGBOX_NPC)
+}
+
+script PortEdaph_Man1 {
+    msgbox(format("Shh!"), MSGBOX_NPC)
+    applymovement(10, moves(face_right))
+    waitmovement(0)
+    release
+}
+
+script PortEdaph_Man2 {
+    msgbox(format("Our ships carry goods all around the region!"), MSGBOX_NPC)
+}
+
+script PortEdaph_Man3 {
+    msgbox(format("In my youth I would play on this very beach, and now I can witness my grand-children doing the very same."), MSGBOX_NPC)
+}
+
+script PortEdaph_Kid2 {
+    msgbox(format("I'm trying to dig a hole with my feet!"), MSGBOX_NPC)
+}
+
+script PortEdaph_Kid3 {
+    msgbox(format("I heard that the salty taste of sea water is actually fish pee!"), MSGBOX_NPC)
+}
+
+script PortEdaph_Kid4 {
+    msgbox(format("What?! How did you notice me?! I'm practicing my stealth skills!"), MSGBOX_NPC)
+}
+
+script PortEdaph_Man4 {
+    msgbox(format("I had this guy sent over from the west coast, he's really handy when it comes to farm work!"), MSGBOX_NPC)
+}
+
+script PortEdaph_Man5 {
+    msgbox(format("My job is to make sure everyone playing on the beach is safe, my Pelipper is great at spotting any potential dangers from afar."), MSGBOX_NPC)
+}

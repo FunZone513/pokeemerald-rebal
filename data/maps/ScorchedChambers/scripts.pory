@@ -280,8 +280,8 @@ script ScorchedChambers_AlertEvelynn {
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
     applymovement(24, moves(walk_fast_left*7))
     waitmovement(0)
-    hideobjectat(24, MAP_SCORCHED_CHAMBERS)
     setobjectxyperm(24, 0, 59)
+    hideobjectat(24, MAP_SCORCHED_CHAMBERS)
     releaseall
 }
 
@@ -377,6 +377,8 @@ script ScorchedChambers_MagmaMultiBattle {
     delay(48)
     applymovement(27, moves(walk_up))
     waitmovement(26)
+    setobjectxyperm(25, 0, 59)
+    setobjectxyperm(26, 0, 59)
     hideobjectat(25, MAP_SCORCHED_CHAMBERS)
     hideobjectat(26, MAP_SCORCHED_CHAMBERS)
     msgbox("Maxie!\pWhat are you up to now?!")
@@ -430,6 +432,7 @@ script ScorchedChambers_MagmaMultiBattle {
     applymovement(27, moves(walk_down*8))
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
     waitmovement(27)
+    setobjectxyperm(27, 0, 59)
     hideobjectat(27, MAP_SCORCHED_CHAMBERS)
     special(RemoveCameraObject)
     setflag(FLAG_CLEARED_SCORCHED_CHAMBERS)

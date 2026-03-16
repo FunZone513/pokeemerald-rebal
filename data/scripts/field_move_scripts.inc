@@ -228,9 +228,10 @@ Text_SmashedRock:
 
 EventScript_StrengthBoulder::
 	lockall
-	goto_if_unset FLAG_BADGE04_GET, EventScript_CantStrength
+	goto_if_unset FLAG_BADGE03_GET, EventScript_CantStrength
 	goto_if_set FLAG_SYS_USE_STRENGTH, EventScript_CheckActivatedBoulder
-	checkpartymove MOVE_STRENGTH
+	@ checkpartymove MOVE_STRENGTH
+	canusefieldmove MOVE_ROCK_SMASH
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantStrength
 	setfieldeffectargument 0, VAR_RESULT
 	msgbox Text_WantToStrength, MSGBOX_YESNO

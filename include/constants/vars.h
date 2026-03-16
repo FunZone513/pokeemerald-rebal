@@ -118,6 +118,7 @@
 #define VAR_DYECRESS_HERB_SHOP_QUEST                     VAR_CURRENT_SECRET_BASE
 
 #define VAR_VERDANTURF_TOWN_STATE                        0x4055 // Unused Var
+#define VAR_PORT_EDAPH_BIKE_SHOP                         VAR_VERDANTURF_TOWN_STATE
 
 #define VAR_PACIFIDLOG_TOWN_STATE                        0x4056 // Unused Var
 

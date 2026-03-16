@@ -6,6 +6,12 @@ script SpringwoodCity_Institution_CheckState {
     if (var(VAR_DYECRESS_MYSTERY_STATE) >= 4) {
         setflag(FLAG_TEMP_A)
     }
+
+    if (flag(FLAG_CLEARED_ROUTE5)) {
+        setflag(FLAG_TEMP_10)
+        setflag(FLAG_TEMP_11)
+        setflag(FLAG_TEMP_12)
+    }
 }
 
 script SpringwoodCity_Institution_Receptionist {
@@ -69,12 +75,48 @@ script SpringwoodCity_Institution_Employee2 {
     msgbox(format("Honestly I'm just here to make sure these two don't fight."), MSGBOX_NPC)
 }
 
-script SpringwoodCity_Institution_Grunt {
-    if (flag(FLAG_CLEARED_QUIET_GROVE)) {
-        msgbox("Huh? What am I still doing here?\pI told you, these are PJs!", MSGBOX_NPC)
+script SpringwoodCity_Institution_Maniac {
+    lock
+    if (!flag(FLAG_GOTTEN_POKEDEX_REWARD)) {
+        msgbox(format("I'm promoting the Pokedex by giving out a reward to trainers that have caught at least 20 Pokemon."), MSGBOX_NPC)
+
+        specialvar(VAR_RESULT, ScriptGetPokedexInfo) // I don't have a national dex, don't need to account for it with specialvar()
+        //buffernumberstring(STR_VAR_1, VAR_0x8005)  // Num seen (only caught)
+        buffernumberstring(STR_VAR_2, VAR_0x8006)  // Num caught 
+
+        if (var(VAR_0x8006) >= 20) {
+            msgbox("{STR_VAR_2} Pokemon! Excellent!\nYou're eligible for this reward!")
+            closemessage
+            giveitem(ITEM_MAX_REPEL, 5)
+            msgbox(format("I hope your journey continues to go well!"))
+            closemessage
+        } else {
+            msgbox("Oh it looks like you have only caught\n{STR_VAR_2} Pokemon so far...\pGood luck with catching some more!", MSGBOX_NPC)
+        }
     } else {
-        msgbox("The security guys keep looking at me\nlike I'm some suspicious individual.\pI uhh...\nI just forgot to take off my PJs\lthis morning!", MSGBOX_NPC)
-    } 
+        msgbox(format("Good day! I hope your travels are going well."), MSGBOX_NPC)
+    }
+    release
+}
+
+script SpringwoodCity_Institution_RockEnjoyer {
+    lock
+    if (flag(FLAG_TEMP_10) && flag(FLAG_TEMP_11) && flag(FLAG_TEMP_12)) {
+        msgbox("MY BABIES!\pWhy would you do that to my babies???", MSGBOX_NPC)
+        delay(32)
+        msgbox(format("What's that? There's a mysterious rock that has been unearthed over on Route 5? Why didn't you say so!"))
+        closemessage
+        setflag(FLAG_CLEARED_ROUTE5)
+        fadescreen(FADE_TO_BLACK)
+        removeobject(14)
+        playse(SE_FLEE)
+        delay(60)
+        special(DrawWholeMapView)
+        fadescreen(FADE_FROM_BLACK)
+    } else {
+        msgbox("I LIKE ROCKS! NOTHING WILL\nSEPARATE ME FROM MY BABIES!", MSGBOX_NPC)
+    }
+    release
 }
 
 script SpringwoodCity_Institution_StairBlocker1 {

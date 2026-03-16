@@ -170,7 +170,7 @@ Route4_Indoor_Researcher_Lab_R3_6:
 # 75 "data/maps/Route4_Indoor_Researcher_Lab/scripts.pory"
 	playse SE_PIN
 # 76 "data/maps/Route4_Indoor_Researcher_Lab/scripts.pory"
-	applymovement 6, Common_Movement_ExclamationMark
+	applymovement 4, Common_Movement_ExclamationMark
 # 77 "data/maps/Route4_Indoor_Researcher_Lab/scripts.pory"
 	waitmovement 0
 # 78 "data/maps/Route4_Indoor_Researcher_Lab/scripts.pory"
@@ -399,5 +399,5 @@ Route4_Indoor_Researcher_Lab_R3_Text3::
 Route4_Indoor_Researcher_Lab_R3_Text4::
 # 144 "data/maps/Route4_Indoor_Researcher_Lab/scripts.pory"
 	.string "Hello!\nWe've finally gotten the materials\lfrom the Ochre Vale group.\p"
-	.string "I'm glad you got it all sorted for them,\nI'm not sure why Magma is getting into\ltrouble with us now.\p"
+	.string "I'm glad you got it all sorted for them,\nI'm not sure why Team Aqua is getting\linto trouble with us now.\p"
 	.string "But anyway,\nsince you've been such a big help with\lour research, I have been given\lpermission to give you a gift.$"

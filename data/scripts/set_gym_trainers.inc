@@ -2,7 +2,7 @@ Common_EventScript_SetGymTrainers::
 	switch VAR_0x8008
 	case 1, SpringwoodCity_Gym_SetGymTrainers
 	case 2, OchreVale_Gym_SetGymTrainers
-	case 3, MauvilleCity_Gym_SetGymTrainers
+	case 3, PortEdaph_Gym_SetGymTrainers
 	case 4, LavaridgeTown_Gym_SetGymTrainers
 	case 5, PetalburgCity_Gym_SetGymTrainers
 	case 6, FortreeCity_Gym_SetGymTrainers
@@ -21,17 +21,16 @@ OchreVale_Gym_SetGymTrainers::
 	settrainerflag TRAINER_OCHRE_VALE_GYM_HIKER
 	settrainerflag TRAINER_OCHRE_VALE_GYM_BATTLE_GIRL
 	settrainerflag TRAINER_OCHRE_VALE_GYM_BEAUTY
-	settrainerflag TRAINER_OCHRE_VALE_GYM_MAGMA_GRUNT
+	settrainerflag TRAINER_OCHRE_VALE_GYM_AQUA_GRUNT
 	settrainerflag TRAINER_OCHRE_VALE_GYM_MANIAC
 	settrainerflag TRAINER_OCHRE_VALE_GYM_LASS
 	return
 
-MauvilleCity_Gym_SetGymTrainers::
-	settrainerflag TRAINER_KIRK
-	settrainerflag TRAINER_SHAWN
-	settrainerflag TRAINER_BEN
-	settrainerflag TRAINER_VIVIAN
-	settrainerflag TRAINER_ANGELO
+PortEdaph_Gym_SetGymTrainers::
+	settrainerflag TRAINER_PORT_EDAPH_GYM_CAMPER
+	settrainerflag TRAINER_PORT_EDAPH_GYM_SWIMMER
+	settrainerflag TRAINER_PORT_EDAPH_GYM_WOMAN
+	settrainerflag TRAINER_PORT_EDAPH_GYM_BLACKBELT
 	return
 
 LavaridgeTown_Gym_SetGymTrainers::

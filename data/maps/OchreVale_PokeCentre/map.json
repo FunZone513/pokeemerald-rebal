@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OldaleTown_PokemonCenter_1F_EventScript_Nurse",
+      "script": "OchreVale_PokeCentre_Nurse",
       "flag": "0"
     },
     {
@@ -80,7 +80,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
       "x": 13,
       "y": 3,
       "elevation": 0,
@@ -89,7 +89,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OchreVale_PokeCentre_MagmaGrunt",
+      "script": "OchreVale_PokeCentre_AquaGrunt",
       "flag": "FLAG_CLEARED_OCHRE_VALE_MINE"
     }
   ],

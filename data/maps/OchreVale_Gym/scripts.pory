@@ -4,7 +4,7 @@ mapscripts OchreVale_Gym_MapScripts {
 
 script OchreVale_Gym_FlashSet {
     if (!flag(FLAG_BADGE02_GET)) {
-        setflashlevel(4)
+        setflashlevel(6)
     } else { 
         setflashlevel(1)
     }
@@ -18,7 +18,7 @@ script OchreVale_Gym_Douglas {
         OchreVale_Gym_Douglas_Defeated,
         NO_MUSIC
     )
-    msgbox(SpringwoodCity_Gym_Martin_PostBattle, MSGBOX_NPC)
+    msgbox(OchreVale_Gym_Douglas_PostBattle, MSGBOX_NPC)
     releaseall
 }
 
@@ -55,15 +55,15 @@ text OchreVale_Gym_Douglas_Text_Defeated {
     "True hard work is the only thing that\nwill never betray you!"
 }
 
+text OchreVale_Gym_Douglas_Badge {
+    "The Ochre Badge is a symbol of your\nstrong will, and that will is what\lenables you to destroy even boulders.\p"
+    "Rock and Fighting types\nhelp in the removal of rocks in the Mine,\land they'll help you outside of it too.\p"
+}
+
 text OchreVale_Gym_Douglas_PostBattle {
     "A man is only really alive with dirt in\nhis hair and sweat on his back.\p"
     "I may not be as young I used to be,\nbut I still work hard at what I love.\p"
     "Never let anyone or anything stand in\nyour path, it's yours for a reason."
-}
-
-text OchreVale_Gym_Douglas_Badge {
-    "The Ochre Badge is a symbol of your\nstrong will, and that will is what\lenables you to destroy even boulders.\p"
-    "Rock, Ground, and Fighting types all\nhelp in the removal of rocks in the Mine,\land they'll help you outside of it too."
 }
 
 script OchreVale_Gym_Hiker {
@@ -96,9 +96,9 @@ script OchreVale_Gym_Beauty {
     end
 }
 
-script OchreVale_Gym_MagmaGrunt {
+script OchreVale_Gym_AquaGrunt {
     trainerbattle_single(
-        TRAINER_OCHRE_VALE_GYM_MAGMA_GRUNT, 
+        TRAINER_OCHRE_VALE_GYM_AQUA_GRUNT, 
         format("I got lost and ended up in the Gym..."),
         format("I don't think I was supposed to be here...")  
     )
@@ -131,7 +131,7 @@ script OchreVale_Gym_Guide {
     if (!flag(FLAG_BADGE02_GET)) {
         msgbox(OchreVale_Gym_Guide_Text, MSGBOX_NPC)
     } else {
-        msgbox("Oh good,\nthe lights have come back on.\pOr well,\nthey're a little brighter now I suppose.", MSGBOX_NPC)
+        msgbox(format("Using Rock Smash requires a Rock or Fighting type Pokemon, or one with the ability Rock Head or Iron Fist."), MSGBOX_NPC)
     }
     releaseall
 }
@@ -140,6 +140,6 @@ text OchreVale_Gym_Guide_Text {
     "Welcome to the Ochre Vale Gym!\nGym Leader Douglas designed the Gym\lafter the inside of the quarry.\p"
     "The cave-like hallways and the dim\nlighting make it that much harder to\lfind your way around!\p"
     "Make sure to keep an eye out for other\nTrainers as you make your way\lthrough the Gym!\p"
-    "Also, Doug likes to use Pokemon that are\nhelpful with the mining operation,\las he doubles as the Gym Leader and the\lquarry overseer.\p"
+    "Also Doug likes to use Pokemon that are\nhelpful with the mining operation,\las he doubles as the Gym Leader and the\lquarry overseer.\p"
     "Keep your wits about you!"
 }

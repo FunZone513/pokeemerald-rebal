@@ -19,9 +19,7 @@ script NewstemTown_ProfLab_Professor {
     if (var(VAR_LITTLEROOT_INTRO_STATE) == 2) {
         msgbox("They're just there on the desk,\ngo ahead and take one.", MSGBOX_NPC)
     } elif (!flag(FLAG_BIRCH_AIDE_MET) && (var(VAR_LITTLEROOT_INTRO_STATE) == 3)) {
-        msgbox(format("Oh right, while you're here, I have some items to help you get started."), MSGBOX_NPC)
-        giveitem(ITEM_POKE_BALL, 5)
-        giveitem(ITEM_POTION, 1)
+        msgbox(format("Have fun exploring the region!"), MSGBOX_NPC)
         setflag(FLAG_BIRCH_AIDE_MET)
     } else {
         msgbox("I'm glad to see you {PLAYER},\nbut I'm quite busy so I'll talk later.", MSGBOX_NPC)
@@ -67,6 +65,12 @@ script StarterSelection {
             call(PickedStarter)
             waitfanfare
             call(NicknamePartyMon)
+            applymovement(4, moves(face_player))
+            applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+            waitmovement(0)
+            msgbox(format("I also have some items to help you get started on your adventure."), MSGBOX_NPC)
+            giveitem(ITEM_POKE_BALL, 5)
+            giveitem(ITEM_POTION, 2)
         } 
         //? I don't really need these, it's a starter
         //elif(var(VAR_RESULT) == MON_GIVEN_TO_PC) {
@@ -82,15 +86,6 @@ script StarterSelection {
         hidemonpic
     }
     waitmessage
-    applymovement(4, moves(face_left))
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
-    waitmovement(0)
-    msgbox(format("I also have some items to help you get started on your adventure."), MSGBOX_NPC)
-    giveitem(ITEM_POKE_BALL, 5)
-    giveitem(ITEM_POTION, 2)
-    msgbox(format("Have fun out there!"), MSGBOX_NPC)
-    applymovement(4, moves(face_down))
-    waitmovement(0)
     releaseall
 }
 

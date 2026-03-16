@@ -8858,7 +8858,7 @@ static const struct LevelUpMove sWhiscashLevelUpLearnset[] = {
 #if P_FAMILY_CORPHISH
 static const struct LevelUpMove sCorphishLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_WATER_GUN),
-    LEVEL_UP_MOVE( 1, MOVE_HARDEN),
+    LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 4, MOVE_LEER),
     LEVEL_UP_MOVE( 8, MOVE_TAUNT),
     LEVEL_UP_MOVE(12, MOVE_BUBBLE_BEAM),

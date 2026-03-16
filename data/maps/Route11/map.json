@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE11",
   "name": "Route11",
   "layout": "LAYOUT_ROUTE11",
-  "music": "MUS_DUMMY",
+  "music": "MUS_ROUTE104",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -17,6 +17,11 @@
       "map": "MAP_ROUTE10",
       "offset": 4,
       "direction": "left"
+    },
+    {
+      "map": "MAP_ROUTE12",
+      "offset": 15,
+      "direction": "right"
     }
   ],
   "object_events": [
@@ -100,7 +105,13 @@
     }
   ],
   "warp_events": [
-
+    {
+      "x": 45,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_HEATSWELL_PATH",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
 

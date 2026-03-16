@@ -6,7 +6,7 @@ script OchreVale_Lab_Director {
         msgbox(OchreVale_Lab_Director_Text, MSGBOX_NPC)
         setvar(VAR_ROUTE4_WATER_STONE_STATE, 5)
     } elif (var(VAR_ROUTE4_WATER_STONE_STATE) == 5) {
-        msgbox(format("Those guys call themselves 'Team Magma'. I'm not sure why they've decided to start hindering our research all of a sudden."), MSGBOX_NPC)
+        msgbox(format("Team Aqua has started messing with us... I'm not sure why they've decided to all of a sudden."), MSGBOX_NPC)
     } else {
         msgbox(format("I thank you for getting rid of those guys getting in the way of our research, I hope they don't cause any further trouble to us or to you."), MSGBOX_NPC)
     }
@@ -15,7 +15,7 @@ script OchreVale_Lab_Director {
 
 text OchreVale_Lab_Director_Text {
     "We're a group from the lab on Route 4,\nand we're supposed to be sending any\limportant looking stones their way,\l"
-    "but recently we've been having trouble\lwith a group in Ochre Vale Mine.\p"
+    "but recently we've been having trouble\lwith Team Aqua in Ochre Vale Mine.\p"
     "They're getting in the way of our\nmaterial collection, as well as\limpeding our transport methods.\p"
     "I just wish someone would get them to\nleave us alone."
 }

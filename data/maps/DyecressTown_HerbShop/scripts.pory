@@ -81,6 +81,7 @@ script DyecressTown_HerbShop_QuestGuy {
             goto(DyecressTown_HerbShop_QuestGuy2)
         } else {
             msgbox("Ah, I understand.\nYou must be busy, my apologies.")
+            closemessage
         }
 
     } elif (var(VAR_DYECRESS_HERB_SHOP_QUEST) == 1) {
@@ -89,6 +90,7 @@ script DyecressTown_HerbShop_QuestGuy {
             goto(DyecressTown_HerbShop_QuestGuy2)
         } else {
             msgbox("Very well, I only hope we can\nmake progress by ourselves.")
+            closemessage
         }
 
     } elif (var(VAR_DYECRESS_HERB_SHOP_QUEST) == 2) {
@@ -107,6 +109,7 @@ script DyecressTown_HerbShop_QuestGuy {
         } else {
             msgbox("The fertile soil can be found around\nthe base of the volcano to the east,\land you'll be able to find the flower\lsomewhere in the jungles to the south.")
         }
+        closemessage
     
     } elif (var(VAR_DYECRESS_HERB_SHOP_QUEST) == 3) {
         msgbox("Thank you for all your help!", MSGBOX_NPC)
@@ -145,8 +148,8 @@ script DyecressTown_HerbShop_QuestGuy3 {
 }
 
 text DyecressTown_HerbShop_QuestGuy_Text {
-    "I'm from Libra Institute, we've been\nworking with the owners of the Herb Shop.\p"
-    "We're hoping that we can create some\nnew special herbs together,\lbut we have hit a rut in development."
+    "I'm from Libra Institute, we've been\ncollaborating on a project with\lthe owners of the Herb Shop.\p"
+    "We're hoping that we can create some\nnew special herbs together,\lbut we've hit a rut in development."
 }
 
 text DyecressTown_HerbShop_QuestGuy_Text2 {

@@ -644,63 +644,62 @@ Level: 14
 Aron
 Level: 14
 
-=== TRAINER_OCHRE_VALE_MINE_MAGMA_GRUNT1 ===
-Name: Ricky
-Class: Team Magma
-Pic: Magma Grunt M
+=== TRAINER_OCHRE_VALE_MINE_AQUA_GRUNT1 ===
+Name: Albert
+Class: Team Aqua
+Pic: Aqua Grunt M
 Gender: Male
-Music: Magma
+Music: Aqua
 AI: Smart Trainer
 
-Numel
-Ability: Simple
+Wingull
+Ability: Keen Eye
 Modest Nature
-Level: 18
-- Ember
-- Amnesia
-- Tackle
+Level: 19
+- Water Pulse
+- Air Cutter
 - Growl
 
-Slugma
-Ability: Flame Body
-Modest Nature
-Level: 18
-- Ember
-- Smog
-- Yawn 
+Krabby
+Ability: Shell Armor
+Jolly Nature
+Level: 19
+- Crabhammer
+- Metal Claw
+- Protect
 
-=== TRAINER_OCHRE_VALE_MINE_MAGMA_GRUNT2 ===
-Name: Bessa
-Class: Team Magma
-Pic: Magma Grunt F
+=== TRAINER_OCHRE_VALE_MINE_AQUA_GRUNT2 ===
+Name: Susan
+Class: Team Aqua
+Pic: Aqua Grunt F
 Gender: Female
-Music: Magma
+Music: Aqua
 AI: Smart Trainer
 
-Onix
-Ability: Weak Armor
-Adamant Nature
-Level: 20
-- Rock Slide
-- Bind
-- Dragon Breath
-- Curse
+Horsea
+Ability: Sniper
+Modest Nature
+Level: 21
+- Twister
+- Bubble
+- Disable
+- Smokescreen
 
-=== TRAINER_OCHRE_VALE_MINE_ENTRANCE_MAGMA_GRUNT ===
+=== TRAINER_OCHRE_VALE_MINE_ENTRANCE_AQUA_GRUNT ===
 Name: Harry
-Class: Team Magma
-Pic: Magma Grunt M
+Class: Team Aqua
+Pic: Aqua Grunt M
 Gender: Male
-Music: Magma
+Music: Aqua
 AI: Basic Trainer
 
-Hippopotas
+Corphish
 Level: 18
-Ability: Sand Stream
-- Sand Attack
-- Yawn
-- Dig
-- Bite
+Ability: Shell Armor
+- Crabhammer
+- Aqua Jet
+- Taunt
+- Tackle
 
 === TRAINER_OCHRE_VALE_GYM_HIKER ===
 Name: Broden
@@ -756,18 +755,18 @@ Level: 17
 Mawile
 Level: 18
 
-=== TRAINER_OCHRE_VALE_GYM_MAGMA_GRUNT ===
+=== TRAINER_OCHRE_VALE_GYM_AQUA_GRUNT ===
 Name: Joseph
-Class: Black Belt
-Pic: Magma Grunt M
+Class: Team Aqua
+Pic: Aqua Grunt M
 Gender: Male
-Music: Magma
+Music: Aqua
 AI: Smart Trainer
 
-Slugma
+Clamperl
 Level: 18
 
-Houndour
+Finneon
 Level: 20
 
 === TRAINER_OCHRE_VALE_GYM_LASS ===
@@ -858,7 +857,6 @@ Careful Nature
 Solrock @ Wide Lens  
 Ability: Levitate  
 Level: 22  
-Tera Type: Rock  
 Adamant Nature  
 - Cosmic Power  
 - Rock Slide  
@@ -936,18 +934,18 @@ Level: 20
 Nacli
 Level: 20
 
-=== TRAINER_OCHRE_VALE_POKECENTRE_MAGMA_GRUNT ===
+=== TRAINER_OCHRE_VALE_POKECENTRE_AQUA_GRUNT ===
 Name: Evan
-Class: Team Magma
-Pic: Magma Grunt M
+Class: Team Aqua
+Pic: Aqua Grunt M
 Gender: Male
-Music: Magma
+Music: Aqua
 AI: Basic Trainer
 
-Houndour
+Poochyena
 Level: 15
 
-Sandile
+Wingull
 Level: 15
 
 === TRAINER_ROUTE9_YOUNGSTER ===
@@ -1467,8 +1465,6 @@ Level: 24
 - Dragon Breath
 - Curse
 
-
-
 === TRAINER_SCORCHED_CHAMBERS_MAGMA_GRUNT7 ===
 Name: Carla
 Class: Team Magma
@@ -1570,7 +1566,7 @@ Gender: Male
 Music: Male
 AI: Basic Trainer
 
-Shedinja
+Scyther
 Level: 24
 
 === TRAINER_ROUTE6_NINJA_BOY ===
@@ -1755,6 +1751,287 @@ Level: 21
 
 Loudred
 Level: 21
+
+=== TRAINER_HEATSWELL_PATH_BLACKBELT ===
+Name: Argo
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Intense
+AI: Basic Trainer
+
+Aron
+Level: 20
+
+Hariyama
+Level: 24
+
+=== TRAINER_HEATSWELL_PATH_KINDLER ===
+Name: Dan
+Class: Kindler
+Pic: Kindler
+Gender: Male
+Music: Hiker
+AI: Basic Trainer
+
+Magby
+Level: 21
+
+Slugma
+Level: 22
+
+Fletchinder
+Level: 23
+
+=== TRAINER_HEATSWELL_PATH_BIKE_KID ===
+Name: Connor
+Class: Rich Boy
+Pic: Rich Boy
+Gender: Male
+Music: Rich
+AI: Basic Trainer
+
+Cinccino (F) @ Lum Berry
+Level: 25
+Ability: Technician
+- Tail Slap
+- Bullet Seed
+- Rest
+- Snore
+
+=== GYM_LEADER_LIFRADE ===
+Name: Lifrade
+Class: Leader
+Pic: Pyramid King Brandon
+Gender: Male
+Music: Intense
+Items: Hyper Potion / Hyper Potion
+Double Battle: Yes
+AI: Gym Leader
+
+Magcargo (M)
+Ability: Drought
+Level: 28 
+Calm Nature  
+- Yawn  
+- Power Gem  
+- Heat Wave  
+- Light Screen
+
+Tauros (M)  
+Ability: Intimidate  
+Level: 28  
+Adamant Nature
+- Trailblaze  
+- Body Slam  
+- Megahorn  
+- Rock Slide  
+
+Whimsicott (F)  
+Ability: Prankster  
+Level: 28  
+Tera Type: Grass  
+Calm Nature  
+IVs: 0 Atk  
+- Sunny Day  
+- Dazzling Gleam  
+- Stun Spore  
+- Swift
+
+Leafeon (F)  
+Ability: Chlorophyll  
+Level: 29
+Adamant Nature  
+- Razor Leaf  
+- Leaf Blade  
+- Fire Fang  
+- Swords Dance
+
+Trevenant (M) @ Custap Berry
+Ability: Harvest
+Level: 30
+Adamant Nature
+- Horn Leech
+- Wood Hammer
+- Will O Wisp
+- Shadow Claw
+
+=== TRAINER_PORT_EDAPH_GYM_CAMPER ===
+Name: Darcy
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+AI: Smart Trainer
+
+Parasect @ Occa Berry
+Level: 27
+- Spore
+- X Scissor
+- Slash
+- Bullet Seed
+
+Miltank
+Level: 27
+- Defense Curl
+- Rollout
+- Body Slam
+- Milk Drink
+
+=== TRAINER_PORT_EDAPH_GYM_SWIMMER ===
+Name: Declan
+Class: Swimmer M
+Pic: Swimmer M
+Gender: Male
+Music: Swimmer
+AI: Smart Trainer
+
+Lombre
+Ability: Own Tempo
+Level: 27
+- Knock Off
+- Fake Out
+- Leech Seed
+- Bullet Seed
+
+Ludicolo @ Chesto Berry
+Ability: Own Tempo
+Level: 28
+- Metronome
+- Surf
+- Giga Drain
+- Rest
+
+=== TRAINER_PORT_EDAPH_GYM_WOMAN ===
+Name: Aloe
+Class: Aroma Lady
+Pic: Aroma Lady
+Gender: Female
+Music: Female
+Double Battle: Yes
+AI: Smart Trainer
+
+Jumpluff
+Level: 27
+- Tailwind
+- Cotton Spore
+- Giga Drain
+- Sunny Day
+
+Delcatty
+Ability: Cute Charm
+Level: 27
+Modest Nature
+- Solar Beam
+- Thunderbolt
+- Fire Blast
+- Shadow Ball
+
+Ninetales
+Ability: Drought
+Level: 27
+- Heat Wave
+- Solar Beam
+- Extrasensory
+- Nasty Plot
+
+=== TRAINER_PORT_EDAPH_GYM_BLACKBELT ===
+Name: Babbs
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Intense
+Double Battle: Yes
+AI: Smart Trainer
+
+Pancham (M)
+Ability: Scrappy
+Level: 28
+Adamant Nature
+- Leer
+- Rock Slide
+- Ice Punch
+- Arm Thrust
+
+Breloom (M)  
+Ability: Technician  
+Level: 28
+Adamant Nature  
+- Bullet Seed  
+- Mach Punch  
+- Drain Punch  
+- Thunder Punch  
+
+=== TRAINER_ROUTE12_BUG_MANIAC === 
+Name: Sven
+Class: Bug Maniac
+Pic: Bug Maniac
+Gender: Male
+Music: Male
+AI: Smart Trainer
+
+Shedinja
+Level: 26
+
+=== TRAINER_ROUTE12_HIKER ===
+Name: Daryl
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+Naclstack
+Level: 24
+
+Staravia
+Level: 24
+
+=== TRAINER_ROUTE12_NINJA_BOY ===
+Name: Akira
+Class: Ninja Boy
+Pic: Ninja Boy
+Gender: Male
+Music: Suspicious
+AI: Smart Trainer
+
+Ariados
+Level: 23
+
+Nidorino
+Level: 23
+
+Murkrow
+Level: 23
+
+=== TRAINER_ROUTE12_BREEDER ===
+Name: Kaasa
+Class: Pkmn Breeder
+Pic: Pokemon Breeder F
+Gender: Female
+Music: Female
+Double Battle: Yes
+AI: Basic Trainer
+
+Slakoth (M)
+Level: 20
+
+Blitzle (M)
+Level: 20
+
+Deerling (M)
+Level: 20
+
+Kirlia (M)
+Level: 20
+
+Poochyena (M)
+Level: 20
+
+Tyrogue (M)
+Level: 20
+
 
 
 /* ------ !! KEEP AT THE BOTTOM !! ------ */

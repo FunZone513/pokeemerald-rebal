@@ -48,15 +48,15 @@
 #define FLAG_HIDE_ROUTE2_MINIBOSS       0x21
 #define FLAG_DYECRESS_BULLSHIT          0x22
 #define FLAG_CLEARED_QUIET_GROVE        0x23
-#define FLAG_UPGRADE_HERBSHOP           0x24 //TODO make a quest or something?
+#define FLAG_UPGRADE_HERBSHOP           0x24 
 #define FLAG_CLEARED_SCORCHED_CHAMBERS  0x25
 #define FLAG_SCORCHED_CHAMBERS_BRIDGE_SEEN    0x26
-#define FLAG_CLEARED_ROUTE6    0x27
-#define FLAG_FIRST_VISIT_DYECRESS       0x28 
-#define FLAG_UNUSED_0x029    0x29 // Unused Flag
-#define FLAG_UNUSED_0x02A    0x2A // Unused Flag
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
-#define FLAG_UNUSED_0x02C    0x2C // Unused Flag
+#define FLAG_CLEARED_ROUTE6             0x27
+#define FLAG_GOTTEN_POKEDEX_REWARD      0x28 
+#define FLAG_CLEARED_ROUTE5             0x29
+#define FLAG_GOT_HERB_MULCH             0x2A // For the dyecress herb quest
+#define FLAG_GOT_HERB_FLOWER            0x2B // For the dyecress herb quest
+#define FLAG_SEEN_EDAPH_DOCK_EVENT      0x2C
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag
 #define FLAG_UNUSED_0x02E    0x2E // Unused Flag
 #define FLAG_UNUSED_0x02F    0x2F // Unused Flag
@@ -573,36 +573,14 @@
 #define FLAG_HIDDEN_ITEM_DRIPSTONE_CHANNEL                   (FLAG_HIDDEN_ITEMS_START + 0x19)
 #define FLAG_HIDDEN_ITEM_DRIPSTONE_PASS                      (FLAG_HIDDEN_ITEMS_START + 0x1A)
 #define FLAG_HIDDEN_ITEM_DRIPSTONE_PASS_2                    (FLAG_HIDDEN_ITEMS_START + 0x1B)
+#define FLAG_HIDDEN_ITEM_OCHRE_VALE_1                        (FLAG_HIDDEN_ITEMS_START + 0x1C)
+#define FLAG_HIDDEN_ITEM_ROUTE_5_1                           (FLAG_HIDDEN_ITEMS_START + 0x1D)
+#define FLAG_HIDDEN_ITEM_DYECRESS_TOWN                       (FLAG_HIDDEN_ITEMS_START + 0x1E)
+#define FLAG_HIDDEN_ITEM_ROUTE_12                            (FLAG_HIDDEN_ITEMS_START + 0x1F)
+#define FLAG_HIDDEN_ITEM_ROUTE_12_1                          (FLAG_HIDDEN_ITEMS_START + 0x20)
+#define FLAG_HIDDEN_ITEM_ROUTE_12_2                          (FLAG_HIDDEN_ITEMS_START + 0x21)
+#define FLAG_HIDDEN_ITEM_LAPASH_TOWN                         (FLAG_HIDDEN_ITEMS_START + 0x22)
 
-// --============= old ones ( put // after ones I'm reusing )
-#define FLAG_HIDDEN_ITEM_ROUTE_123_SUPER_REPEL               (FLAG_HIDDEN_ITEMS_START + 0x07) //
-#define FLAG_HIDDEN_ITEM_UNDERWATER_124_CARBOS               (FLAG_HIDDEN_ITEMS_START + 0x08) //
-#define FLAG_HIDDEN_ITEM_UNDERWATER_124_GREEN_SHARD          (FLAG_HIDDEN_ITEMS_START + 0x09) //
-#define FLAG_HIDDEN_ITEM_UNDERWATER_124_PEARL                (FLAG_HIDDEN_ITEMS_START + 0x0A) //
-#define FLAG_HIDDEN_ITEM_UNDERWATER_124_BIG_PEARL            (FLAG_HIDDEN_ITEMS_START + 0x0B) //
-#define FLAG_HIDDEN_ITEM_UNDERWATER_126_BLUE_SHARD           (FLAG_HIDDEN_ITEMS_START + 0x0C) //
-#define FLAG_HIDDEN_ITEM_UNDERWATER_124_HEART_SCALE_1        (FLAG_HIDDEN_ITEMS_START + 0x0D) //
-#define FLAG_HIDDEN_ITEM_UNDERWATER_126_HEART_SCALE          (FLAG_HIDDEN_ITEMS_START + 0x0E) //
-#define FLAG_HIDDEN_ITEM_UNDERWATER_126_ULTRA_BALL           (FLAG_HIDDEN_ITEMS_START + 0x0F) //
-#define FLAG_HIDDEN_ITEM_UNDERWATER_126_STARDUST             (FLAG_HIDDEN_ITEMS_START + 0x10) //
-#define FLAG_HIDDEN_ITEM_UNDERWATER_126_PEARL                (FLAG_HIDDEN_ITEMS_START + 0x11) //
-#define FLAG_HIDDEN_ITEM_UNDERWATER_126_YELLOW_SHARD         (FLAG_HIDDEN_ITEMS_START + 0x12) //
-#define FLAG_HIDDEN_ITEM_UNDERWATER_126_IRON                 (FLAG_HIDDEN_ITEMS_START + 0x13) //
-#define FLAG_HIDDEN_ITEM_UNDERWATER_126_BIG_PEARL            (FLAG_HIDDEN_ITEMS_START + 0x14) //
-#define FLAG_HIDDEN_ITEM_UNDERWATER_127_STAR_PIECE           (FLAG_HIDDEN_ITEMS_START + 0x15) //
-#define FLAG_HIDDEN_ITEM_UNDERWATER_127_HP_UP                (FLAG_HIDDEN_ITEMS_START + 0x16) //
-#define FLAG_HIDDEN_ITEM_UNDERWATER_127_HEART_SCALE          (FLAG_HIDDEN_ITEMS_START + 0x17) //
-#define FLAG_HIDDEN_ITEM_UNDERWATER_127_RED_SHARD            (FLAG_HIDDEN_ITEMS_START + 0x18) //
-#define FLAG_HIDDEN_ITEM_UNDERWATER_128_PROTEIN              (FLAG_HIDDEN_ITEMS_START + 0x19) //
-#define FLAG_HIDDEN_ITEM_UNDERWATER_128_PEARL                (FLAG_HIDDEN_ITEMS_START + 0x1A) //
-#define FLAG_HIDDEN_ITEM_LILYCOVE_CITY_HEART_SCALE           (FLAG_HIDDEN_ITEMS_START + 0x1B) //
-#define FLAG_HIDDEN_ITEM_FALLARBOR_TOWN_NUGGET               (FLAG_HIDDEN_ITEMS_START + 0x1C)
-#define FLAG_HIDDEN_ITEM_MT_PYRE_EXTERIOR_ULTRA_BALL         (FLAG_HIDDEN_ITEMS_START + 0x1D)
-#define FLAG_HIDDEN_ITEM_UNUSED_0X1E                         (FLAG_HIDDEN_ITEMS_START + 0x1E)
-#define FLAG_HIDDEN_ITEM_ABANDONED_SHIP_RM_1_KEY             (FLAG_HIDDEN_ITEMS_START + 0x1F)
-#define FLAG_HIDDEN_ITEM_ABANDONED_SHIP_RM_2_KEY             (FLAG_HIDDEN_ITEMS_START + 0x20)
-#define FLAG_HIDDEN_ITEM_ABANDONED_SHIP_RM_4_KEY             (FLAG_HIDDEN_ITEMS_START + 0x21)
-#define FLAG_HIDDEN_ITEM_ABANDONED_SHIP_RM_6_KEY             (FLAG_HIDDEN_ITEMS_START + 0x22)
 #define FLAG_HIDDEN_ITEM_SS_TIDAL_LOWER_DECK_LEFTOVERS       (FLAG_HIDDEN_ITEMS_START + 0x23)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_124_CALCIUM              (FLAG_HIDDEN_ITEMS_START + 0x24)
 #define FLAG_HIDDEN_ITEM_UNUSED_0X25                         (FLAG_HIDDEN_ITEMS_START + 0x25)
@@ -1120,16 +1098,17 @@
 #define FLAG_ITEM_ROUTE_11                                          0x40F
 #define FLAG_ITEM_ROUTE_11_1                                        0x410
 #define FLAG_ITEM_ROUTE_11_2                                        0x411
+#define FLAG_ITEM_HEATSWELL_PATH                                    0x412
+#define FLAG_ITEM_HEATSWELL_PATH_1                                  0x413
+#define FLAG_ITEM_PORT_EDAPH                                        0x414
+#define FLAG_ITEM_PORT_EDAPH_1                                      0x415
+#define FLAG_ITEM_PORT_EDAPH_2                                      0x416
+#define FLAG_ITEM_ROUTE_2_2                                         0x417
+#define FLAG_ITEM_ROUTE_8_1                                         0x418
+#define FLAG_ITEM_HEATSWELL_PATH_2                                  0x419
+#define FLAG_ITEM_ROUTE_12                                          0x41A
 
-#define FLAG_ITEM_LILYCOVE_CITY_MAX_REPEL                           0x412
-#define FLAG_ITEM_MOSSDEEP_CITY_NET_BALL                            0x413
-#define FLAG_ITEM_METEOR_FALLS_1F_1R_TM_IRON_TAIL                   0x414
-#define FLAG_ITEM_METEOR_FALLS_1F_1R_FULL_HEAL                      0x415
-#define FLAG_ITEM_METEOR_FALLS_1F_1R_MOON_STONE                     0x416
-#define FLAG_ITEM_METEOR_FALLS_1F_1R_PP_UP                          0x417
-#define FLAG_ITEM_RUSTURF_TUNNEL_POKE_BALL                          0x418
-#define FLAG_ITEM_RUSTURF_TUNNEL_MAX_ETHER                          0x419
-#define FLAG_ITEM_GRANITE_CAVE_1F_ESCAPE_ROPE                       0x41A
+
 #define FLAG_ITEM_GRANITE_CAVE_B1F_POKE_BALL                        0x41B
 #define FLAG_ITEM_MT_PYRE_5F_LAX_INCENSE                            0x41C
 #define FLAG_ITEM_GRANITE_CAVE_B2F_REPEL                            0x41D

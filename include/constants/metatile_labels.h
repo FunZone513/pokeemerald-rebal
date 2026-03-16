@@ -248,6 +248,7 @@
 #define METATILE_General_SecretBase_TreeRight  0x027
 #define METATILE_General_SecretBase_VineLeft   0x036
 #define METATILE_General_SecretBase_VineRight  0x037
+#define METATILE_General_Staircase             0x0AF
 #define METATILE_General_TallGrass             0x00D
 #define METATILE_General_TallGrass_TreeLeft    0x1C6
 #define METATILE_General_TallGrass_TreeRight   0x1C7
@@ -445,9 +446,10 @@
 #define METATILE_PokemonCenter_Floor_ShadowTop_Alt       0x2DC
 
 // gTileset_Rustboro
-#define METATILE_Rustboro_Door_Gray       0x21F
-#define METATILE_Rustboro_Door_Tan        0x22F
-#define METATILE_Rustboro_Fountain_Water  0x340
+#define METATILE_Rustboro_Door_Gray          0x21F
+#define METATILE_Rustboro_Door_Tan           0x22F
+#define METATILE_Rustboro_Fountain_Water     0x340
+#define METATILE_Rustboro_Route5_SturdyRock  0x2C4
 
 // gTileset_SecretBase
 #define METATILE_SecretBase_AttractMat_BottomLeft       0x313

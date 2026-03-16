@@ -3238,8 +3238,8 @@ bool8 CanUseFieldMove(struct ScriptContext *ctx)
             switch(moveID) {
                 case MOVE_CUT:
                     if ((gSpeciesInfo[species].types[0] == TYPE_GRASS || gSpeciesInfo[species].types[1] == TYPE_GRASS)  
-                    || (gSpeciesInfo[species].types[0] == TYPE_BUG || gSpeciesInfo[species].types[1] == TYPE_BUG)
-                    || (GetMonAbility(pokemon) == ABILITY_HYPER_CUTTER)) {
+                    || (gSpeciesInfo[species].types[0] == TYPE_BUG    || gSpeciesInfo[species].types[1] == TYPE_BUG)
+                    || (GetMonAbility(pokemon) == ABILITY_HYPER_CUTTER) || (GetMonAbility(pokemon) == ABILITY_SHARPNESS)) {
                         gSpecialVar_Result = i;
                         gSpecialVar_0x8004 = species;
                         return TRUE;
@@ -3248,14 +3248,25 @@ bool8 CanUseFieldMove(struct ScriptContext *ctx)
                 
                 case MOVE_ROCK_SMASH:
                     if ((gSpeciesInfo[species].types[0] == TYPE_FIGHTING || gSpeciesInfo[species].types[1] == TYPE_FIGHTING) 
-                    || (gSpeciesInfo[species].types[0] == TYPE_ROCK || gSpeciesInfo[species].types[1] == TYPE_ROCK)
-                    || (GetMonAbility(pokemon) == ABILITY_ROCK_HEAD || GetMonAbility(pokemon) == ABILITY_IRON_FIST)) {
+                    || (gSpeciesInfo[species].types[0] == TYPE_ROCK      || gSpeciesInfo[species].types[1] == TYPE_ROCK)
+                    || (GetMonAbility(pokemon) == ABILITY_ROCK_HEAD      || GetMonAbility(pokemon) == ABILITY_IRON_FIST)) {
                         gSpecialVar_Result = i;
                         gSpecialVar_0x8004 = species;
                         return TRUE;
                     }
                     break;
                 
+                case MOVE_STRENGTH:
+                    if ((gSpeciesInfo[species].types[0] == TYPE_FIGHTING || gSpeciesInfo[species].types[1] == TYPE_FIGHTING) 
+                    || (gSpeciesInfo[species].types[0] == TYPE_GROUND    || gSpeciesInfo[species].types[1] == TYPE_GROUND)
+                    || (gSpeciesInfo[species].types[0] == TYPE_PSYCHIC   || gSpeciesInfo[species].types[1] == TYPE_PSYCHIC)
+                    || (GetMonAbility(pokemon) == ABILITY_HUGE_POWER     || GetMonAbility(pokemon) == ABILITY_SHEER_FORCE)) {
+                        gSpecialVar_Result = i;
+                        gSpecialVar_0x8004 = species;
+                        return TRUE;
+                    }
+                    break;
+
                 case MOVE_SURF:
                     if (gSpeciesInfo[species].types[0] == TYPE_WATER || gSpeciesInfo[species].types[1] == TYPE_WATER) {
                         gSpecialVar_Result = i;

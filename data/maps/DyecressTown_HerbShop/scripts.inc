@@ -146,17 +146,17 @@ DyecressTown_HerbShop_QuestGuy::
 # 76 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	compare VAR_DYECRESS_HERB_SHOP_QUEST, 0
 	goto_if_eq DyecressTown_HerbShop_QuestGuy_2
-# 86 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 87 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	compare VAR_DYECRESS_HERB_SHOP_QUEST, 1
 	goto_if_eq DyecressTown_HerbShop_QuestGuy_3
-# 94 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 96 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	compare VAR_DYECRESS_HERB_SHOP_QUEST, 2
 	goto_if_eq DyecressTown_HerbShop_QuestGuy_4
-# 111 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 114 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	compare VAR_DYECRESS_HERB_SHOP_QUEST, 3
 	goto_if_eq DyecressTown_HerbShop_QuestGuy_5
 DyecressTown_HerbShop_QuestGuy_1:
-# 114 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 117 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	releaseall
 	return
 
@@ -172,49 +172,56 @@ DyecressTown_HerbShop_QuestGuy_2:
 	goto_if_eq DyecressTown_HerbShop_QuestGuy_10
 # 83 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	msgbox DyecressTown_HerbShop_QuestGuy_Text_1
+# 84 "data/maps/DyecressTown_HerbShop/scripts.pory"
+	closemessage
 	goto DyecressTown_HerbShop_QuestGuy_1
 
 DyecressTown_HerbShop_QuestGuy_3:
-# 87 "data/maps/DyecressTown_HerbShop/scripts.pory"
-	msgbox DyecressTown_HerbShop_QuestGuy_Text_2, MSGBOX_YESNO
 # 88 "data/maps/DyecressTown_HerbShop/scripts.pory"
+	msgbox DyecressTown_HerbShop_QuestGuy_Text_2, MSGBOX_YESNO
+# 89 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq DyecressTown_HerbShop_QuestGuy_13
-# 91 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 92 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	msgbox DyecressTown_HerbShop_QuestGuy_Text_3
+# 93 "data/maps/DyecressTown_HerbShop/scripts.pory"
+	closemessage
 	goto DyecressTown_HerbShop_QuestGuy_1
 
 DyecressTown_HerbShop_QuestGuy_4:
-# 95 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 97 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	checkitem ITEM_RICH_MULCH
-# 96 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 98 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne DyecressTown_HerbShop_QuestGuy_17
 DyecressTown_HerbShop_QuestGuy_16:
-# 97 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 99 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	checkitem ITEM_GRACIDEA
-# 98 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 100 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne DyecressTown_HerbShop_QuestGuy_20
 DyecressTown_HerbShop_QuestGuy_19:
-# 101 "data/maps/DyecressTown_HerbShop/scripts.pory"
-	compare VAR_TEMP_A, 0
-	goto_if_ne DyecressTown_HerbShop_QuestGuy_32
-DyecressTown_HerbShop_QuestGuy_30:
 # 103 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	compare VAR_TEMP_A, 0
-	goto_if_ne DyecressTown_HerbShop_QuestGuy_29
-DyecressTown_HerbShop_QuestGuy_27:
+	goto_if_ne DyecressTown_HerbShop_QuestGuy_33
+DyecressTown_HerbShop_QuestGuy_31:
 # 105 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	compare VAR_TEMP_A, 0
-	goto_if_eq DyecressTown_HerbShop_QuestGuy_26
-DyecressTown_HerbShop_QuestGuy_25:
-# 108 "data/maps/DyecressTown_HerbShop/scripts.pory"
+	goto_if_ne DyecressTown_HerbShop_QuestGuy_30
+DyecressTown_HerbShop_QuestGuy_28:
+# 107 "data/maps/DyecressTown_HerbShop/scripts.pory"
+	compare VAR_TEMP_A, 0
+	goto_if_eq DyecressTown_HerbShop_QuestGuy_27
+DyecressTown_HerbShop_QuestGuy_26:
+# 110 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	msgbox DyecressTown_HerbShop_QuestGuy_Text_6
+DyecressTown_HerbShop_QuestGuy_22:
+# 112 "data/maps/DyecressTown_HerbShop/scripts.pory"
+	closemessage
 	goto DyecressTown_HerbShop_QuestGuy_1
 
 DyecressTown_HerbShop_QuestGuy_5:
-# 112 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 115 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	msgbox DyecressTown_HerbShop_QuestGuy_Text_7, MSGBOX_NPC
 	goto DyecressTown_HerbShop_QuestGuy_1
 
@@ -224,106 +231,106 @@ DyecressTown_HerbShop_QuestGuy_10:
 	goto DyecressTown_HerbShop_QuestGuy_1
 
 DyecressTown_HerbShop_QuestGuy_13:
-# 89 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 90 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	goto DyecressTown_HerbShop_QuestGuy2
 	goto DyecressTown_HerbShop_QuestGuy_1
 
 DyecressTown_HerbShop_QuestGuy_17:
-# 96 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 98 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	setvar VAR_TEMP_A, TRUE
 	goto DyecressTown_HerbShop_QuestGuy_16
 
 DyecressTown_HerbShop_QuestGuy_20:
-# 98 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 100 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	setvar VAR_TEMP_B, TRUE
 	goto DyecressTown_HerbShop_QuestGuy_19
 
-DyecressTown_HerbShop_QuestGuy_22:
-# 102 "data/maps/DyecressTown_HerbShop/scripts.pory"
-	goto DyecressTown_HerbShop_QuestGuy3
-	goto DyecressTown_HerbShop_QuestGuy_1
-
 DyecressTown_HerbShop_QuestGuy_23:
 # 104 "data/maps/DyecressTown_HerbShop/scripts.pory"
-	msgbox DyecressTown_HerbShop_QuestGuy_Text_4
-	goto DyecressTown_HerbShop_QuestGuy_1
+	goto DyecressTown_HerbShop_QuestGuy3
+	goto DyecressTown_HerbShop_QuestGuy_22
 
 DyecressTown_HerbShop_QuestGuy_24:
 # 106 "data/maps/DyecressTown_HerbShop/scripts.pory"
-	msgbox DyecressTown_HerbShop_QuestGuy_Text_5
-	goto DyecressTown_HerbShop_QuestGuy_1
+	msgbox DyecressTown_HerbShop_QuestGuy_Text_4
+	goto DyecressTown_HerbShop_QuestGuy_22
 
-DyecressTown_HerbShop_QuestGuy_26:
+DyecressTown_HerbShop_QuestGuy_25:
+# 108 "data/maps/DyecressTown_HerbShop/scripts.pory"
+	msgbox DyecressTown_HerbShop_QuestGuy_Text_5
+	goto DyecressTown_HerbShop_QuestGuy_22
+
+DyecressTown_HerbShop_QuestGuy_27:
+# 107 "data/maps/DyecressTown_HerbShop/scripts.pory"
+	compare VAR_TEMP_B, 0
+	goto_if_ne DyecressTown_HerbShop_QuestGuy_25
+	goto DyecressTown_HerbShop_QuestGuy_26
+
+DyecressTown_HerbShop_QuestGuy_30:
 # 105 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	compare VAR_TEMP_B, 0
-	goto_if_ne DyecressTown_HerbShop_QuestGuy_24
-	goto DyecressTown_HerbShop_QuestGuy_25
+	goto_if_eq DyecressTown_HerbShop_QuestGuy_24
+	goto DyecressTown_HerbShop_QuestGuy_28
 
-DyecressTown_HerbShop_QuestGuy_29:
+DyecressTown_HerbShop_QuestGuy_33:
 # 103 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	compare VAR_TEMP_B, 0
-	goto_if_eq DyecressTown_HerbShop_QuestGuy_23
-	goto DyecressTown_HerbShop_QuestGuy_27
-
-DyecressTown_HerbShop_QuestGuy_32:
-# 101 "data/maps/DyecressTown_HerbShop/scripts.pory"
-	compare VAR_TEMP_B, 0
-	goto_if_ne DyecressTown_HerbShop_QuestGuy_22
-	goto DyecressTown_HerbShop_QuestGuy_30
+	goto_if_ne DyecressTown_HerbShop_QuestGuy_23
+	goto DyecressTown_HerbShop_QuestGuy_31
 
 
 DyecressTown_HerbShop_QuestGuy2::
-# 118 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 121 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	setvar VAR_DYECRESS_HERB_SHOP_QUEST, 2
-# 119 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 122 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	msgbox DyecressTown_HerbShop_QuestGuy_Text2
-# 120 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 123 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	release
 	return
 
 
 DyecressTown_HerbShop_QuestGuy3::
-# 124 "data/maps/DyecressTown_HerbShop/scripts.pory"
-	setvar VAR_DYECRESS_HERB_SHOP_QUEST, 3
-# 125 "data/maps/DyecressTown_HerbShop/scripts.pory"
-	msgbox DyecressTown_HerbShop_QuestGuy_Text3
-# 126 "data/maps/DyecressTown_HerbShop/scripts.pory"
-	applymovement 4, DyecressTown_HerbShop_QuestGuy3_Movement_0
 # 127 "data/maps/DyecressTown_HerbShop/scripts.pory"
-	waitmovement 0
+	setvar VAR_DYECRESS_HERB_SHOP_QUEST, 3
 # 128 "data/maps/DyecressTown_HerbShop/scripts.pory"
-	playse SE_EXIT
+	msgbox DyecressTown_HerbShop_QuestGuy_Text3
 # 129 "data/maps/DyecressTown_HerbShop/scripts.pory"
-	removeobject 4
+	applymovement 4, DyecressTown_HerbShop_QuestGuy3_Movement_0
 # 130 "data/maps/DyecressTown_HerbShop/scripts.pory"
-	waitse
+	waitmovement 0
 # 131 "data/maps/DyecressTown_HerbShop/scripts.pory"
-	delay 60
-# 132 "data/maps/DyecressTown_HerbShop/scripts.pory"
-	playfanfare MUS_OBTAIN_BERRY
-# 133 "data/maps/DyecressTown_HerbShop/scripts.pory"
-	waitfanfare
-# 134 "data/maps/DyecressTown_HerbShop/scripts.pory"
-	delay 30
-# 135 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	playse SE_EXIT
-# 136 "data/maps/DyecressTown_HerbShop/scripts.pory"
-	addobject 4
-# 137 "data/maps/DyecressTown_HerbShop/scripts.pory"
-	setobjectxy 4, 0, 1
-# 138 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 132 "data/maps/DyecressTown_HerbShop/scripts.pory"
+	removeobject 4
+# 133 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	waitse
+# 134 "data/maps/DyecressTown_HerbShop/scripts.pory"
+	delay 60
+# 135 "data/maps/DyecressTown_HerbShop/scripts.pory"
+	playfanfare MUS_OBTAIN_BERRY
+# 136 "data/maps/DyecressTown_HerbShop/scripts.pory"
+	waitfanfare
+# 137 "data/maps/DyecressTown_HerbShop/scripts.pory"
+	delay 30
+# 138 "data/maps/DyecressTown_HerbShop/scripts.pory"
+	playse SE_EXIT
 # 139 "data/maps/DyecressTown_HerbShop/scripts.pory"
-	applymovement 4, DyecressTown_HerbShop_QuestGuy3_Movement_1
+	addobject 4
 # 140 "data/maps/DyecressTown_HerbShop/scripts.pory"
-	waitmovement 0
+	setobjectxy 4, 0, 1
 # 141 "data/maps/DyecressTown_HerbShop/scripts.pory"
-	applymovement 4, DyecressTown_HerbShop_Clerk_Movement_0
+	waitse
 # 142 "data/maps/DyecressTown_HerbShop/scripts.pory"
-	waitmovement 0
+	applymovement 4, DyecressTown_HerbShop_QuestGuy3_Movement_1
 # 143 "data/maps/DyecressTown_HerbShop/scripts.pory"
-	msgbox DyecressTown_HerbShop_QuestGuy3_Text_0
+	waitmovement 0
 # 144 "data/maps/DyecressTown_HerbShop/scripts.pory"
+	applymovement 4, DyecressTown_HerbShop_Clerk_Movement_0
+# 145 "data/maps/DyecressTown_HerbShop/scripts.pory"
+	waitmovement 0
+# 146 "data/maps/DyecressTown_HerbShop/scripts.pory"
+	msgbox DyecressTown_HerbShop_QuestGuy3_Text_0
+# 147 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	releaseall
 	return
 
@@ -334,23 +341,23 @@ DyecressTown_HerbShop_Clerk_Movement_0:
 	face_player
 	step_end
 
-# 126 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 129 "data/maps/DyecressTown_HerbShop/scripts.pory"
 DyecressTown_HerbShop_QuestGuy3_Movement_0:
-# 126 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 129 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	walk_up
-# 126 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 129 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	walk_up
-# 126 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 129 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	walk_up
 	step_end
 
-# 139 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 142 "data/maps/DyecressTown_HerbShop/scripts.pory"
 DyecressTown_HerbShop_QuestGuy3_Movement_1:
-# 139 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 142 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	walk_down
-# 139 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 142 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	walk_down
-# 139 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 142 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	walk_down
 	step_end
 
@@ -389,40 +396,40 @@ DyecressTown_HerbShop_QuestGuy_Text_1:
 	.string "Ah, I understand.\nYou must be busy, my apologies.$"
 
 DyecressTown_HerbShop_QuestGuy_Text_2:
-# 87 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 88 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	.string "Have you decided to help us out?$"
 
 DyecressTown_HerbShop_QuestGuy_Text_3:
-# 91 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 92 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	.string "Very well, I only hope we can\nmake progress by ourselves.$"
 
 DyecressTown_HerbShop_QuestGuy_Text_4:
-# 104 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 106 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	.string "You'll be able to find the flower\nsomewhere in the jungles to the south.$"
 
 DyecressTown_HerbShop_QuestGuy_Text_5:
-# 106 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 108 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	.string "The fertile soil can be found around\nthe base of the volcano to the east.$"
 
 DyecressTown_HerbShop_QuestGuy_Text_6:
-# 108 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 110 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	.string "The fertile soil can be found around\nthe base of the volcano to the east,\land you'll be able to find the flower\lsomewhere in the jungles to the south.$"
 
 DyecressTown_HerbShop_QuestGuy_Text_7:
-# 112 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 115 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	.string "Thank you for all your help!$"
 
 DyecressTown_HerbShop_QuestGuy3_Text_0:
-# 143 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 146 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	.string "Success!\nWe will now be able to stock Mints!$"
 
 DyecressTown_HerbShop_QuestGuy_Text::
-# 147 "data/maps/DyecressTown_HerbShop/scripts.pory"
-	.string "I'm from Libra Institute, we've been\nworking with the owners of the Herb Shop.\p"
-	.string "We're hoping that we can create some\nnew special herbs together,\lbut we have hit a rut in development.$"
+# 150 "data/maps/DyecressTown_HerbShop/scripts.pory"
+	.string "I'm from Libra Institute, we've been\ncollaborating on a project with\lthe owners of the Herb Shop.\p"
+	.string "We're hoping that we can create some\nnew special herbs together,\lbut we've hit a rut in development.$"
 
 DyecressTown_HerbShop_QuestGuy_Text2::
-# 152 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 155 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	.string "Fantastic! Thank you for offering to\nlend us a hand, I'm sure it\lwill be worth your while!\p"
 	.string "I believe we're close, we just need 2\nmore things to get the results\lwe're looking for.\p"
 	.string "Firstly, I've heard that the soil near\nthe volcano in the east is very fertile.\p"
@@ -433,7 +440,7 @@ DyecressTown_HerbShop_QuestGuy_Text2::
 	.string "I wish you the best of luck,\nand thank you again!$"
 
 DyecressTown_HerbShop_QuestGuy_Text3::
-# 163 "data/maps/DyecressTown_HerbShop/scripts.pory"
+# 166 "data/maps/DyecressTown_HerbShop/scripts.pory"
 	.string "Wow! You've got them both!\nThank you very much!\p"
 	.string "I'm sure we'll definitely be able to\nmake some progress on the Mints now!\p"
 	.string "I'll get our scientists to have a look!$"

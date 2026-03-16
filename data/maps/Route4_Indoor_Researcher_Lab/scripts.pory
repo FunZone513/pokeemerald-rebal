@@ -73,7 +73,7 @@ script Route4_Indoor_Researcher_Lab_R3 {
     switch(var(VAR_ROUTE4_WATER_STONE_STATE)) {
         case 1:
             playse(SE_PIN)
-            applymovement(6, Common_Movement_ExclamationMark)
+            applymovement(4, Common_Movement_ExclamationMark)
             waitmovement(0)
             msgbox(Route4_Indoor_Researcher_Lab_R3_Text2, MSGBOX_NPC)
             setvar(VAR_ROUTE4_WATER_STONE_STATE, 2)
@@ -143,7 +143,7 @@ text Route4_Indoor_Researcher_Lab_R3_Text3 {
 
 text Route4_Indoor_Researcher_Lab_R3_Text4 {
     "Hello!\nWe've finally gotten the materials\lfrom the Ochre Vale group.\p"
-    "I'm glad you got it all sorted for them,\nI'm not sure why Magma is getting into\ltrouble with us now.\p"
+    "I'm glad you got it all sorted for them,\nI'm not sure why Team Aqua is getting\linto trouble with us now.\p"
     "But anyway,\nsince you've been such a big help with\lour research, I have been given\lpermission to give you a gift."
 }
 

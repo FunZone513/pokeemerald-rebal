@@ -409,9 +409,9 @@ ScorchedChambers_AlertEvelynn_1:
 # 282 "data/maps/ScorchedChambers/scripts.pory"
 	waitmovement 0
 # 283 "data/maps/ScorchedChambers/scripts.pory"
-	hideobjectat 24, MAP_SCORCHED_CHAMBERS
-# 284 "data/maps/ScorchedChambers/scripts.pory"
 	setobjectxyperm 24, 0, 59
+# 284 "data/maps/ScorchedChambers/scripts.pory"
+	hideobjectat 24, MAP_SCORCHED_CHAMBERS
 # 285 "data/maps/ScorchedChambers/scripts.pory"
 	releaseall
 	return
@@ -577,120 +577,126 @@ ScorchedChambers_MagmaMultiBattle_4:
 # 379 "data/maps/ScorchedChambers/scripts.pory"
 	waitmovement 26
 # 380 "data/maps/ScorchedChambers/scripts.pory"
-	hideobjectat 25, MAP_SCORCHED_CHAMBERS
+	setobjectxyperm 25, 0, 59
 # 381 "data/maps/ScorchedChambers/scripts.pory"
-	hideobjectat 26, MAP_SCORCHED_CHAMBERS
+	setobjectxyperm 26, 0, 59
 # 382 "data/maps/ScorchedChambers/scripts.pory"
-	msgbox ScorchedChambers_MagmaMultiBattle_Text_5
+	hideobjectat 25, MAP_SCORCHED_CHAMBERS
 # 383 "data/maps/ScorchedChambers/scripts.pory"
-	closemessage
+	hideobjectat 26, MAP_SCORCHED_CHAMBERS
 # 384 "data/maps/ScorchedChambers/scripts.pory"
-	delay 20
+	msgbox ScorchedChambers_MagmaMultiBattle_Text_5
 # 385 "data/maps/ScorchedChambers/scripts.pory"
-	special SpawnCameraObject
+	closemessage
 # 386 "data/maps/ScorchedChambers/scripts.pory"
-	applymovement 18, ScorchedChambers_MagmaCouple_Movement_4
+	delay 20
 # 387 "data/maps/ScorchedChambers/scripts.pory"
-	applymovement OBJ_EVENT_ID_CAMERA, ScorchedChambers_MagmaCouple_Movement_0
+	special SpawnCameraObject
 # 388 "data/maps/ScorchedChambers/scripts.pory"
-	waitmovement 0
-# 389 "data/maps/ScorchedChambers/scripts.pory"
-	msgbox ScorchedChambers_MagmaMultiBattle_Text_6
-# 390 "data/maps/ScorchedChambers/scripts.pory"
-	applymovement 27, ScorchedChambers_MagmaCouple_Movement_3
-# 391 "data/maps/ScorchedChambers/scripts.pory"
-	msgbox ScorchedChambers_MagmaMultiBattle_Text_7
-# 392 "data/maps/ScorchedChambers/scripts.pory"
-	msgbox ScorchedChambers_MagmaMultiBattle_Text_8
-# 393 "data/maps/ScorchedChambers/scripts.pory"
-	closemessage
-# 394 "data/maps/ScorchedChambers/scripts.pory"
-	delay 80
-# 395 "data/maps/ScorchedChambers/scripts.pory"
-	msgbox ScorchedChambers_MagmaMultiBattle_Text_9
-# 396 "data/maps/ScorchedChambers/scripts.pory"
-	closemessage
-# 397 "data/maps/ScorchedChambers/scripts.pory"
-	applymovement 18, ScorchedChambers_MagmaCouple_Movement_5
-# 398 "data/maps/ScorchedChambers/scripts.pory"
-	applymovement OBJ_EVENT_ID_CAMERA, ScorchedChambers_MagmaMultiBattle_Movement_3
-# 399 "data/maps/ScorchedChambers/scripts.pory"
-	waitmovement 0
-# 400 "data/maps/ScorchedChambers/scripts.pory"
-	msgbox ScorchedChambers_MaxieText
-# 401 "data/maps/ScorchedChambers/scripts.pory"
-	applymovement 27, ScorchedChambers_MagmaMultiBattle_Movement_4
-# 402 "data/maps/ScorchedChambers/scripts.pory"
-	msgbox ScorchedChambers_MagmaMultiBattle_Text_10
-# 403 "data/maps/ScorchedChambers/scripts.pory"
 	applymovement 18, ScorchedChambers_MagmaCouple_Movement_4
-# 404 "data/maps/ScorchedChambers/scripts.pory"
+# 389 "data/maps/ScorchedChambers/scripts.pory"
+	applymovement OBJ_EVENT_ID_CAMERA, ScorchedChambers_MagmaCouple_Movement_0
+# 390 "data/maps/ScorchedChambers/scripts.pory"
 	waitmovement 0
-# 405 "data/maps/ScorchedChambers/scripts.pory"
-	msgbox ScorchedChambers_MagmaMultiBattle_Text_11
-# 406 "data/maps/ScorchedChambers/scripts.pory"
+# 391 "data/maps/ScorchedChambers/scripts.pory"
+	msgbox ScorchedChambers_MagmaMultiBattle_Text_6
+# 392 "data/maps/ScorchedChambers/scripts.pory"
+	applymovement 27, ScorchedChambers_MagmaCouple_Movement_3
+# 393 "data/maps/ScorchedChambers/scripts.pory"
+	msgbox ScorchedChambers_MagmaMultiBattle_Text_7
+# 394 "data/maps/ScorchedChambers/scripts.pory"
+	msgbox ScorchedChambers_MagmaMultiBattle_Text_8
+# 395 "data/maps/ScorchedChambers/scripts.pory"
 	closemessage
-# 407 "data/maps/ScorchedChambers/scripts.pory"
-	delay 120
-# 408 "data/maps/ScorchedChambers/scripts.pory"
+# 396 "data/maps/ScorchedChambers/scripts.pory"
+	delay 80
+# 397 "data/maps/ScorchedChambers/scripts.pory"
+	msgbox ScorchedChambers_MagmaMultiBattle_Text_9
+# 398 "data/maps/ScorchedChambers/scripts.pory"
+	closemessage
+# 399 "data/maps/ScorchedChambers/scripts.pory"
 	applymovement 18, ScorchedChambers_MagmaCouple_Movement_5
+# 400 "data/maps/ScorchedChambers/scripts.pory"
+	applymovement OBJ_EVENT_ID_CAMERA, ScorchedChambers_MagmaMultiBattle_Movement_3
+# 401 "data/maps/ScorchedChambers/scripts.pory"
+	waitmovement 0
+# 402 "data/maps/ScorchedChambers/scripts.pory"
+	msgbox ScorchedChambers_MaxieText
+# 403 "data/maps/ScorchedChambers/scripts.pory"
+	applymovement 27, ScorchedChambers_MagmaMultiBattle_Movement_4
+# 404 "data/maps/ScorchedChambers/scripts.pory"
+	msgbox ScorchedChambers_MagmaMultiBattle_Text_10
+# 405 "data/maps/ScorchedChambers/scripts.pory"
+	applymovement 18, ScorchedChambers_MagmaCouple_Movement_4
+# 406 "data/maps/ScorchedChambers/scripts.pory"
+	waitmovement 0
+# 407 "data/maps/ScorchedChambers/scripts.pory"
+	msgbox ScorchedChambers_MagmaMultiBattle_Text_11
+# 408 "data/maps/ScorchedChambers/scripts.pory"
+	closemessage
 # 409 "data/maps/ScorchedChambers/scripts.pory"
-	waitmovement 0
+	delay 120
 # 410 "data/maps/ScorchedChambers/scripts.pory"
-	msgbox ScorchedChambers_MagmaMultiBattle_Text_12
+	applymovement 18, ScorchedChambers_MagmaCouple_Movement_5
 # 411 "data/maps/ScorchedChambers/scripts.pory"
-	closemessage
+	waitmovement 0
 # 412 "data/maps/ScorchedChambers/scripts.pory"
-	applymovement 18, ScorchedChambers_MagmaCouple_Movement_8
+	msgbox ScorchedChambers_MagmaMultiBattle_Text_12
 # 413 "data/maps/ScorchedChambers/scripts.pory"
-	waitmovement 0
+	closemessage
 # 414 "data/maps/ScorchedChambers/scripts.pory"
-	msgbox ScorchedChambers_MagmaMultiBattle_Text_13
+	applymovement 18, ScorchedChambers_MagmaCouple_Movement_8
 # 415 "data/maps/ScorchedChambers/scripts.pory"
-	closemessage
+	waitmovement 0
 # 416 "data/maps/ScorchedChambers/scripts.pory"
-	applymovement 18, ScorchedChambers_MagmaMultiBattle_Movement_5
+	msgbox ScorchedChambers_MagmaMultiBattle_Text_13
 # 417 "data/maps/ScorchedChambers/scripts.pory"
-	waitmovement 0
+	closemessage
 # 418 "data/maps/ScorchedChambers/scripts.pory"
-	msgbox ScorchedChambers_MagmaMultiBattle_Text_14
+	applymovement 18, ScorchedChambers_MagmaMultiBattle_Movement_5
 # 419 "data/maps/ScorchedChambers/scripts.pory"
-	closemessage
+	waitmovement 0
 # 420 "data/maps/ScorchedChambers/scripts.pory"
-	applymovement 18, ScorchedChambers_MagmaMultiBattle_Movement_6
+	msgbox ScorchedChambers_MagmaMultiBattle_Text_14
 # 421 "data/maps/ScorchedChambers/scripts.pory"
-	waitmovement 0
-# 422 "data/maps/ScorchedChambers/scripts.pory"
-	removeobject 18
-# 423 "data/maps/ScorchedChambers/scripts.pory"
-	delay 60
-# 424 "data/maps/ScorchedChambers/scripts.pory"
-	applymovement 27, ScorchedChambers_MagmaCouple_Movement_6
-# 425 "data/maps/ScorchedChambers/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, ScorchedChambers_MagmaCouple_Movement_9
-# 426 "data/maps/ScorchedChambers/scripts.pory"
-	applymovement OBJ_EVENT_ID_CAMERA, ScorchedChambers_MagmaMultiBattle_Movement_7
-# 427 "data/maps/ScorchedChambers/scripts.pory"
-	waitmovement 0
-# 428 "data/maps/ScorchedChambers/scripts.pory"
-	msgbox ScorchedChambers_MagmaMultiBattle_Text_15
-# 429 "data/maps/ScorchedChambers/scripts.pory"
 	closemessage
+# 422 "data/maps/ScorchedChambers/scripts.pory"
+	applymovement 18, ScorchedChambers_MagmaMultiBattle_Movement_6
+# 423 "data/maps/ScorchedChambers/scripts.pory"
+	waitmovement 0
+# 424 "data/maps/ScorchedChambers/scripts.pory"
+	removeobject 18
+# 425 "data/maps/ScorchedChambers/scripts.pory"
+	delay 60
+# 426 "data/maps/ScorchedChambers/scripts.pory"
+	applymovement 27, ScorchedChambers_MagmaCouple_Movement_6
+# 427 "data/maps/ScorchedChambers/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, ScorchedChambers_MagmaCouple_Movement_9
+# 428 "data/maps/ScorchedChambers/scripts.pory"
+	applymovement OBJ_EVENT_ID_CAMERA, ScorchedChambers_MagmaMultiBattle_Movement_7
+# 429 "data/maps/ScorchedChambers/scripts.pory"
+	waitmovement 0
 # 430 "data/maps/ScorchedChambers/scripts.pory"
-	applymovement 27, ScorchedChambers_MagmaMultiBattle_Movement_8
+	msgbox ScorchedChambers_MagmaMultiBattle_Text_15
 # 431 "data/maps/ScorchedChambers/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, ScorchedChambers_MagmaCouple_Movement_5
+	closemessage
 # 432 "data/maps/ScorchedChambers/scripts.pory"
-	waitmovement 27
+	applymovement 27, ScorchedChambers_MagmaMultiBattle_Movement_8
 # 433 "data/maps/ScorchedChambers/scripts.pory"
-	hideobjectat 27, MAP_SCORCHED_CHAMBERS
+	applymovement OBJ_EVENT_ID_PLAYER, ScorchedChambers_MagmaCouple_Movement_5
 # 434 "data/maps/ScorchedChambers/scripts.pory"
-	special RemoveCameraObject
+	waitmovement 27
 # 435 "data/maps/ScorchedChambers/scripts.pory"
-	setflag FLAG_CLEARED_SCORCHED_CHAMBERS
+	setobjectxyperm 27, 0, 59
 # 436 "data/maps/ScorchedChambers/scripts.pory"
-	setvar VAR_TEMP_A, 0
+	hideobjectat 27, MAP_SCORCHED_CHAMBERS
 # 437 "data/maps/ScorchedChambers/scripts.pory"
+	special RemoveCameraObject
+# 438 "data/maps/ScorchedChambers/scripts.pory"
+	setflag FLAG_CLEARED_SCORCHED_CHAMBERS
+# 439 "data/maps/ScorchedChambers/scripts.pory"
+	setvar VAR_TEMP_A, 0
+# 440 "data/maps/ScorchedChambers/scripts.pory"
 	releaseall
 	return
 
@@ -955,83 +961,83 @@ ScorchedChambers_MagmaMultiBattle_Movement_2:
 	walk_fast_left
 	step_end
 
-# 398 "data/maps/ScorchedChambers/scripts.pory"
+# 400 "data/maps/ScorchedChambers/scripts.pory"
 ScorchedChambers_MagmaMultiBattle_Movement_3:
-# 398 "data/maps/ScorchedChambers/scripts.pory"
+# 400 "data/maps/ScorchedChambers/scripts.pory"
 	walk_fast_down
-# 398 "data/maps/ScorchedChambers/scripts.pory"
+# 400 "data/maps/ScorchedChambers/scripts.pory"
 	walk_fast_down
 	step_end
 
-# 401 "data/maps/ScorchedChambers/scripts.pory"
+# 403 "data/maps/ScorchedChambers/scripts.pory"
 ScorchedChambers_MagmaMultiBattle_Movement_4:
-# 401 "data/maps/ScorchedChambers/scripts.pory"
+# 403 "data/maps/ScorchedChambers/scripts.pory"
 	lock_facing_direction
-# 401 "data/maps/ScorchedChambers/scripts.pory"
+# 403 "data/maps/ScorchedChambers/scripts.pory"
 	walk_down
-# 401 "data/maps/ScorchedChambers/scripts.pory"
+# 403 "data/maps/ScorchedChambers/scripts.pory"
 	walk_down
-# 401 "data/maps/ScorchedChambers/scripts.pory"
+# 403 "data/maps/ScorchedChambers/scripts.pory"
 	unlock_facing_direction
 	step_end
 
-# 416 "data/maps/ScorchedChambers/scripts.pory"
+# 418 "data/maps/ScorchedChambers/scripts.pory"
 ScorchedChambers_MagmaMultiBattle_Movement_5:
-# 416 "data/maps/ScorchedChambers/scripts.pory"
+# 418 "data/maps/ScorchedChambers/scripts.pory"
 	walk_left
-# 416 "data/maps/ScorchedChambers/scripts.pory"
+# 418 "data/maps/ScorchedChambers/scripts.pory"
 	delay_16
-# 416 "data/maps/ScorchedChambers/scripts.pory"
+# 418 "data/maps/ScorchedChambers/scripts.pory"
 	delay_16
-# 416 "data/maps/ScorchedChambers/scripts.pory"
+# 418 "data/maps/ScorchedChambers/scripts.pory"
 	face_down
 	step_end
 
-# 420 "data/maps/ScorchedChambers/scripts.pory"
+# 422 "data/maps/ScorchedChambers/scripts.pory"
 ScorchedChambers_MagmaMultiBattle_Movement_6:
-# 420 "data/maps/ScorchedChambers/scripts.pory"
+# 422 "data/maps/ScorchedChambers/scripts.pory"
 	walk_left
-# 420 "data/maps/ScorchedChambers/scripts.pory"
+# 422 "data/maps/ScorchedChambers/scripts.pory"
 	walk_left
-# 420 "data/maps/ScorchedChambers/scripts.pory"
+# 422 "data/maps/ScorchedChambers/scripts.pory"
 	walk_left
-# 420 "data/maps/ScorchedChambers/scripts.pory"
+# 422 "data/maps/ScorchedChambers/scripts.pory"
 	walk_left
-# 420 "data/maps/ScorchedChambers/scripts.pory"
+# 422 "data/maps/ScorchedChambers/scripts.pory"
 	walk_left
-# 420 "data/maps/ScorchedChambers/scripts.pory"
+# 422 "data/maps/ScorchedChambers/scripts.pory"
 	walk_left
-# 420 "data/maps/ScorchedChambers/scripts.pory"
+# 422 "data/maps/ScorchedChambers/scripts.pory"
 	walk_left
-# 420 "data/maps/ScorchedChambers/scripts.pory"
+# 422 "data/maps/ScorchedChambers/scripts.pory"
 	walk_left
 	step_end
 
-# 426 "data/maps/ScorchedChambers/scripts.pory"
+# 428 "data/maps/ScorchedChambers/scripts.pory"
 ScorchedChambers_MagmaMultiBattle_Movement_7:
-# 426 "data/maps/ScorchedChambers/scripts.pory"
+# 428 "data/maps/ScorchedChambers/scripts.pory"
 	walk_down
-# 426 "data/maps/ScorchedChambers/scripts.pory"
+# 428 "data/maps/ScorchedChambers/scripts.pory"
 	walk_down
 	step_end
 
-# 430 "data/maps/ScorchedChambers/scripts.pory"
+# 432 "data/maps/ScorchedChambers/scripts.pory"
 ScorchedChambers_MagmaMultiBattle_Movement_8:
-# 430 "data/maps/ScorchedChambers/scripts.pory"
+# 432 "data/maps/ScorchedChambers/scripts.pory"
 	walk_down
-# 430 "data/maps/ScorchedChambers/scripts.pory"
+# 432 "data/maps/ScorchedChambers/scripts.pory"
 	walk_down
-# 430 "data/maps/ScorchedChambers/scripts.pory"
+# 432 "data/maps/ScorchedChambers/scripts.pory"
 	walk_down
-# 430 "data/maps/ScorchedChambers/scripts.pory"
+# 432 "data/maps/ScorchedChambers/scripts.pory"
 	walk_down
-# 430 "data/maps/ScorchedChambers/scripts.pory"
+# 432 "data/maps/ScorchedChambers/scripts.pory"
 	walk_down
-# 430 "data/maps/ScorchedChambers/scripts.pory"
+# 432 "data/maps/ScorchedChambers/scripts.pory"
 	walk_down
-# 430 "data/maps/ScorchedChambers/scripts.pory"
+# 432 "data/maps/ScorchedChambers/scripts.pory"
 	walk_down
-# 430 "data/maps/ScorchedChambers/scripts.pory"
+# 432 "data/maps/ScorchedChambers/scripts.pory"
 	walk_down
 	step_end
 
@@ -1259,47 +1265,47 @@ ScorchedChambers_MagmaMultiBattle_Text_4:
 	.string "Yes sir!$"
 
 ScorchedChambers_MagmaMultiBattle_Text_5:
-# 382 "data/maps/ScorchedChambers/scripts.pory"
+# 384 "data/maps/ScorchedChambers/scripts.pory"
 	.string "Maxie!\pWhat are you up to now?!$"
 
 ScorchedChambers_MagmaMultiBattle_Text_6:
-# 389 "data/maps/ScorchedChambers/scripts.pory"
+# 391 "data/maps/ScorchedChambers/scripts.pory"
 	.string "Doesn't it seem strange, Miss Evelynn?$"
 
 ScorchedChambers_MagmaMultiBattle_Text_7:
-# 391 "data/maps/ScorchedChambers/scripts.pory"
+# 393 "data/maps/ScorchedChambers/scripts.pory"
 	.string "What does?$"
 
 ScorchedChambers_MagmaMultiBattle_Text_8:
-# 392 "data/maps/ScorchedChambers/scripts.pory"
+# 394 "data/maps/ScorchedChambers/scripts.pory"
 	.string "Everything.\pThe warmth of this lava,\nthe strength of our Pokemon,\leven our very lives.$"
 
 ScorchedChambers_MagmaMultiBattle_Text_9:
-# 395 "data/maps/ScorchedChambers/scripts.pory"
+# 397 "data/maps/ScorchedChambers/scripts.pory"
 	.string "...\pHave you gone mad Maxie?$"
 
 ScorchedChambers_MagmaMultiBattle_Text_10:
-# 402 "data/maps/ScorchedChambers/scripts.pory"
+# 404 "data/maps/ScorchedChambers/scripts.pory"
 	.string "I...\pOf course I know that!\pWho wouldn't know their own name?!$"
 
 ScorchedChambers_MagmaMultiBattle_Text_11:
-# 405 "data/maps/ScorchedChambers/scripts.pory"
+# 407 "data/maps/ScorchedChambers/scripts.pory"
 	.string "Yes, yes of course...\njust as my name is Maxie,\lyour name is Evelynn.$"
 
 ScorchedChambers_MagmaMultiBattle_Text_12:
-# 410 "data/maps/ScorchedChambers/scripts.pory"
+# 412 "data/maps/ScorchedChambers/scripts.pory"
 	.string "...\pI see it's still too early.$"
 
 ScorchedChambers_MagmaMultiBattle_Text_13:
-# 414 "data/maps/ScorchedChambers/scripts.pory"
+# 416 "data/maps/ScorchedChambers/scripts.pory"
 	.string "I shall be taking my leave here,\nI hope to see you again Evelynn.$"
 
 ScorchedChambers_MagmaMultiBattle_Text_14:
-# 418 "data/maps/ScorchedChambers/scripts.pory"
+# 420 "data/maps/ScorchedChambers/scripts.pory"
 	.string "...and I hope to never see your annoying\nfriend again.$"
 
 ScorchedChambers_MagmaMultiBattle_Text_15:
-# 428 "data/maps/ScorchedChambers/scripts.pory"
+# 430 "data/maps/ScorchedChambers/scripts.pory"
 	.string "I uh...\p...\p...thanks for the help...$"
 
 ScorchedChambers_MagmaCouple_Text1::
@@ -1321,7 +1327,7 @@ ScorchedChambers_MagmaCouple_Text2::
 	.string "We're not gonna go easy this time,\nso prepare yourself for a butt-kicking!$"
 
 ScorchedChambers_EvelynnText::
-# 440 "data/maps/ScorchedChambers/scripts.pory"
+# 443 "data/maps/ScorchedChambers/scripts.pory"
 	.string "I see that you've already taken care of\nsome of the guards.\p"
 	.string "If I had known you would be doing that,\nI wouldn't have bothered sneaking in...\p"
 	.string "Whatever, how about a temporary\nalliance?\p"
@@ -1329,13 +1335,13 @@ ScorchedChambers_EvelynnText::
 	.string "I think I saw their Boss up ahead,\nbut he's all mine to take care of,\lso if you don't mind...$"
 
 ScorchedChambers_EvelynnText2::
-# 448 "data/maps/ScorchedChambers/scripts.pory"
+# 451 "data/maps/ScorchedChambers/scripts.pory"
 	.string "I know I know,\nI didn't make it very far.\p"
 	.string "But I think we'd better work together\nto take down these two.\p"
 	.string "I'll quickly heal your Pokemon,\nso you better not hold me back!$"
 
 ScorchedChambers_MaxieText::
-# 454 "data/maps/ScorchedChambers/scripts.pory"
+# 457 "data/maps/ScorchedChambers/scripts.pory"
 	.string "Far from it!\nI'd say you're the one who's mad here.\p"
 	.string "Tell me, how much do you remember?\p"
 	.string "Do you know where we are?\pDo you know who I am?\pDo you even know your name?$"

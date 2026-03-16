@@ -6,6 +6,14 @@ script OchreVale_PokeCentre_OnTransition {
     setrespawn(HEAL_LOCATION_OCHRE_VALE)
 }
 
+script OchreVale_PokeCentre_Nurse {
+	setvar(VAR_0x800B, 1)
+	call(Common_EventScript_PkmnCenterNurse)
+	waitmessage
+	waitbuttonpress
+	release
+}
+
 script OchreVale_PokeCentre_Hiker {
     msgbox(format("Ochre Vale is a great place to stock up on supplies before I continue on to Springwood City."), MSGBOX_NPC)
 }
@@ -22,9 +30,9 @@ script OchreVale_PokeCentre_Scientist {
     msgbox(format("There's only so much dirt you can study before it becomes tedious..."), MSGBOX_NPC)
 }
 
-script OchreVale_PokeCentre_MagmaGrunt {
+script OchreVale_PokeCentre_AquaGrunt {
     lockall
-    if (!defeated(TRAINER_OCHRE_VALE_POKECENTRE_MAGMA_GRUNT)) {
+    if (!defeated(TRAINER_OCHRE_VALE_POKECENTRE_AQUA_GRUNT)) {
         switch(var(VAR_TEMP_0)) {
             case 0:
                 msgbox("Don't bother me!\nCan't you see I'm busy!?", MSGBOX_NPC)
@@ -36,7 +44,7 @@ script OchreVale_PokeCentre_MagmaGrunt {
                 break
             case 2:
                 trainerbattle_single(
-                    TRAINER_OCHRE_VALE_POKECENTRE_MAGMA_GRUNT, 
+                    TRAINER_OCHRE_VALE_POKECENTRE_AQUA_GRUNT, 
                     format("THAT'S IT! YOU ASKED FOR IT!"),
                     format("Well at least it'll be easy to heal my Pokemon...")  
                 )

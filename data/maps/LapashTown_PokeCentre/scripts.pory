@@ -1,0 +1,27 @@
+mapscripts LapashTown_PokeCentre_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: LapashTown_PokeCentre_OnTransition
+}
+
+script LapashTown_PokeCentre_OnTransition {
+    setrespawn(HEAL_LOCATION_LAPASH_TOWN)
+}
+
+script LapashTown_PokeCentre_Nurse {
+	setvar(VAR_0x800B, 1)
+	call(Common_EventScript_PkmnCenterNurse)
+	waitmessage
+	waitbuttonpress
+	release
+}
+
+script LapashTown_PokeCentre_OldWoman {
+    msgbox(format("Oh hello dear, we don't tend to get many travellers around here. It's not an overly welcoming area after all."), MSGBOX_NPC)
+}
+
+script LapashTown_PokeCentre_OldMan {
+    msgbox(format("I'm checking the records of the passed residents. I've found that names aren't always consistent."), MSGBOX_NPC)
+}
+
+script LapashTown_PokeCentre_HexManiac {
+    msgbox("It's really solemn here...\nit's nice, in a strange way...", MSGBOX_NPC)
+}

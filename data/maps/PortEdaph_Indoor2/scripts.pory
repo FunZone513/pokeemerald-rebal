@@ -1,0 +1,17 @@
+mapscripts PortEdaph_Indoor2_MapScripts {}
+
+script PortEdaph_Indoor2_Man {
+    msgbox(format("My brother is staying over at the moment, but I'm not sure if he's a great influence..."), MSGBOX_NPC)
+}
+
+script PortEdaph_Indoor2_Woman {
+    msgbox(format("I'm glad my little boy is happy, but..."), MSGBOX_NPC)
+}
+
+script PortEdaph_Indoor2_Man2 {
+    msgbox(format("IF YOU WANNA PICK UP GIRLS THEN YOU GOTTA BE A MACHO MAN LIKE ME!"), MSGBOX_NPC)
+}
+
+script PortEdaph_Indoor2_Kid {
+    msgbox(format("YEAH!"), MSGBOX_NPC)
+}

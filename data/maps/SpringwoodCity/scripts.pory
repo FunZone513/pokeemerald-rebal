@@ -3,7 +3,7 @@ mapscripts SpringwoodCity_MapScripts {
 }
 
 script SpringwoodCity_OnTransition {
-    if (flag(FLAG_CLEARED_QUIET_GROVE) && var(VAR_EVELYNN_STATE) == 2 && flag(FLAG_BADGE01_GET)) {
+    if (flag(FLAG_CLEARED_QUIET_GROVE) && var(VAR_EVELYNN_STATE) == 2) {
         setvar(VAR_TEMP_A, 1)
     }
 }
@@ -29,7 +29,6 @@ script SpringwoodCity_LibraEvelynnTrigger {
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up lock_facing_direction walk_down unlock_facing_direction))
     waitmovement(0)
     playse(SE_PIN)
-    waitmovement(0)
     applymovement(14, Common_Movement_ExclamationMark)
     waitmovement(0)
     applymovement(14, moves(face_down))
@@ -127,8 +126,7 @@ script SpringwoodCity_Sign_Gym {
 script SpringwoodCity_Sydney {
     lockall
     if (!flag(FLAG_ITEM_SPRINGWOOD_CITY_SILVER_POWDER)) {
-        faceplayer
-        msgbox("Psst, hey kid.")
+        msgbox("Psst, hey kid.", MSGBOX_NPC)
         msgbox("Have you heard?", MSGBOX_YESNO)
         if (var(VAR_RESULT) == YES) {
             msgbox("Yeah you sure have.", MSGBOX_NPC)
@@ -141,6 +139,44 @@ script SpringwoodCity_Sydney {
         msgbox("You didn't get it from me.", MSGBOX_NPC)
     }
     releaseall
+}
+
+script SpringwoodCity_AquaGrunt_BlockerL {
+    lock
+    msgbox(format("I kinda wanted to go to Quiet Grove too, standing around is bor-"))
+    closemessage
+    playse(SE_PIN)
+    applymovement(20, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(20, moves(face_down))
+    waitmovement(0)
+    msgbox(format("What the-\pAre you eavesdropping on us?\nStop doing that!"))
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(lock_facing_direction walk_down))
+    applymovement(20, moves(walk_down))
+    waitmovement(0)
+    applymovement(20, moves(walk_up face_right))
+    waitmovement(0)
+    release
+}
+
+script SpringwoodCity_AquaGrunt_BlockerR {
+    lock
+    msgbox(format("I do feel kinda bad for the Parasect, I know we need to-"))
+    closemessage
+    playse(SE_PIN)
+    applymovement(21, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(21, moves(face_down))
+    waitmovement(0)
+    msgbox(format("Hey!\pDo you mind?\nThis is a PRIVATE conversation!"))
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(lock_facing_direction walk_down))
+    applymovement(21, moves(walk_down))
+    waitmovement(0)
+    applymovement(21, moves(walk_up face_right))
+    waitmovement(0)
+    release
 }
 
 script SpringwoodCity_RichBoy {

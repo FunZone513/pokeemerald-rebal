@@ -166,33 +166,43 @@ Route2_Evelynn::
 # 113 "data/maps/Route2/scripts.pory"
 	msgbox Route2_Evelynn_Text_0
 # 114 "data/maps/Route2/scripts.pory"
-	playse SE_PIN
+	closemessage
 # 115 "data/maps/Route2/scripts.pory"
-	applymovement 6, Common_Movement_ExclamationMark
+	playse SE_PIN
 # 116 "data/maps/Route2/scripts.pory"
-	waitmovement 0
+	applymovement 6, Common_Movement_ExclamationMark
 # 117 "data/maps/Route2/scripts.pory"
-	applymovement 6, Route2_MoveCamper_Movement_0
+	waitmovement 0
 # 118 "data/maps/Route2/scripts.pory"
-	waitmovement 0
+	applymovement 6, Route2_MoveCamper_Movement_0
 # 119 "data/maps/Route2/scripts.pory"
-	applymovement 6, Common_Movement_Delay48
+	waitmovement 0
 # 120 "data/maps/Route2/scripts.pory"
-	waitmovement 0
+	applymovement 6, Common_Movement_Delay48
 # 121 "data/maps/Route2/scripts.pory"
-	msgbox Route2_Evelynn_Text_1
-# 122 "data/maps/Route2/scripts.pory"
-	applymovement 6, Route2_Evelynn_Movement_0
-# 123 "data/maps/Route2/scripts.pory"
 	waitmovement 0
+# 122 "data/maps/Route2/scripts.pory"
+	msgbox Route2_Evelynn_Text_1
+# 123 "data/maps/Route2/scripts.pory"
+	closemessage
 # 124 "data/maps/Route2/scripts.pory"
-	removeobject 6
+	applymovement 6, Route2_Evelynn_Movement_0
 # 125 "data/maps/Route2/scripts.pory"
-	setflag FLAG_TEMP_A
+	waitmovement 0
 # 126 "data/maps/Route2/scripts.pory"
-	setvar VAR_EVELYNN_STATE, 1
+	removeobject 6
 # 127 "data/maps/Route2/scripts.pory"
+	setflag FLAG_TEMP_A
+# 128 "data/maps/Route2/scripts.pory"
+	setvar VAR_EVELYNN_STATE, 1
+# 129 "data/maps/Route2/scripts.pory"
 	release
+	return
+
+
+Route2_Sign::
+# 133 "data/maps/Route2/scripts.pory"
+	msgbox Route2_Sign_Text_0, MSGBOX_SIGN
 	return
 
 
@@ -252,18 +262,32 @@ Route2_Miniboss_Movement_0:
 	face_player
 	step_end
 
-# 122 "data/maps/Route2/scripts.pory"
+# 124 "data/maps/Route2/scripts.pory"
 Route2_Evelynn_Movement_0:
-# 122 "data/maps/Route2/scripts.pory"
+# 124 "data/maps/Route2/scripts.pory"
 	walk_up
-# 122 "data/maps/Route2/scripts.pory"
+# 124 "data/maps/Route2/scripts.pory"
 	walk_up
-# 122 "data/maps/Route2/scripts.pory"
+# 124 "data/maps/Route2/scripts.pory"
 	walk_up
-# 122 "data/maps/Route2/scripts.pory"
+# 124 "data/maps/Route2/scripts.pory"
 	walk_up
-# 122 "data/maps/Route2/scripts.pory"
-	walk_up
+# 124 "data/maps/Route2/scripts.pory"
+	walk_left
+# 124 "data/maps/Route2/scripts.pory"
+	walk_left
+# 124 "data/maps/Route2/scripts.pory"
+	walk_left
+# 124 "data/maps/Route2/scripts.pory"
+	walk_left
+# 124 "data/maps/Route2/scripts.pory"
+	walk_left
+# 124 "data/maps/Route2/scripts.pory"
+	walk_left
+# 124 "data/maps/Route2/scripts.pory"
+	walk_left
+# 124 "data/maps/Route2/scripts.pory"
+	walk_left
 	step_end
 
 Route2_Camper_Text_0:
@@ -295,8 +319,12 @@ Route2_Evelynn_Text_0:
 	.string "You poor thing...\nWhat did those idiots do to you?$"
 
 Route2_Evelynn_Text_1:
-# 121 "data/maps/Route2/scripts.pory"
+# 122 "data/maps/Route2/scripts.pory"
 	.string "Can I help you?\p...\pOh wait,\nI don't care.$"
+
+Route2_Sign_Text_0:
+# 133 "data/maps/Route2/scripts.pory"
+	.string "Springwood City {UP_ARROW}\nQuiet Grove {RIGHT_ARROW}$"
 
 Route2_Camper_Warning_Text::
 # 59 "data/maps/Route2/scripts.pory"

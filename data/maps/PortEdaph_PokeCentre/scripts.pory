@@ -1,0 +1,45 @@
+mapscripts PortEdaph_PokeCentre_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: PortEdaph_PokeCentre_OnTransition
+}
+
+script PortEdaph_PokeCentre_OnTransition {
+    setrespawn(HEAL_LOCATION_PORT_EDAPH)
+}
+
+script PortEdaph_PokeCentre_Nurse {
+	setvar(VAR_0x800B, 1)
+	call(Common_EventScript_PkmnCenterNurse)
+	waitmessage
+	waitbuttonpress
+	release
+}
+
+script PortEdaph_PokeCentre_OldWoman {
+    msgbox(format("I'm worried the girlfriend my son picked up from the big city is just after his money..."), MSGBOX_NPC)
+}
+
+script PortEdaph_PokeCentre_Man {
+    msgbox(format("My Mother is grilling us on our relationship..."), MSGBOX_NPC)
+}
+
+script PortEdaph_PokeCentre_Woman {
+    msgbox(format("Don't you think my boyfriend's bald head is super cute?"), MSGBOX_NPC)
+}
+
+script PortEdaph_PokeCentre_Man2 {
+    msgbox(format("I'm looking after some children while they play Pokemon battle."), MSGBOX_NPC)
+}
+
+script PortEdaph_PokeCentre_Kid1 {
+    msgbox(format("Go Magnemite! Bzzt! Get him!"))
+    closemessage
+}
+
+script PortEdaph_PokeCentre_Kid2 {
+    msgbox(format("Look out Azurill! Dodge the lightning!"))
+    closemessage
+}
+
+script PortEdaph_PokeCentre_idk {
+    msgbox("Bibidi Bobidi Boowa", MSGBOX_SIGN)
+}

@@ -1,0 +1,161 @@
+mapscripts PortEdaph_BikeShop_MapScripts {
+    MAP_SCRIPT_ON_LOAD: PortEdaph_BikeShop_OnLoad
+    MAP_SCRIPT_ON_FRAME_TABLE [ 
+        VAR_PORT_EDAPH_BIKE_SHOP, 0: PortEdaph_BikeShop_StartBikeQuest
+    ]
+}
+
+script PortEdaph_BikeShop_OnLoad {
+    if (var(VAR_PORT_EDAPH_BIKE_SHOP) < 2) {
+        setflag(FLAG_TEMP_A)
+    }
+}
+
+script PortEdaph_BikeShop_StartBikeQuest {
+    lock
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up*2))
+    waitmovement(0)
+    applymovement(1, moves(walk_fast_down*3))
+    waitmovement(0)
+    applymovement(1, moves(walk_down))
+    waitmovement(0)
+    msgbox(PortEdaph_BikeShop_StartBikeQuest_Text1)
+    closemessage
+    applymovement(1, moves(walk_up*2 walk_left*2))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up*3 walk_left*1))
+    waitmovement(0)
+    applymovement(1, moves(face_right))
+    waitmovement(0)
+    msgbox(PortEdaph_BikeShop_StartBikeQuest_Text2)
+    applymovement(1, moves(face_left))
+    waitmovement(0)
+    msgbox("Hmm...")
+    closemessage
+    delay(24)
+    applymovement(1, moves(walk_up face_left))
+    waitmovement(0)
+    delay(24)
+    msgbox("No this won't do...")
+    closemessage
+    delay(16)
+    applymovement(1, moves(walk_down*2 face_left))
+    waitmovement(0)
+    msgbox("Not this one either...")
+    closemessage
+    delay(24)
+    applymovement(1, moves(walk_up face_right))
+    waitmovement(0)
+    msgbox("I'm not sure if I have anything\nwithin that budget currently...")
+    closemessage
+    applymovement(1, moves(face_left))
+    waitmovement(0)
+    delay(48)
+    playse(SE_PIN)
+    applymovement(1, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(1, moves(face_right))
+    waitmovement(0)
+    msgbox(PortEdaph_BikeShop_StartBikeQuest_Text3)
+    closemessage
+    applymovement(1, moves(walk_up*2 walk_right*2 face_down))
+    delay(48)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right walk_up))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    msgbox(PortEdaph_BikeShop_Chashier_Text1)
+    setvar(VAR_PORT_EDAPH_BIKE_SHOP, 1)
+    closemessage
+    release
+}
+
+text PortEdaph_BikeShop_StartBikeQuest_Text1 {
+    "A new face!\p"
+    "Hello and Welcome to the Bike Store!\nWe have all kinds of varieties of bikes,\lwhat type of bicycle has caught your\linterest today?\p"
+    "...\p"
+    "I see, I see...\p"
+    "So you want a bike that can aid\nin your travels is it?\p"
+    "Certainly!\nWe have just the thing!"
+}
+
+text PortEdaph_BikeShop_StartBikeQuest_Text2 {
+    "This here is our affordable bike for\nPokemon Trainers such as yourself,\lwe can offer it in blue or yellow, as you\lcan see from the display.\p"
+    "It allows you to travel across the\nregion with blitzing speed and expand\lyour traversal options!\p"
+    "Since it's a new model, it can be on\nthe pricer side of things, but it's\ldefinitely worth it in the long run!\p"
+    "What is your budget?\p"
+    "...\p"
+    "Oh..."
+}
+
+text PortEdaph_BikeShop_StartBikeQuest_Text3 {
+    "Actually, I have an older model lying\nout the back that I haven't been\lable to sell.\p"
+    "If you do me a favour, I could even\npart with it without a dime.\p"
+    "It's honestly just taking up space,\nbut giving it away would look bad\lfor the business."
+}
+
+script PortEdaph_BikeShop_Boy {
+    msgbox(format("Oh it's you, come to gloat have you?"), MSGBOX_NPC)
+}
+
+script PortEdaph_BikeShop_BikeInfo {
+    // yesno
+    msgbox(PortEdaph_BikeShop_BikeInfo_Text, MSGBOX_SIGN)
+}
+
+text PortEdaph_BikeShop_BikeInfo_Text {
+    "The Bicycle (or Bike) is a needed tool\nfor any avid adventurer!\p"
+    "It allows one to speedily climb\nslippery slopes, and even zoom across\lunstable ground before it collapses!\p"
+    "It may start out slow, but once it\npicks up speed quickly!\p"
+    "You'll be zipping around before\nyou know it!"
+}
+
+script PortEdaph_BikeShop_Cashier {
+    switch(var(VAR_PORT_EDAPH_BIKE_SHOP)) {
+        case 0:
+        case 1:
+            msgbox(PortEdaph_BikeShop_Chashier_Text1, MSGBOX_NPC)
+            break
+        
+        case 2:
+            msgbox(PortEdaph_BikeShop_Chashier_Text2, MSGBOX_NPC)
+            giveitem(ITEM_MACH_BIKE)
+            setvar(VAR_PORT_EDAPH_BIKE_SHOP, 3)
+            break
+        
+        case 3:
+            msgbox("I hope the Bike is treating you well!", MSGBOX_NPC)
+            break
+    }
+}
+
+text PortEdaph_BikeShop_Chashier_Text1 {
+    "My son is trying to become a\nPokemon Trainer himself, so he's\lbeen out exploring nearby.\p"
+    "The only problem is that he's never\nbeen very good with directions.\p"
+    "I'm sure he's fine for now, but it would\ngive me peace of mind if you could go\land convince him that maybe the\llife of a trainer isn't for him.\p"
+    "I worry that something will eventually\nhappen to him, but he won't listen to me."
+}
+
+text PortEdaph_BikeShop_Chashier_Text2 {
+    "My son came back in a huff, I'm\nnot sure what you said to him but I'm\lglad he's decided to stop wandering\labout and help out here.\p"
+    "I apologise if he acted rudely to you,\nI think I may have spoiled him a little\lwhen he was a child...\p"
+    "Oh right! I have the Bike here\nready for you as thanks!\p"
+    "I've had our mechanic fix it up\ngood as new too, so feel free to\lgive it a go right away!"
+}
+
+script PortEdaph_BikeShop_Mechanic {
+    msgbox("Ya?\pLooking for bike?\nThis is bike fixing part, try other side.", MSGBOX_NPC)
+}
+
+script PortEdaph_BikeShop_Woman {
+    msgbox(format("These bikes sure are fancy, I guess they have to justify the price somehow."), MSGBOX_NPC)
+}
+
+script PortEdaph_BikeShop_Man {
+    msgbox("The seat wasn't on when I sat down...\nNow I'm stuck...", MSGBOX_NPC)
+}
+
+script PortEdaph_BikeShop_Man2 {
+    msgbox(format("This lady is crazy! Who said you could ride around inside!"), MSGBOX_NPC)
+}
+
+script PortEdaph_BikeShop_Woman2 {
+    msgbox(format("I love that I can just take the bikes for a test ride before buying one!"), MSGBOX_NPC)
+}

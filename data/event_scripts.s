@@ -1269,3 +1269,33 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/DripstonePass/scripts.inc"
 
 	.include "data/maps/Route11/scripts.inc"
+
+	.include "data/maps/HeatswellPath/scripts.inc"
+
+	.include "data/maps/LapashTown/scripts.inc"
+
+	.include "data/maps/Route12/scripts.inc"
+
+	.include "data/maps/PortEdaph/scripts.inc"
+
+	.include "data/maps/PortEdaph_PokeCentre/scripts.inc"
+
+	.include "data/maps/PortEdaph_Indoor1/scripts.inc"
+
+	.include "data/maps/PortEdaph_Indoor2/scripts.inc"
+
+	.include "data/maps/PortEdaph_Indoor3/scripts.inc"
+
+	.include "data/maps/PortEdaph_PokeMart/scripts.inc"
+
+	.include "data/maps/PortEdaph_BikeShop/scripts.inc"
+
+	.include "data/maps/PortEdaph_Dock/scripts.inc"
+
+	.include "data/maps/PortEdaph_Gym/scripts.inc"
+
+	.include "data/maps/LapashTown_PokeCentre/scripts.inc"
+
+	.include "data/maps/LapashTown_Indoor1/scripts.inc"
+
+	.include "data/maps/LapashTown_Indoor2/scripts.inc"
