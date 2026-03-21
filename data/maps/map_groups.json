@@ -3,6 +3,7 @@
     "gMapGroup_Towns",
     "gMapGroup_Routes",
     "gMapGroup_Dungeons",
+    "gMapGroup_NamedAreas",
     "gMapGroup_Indoor_Routes",
     "gMapGroup_Indoor_NewstemTown",
     "gMapGroup_Indoor_SpringwoodCity",
@@ -81,6 +82,11 @@
     "DripstonePass",
     "HeatswellPath"
   ],
+  "gMapGroup_NamedAreas": [
+    "MtScorch_Entrance",
+    "MtScorch_1",
+    "MtScorch_Inside"
+  ],
   "gMapGroup_Indoor_Routes": [
     "Route3_FishingHut",
     "Route4_Indoor_Researcher_Lab",
@@ -130,7 +136,8 @@
     "PortEdaph_PokeMart",
     "PortEdaph_BikeShop",
     "PortEdaph_Dock",
-    "PortEdaph_Gym"
+    "PortEdaph_Gym",
+    "PortEdaph_Gate"
   ],
   "gMapGroup_Indoor_LapashTown": [
     "LapashTown_PokeCentre",

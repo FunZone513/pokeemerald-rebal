@@ -57,8 +57,9 @@
 #define FLAG_GOT_HERB_MULCH             0x2A // For the dyecress herb quest
 #define FLAG_GOT_HERB_FLOWER            0x2B // For the dyecress herb quest
 #define FLAG_SEEN_EDAPH_DOCK_EVENT      0x2C
-#define FLAG_UNUSED_0x02D    0x2D // Unused Flag
-#define FLAG_UNUSED_0x02E    0x2E // Unused Flag
+#define FLAG_SEEN_ROUTE7_MAGMA_GRUNTS   0x2D
+#define FLAG_SEEN_MT_SCORCH_1_MAGMA_GRUNTS    0x2E // Unused Flag
+
 #define FLAG_UNUSED_0x02F    0x2F // Unused Flag
 #define FLAG_UNUSED_0x030    0x30 // Unused Flag
 #define FLAG_UNUSED_0x031    0x31 // Unused Flag
@@ -581,17 +582,17 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_12_2                          (FLAG_HIDDEN_ITEMS_START + 0x21)
 #define FLAG_HIDDEN_ITEM_LAPASH_TOWN                         (FLAG_HIDDEN_ITEMS_START + 0x22)
 #define FLAG_HIDDEN_ITEM_LAPASH_TOWN_1                       (FLAG_HIDDEN_ITEMS_START + 0x23)
+#define FLAG_HIDDEN_ITEM_MT_SCORCH                           (FLAG_HIDDEN_ITEMS_START + 0x24)
+#define FLAG_HIDDEN_ITEM_MT_SCORCH_1                         (FLAG_HIDDEN_ITEMS_START + 0x25)
+#define FLAG_HIDDEN_ITEM_MT_SCORCH_2                         (FLAG_HIDDEN_ITEMS_START + 0x26)
+#define FLAG_HIDDEN_ITEM_MT_SCORCH_3                         (FLAG_HIDDEN_ITEMS_START + 0x27)
+#define FLAG_HIDDEN_ITEM_MT_SCORCH_4                         (FLAG_HIDDEN_ITEMS_START + 0x28)
+#define FLAG_HIDDEN_ITEM_MT_SCORCH_5                         (FLAG_HIDDEN_ITEMS_START + 0x29)
+#define FLAG_HIDDEN_ITEM_MT_SCORCH_6                         (FLAG_HIDDEN_ITEMS_START + 0x2A)
+#define FLAG_HIDDEN_ITEM_MT_SCORCH_7                         (FLAG_HIDDEN_ITEMS_START + 0x2B)
+#define FLAG_HIDDEN_ITEM_MT_SCORCH_8                         (FLAG_HIDDEN_ITEMS_START + 0x2C)
 
 
-#define FLAG_HIDDEN_ITEM_UNDERWATER_124_CALCIUM              (FLAG_HIDDEN_ITEMS_START + 0x24)
-#define FLAG_HIDDEN_ITEM_UNUSED_0X25                         (FLAG_HIDDEN_ITEMS_START + 0x25)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_124_HEART_SCALE_2        (FLAG_HIDDEN_ITEMS_START + 0x26)
-#define FLAG_HIDDEN_ITEM_ROUTE_121_HP_UP                     (FLAG_HIDDEN_ITEMS_START + 0x27)
-#define FLAG_HIDDEN_ITEM_ROUTE_121_NUGGET                    (FLAG_HIDDEN_ITEMS_START + 0x28)
-#define FLAG_HIDDEN_ITEM_ROUTE_123_REVIVE                    (FLAG_HIDDEN_ITEMS_START + 0x29)
-#define FLAG_HIDDEN_ITEM_UNUSED_0X2A                         (FLAG_HIDDEN_ITEMS_START + 0x2A)
-#define FLAG_HIDDEN_ITEM_LILYCOVE_CITY_PP_UP                 (FLAG_HIDDEN_ITEMS_START + 0x2B)
-#define FLAG_HIDDEN_ITEM_UNUSED_0X2C                         (FLAG_HIDDEN_ITEMS_START + 0x2C)
 #define FLAG_HIDDEN_ITEM_ROUTE_116_SUPER_POTION              (FLAG_HIDDEN_ITEMS_START + 0x2D)
 #define FLAG_HIDDEN_ITEM_UNUSED_0X2E                         (FLAG_HIDDEN_ITEMS_START + 0x2E)
 #define FLAG_HIDDEN_ITEM_UNUSED_OX2F                         (FLAG_HIDDEN_ITEMS_START + 0x2F)
@@ -1109,15 +1110,15 @@
 #define FLAG_ITEM_HEATSWELL_PATH_2                                  0x419
 #define FLAG_ITEM_ROUTE_12                                          0x41A
 #define FLAG_ITEM_LAPASH_TOWN                                       0x41B
+#define FLAG_ITEM_MT_SCORCH                                         0x41C
+#define FLAG_ITEM_MT_SCORCH_1                                       0x41D
+#define FLAG_ITEM_MT_SCORCH_2                                       0x41E
+#define FLAG_ITEM_MT_SCORCH_3                                       0x41F
+#define FLAG_ITEM_MT_SCORCH_4                                       0x420
+#define FLAG_ITEM_MT_SCORCH_5                                       0x421
+#define FLAG_ITEM_MT_SCORCH_6                                       0x422
 
 
-#define FLAG_ITEM_MT_PYRE_5F_LAX_INCENSE                            0x41C
-#define FLAG_ITEM_GRANITE_CAVE_B2F_REPEL                            0x41D
-#define FLAG_ITEM_GRANITE_CAVE_B2F_RARE_CANDY                       0x41E
-#define FLAG_ITEM_PETALBURG_WOODS_X_ATTACK                          0x41F
-#define FLAG_ITEM_PETALBURG_WOODS_GREAT_BALL                        0x420
-#define FLAG_ITEM_UNUSED_0X421                                      0x421
-#define FLAG_ITEM_PETALBURG_WOODS_ETHER                             0x422
 #define FLAG_ITEM_MAGMA_HIDEOUT_3F_3R_ECAPE_ROPE                    0x423
 #define FLAG_ITEM_TRICK_HOUSE_PUZZLE_1_ORANGE_MAIL                  0x424
 #define FLAG_ITEM_TRICK_HOUSE_PUZZLE_2_HARBOR_MAIL                  0x425

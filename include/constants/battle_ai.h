@@ -53,6 +53,7 @@
 #define AI_FLAG_PREDICTION            (AI_FLAG_PREDICT_SWITCH | AI_FLAG_PREDICT_INCOMING_MON)
 #define AI_FLAG_RIVAL                 (AI_FLAG_GYM_LEADER | AI_FLAG_PREDICTION)
 #define AI_FLAG_CHEESE_TRAINER        (AI_FLAG_BASIC_TRAINER | AI_FLAG_POWERFUL_STATUS | AI_FLAG_PREFER_STATUS_MOVES | AI_FLAG_WILL_SUICIDE | AI_FLAG_HP_AWARE)
+#define AI_FLAG_KABOOM                (AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_WILL_SUICIDE)
 
 // 'other' ai logic flags
 #define AI_FLAG_DYNAMIC_FUNC          (1 << 28)  // Create custom AI functions for specific battles via "setdynamicaifunc" cmd

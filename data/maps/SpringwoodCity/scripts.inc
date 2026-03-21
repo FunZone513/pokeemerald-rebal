@@ -270,7 +270,7 @@ SpringwoodCity_AquaGrunt_BlockerR::
 # 176 "data/maps/SpringwoodCity/scripts.pory"
 	waitmovement 0
 # 177 "data/maps/SpringwoodCity/scripts.pory"
-	applymovement 21, SpringwoodCity_AquaGrunt_BlockerL_Movement_1
+	applymovement 21, SpringwoodCity_AquaGrunt_BlockerR_Movement_0
 # 178 "data/maps/SpringwoodCity/scripts.pory"
 	waitmovement 0
 # 179 "data/maps/SpringwoodCity/scripts.pory"
@@ -450,6 +450,14 @@ SpringwoodCity_AquaGrunt_BlockerL_Movement_1:
 	walk_up
 # 158 "data/maps/SpringwoodCity/scripts.pory"
 	face_right
+	step_end
+
+# 177 "data/maps/SpringwoodCity/scripts.pory"
+SpringwoodCity_AquaGrunt_BlockerR_Movement_0:
+# 177 "data/maps/SpringwoodCity/scripts.pory"
+	walk_up
+# 177 "data/maps/SpringwoodCity/scripts.pory"
+	face_left
 	step_end
 
 SpringwoodCity_LibraEvelynnTrigger_Text_0:

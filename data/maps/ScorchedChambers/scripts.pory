@@ -215,7 +215,7 @@ script ScorchedChambers_MagmaCouple {
 
 text ScorchedChambers_MagmaCouple_Text1 {
     "Huh?\p"
-    "Aren't you the one from Ochre Vale...?\p"
+    "Aren't you the one from Route 7...?\p"
     "Oh shoot, you are too!\p"
     "Don't tell me you've come to\nmess with us again!"
 }
@@ -224,10 +224,6 @@ text ScorchedChambers_MagmaCouple_Text2 {
     "Hey man, what are you up t-\p"
     "Oh god, not this kid again!\p"
     "We got scolded so hard because\nyou screwed up what we were\ldoing before!\p"
-    "Why have you come back to harass us?\p"
-    "...\p"
-    "Huh?\nWe're doing something wrong?\p"
-    "Ignorance truely is bliss isn't it?\p"
     "We're not gonna go easy this time,\nso prepare yourself for a butt-kicking!"
 }
 

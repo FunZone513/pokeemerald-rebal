@@ -5130,6 +5130,46 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/LapashTown_Indoor2/border.bin",
       "blockdata_filepath": "data/layouts/LapashTown_Indoor2/map.bin"
+    },
+    {
+      "id": "LAYOUT_PORT_EDAPH_GATE",
+      "name": "PortEdaph_Gate_Layout",
+      "width": 20,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/PortEdaph_Gate/border.bin",
+      "blockdata_filepath": "data/layouts/PortEdaph_Gate/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_SCORCH_ENTRANCE",
+      "name": "MtScorch_Entrance_Layout",
+      "width": 40,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/MtScorch_Entrance/border.bin",
+      "blockdata_filepath": "data/layouts/MtScorch_Entrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_SCORCH_1",
+      "name": "MtScorch_1_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/MtScorch_1/border.bin",
+      "blockdata_filepath": "data/layouts/MtScorch_1/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_SCORCH_INSIDE",
+      "name": "MtScorch_Inside_Layout",
+      "width": 50,
+      "height": 44,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/MtScorch_Inside/border.bin",
+      "blockdata_filepath": "data/layouts/MtScorch_Inside/map.bin"
     }
   ]
 }

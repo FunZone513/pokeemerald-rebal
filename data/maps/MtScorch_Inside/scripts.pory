@@ -1,0 +1,61 @@
+mapscripts MtScorch_Inside_MapScripts {}
+
+script MtScorch_Inside_Fisherman {
+    if (!flag(FLAG_RECEIVED_GOOD_ROD)) {
+        msgbox("'ave this.", MSGBOX_NPC)
+        giveitem(ITEM_GOOD_ROD)
+        msgbox("I've no use for it 'ere, ain't no fish.", MSGBOX_NPC)
+    } else {
+        msgbox("How's the rod treatin' ya?", MSGBOX_NPC)
+    }
+}
+
+script MtScorch_Inside_Kindler {
+    trainerbattle_single(
+        TRAINER_MT_SCORCH_INSIDE_KINDLER, 
+        format("Can you take the heat?"),
+        format("Whew, you can even dish out the heat!")  
+    )
+    msgbox(format("I'm really feeling the heat in here."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script MtScorch_Inside_Kindler2 {
+    trainerbattle_single(
+        TRAINER_MT_SCORCH_INSIDE_KINDLER_2, 
+        format("Hey man can you spare some water?"),
+        format("The smoke got in my eyes, I would've won if I could see...")  
+    )
+    msgbox(format("Gimme a sec... Trying to wash out my eyes... The smoke..."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script MtScorch_Inside_Hiker {
+    trainerbattle_single(
+        TRAINER_MT_SCORCH_INSIDE_HIKER, 
+        format("I'm aiming for the top!"),
+        format("This is but a minor set-back!")  
+    )
+    msgbox(format("Do you think if I get to the top I'll become popular with the ladies?"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script MtScorch_Inside_CoolTrainer {
+    trainerbattle_single(
+        TRAINER_MT_SCORCH_INSIDE_COOL_TRAINER, 
+        format("Mt Scorch is a good place to train against fire types."),
+        format("Hmm, I guess I needed better diversity.")  
+    )
+    msgbox(format("I thought it would be good enough to just have some Pokemon strong against fire types."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script MtScorch_Inside_Psychic {
+    trainerbattle_single(
+        TRAINER_MT_SCORCH_INSIDE_PSYCHIC, 
+        format("Thought you could sneak past me did you?"),
+        format("Oh, darn.")  
+    )
+    msgbox(format("Do you think I could convince you to go for a swim real quick?"), MSGBOX_AUTOCLOSE)
+    end
+}

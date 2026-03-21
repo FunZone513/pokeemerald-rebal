@@ -1,0 +1,70 @@
+mapscripts PortEdaph_Gate_MapScripts {}
+
+script PortEdaph_Gate_PassThrough {
+    lock
+    msgbox("Do you want to pass through?", MSGBOX_YESNO)
+    waitse
+    closemessage
+    getobjectxy(OBJ_EVENT_ID_PLAYER, CURRENT_POSITION, NULL, VAR_TEMP_0)
+    if (var(VAR_RESULT) == YES) {
+        setmetatile(4, 5, METATILE_PokemonCenter_CounterBarrierOpen, FALSE)
+        special(DrawWholeMapView)
+        playse(SE_UNLOCK)
+        waitse
+        delay(30)
+        if (var(VAR_TEMP_0) == 6) {
+            applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up*3 delay_16*2))
+        } else {
+            applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down*3 delay_16*2))
+        }
+        waitmovement(0)
+        setmetatile(4, 5, METATILE_PokemonCenter_CounterBarrier, TRUE)
+        special(DrawWholeMapView)
+        playse(SE_UNLOCK)
+        waitse
+        delay(16)
+    } else {
+        if (var(VAR_TEMP_0) == 6) {
+            applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+        } else {
+            applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+        }
+        waitmovement(0)
+    }
+    release
+}
+
+script PortEdaph_Gate_Guide {
+    msgbox(PortEdaph_Gate_Guide_Text, MSGBOX_NPC)
+}
+
+text PortEdaph_Gate_Guide_Text {
+    "Up ahead is Mt Scorch, it's a dangerous\nvolcanic region that requires us to\l"
+    "keep track of who enters and leaves,\lin case someone goes missing.\p"
+    "As a Pokemon Trainer, you are permitted\nto enter the area.\p"
+    "Please be mindful to not get lost\nwhile climbing the volcano, rescue\lcan prove difficult due to the terrain."
+}
+
+script PortEdaph_Gate_Woman {
+    msgbox(format("I'm waiting for a cool, single trainer to come through here so I can 'capture' him."), MSGBOX_NPC)
+}
+
+script PortEdaph_Gate_Camper {
+    msgbox(format("The strange design on the floor reminds me of Mt Scorch... I wonder if that was deliberate?"), MSGBOX_NPC)
+}
+
+script PortEdaph_Gate_Kid {
+    msgbox(format("There's all types of interesting knowledge stored in these books for aspiring climbers to browse through."), MSGBOX_NPC)
+}
+
+script PortEdaph_Gate_Artist {
+    msgbox(format("The contrast between the stark and harsh volcano with the lush ground around it gives me inspiration!"), MSGBOX_NPC)
+}
+
+script PortEdaph_Gate_Picnicker {
+    msgbox(format("Have you climbed on Mt Scorch before? I'm trying to psych myself up to give it a go."), MSGBOX_NPC)
+}
+
+script PortEdaph_Gate_Shop {
+    msgbox(format("I'll probably be a shop at some point, maybe. I'm not sure what to do yet."), MSGBOX_NPC)
+}

@@ -3144,6 +3144,7 @@ void Script_EndTrainerCanSeeIf(struct ScriptContext *ctx)
         StopScript(ctx);
 }
 
+//MARK: custom
 //=======================================
 
 bool8 ScrCmd_debugprint(struct ScriptContext *ctx)
@@ -3165,6 +3166,26 @@ bool8 ScrCmd_debugprint(struct ScriptContext *ctx)
         }
     }
     return FALSE;
+}
+
+// locks only the player's movement
+bool8 ScrCmd_lockplayer(struct ScriptContext *ctx)
+{
+    Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
+
+    if (IsOverworldLinkActive())
+    {
+        return FALSE;
+    }
+    else
+    {
+        struct ObjectEvent *followerObj = GetFollowerObject();
+        JustFreezePlayer();
+        SetupNativeScript(ctx, IsFreezePlayerFinished);
+        if (FlagGet(FLAG_SAFE_FOLLOWER_MOVEMENT) && followerObj) // Unfreeze follower object (conditionally)
+            UnfreezeObjectEvent(followerObj);
+        return TRUE;
+    }
 }
 
 void GetInteractedPokemon(void) {

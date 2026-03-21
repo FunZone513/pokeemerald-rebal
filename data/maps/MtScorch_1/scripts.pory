@@ -1,0 +1,181 @@
+mapscripts MtScorch_1_MapScripts {
+    MAP_SCRIPT_ON_LOAD: MtScorch_1_OnLoad
+    MAP_SCRIPT_ON_RESUME: MtScorch_1_OnResume
+}
+
+script MtScorch_1_OnLoad {
+    if (!flag(FLAG_SEEN_MT_SCORCH_1_MAGMA_GRUNTS)) {
+        setvar(VAR_TEMP_A, 1)
+    }
+}
+
+script MtScorch_1_OnResume {
+	setstepcallback(STEP_CB_ASH)
+}
+
+script MtScorch_1_MagmaEvent {
+    lockall
+    playse(SE_PIN)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    getobjectxy(OBJ_EVENT_ID_PLAYER, CURRENT_POSITION, VAR_TEMP_1, NULL)
+    if (var(VAR_TEMP_1) == 13) {
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left))
+        waitmovement(0)
+    }
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up))
+    waitmovement(0)
+    special(SpawnCameraObject)
+    delay(16)
+    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_up*3))
+    waitmovement(0)
+    msgbox("Do you think we're stuck back here\nbecause we keep screwing up?")
+    applymovement(12, moves(face_left))
+    msgbox("Hey, that's negative talk!\nIt's not like we're screwing up!")
+    applymovement(11, moves(face_right))
+    msgbox("I know, I know...")
+    msgbox("But the higher-ups certainly don't see\nit that way.")
+    waitmovement(0)
+    msgbox("It's alright, we won't be stuck in a\nrut forever.")
+    applymovement(12, moves(face_up))
+    msgbox("Isn't that right Onix?")
+    applymovement(11, moves(face_up))
+    playse(SE_LEDGE)
+    applymovement(13, moves(jump_in_place_left*2))
+    waitse
+    playse(SE_LEDGE)
+    waitmovement(13)
+    playmoncry(SPECIES_ONIX, CRY_MODE_NORMAL)
+    waitmoncry
+    delay(60)
+    applymovement(11, moves(face_right))
+    applymovement(12, moves(face_left))
+    msgbox("Yeah, you're right.")
+    msgbox("There's no way that kid will keep\nmessing with just us.")
+    closemessage
+    delay(70)
+    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_slow_down*3))
+    waitmovement(0)
+    delay(20)
+    applymovement(11, moves(face_down))
+    applymovement(12, moves(face_down))
+    waitmovement(0)
+    delay(48)
+    msgbox("...")
+    closemessage
+    delay(60)
+    message("OH COME ON!")
+    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_faster_up*2))
+    waitmessage
+    waitbuttonpress
+    applymovement(11, moves(face_right))
+    applymovement(12, moves(face_left))
+    msgbox("You just had to jinx it didn't you!")
+    msgbox("Wha- Me?\nYou're blaming me for this?!",)
+    waitmovement(0)
+    applymovement(11, moves(face_down))
+    applymovement(12, moves(face_down))
+    msgbox("Are you following us or something?\nWhy won't you bother someone else!")
+    waitmovement(0)
+    message("I'm not having any of this right now.")
+    applymovement(11, moves(walk_up*3))
+    applymovement(12, moves(face_left delay_16 face_up))
+    waitmovement(11)
+    applymovement(11, moves(set_invisible))
+    playse(SE_EXIT)
+    waitse
+    closemessage
+    applymovement(12, moves(delay_16*3 face_down delay_16*4 walk_fast_left walk_fast_up*2 walk_up))
+    delay(100)
+    message("ONIX, DO SOMETHING!")
+    waitmovement(12)
+    applymovement(12, moves(set_invisible))
+    playse(SE_EXIT)
+    waitse
+    closemessage
+    applymovement(13, moves(delay_16*2 walk_left face_down delay_16*2))
+    waitmovement(0)
+    playse(SE_LEDGE)
+    applymovement(13, moves(jump_in_place_down))
+    waitse
+    waitmovement(0)
+    applymovement(13, moves(walk_faster_up*2))
+    waitmovement(13)
+    applymovement(13, moves(lock_facing_direction jump_down unlock_facing_direction delay_16*2))
+    setvar(VAR_0x8004, 1)  // vertical pan
+	setvar(VAR_0x8005, 3)  // horizontal pan
+	setvar(VAR_0x8006, 4)  // num shakes
+	setvar(VAR_0x8007, 1)  // shake delay
+	setvar(VAR_0x8008, 0)  // remove sound
+    special(ShakeCamera)
+    waitstate
+    waitmovement(13)
+    applymovement(13, moves(walk_faster_left walk_up))
+    waitmovement(13)
+    waitse
+    applymovement(13, moves(set_invisible))
+    playse(SE_EXIT)
+    waitse
+    delay(16)
+    playse(SE_FALL)
+    delay(48)
+    setobjectxy(14, 12, 6)
+    applymovement(14, moves(walk_fast_down*3))
+    waitmovement(14)
+    waitse
+    playse(SE_M_STRENGTH)
+    applymovement(14, moves(jump_down))
+    waitse
+    waitmovement(0)
+    playse(SE_M_STRENGTH)
+    setfieldeffectargument(0, 12) // x
+    setfieldeffectargument(1, 10) // y
+    setfieldeffectargument(2, 1) // prio?
+    dofieldeffect(FLDEFF_DUST)
+    applymovement(14, moves(walk_slow_down))
+    waitse
+    playse(SE_M_STRENGTH)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_down*2))
+    waitmovement(0)
+    special(RemoveCameraObject)
+    setflag(FLAG_SEEN_MT_SCORCH_1_MAGMA_GRUNTS)
+    special(DrawWholeMapView)
+    setobjectxyperm(14, 12, 11)
+    setvar(VAR_TEMP_A, 0)
+    releaseall
+}
+
+script MtScorch_1_Sign_Checkpoint {
+    msgbox("Checkpoint", MSGBOX_SIGN)
+}
+
+script MtScorch_1_Picnicker {
+    trainerbattle_single(
+        TRAINER_MT_SCORCH_OUTER_PICNICKER, 
+        format("It always smells like a campfire here."),
+        format("I'll take my camping gear and head back down...")  
+    )
+    msgbox(format("Not all of Mt Scorch is accessible, its too difficult to move around the cliffside in some spots."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script MtScorch_1_Hiker {
+    trainerbattle_single(
+        TRAINER_MT_SCORCH_OUTER_HIKER, 
+        format("Put a mountain in front of me and I'll climb it!"),
+        format("Oh ho!")  
+    )
+    msgbox(format("We hikers take any and all mountains as a challenge!"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script MtScorch_1_Kindler {
+    trainerbattle_single(
+        TRAINER_MT_SCORCH_OUTER_KINDLER, 
+        format("Hey, watch this!"),
+        format("Oh, that's not supposed to happen.")  
+    )
+    msgbox(format("After all that practice, we fumbled the trick..."), MSGBOX_AUTOCLOSE)
+    end
+}

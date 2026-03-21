@@ -1,4 +1,161 @@
-mapscripts Route7_MapScripts {}
+mapscripts Route7_MapScripts {
+    MAP_SCRIPT_ON_LOAD: Route7_OnLoad
+}
+
+script Route7_OnLoad {
+    if (!flag(FLAG_SEEN_ROUTE7_MAGMA_GRUNTS)) {
+        setvar(VAR_TEMP_A, 1)
+    }
+}
+
+script Route7_BridgeTrigger {
+    lock
+    setvar(VAR_TEMP_A, 0)
+    setflag(FLAG_SEEN_ROUTE7_MAGMA_GRUNTS)
+    playse(SE_PIN)
+    //waitse
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    getobjectxy(OBJ_EVENT_ID_PLAYER, CURRENT_POSITION, NULL, VAR_TEMP_1)
+    if (var(VAR_TEMP_1) == 6) { setobjectxy(13, 23, 5) }
+    applymovement(13, moves(walk_fast_right*5))
+    waitmovement(0)
+    if (var(VAR_TEMP_1) == 6) {
+        applymovement(13, moves(walk_fast_right*5 walk_down face_left))
+    } else { applymovement(13, moves(walk_fast_right*5 walk_up face_left)) }
+    applymovement(10, moves(walk_fast_right*5 emote_exclamation_mark walk_right*2))
+    applymovement(11, moves(walk_fast_right*5 emote_exclamation_mark walk_right*2))
+    delay(32)
+    playse(SE_PIN)
+    msgbox("HEY YOU!", MSGBOX_DEFAULT)
+    waitmovement(0)
+    msgbox("You'd better hand over that Pokemon if\nyou know what's good for you!", MSGBOX_DEFAULT)
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right delay_16))
+    waitmovement(0)
+    playse(SE_LEDGE)
+    applymovement(13, moves(jump_in_place_left*2))
+    waitse
+    playse(SE_LEDGE)
+    waitmovement(13)
+    waitse
+    playmoncry(SPECIES_NIDORAN_M, CRY_MODE_WEAK)
+    delay(48)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
+    msgbox("Hurry it up!\nWe don't have time for your hero act!", MSGBOX_DEFAULT)
+    waitmoncry
+    closemessage
+    if (var(VAR_TEMP_1) == 6) { setobjectxy(12, 23, 6) }
+    playse(SE_PIN)
+    applymovement(10, moves(emote_exclamation_mark face_left))
+    applymovement(11, moves(emote_exclamation_mark face_left))
+    applymovement(12, moves(walk_fast_right*4 walk_faster_right))
+    waitmovement(11)
+    applymovement(10, moves(lock_facing_direction walk_slow_right unlock_facing_direction))
+    applymovement(11, moves(lock_facing_direction walk_slow_right unlock_facing_direction))
+    waitmovement(11)
+    applymovement(10, moves(face_right delay_16*2 face_left delay_16*2 face_right))
+    applymovement(11, moves(face_right delay_16*2 face_left delay_16*2 face_right))
+    playmoncry(SPECIES_NIDOQUEEN, CRY_MODE_ENCOUNTER)
+    waitmovement(12)
+    applymovement(12, moves(walk_slow_right delay_16*2 walk_slow_right))
+    waitmovement(11)
+    playbgm(MUS_ENCOUNTER_MAGMA, FALSE)
+    msgbox("Get out of our way!")
+    closemessage
+    call(Route7_MultiBattle)
+
+    // continue post battle
+    applymovement(12, moves(walk_in_place_slow_right))
+    applymovement(10, moves(face_left delay_16*3))
+    applymovement(11, moves(face_left delay_16*3))
+    waitmovement(11)
+    applymovement(10, moves(face_down delay_16*3 face_right))
+    applymovement(11, moves(face_up delay_16*3 face_right))
+    waitmovement(0)
+    msgbox("This isn't the last you've heard of us!", MSGBOX_DEFAULT)
+    closemessage
+    delay(48)
+    playse(SE_LEDGE)
+    applymovement(10, moves(jump_up set_invisible))
+    applymovement(11, moves(delay_16*3 face_down delay_16*4 walk_faster_up jump_up set_invisible))
+    waitmovement(10)
+    playse(SE_M_DIVE)
+    dofieldeffectsplash(31, 4, 1)
+    waitmovement(11)
+    playse(SE_M_DIVE)
+    dofieldeffectsplash(31, 8, 1)
+    removeobject(10)
+    removeobject(11)
+    applymovement(12, moves(walk_slow_right))
+    playmoncry(SPECIES_NIDOQUEEN, CRY_MODE_NORMAL)
+    delay(32)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+    waitmovement(0)
+    playse(SE_LEDGE)
+    applymovement(13, moves(jump_in_place_left))
+    waitmovement(0)
+    getobjectxy(OBJ_EVENT_ID_PLAYER, CURRENT_POSITION, NULL, VAR_TEMP_1)
+    if (var(VAR_TEMP_1) == 6) {
+        applymovement(13, moves(walk_up walk_left*2 face_down))
+    } else { applymovement(13, moves(walk_down walk_left*2 face_up)) }
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
+    playmoncry(SPECIES_NIDORAN_M, CRY_MODE_NORMAL)
+    if (var(VAR_TEMP_1) == 6) {
+        applymovement(12, moves(face_up))
+    } else { applymovement(12, moves(face_down)) }
+    waitmovement(0)
+    waitmoncry
+    delay(80)
+    applymovement(12, moves(walk_in_place_right*2))
+    applymovement(13, moves(face_right))
+    playmoncry(SPECIES_NIDOQUEEN, CRY_MODE_NORMAL)
+    waitmovement(12)
+    waitmoncry
+    delay(80)
+    applymovement(12, moves(walk_left*8))
+    applymovement(13, moves(walk_left*4 delay_16 face_right delay_16*2))
+    waitmovement(13)
+    playse(SE_LEDGE)
+    applymovement(13, moves(jump_in_place_right*2))
+    waitse
+    playse(SE_LEDGE)
+    waitmovement(13)
+    waitse
+    applymovement(13, moves(walk_fast_left*4))
+    waitmovement(0)
+    removeobject(12)
+    removeobject(13)
+    special(DrawWholeMapView)
+    release
+}
+
+script Route7_MultiBattle { 
+    special(SavePlayerParty) // save the normal party
+    fadescreen(FADE_TO_BLACK)
+    special(ChooseHalfPartyForBattle) // pick your pokemon
+    waitstate
+    if (var(VAR_RESULT) == 0) {
+        special(LoadPlayerParty)
+        msgbox("You should probably help!", MSGBOX_DEFAULT)
+        closemessage
+        goto(Route7_MultiBattle)
+    }
+    multi_2_vs_2(
+        TRAINER_ROUTE7_MAGMA_GRUNT1, 
+        "Damn it!", 
+        TRAINER_ROUTE7_MAGMA_GRUNT2,
+        "Curse you!",
+        PARTNER_ROUTE7_NIDOQUEEN
+    )
+    if (var(VAR_RESULT) != 1) {
+        fadescreen(FADE_TO_BLACK)
+        special(SetCB2WhiteOut)
+        waitstate
+    }
+    return
+}
 
 script Route7_Picnicker {
     trainerbattle_single(

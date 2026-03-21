@@ -3,6 +3,7 @@
 
 bool8 IsFreezePlayerFinished(void);
 bool8 IsFreezeSelectedObjectAndPlayerFinished(void);
+void JustFreezePlayer(void);
 void FreezeObjects_WaitForPlayer(void);
 void FreezeObjects_WaitForPlayerAndSelected(void);
 void FreezeForApproachingTrainers(void);

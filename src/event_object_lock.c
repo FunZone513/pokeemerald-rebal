@@ -39,6 +39,10 @@ bool8 IsFreezePlayerFinished(void)
     }
 }
 
+void JustFreezePlayer(void)
+{
+    CreateTask(Task_FreezePlayer, 80);
+}
 
 void FreezeObjects_WaitForPlayer(void)
 {

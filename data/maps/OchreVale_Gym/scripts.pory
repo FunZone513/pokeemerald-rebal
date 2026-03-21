@@ -80,7 +80,7 @@ script OchreVale_Gym_BattleGirl {
     trainerbattle_single(
         TRAINER_OCHRE_VALE_GYM_BATTLE_GIRL, 
         format("My muscles are pretty big!"),
-        format("You should feel my abs!")  
+        format("You should feel my abs!")
     )
     msgbox(format("I love working out, you look like you could do with some more muscle too."), MSGBOX_AUTOCLOSE)
     end

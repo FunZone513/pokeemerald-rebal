@@ -40,8 +40,20 @@ Jolly Nature
 - Fairy Wind
 - Protect
 
+=== PARTNER_ROUTE7_NIDOQUEEN ===
+Name: NIDOQUEEN
+Class: Boss Pokemon
+Pic: Nidoqueen
+Gender: Female
+Music: Female
 
-
+Nidoqueen
+Level: 45
+Ability: Poison Point
+- Earth Power
+- Poison Jab
+- Crunch
+- Double Kick
 
 
 

@@ -1299,3 +1299,11 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/LapashTown_Indoor1/scripts.inc"
 
 	.include "data/maps/LapashTown_Indoor2/scripts.inc"
+
+	.include "data/maps/PortEdaph_Gate/scripts.inc"
+
+	.include "data/maps/MtScorch_Entrance/scripts.inc"
+
+	.include "data/maps/MtScorch_1/scripts.inc"
+
+	.include "data/maps/MtScorch_Inside/scripts.inc"

@@ -2513,6 +2513,11 @@
 
 	@ --====================== custom
 
+	@ Locks only the player's movement.
+	.macro lockplayer
+	callnative ScrCmd_lockplayer
+	.endm
+
 	@ Checks if any Pokemon in the player's party has the given type.
 	.macro istypeinparty type:req
     callnative IsTypeInParty
@@ -2539,3 +2544,10 @@
     .2byte \numOrVar
     .endm
 	
+	@ Does a big splash field effect at the given coordinates.
+	.macro dofieldeffectsplash x:req, y:req, priority:req
+	setfieldeffectargument 0, \x
+	setfieldeffectargument 1, \y
+	setfieldeffectargument 2, \priority
+	dofieldeffect FLDEFF_JUMP_BIG_SPLASH
+	.endm

@@ -1,0 +1,15 @@
+mapscripts MtScorch_Entrance_MapScripts {}
+
+script MtScorch_Entrance_Sign {
+    msgbox("Mt Scorch,\nDon't get too hot and bothered.")
+}
+
+script MtScorch_Entrance_RichBoy {
+    trainerbattle_single(
+        TRAINER_MT_SCORCH_ENTRANCE_RICH_BOY, 
+        format("My Pokemon is far to valuable to actually take up a volcano."),
+        format("How dare you...!")  
+    )
+    msgbox(format("I didn't even want to climb anyway, so you've done me a favour."), MSGBOX_AUTOCLOSE)
+    end
+}

@@ -114,13 +114,24 @@
 #define TRAINER_ROUTE12_HIKER            102
 #define TRAINER_ROUTE12_NINJA_BOY        103
 #define TRAINER_ROUTE12_BREEDER          104
+#define TRAINER_ROUTE7_MAGMA_GRUNT1      105
+#define TRAINER_ROUTE7_MAGMA_GRUNT2      106
+#define TRAINER_MT_SCORCH_OUTER_PICNICKER       107
+#define TRAINER_MT_SCORCH_OUTER_HIKER           108
+#define TRAINER_MT_SCORCH_OUTER_KINDLER         109
+#define TRAINER_MT_SCORCH_INSIDE_KINDLER        110
+#define TRAINER_MT_SCORCH_INSIDE_KINDLER_2      111
+#define TRAINER_MT_SCORCH_INSIDE_HIKER          112
+#define TRAINER_MT_SCORCH_INSIDE_COOL_TRAINER   113
+#define TRAINER_MT_SCORCH_INSIDE_PSYCHIC        114
+#define TRAINER_MT_SCORCH_ENTRANCE_RICH_BOY     115
 
 
 // I'm just gonna keep these grouped together at the bottom by adding to them :)
-#define RIVAL_EVELYNN_1                  105
+#define RIVAL_EVELYNN_1                  116
 
 //* don't forget to increase this one too
-#define TRAINERS_COUNT                      106
+#define TRAINERS_COUNT                      117
 
 #define MAX_TRAINERS_COUNT                  864
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)

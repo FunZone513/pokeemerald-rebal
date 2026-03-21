@@ -1140,13 +1140,13 @@ Music: Hiker
 AI: Basic Trainer
 
 Slugma
-Level: 20
+Level: 21
 
 Aron
-Level: 20
+Level: 21
 
 Barboach
-Level: 20
+Level: 21
 
 === TRAINER_SCORCHED_CHAMBERS_PICNICKER ===
 Name: Rayleigh
@@ -1157,10 +1157,10 @@ Music: Girl
 AI: Basic Trainer
 
 Lombre
-Level: 19
+Level: 22
 
 Numel
-Level: 19
+Level: 22
 
 === TRAINER_SCORCHED_CHAMBERS_GUITARIST ===
 Name: Kurt
@@ -1171,10 +1171,10 @@ Music: Intense
 AI: Basic Trainer
 
 Flaaffy
-Level: 18
+Level: 20
 
 Loudred
-Level: 20
+Level: 24
 
 === TRAINER_SCORCHED_CHAMBERS_BUG_CATCHER ===
 Name: Bryan
@@ -1185,13 +1185,13 @@ Music: Male
 AI: Basic Trainer
 
 Dwebble
-Level: 16
+Level: 18
 
 Dustox
-Level: 16
+Level: 18
 
 Sizzlipede
-Level: 16
+Level: 19
 
 Masquerain
 Level: 22
@@ -1216,10 +1216,10 @@ Music: Intense
 AI: Basic Trainer
 
 Makuhita
-Level: 18
+Level: 24
 
 Bergmite
-Level: 18
+Level: 23
 
 === TRAINER_SCORCHED_CHAMBERS_BATTLEGIRL ===
 Name: Elise
@@ -1230,10 +1230,10 @@ Music: Intense
 AI: Basic Trainer
 
 Meditite
-Level: 18
+Level: 23
 
 Staravia
-Level: 18
+Level: 24
 
 === TRAINER_SCORCHED_CHAMBERS_EXPERTF ===
 Name: Deborah
@@ -1245,7 +1245,7 @@ AI: Smart Trainer
 
 Chansey  
 Ability: Healer  
-Level: 25  
+Level: 26  
 Tera Type: Normal  
 Bold Nature  
 IVs: 0 Atk  
@@ -1264,7 +1264,7 @@ AI: Smart Trainer
 
 Snorlax  
 Ability: Thick Fat  
-Level: 25  
+Level: 26  
 Tera Type: Normal  
 Adamant Nature  
 - Heavy Slam  
@@ -1370,7 +1370,7 @@ Music: Magma
 AI: Basic Trainer
 
 Slugma
-Level: 19
+Level: 20
 
 === TRAINER_SCORCHED_CHAMBERS_MAGMA_GRUNT2 ===
 Name: Stacy
@@ -1381,10 +1381,10 @@ Music: Magma
 AI: Basic Trainer
 
 Vulpix
-Level: 18
+Level: 19
 
 Poochyena
-Level: 18
+Level: 19
 
 === TRAINER_SCORCHED_CHAMBERS_MAGMA_GRUNT3 ===
 Name: Alec
@@ -1398,7 +1398,7 @@ Sizzlipede
 Level: 18
 
 Numel
-Level: 18
+Level: 20
 
 === TRAINER_SCORCHED_CHAMBERS_MAGMA_GRUNT4 ===
 Name: Harold
@@ -1408,14 +1408,14 @@ Gender: Male
 Music: Magma
 AI: Basic Trainer
 
-Zubat
-Level: 18
-
 Poochyena
 Level: 18
 
 Slugma
 Level: 18
+
+Zubat
+Level: 20
 
 === TRAINER_SCORCHED_CHAMBERS_MAGMA_GRUNT5 ===
 Name: Ricky
@@ -2032,6 +2032,178 @@ Level: 20
 Tyrogue (M)
 Level: 20
 
+=== TRAINER_ROUTE7_MAGMA_GRUNT1 ===
+Name: Ricky
+Class: Team Magma
+Pic: Magma Grunt M
+Gender: Male
+Music: Magma
+AI: Smart Trainer
+
+Slugma
+Ability: Flame Body
+Modest Nature
+Level: 16
+- Flamethrower
+- Smog
+- Yawn 
+
+Numel
+Ability: Simple
+Modest Nature
+Level: 16
+- Ember
+- Tackle
+- Bulldoze
+
+=== TRAINER_ROUTE7_MAGMA_GRUNT2 ===
+Name: Bessa
+Class: Team Magma
+Pic: Magma Grunt F
+Gender: Female
+Music: Magma
+AI: Smart Trainer
+
+Onix
+Ability: Weak Armor
+Adamant Nature
+Level: 18
+- Rock Slide
+- Bind
+- Dragon Breath
+
+=== TRAINER_MT_SCORCH_OUTER_PICNICKER ===
+Name: Yasmin
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Girl
+AI: Basic Trainer
+
+Mightyena
+Level: 22
+
+Nidorina
+Level: 22
+
+=== TRAINER_MT_SCORCH_OUTER_HIKER ===
+Name: Warren
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
+AI: Basic Trainer
+
+Roggenrola
+Level: 21
+
+Roggenrola
+Level: 21
+
+Roggenrola
+Level: 21
+
+=== TRAINER_MT_SCORCH_OUTER_KINDLER ===
+Name: Corey
+Class: Kindler
+Pic: Kindler
+Gender: Male
+Music: Hiker
+AI: Kaboom
+
+Drifloon
+Level: 29
+- Self-Destruct
+
+=== TRAINER_MT_SCORCH_INSIDE_KINDLER ===
+Name: Frank
+Class: Kindler
+Pic: Kindler
+Gender: Male
+Music: Hiker
+AI: Basic Trainer
+
+Houndour
+Level: 26
+
+Torkoal
+Level: 28
+
+=== TRAINER_MT_SCORCH_INSIDE_KINDLER_2 ===
+Name: Shaun
+Class: Kindler
+Pic: Kindler
+Gender: Male
+Music: Hiker
+AI: Basic Trainer
+
+Magcargo
+Level: 27
+
+Sizzlipede
+Level: 27
+
+=== TRAINER_MT_SCORCH_INSIDE_HIKER ===
+Name: Warren
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+Gigalith
+Level: 32
+
+=== TRAINER_MT_SCORCH_INSIDE_COOL_TRAINER ===
+Name: Jackson
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Cool
+Items: Hyper Potion
+Double Battle: No
+AI: Smart Trainer
+
+Poliwhirl
+Level: 28
+
+Barboach
+Level: 28
+
+Kingler
+Level: 28
+
+Gligar
+Level: 28
+
+=== TRAINER_MT_SCORCH_INSIDE_PSYCHIC ===  
+Name: Nendin
+Class: Psychic
+Pic: Psychic M
+Gender: Male
+Music: Intense
+AI: Smart Trainer
+
+Solosis
+Level: 24
+
+Solosis
+Level: 24
+
+Bronzor
+Level: 24
+
+=== TRAINER_MT_SCORCH_ENTRANCE_RICH_BOY ===
+Name: Zackary
+Class: Rich Boy
+Pic: Rich Boy
+Gender: Male
+Music: Rich
+AI: Basic Trainer
+
+Flaaffy (F)
+Level: 26
 
 
 /* ------ !! KEEP AT THE BOTTOM !! ------ */

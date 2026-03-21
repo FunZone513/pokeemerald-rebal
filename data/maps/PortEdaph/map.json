@@ -100,8 +100,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
-      "x": 27,
-      "y": 50,
+      "x": 33,
+      "y": 43,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -113,10 +113,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_1",
-      "x": 10,
-      "y": 38,
+      "x": 12,
+      "y": 47,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -373,11 +373,11 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_3",
-      "x": 15,
-      "y": 52,
+      "x": 19,
+      "y": 53,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-      "movement_range_x": 3,
+      "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
@@ -477,7 +477,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 14,
+      "x": 15,
       "y": 37,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
@@ -513,6 +513,19 @@
       "trainer_sight_or_berry_tree_id": "ITEM_RICH_MULCH",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_GOT_HERB_MULCH"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(LAIRON)",
+      "x": 11,
+      "y": 47,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "SPECIES_LAIRON",
+      "script": "Generic_POKEMON_INTERACT",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -524,7 +537,7 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 13,
+      "x": 20,
       "y": 50,
       "elevation": 0,
       "dest_map": "MAP_PORT_EDAPH_INDOOR1",
@@ -545,8 +558,8 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 20,
-      "y": 49,
+      "x": 25,
+      "y": 43,
       "elevation": 0,
       "dest_map": "MAP_PORT_EDAPH_POKE_MART",
       "dest_warp_id": "0"
@@ -570,6 +583,13 @@
       "y": 19,
       "elevation": 0,
       "dest_map": "MAP_PORT_EDAPH_GYM",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 6,
+      "y": 48,
+      "elevation": 0,
+      "dest_map": "MAP_PORT_EDAPH_GATE",
       "dest_warp_id": "0"
     }
   ],
@@ -595,16 +615,16 @@
     },
     {
       "type": "sign",
-      "x": 21,
-      "y": 49,
+      "x": 26,
+      "y": 43,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemartSign"
     },
     {
       "type": "sign",
-      "x": 22,
-      "y": 49,
+      "x": 27,
+      "y": 43,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemartSign"
@@ -648,6 +668,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "PortEdaph_Dock_Sign"
+    },
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 48,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NULL"
     }
   ]
 }

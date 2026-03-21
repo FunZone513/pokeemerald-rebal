@@ -174,7 +174,7 @@ script SpringwoodCity_AquaGrunt_BlockerR {
     applymovement(OBJ_EVENT_ID_PLAYER, moves(lock_facing_direction walk_down))
     applymovement(21, moves(walk_down))
     waitmovement(0)
-    applymovement(21, moves(walk_up face_right))
+    applymovement(21, moves(walk_up face_left))
     waitmovement(0)
     release
 }

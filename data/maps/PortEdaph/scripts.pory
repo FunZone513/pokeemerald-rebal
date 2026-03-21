@@ -17,7 +17,11 @@ script PortEdaph_Bike_Sign {
 }
 
 script PortEdaph_Dock_Sign {
-    msgbox("Port Edaph Port,\nIt's a mouthful.", MSGBOX_SIGN)
+    msgbox("Port Edaph Dock,\nSure is a lot of Docking going on here.", MSGBOX_SIGN)
+}
+
+script PortEdaph_Gate_Sign {
+    msgbox("Mt Scorch Gate,\nNot for the faint of heart.", MSGBOX_SIGN)
 }
 
 script PortEdaph_Woman1 {
@@ -37,10 +41,7 @@ script PortEdaph_Kid1 {
 }
 
 script PortEdaph_Man1 {
-    msgbox(format("Shh!"), MSGBOX_NPC)
-    applymovement(10, moves(face_right))
-    waitmovement(0)
-    release
+    msgbox(format("I sometimes take my Lairon up to Mt Scorch to let it roam around, but my knees aren't what they used to be."), MSGBOX_NPC)
 }
 
 script PortEdaph_Man2 {

@@ -110,3 +110,42 @@ F_TRAINER_FEMALE |
             },
         },
     },
+#line 43
+    [DIFFICULTY_NORMAL][PARTNER_ROUTE7_NIDOQUEEN] =
+    {
+#line 44
+        .trainerName = _("NIDOQUEEN"),
+#line 45
+        .trainerClass = TRAINER_CLASS_BOSS_POKEMON,
+#line 46
+        .trainerPic = TRAINER_BACK_PIC_NIDOQUEEN,
+        .encounterMusic_gender =
+#line 47
+F_TRAINER_FEMALE | 
+#line 48
+            TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .partySize = 1,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 50
+            .species = SPECIES_NIDOQUEEN,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 53
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 52
+            .ability = ABILITY_POISON_POINT,
+#line 51
+            .lvl = 45,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 53
+                MOVE_EARTH_POWER,
+                MOVE_POISON_JAB,
+                MOVE_CRUNCH,
+                MOVE_DOUBLE_KICK,
+            },
+            },
+        },
+    },
