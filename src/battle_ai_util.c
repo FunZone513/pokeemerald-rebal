@@ -3844,7 +3844,7 @@ static u32 IncreaseStatUpScoreInternal(u32 battlerAtk, u32 battlerDef, u32 statI
     if (AI_DATA->hpPercents[battlerAtk] < 70 && noOfHitsToFaint == UNKNOWN_NO_OF_HITS)
         return NO_INCREASE;
 
-    // Don't increase stat is AI has less than 45% HP
+    // Don't increase stat if AI has less than 45% HP
     if (AI_DATA->hpPercents[battlerAtk] < 45)
         return NO_INCREASE;
 

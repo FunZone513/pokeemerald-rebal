@@ -16995,8 +16995,6 @@ void ApplyExperienceMultipliers(s32 *expAmount, u8 expGetterMonId, u8 faintedBat
 {
     u32 holdEffect = GetMonHoldEffect(&gPlayerParty[expGetterMonId]);
 
-    *expAmount = (*expAmount * VarGet(VAR_INCREASE_EXP_GAIN)) / 100;
-
     if (IsTradedMon(&gPlayerParty[expGetterMonId]))
         *expAmount = (*expAmount * 150) / 100;
     if (holdEffect == HOLD_EFFECT_LUCKY_EGG)
@@ -17016,11 +17014,14 @@ void ApplyExperienceMultipliers(s32 *expAmount, u8 expGetterMonId, u8 faintedBat
         u8 faintedLevel = gBattleMons[faintedBattler].level;
         u8 expGetterLevel = GetMonData(&gPlayerParty[expGetterMonId], MON_DATA_LEVEL);
 
-        value *= sExperienceScalingFactors[(faintedLevel * 2) + 12];
-        value /= sExperienceScalingFactors[faintedLevel + expGetterLevel + 3];
+        value *= sExperienceScalingFactors[(faintedLevel * 2) + 10];
+        value /= sExperienceScalingFactors[faintedLevel + expGetterLevel + 10];
 
         *expAmount = value + 1;
     }
+
+    // Adjust the final experience value by the QoL exp amp
+    *expAmount = (*expAmount * (100 + VarGet(VAR_INCREASE_EXP_GAIN))) / 100;
 }
 
 void BS_ItemRestoreHP(void)
