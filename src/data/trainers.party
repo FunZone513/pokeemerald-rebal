@@ -498,10 +498,10 @@ Music: Hiker
 AI: Basic Trainer
 
 Aron
-Level: 15
+Level: 13
 
 Barboach
-Level: 15
+Level: 13
 
 === TRAINER_SPRING_WOODS_BUG_CATCHER ===
 Name: Charlie
@@ -512,13 +512,13 @@ Music: Male
 AI: Basic Trainer
 
 Paras
-Level: 13
+Level: 11
 
 Yanma
-Level: 13
+Level: 11
 
 Venipede
-Level: 13
+Level: 11
 
 === TRAINER_SPRING_WOODS_WOMAN ===
 Name: Laurel
@@ -529,7 +529,7 @@ Music: Female
 AI: Basic Trainer
 
 Shroomish
-Level: 14
+Level: 12
 
 Lotad
 Level: 14
@@ -557,10 +557,10 @@ Music: Girl
 AI: Basic Trainer
 
 Slakoth
-Level: 14
+Level: 13
 
 Ekans
-Level: 14
+Level: 13
 
 === TRAINER_SPRING_WOODS_CAMPER ===
 Name: Arthur
@@ -585,10 +585,10 @@ Music: Intense
 AI: Basic Trainer
 
 Roggenrola
-Level: 15
+Level: 17
 
 Heracross
-Level: 16
+Level: 17
 
 === TRAINER_OCHRE_VALE_MINE_BATTLE_GIRL ===
 Name: Leanna
@@ -598,8 +598,8 @@ Gender: Female
 Music: Intense
 AI: Basic Trainer
 
-Poliwhirl
-Level: 17
+Poliwag
+Level: 20
 
 === TRAINER_OCHRE_VALE_MINE_PICNICKER ===
 Name: Imogen
@@ -610,13 +610,13 @@ Music: Girl
 AI: Basic Trainer
 
 Shroomish
-Level: 15
-
-Lombre
-Level: 15
+Level: 16
 
 Poochyena
-Level: 15
+Level: 16
+
+Lombre
+Level: 17
 
 === TRAINER_OCHRE_VALE_MINE_HIKER ===
 Name: Aaron
@@ -816,7 +816,7 @@ AI: Gym Leader
 
 Makuhita (M)  
 Ability: Guts  
-Level: 19  
+Level: 20  
 Tera Type: Fighting  
 Adamant Nature  
 - Bulk Up  
@@ -826,7 +826,7 @@ Adamant Nature
 
 Chinchou (F)  
 Ability: Water Absorb  
-Level: 19  
+Level: 20  
 Tera Type: Water  
 Modest Nature  
 IVs: 0 Atk  
@@ -836,7 +836,7 @@ IVs: 0 Atk
 
 Vigoroth (M)  
 Ability: Vital Spirit  
-Level: 19  
+Level: 20  
 Tera Type: Normal  
 Adamant Nature  
 - Slash  
@@ -907,7 +907,7 @@ Double Battle: Yes
 AI: Cheese Trainer
 
 Skiploom
-Level: 18
+Level: 17
 - Fairy Wind
 - Poison Powder
 - Sleep Powder
@@ -915,7 +915,7 @@ Level: 18
 
 Minccino
 Ability: Technician
-Level: 18
+Level: 17
 - Thief
 - Echoed Voice
 - Swift
@@ -928,11 +928,11 @@ Gender: Male
 Music: Intense
 AI: Basic Trainer
 
-Pancham
-Level: 20
+Makuhita
+Level: 16
 
 Nacli
-Level: 20
+Level: 16
 
 === TRAINER_OCHRE_VALE_POKECENTRE_AQUA_GRUNT ===
 Name: Evan
@@ -957,13 +957,13 @@ Music: Male
 AI: Basic Trainer
 
 Krabby
-Level: 18
+Level: 16
 
 Poochyena
-Level: 18
+Level: 16
 
 Yanma
-Level: 18
+Level: 17
 
 === TRAINER_ROUTE9_COUPLE ===
 Name: Amy & Luke
@@ -974,17 +974,17 @@ Music: Girl
 Double Battle: Yes
 AI: Basic Trainer
 
-Lombre
-Level: 20
-
 Electrike
+Level: 16
+
+Lombre
 Level: 18
 
 Paras
-Level: 18
+Level: 16
 
 Wingull
-Level: 20
+Level: 18
 
 === TRAINER_ROUTE9_RUNNERF ===
 Name: Leila
@@ -994,11 +994,11 @@ Gender: Female
 Music: Female
 AI: Basic Trainer
 
-Mightyena
-Level: 20
+Whismur
+Level: 17
 
-Rhyhorn
-Level: 20
+Mudbray
+Level: 17
 
 === TRAINER_ROUTE9_RUNNERM ===
 Name: Matt
@@ -1009,12 +1009,12 @@ Music: Male
 AI: Basic Trainer
 
 Houndour
-Level: 18
-
-Tauros
-Level: 18
+Level: 16
 
 Staravia
+Level: 16
+
+Tauros
 Level: 18
 
 === TRAINER_ROUTE9_LADY ===
@@ -1035,7 +1035,7 @@ Level: 16
 Hoothoot
 Level: 16
 
-Whismur
+Azurill
 Level: 16
 
 Skiploom
@@ -1078,13 +1078,13 @@ Music: Hiker
 AI: Basic Trainer
 
 Clamperl
-Level: 18
+Level: 17
 
 Skrelp
-Level: 18
+Level: 17
 
 Frillish
-Level: 18
+Level: 17
 
 === TRAINER_ROUTE5_EXPERT ===
 Name: Gergino
@@ -1095,10 +1095,10 @@ Music: Intense
 AI: Basic Trainer
 
 Makuhita
-Level: 20
+Level: 18
 
 Ninjask
-Level: 24
+Level: 21
 
 === TRAINER_ROUTE10_HIKER ===
 Name: Rictor
@@ -1109,10 +1109,10 @@ Music: Hiker
 AI: Basic Trainer
 
 Nacli
-Level: 18
+Level: 19
 
 Onix
-Level: 20
+Level: 19
 
 === TRAINER_ROUTE10_YOUNGSTER ===
 Name: Henry
@@ -1760,9 +1760,6 @@ Gender: Male
 Music: Intense
 AI: Basic Trainer
 
-Aron
-Level: 20
-
 Hariyama
 Level: 24
 
@@ -1776,9 +1773,6 @@ AI: Basic Trainer
 
 Magby
 Level: 21
-
-Slugma
-Level: 22
 
 Fletchinder
 Level: 23
@@ -2153,7 +2147,7 @@ Double Battle: No
 AI: Basic Trainer
 
 Gigalith
-Level: 32
+Level: 30
 
 === TRAINER_MT_SCORCH_INSIDE_COOL_TRAINER ===
 Name: Jackson
@@ -2166,15 +2160,15 @@ Double Battle: No
 AI: Smart Trainer
 
 Poliwhirl
-Level: 28
+Level: 26
 
 Barboach
-Level: 28
-
-Kingler
-Level: 28
+Level: 26
 
 Gligar
+Level: 26
+
+Kingler
 Level: 28
 
 === TRAINER_MT_SCORCH_INSIDE_PSYCHIC ===  
@@ -2204,6 +2198,7 @@ AI: Basic Trainer
 
 Flaaffy (F)
 Level: 26
+
 
 
 /* ------ !! KEEP AT THE BOTTOM !! ------ */

@@ -13,7 +13,7 @@ OchreVale_Gym_FlashSet::
 
 OchreVale_Gym_FlashSet_1:
 # 7 "data/maps/OchreVale_Gym/scripts.pory"
-	setflashlevel 6
+	setflashlevel 5
 	return
 
 
@@ -212,7 +212,7 @@ OchreVale_Gym_Guide_Text_0:
 # 134 "data/maps/OchreVale_Gym/scripts.pory"
 	.string "Using Rock Smash requires a Rock or\n"
 	.string "Fighting type Pokemon, or one with the\l"
-	.string "ability Rock Head or Iron Fist.$"
+	.string "ability Rock Head or Sheer Force.$"
 
 OchreVale_Gym_Douglas_Text_Intro::
 # 39 "data/maps/OchreVale_Gym/scripts.pory"
@@ -236,7 +236,7 @@ OchreVale_Gym_Douglas_Text_Defeated::
 OchreVale_Gym_Douglas_Badge::
 # 58 "data/maps/OchreVale_Gym/scripts.pory"
 	.string "The Ochre Badge is a symbol of your\nstrong will, and that will is what\lenables you to destroy even boulders.\p"
-	.string "Rock and Fighting types\nhelp in the removal of rocks in the Mine,\land they'll help you outside of it too.\p$"
+	.string "Rock and Fighting types help in the\nremoval of rocks in the Mine, and they'll\lhelp you outside of it too.$"
 
 OchreVale_Gym_Douglas_PostBattle::
 # 63 "data/maps/OchreVale_Gym/scripts.pory"

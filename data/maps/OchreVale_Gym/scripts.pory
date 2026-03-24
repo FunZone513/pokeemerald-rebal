@@ -4,7 +4,7 @@ mapscripts OchreVale_Gym_MapScripts {
 
 script OchreVale_Gym_FlashSet {
     if (!flag(FLAG_BADGE02_GET)) {
-        setflashlevel(6)
+        setflashlevel(5)
     } else { 
         setflashlevel(1)
     }
@@ -57,7 +57,7 @@ text OchreVale_Gym_Douglas_Text_Defeated {
 
 text OchreVale_Gym_Douglas_Badge {
     "The Ochre Badge is a symbol of your\nstrong will, and that will is what\lenables you to destroy even boulders.\p"
-    "Rock and Fighting types\nhelp in the removal of rocks in the Mine,\land they'll help you outside of it too.\p"
+    "Rock and Fighting types help in the\nremoval of rocks in the Mine, and they'll\lhelp you outside of it too."
 }
 
 text OchreVale_Gym_Douglas_PostBattle {
@@ -131,7 +131,7 @@ script OchreVale_Gym_Guide {
     if (!flag(FLAG_BADGE02_GET)) {
         msgbox(OchreVale_Gym_Guide_Text, MSGBOX_NPC)
     } else {
-        msgbox(format("Using Rock Smash requires a Rock or Fighting type Pokemon, or one with the ability Rock Head or Iron Fist."), MSGBOX_NPC)
+        msgbox(format("Using Rock Smash requires a Rock or Fighting type Pokemon, or one with the ability Rock Head or Sheer Force."), MSGBOX_NPC)
     }
     releaseall
 }

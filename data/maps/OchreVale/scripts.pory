@@ -17,7 +17,7 @@ script OchreVale_Scientist {
     if (flag(FLAG_CLEARED_OCHRE_VALE_MINE)) {
         msgbox(format("The entrance to the mine is just left of here, it might not be that easy to navigate inside but people still go there now that the main quarrying has stopped."), MSGBOX_NPC)
     } else {
-        msgbox(format("We've been having a bit of trouble with Team Magma in Ochre Vale Mine recently, I'm not sure why they've decided to do this."), MSGBOX_NPC)
+        msgbox(format("We've been having a bit of trouble with Team Aqua in Ochre Vale Mine recently, I'm not sure why they've decided to do this."), MSGBOX_NPC)
     }
 }
 

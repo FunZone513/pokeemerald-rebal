@@ -157,7 +157,7 @@ OchreVale_Scientist_Text_0:
 OchreVale_Scientist_Text_1:
 # 20 "data/maps/OchreVale/scripts.pory"
 	.string "We've been having a bit of trouble with\n"
-	.string "Team Magma in Ochre Vale Mine recently,\l"
+	.string "Team Aqua in Ochre Vale Mine recently,\l"
 	.string "I'm not sure why they've decided to do\l"
 	.string "this.$"
 
